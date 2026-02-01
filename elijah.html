@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Expires" content="Fri, 15 Aug 2025 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>KEVONZ ISLAND</title>
+<link rel="icon"href="image/favicon.ico">
+
+<link rel="stylesheet" type="text/css" href="pcss/elizabeth.css">
+
+<style type="text/css">
+#door{
+    width:80px;
+    height:183px;
+    position: absolute;
+    top:210px;
+    left:450px;
+}
+#konkon{
+    width:970px;
+    height:580px;
+    position: absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    background-color: #000000;
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+/*エリザベスアニメーション********************************************/
+/*エリザベス1の動き**************************/
+@keyframes eli1move{
+    0% {
+        top:2px;
+        left:0px;
+    }
+    50% {
+        top:2px;
+        left:870px;
+    }
+    100% {
+        top:2px;
+        left:0px;
+    }
+}
+@-webkit-keyframes eli1move{
+    0% {
+        top:2px;
+        left:0px;
+    }
+    50% {
+        top:2px;
+        left:870px;
+    }
+    100% {
+        top:2px;
+        left:0px;
+    }
+}
+/*エリザベス2の動き**************************/
+@keyframes eli2move{
+    0% {
+        top:102px;
+        right:0px;
+    }
+    50% {
+        top:102px;
+        right:911px;
+    }
+    100% {
+        top:102px;
+        right:0px;
+    }
+}
+@-webkit-keyframes eli2move{
+    0% {
+        top:102px;
+        left:0px;
+    }
+    50% {
+        top:102px;
+        left:911px;
+    }
+    100% {
+        top:102px;
+        left:0px;
+    }
+}
+/*エリザベス3の動き**************************/
+@keyframes eli3move{
+    0% {
+        top:161px;
+        left:0px;
+    }
+    50% {
+        top:161px;
+        left:895px;
+    }
+    100% {
+        top:161px;
+        left:0px;
+    }
+}
+@-webkit-keyframes eli3move{
+    0% {
+        top:161px;
+        left:0px;
+    }
+    50% {
+        top:161px;
+        left:895px;
+    }
+    100% {
+        top:161px;
+        left:0px;
+    }
+}
+/*エリザベス4の動き**************************/
+@keyframes eli4move{
+    0% {
+        top:236px;
+        right:0px;
+    }
+    50% {
+        top:236px;
+        right:845px;
+    }
+    100% {
+        top:236px;
+        right:0px;
+    }
+}
+@-webkit-keyframes eli4move{
+    0% {
+        top:236px;
+        right:0px;
+    }
+    50% {
+        top:236px;
+        right:845px;
+    }
+    100% {
+        top:236px;
+        right:0px;
+    }
+}
+/*エリザベス5の動き**************************/
+@keyframes eli5move{
+    0% {
+        top:361px;
+        left:0px;
+    }
+    50% {
+        top:361px;
+        left:804px;
+    }
+    100% {
+        top:361px;
+        left:0px;
+    }
+}
+@-webkit-keyframes eli5move{
+    0% {
+        top:361px;
+        left:0px;
+    }
+    50% {
+        top:361px;
+        left:804px;
+    }
+    100% {
+        top:361px;
+        left:0px;
+    }
+}
+/*エリザベス6の動き**************************/
+@keyframes eli6move{
+    0% {
+        top:527px;
+        right:0px;
+    }
+    50% {
+        top:527px;
+        right:919px;
+    }
+    100% {
+        top:527px;
+        right:0px;
+    }
+}
+@-webkit-keyframes eli6move{
+    0% {
+        top:527px;
+        right:0px;
+    }
+    50% {
+        top:527px;
+        right:919px;
+    }
+    100% {
+        top:527px;
+        right:0px;
+    }
+}
+#eli1{
+    width:100px;
+    height:100px;
+    position:absolute;
+    animation-name: eli1move;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: eli1move;
+    -webkit-animation-duration: 16s;
+    -webkit-animation-iteration-count: infinite;
+    display:none;
+}
+#eli2{
+    width:59px;
+    height:59px;
+    position:absolute;
+    animation-name: eli2move;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: eli2move;
+    -webkit-animation-duration: 12s;
+    -webkit-animation-iteration-count: infinite;
+    display:none;
+}
+#eli3{
+    width:75px;
+    height:75px;
+    position:absolute;
+    animation-name: eli3move;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: eli3move;
+    -webkit-animation-duration: 14s;
+    -webkit-animation-iteration-count: infinite;
+    display:none;
+}
+#eli4{
+    width:125px;
+    height:125px;
+    position:absolute;
+    animation-name: eli4move;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: eli4move;
+    -webkit-animation-duration: 18s;
+    -webkit-animation-iteration-count: infinite;
+    display:none;
+}
+#eli5{
+    width:166px;
+    height:166px;
+    position:absolute;
+    animation-name: eli5move;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: eli5move;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    display:none;
+}
+#eli6{
+    width:51px;
+    height:51px;
+    position:absolute;
+    animation-name: eli6move;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: eli6move;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    display:none;
+}
+</style>
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<!--/*
+<audio id="elivoice" preload="auto"loop>
+<source src="pse/elivoice.wav" type="audio/wav">
+<source src="pse/elivoice.mp3" type="audio/mp3">
+</audio>
+
+<audio id="konkonse" preload="auto"loop>
+<source src="pse/konkonse.wav" type="audio/wav">
+<source src="pse/konkonse.mp3" type="audio/mp3">
+</audio>
+*/-->
+
+<div id="d1">
+<img src="pimg/door.jpg"id="door">
+<!--1アケル-->
+<img src="pimg/elijah.png"id="eli1">
+<!--2コンコン音有-->
+<img src="pimg/elijah.png"id="eli2">
+<img src="pimg/konkonsan.gif"id="konkon">
+<!--3防犯カメラ-->
+<img src="pimg/elijah.png"id="eli3">
+<!--4ベビー-->
+<img src="pimg/elijah.png"id="eli4">
+<!--5ピエコード-->
+<img src="pimg/elijah.png"id="eli5">
+<!--6カース音有-->
+<img src="pimg/elijah.png"id="eli6">
+
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+
+</div>
+
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+/*★には同じ数字、☆には同じスペル(変数、関数)、◇にはファイルのパスを入力
+let sampleSource★ = '';
+async function decodeSe★(){
+    const response★ = await fetch("◇◇◇");
+    const arrayBuffer★ = await response★.arrayBuffer();
+    const audioBuffer★ = await ctx.decodeAudioData(arrayBuffer★);
+    return audioBuffer★;
+}
+function playSe★(ctx,audioBuffer★){
+    sampleSource★ = ctx.createBufferSource();
+    sampleSource★.buffer = audioBuffer★;
+    sampleSource★.connect(ctx.destination);
+    sampleSource★.start();
+}
+async function se☆Play(){
+    const se☆ = await decodeSe★();
+    playSe★(ctx,se☆);
+}
+async function se☆Stop(){
+    sampleSource★?.stop();
+}
+*/
+
+/*
+<audio id="elivoice" preload="auto"loop>
+<source src="pse/elivoice.mp3" type="audio/mp3">
+</audio>
+
+<audio id="konkonse" preload="auto"loop>
+<source src="pse/konkonse.mp3" type="audio/mp3">
+</audio>
+*/
+
+/*★★★★★★★★★★★★★★★★★効果音のセット★★★★★★★★★★★★★★★★★★★★*/
+window.AudioContext = window.AudioContext||window.webkitAudioContext;
+const ctx = new AudioContext();
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let elikoeplaying = false;
+let sampleSource1 = '';
+async function decodeSe1(){
+
+}
+function playSe1(ctx,audioBuffer1){
+    sampleSource1 = ctx.createBufferSource();
+    sampleSource1.buffer = audioBuffer1;
+    sampleSource1.loop = true;
+    sampleSource1.connect(ctx.destination);
+    sampleSource1.start();
+    elikoeplaying = true;
+}
+async function seelivoicePlay(){
+    const seelivoice = await decodeSe1();
+    playSe1(ctx,seelivoice);
+}
+async function seelivoiceStop(){
+    sampleSource1?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource2 = '';
+async function decodeSe2(){
+    const response2 = await fetch("pse/konkonse.mp3");
+    const arrayBuffer2 = await response2.arrayBuffer();
+    const audioBuffer2 = await ctx.decodeAudioData(arrayBuffer2);
+    return audioBuffer2;
+}
+function playSe2(ctx,audioBuffer2){
+    sampleSource2 = ctx.createBufferSource();
+    sampleSource2.buffer = audioBuffer2;
+    sampleSource2.loop = true;
+    sampleSource2.connect(ctx.destination);
+    sampleSource2.start();
+}
+async function sekonkonPlay(){
+    const sekonkon = await decodeSe2();
+    playSe2(ctx,sekonkon);
+}
+async function sekonkonStop(){
+    sampleSource2?.stop();
+}
+
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+
+let body =  document.getElementById('body');
+let eli1 = document.getElementById('eli1');
+let eli2 = document.getElementById('eli2');
+let eli3 = document.getElementById('eli3');
+let eli4 = document.getElementById('eli4');
+let eli5 = document.getElementById('eli5');
+let eli6 = document.getElementById('eli6');
+//let elikoe = document.getElementById('elivoice');
+//let dondon = document.getElementById('konkonse');
+//load(); play(); pause();
+let konkon = document.getElementById('konkon');
+let door = document.getElementById('door');
+
+door.addEventListener('mouseover',function(){door.style.cursor = 'pointer';});
+door.addEventListener('click',function(){
+    //elikoe.load();
+    //elikoe.play();
+    seelivoicePlay();
+    door.style.display = 'none';
+    eli1.style.display = 'block';
+    eli2.style.display = 'block';
+    eli3.style.display = 'block';
+    eli4.style.display = 'block';
+    eli5.style.display = 'block';
+    eli6.style.display = 'block';
+});
+
+function elizabethHide(){
+    eli1.style.display = 'none';
+    eli2.style.display = 'none';
+    eli3.style.display = 'none';
+    eli4.style.display = 'none';
+    eli5.style.display = 'none';
+    eli6.style.display = 'none';
+}
+
+eli1.addEventListener('mouseover',function(){eli1.style.cursor = 'pointer';});
+eli1.addEventListener('click',function(){
+    if(elikoeplaying===true){seelivoiceStop();}
+    location.href = 'akeru.html';
+});
+
+eli2.addEventListener('mouseover',function(){eli2.style.cursor = 'pointer';});
+eli2.addEventListener('click',function(){
+    //elikoe.pause();
+    if(elikoeplaying===true){seelivoiceStop();}
+    elizabethHide();
+    body.style.backgroundColor = '#a40000';
+    //dondon.load();
+    //dondon.play();
+    sekonkonPlay();
+    konkon.style.display = 'inline';
+});
+
+eli3.addEventListener('mouseover',function(){eli3.style.cursor = 'pointer';});
+eli3.addEventListener('click',function(){
+    if(elikoeplaying===true){seelivoiceStop();}
+    location.href = 'utsuru.html';
+});
+
+eli4.addEventListener('mouseover',function(){eli4.style.cursor = 'pointer';});
+eli4.addEventListener('click',function(){
+    if(elikoeplaying===true){seelivoiceStop();}
+    location.href = 'ydad.html';
+});
+
+eli5.addEventListener('mouseover',function(){eli5.style.cursor = 'pointer';});
+eli5.addEventListener('click',function(){
+    if(elikoeplaying===true){seelivoiceStop();}
+    location.href = 'oiaaeptoiympe.html';
+});
+
+eli6.addEventListener('mouseover',function(){eli6.style.cursor = 'pointer';});
+eli6.addEventListener('click',function(){
+    if(elikoeplaying===true){seelivoiceStop();}
+    location.href = 'curse.html';
+});
+</script>
+</body>
+</html>

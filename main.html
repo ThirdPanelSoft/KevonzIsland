@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Expires" content="Fri, 15 Aug 2025 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>KEVONZ ISLAND</title>
+<link rel="icon"href="image/favicon.ico">
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#mainent1{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index: 0;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#mainent2{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index: 0;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#entdoor1{
+    background-color:#000000;
+    opacity: 0.1;
+    width:276px;
+    height:347px;
+    position:absolute;
+    left:347px;
+    top:173px;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#entdoor2{
+    background-color: #000000;
+    opacity: 0.1;
+    width:276px;
+    height:347px;
+    position:absolute;
+    left:347px;
+    top:173px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#mainpic1{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index: 0;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#link1a{
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:560px;
+    left:20px;
+    z-index: 1;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#link1b{
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:560px;
+    left:60px;
+    z-index: 2;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#link1c{
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:560px;
+    left:100px;
+    z-index: 3;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#link1d{
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:560px;
+    left:140px;
+    z-index: 4;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#ghostarea{
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:560px;
+    left:180px;
+    z-index: 5;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#yukie{
+    width:970px;
+    height:560px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index: 6;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#link2a{
+    position:absolute;
+    top:200px;
+    left:69px;
+    z-index: 4;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#link2b{
+    position:absolute;
+    top:200px;
+    left:294px;
+    z-index: 5;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#link2c{
+    position:absolute;
+    top:200px;
+    left:519px;
+    z-index: 6;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#link2d{
+    position:absolute;
+    top:200px;
+    left:744px;
+    z-index: 7;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<div id="d1">
+<!--エントランス-->
+<img src="pimg/mainent1.jpg"id="mainent1">
+<img src="pimg/mainent2.jpg"id="mainent2">
+<div id="entdoor1"></div>
+<div id="entdoor2"></div>
+<!--メイン1リンク-->
+<img src="pimg/mainpic1.jpg"id="mainpic1">
+<img src="pimg/mainlink.jpg"id="link1a">
+<img src="pimg/mainlink.jpg"id="link1b">
+<img src="pimg/mainlink.jpg"id="link1c">
+<img src="pimg/mainlink.jpg"id="link1d">
+<img src="pimg/mainlink.jpg"id="ghostarea">
+<img src="pimg/mainyukie.gif"id="yukie">
+<!--メイン2リンク-->
+<img src="pimg/door.jpg"id="link2a">
+<img src="pimg/door.jpg"id="link2b">
+<img src="pimg/door.jpg"id="link2c">
+<img src="pimg/door.jpg"id="link2d">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+/*★には同じ数字、☆には同じスペル(変数、関数)、◇にはファイルのパスを入力
+let sampleSource★ = '';
+async function decodeSe★(){
+    const response★ = await fetch("◇◇◇");
+    const arrayBuffer★ = await response★.arrayBuffer();
+    const audioBuffer★ = await ctx.decodeAudioData(arrayBuffer★);
+    return audioBuffer★;
+}
+function playSe★(ctx,audioBuffer★){
+    sampleSource★ = ctx.createBufferSource();
+    sampleSource★.buffer = audioBuffer★;
+    sampleSource★.connect(ctx.destination);
+    sampleSource★.start();
+}
+async function se☆Play(){
+    const se☆ = await decodeSe★();
+    playSe★(ctx,se☆);
+}
+async function se☆Stop(){
+    sampleSource★?.stop();
+}
+*/
+
+/*
+<audio id="doorse" preload="auto">
+<source src="pse/doorkishimi.mp3" type="audio/mp3">
+</audio>
+
+<audio id="bgm" preload="auto" loop>
+<source src="pse/horrorbgm.mp3" type="audio/mp3">
+</audio>
+
+<audio id="yukiekoe" preload="auto">
+<source src="pse/kbsmkoe.mp3" type="audio/mp3">
+</audio>
+
+<audio id="maindollkoe" preload="auto">
+<source src="pse/maindollkoe.mp3" type="audio/mp3">
+</audio>
+*/
+
+/*★★★★★★★★★★★★★★★★★効果音のセット★★★★★★★★★★★★★★★★★★★★*/
+window.AudioContext = window.AudioContext||window.webkitAudioContext;
+const ctx = new AudioContext();
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource1 = '';
+async function decodeSe1(){
+    const response1 = await fetch("pse/doorkishimi.mp3");
+    const arrayBuffer1 = await response1.arrayBuffer();
+    const audioBuffer1 = await ctx.decodeAudioData(arrayBuffer1);
+    return audioBuffer1;
+}
+function playSe1(ctx,audioBuffer1){
+    sampleSource1 = ctx.createBufferSource();
+    sampleSource1.buffer = audioBuffer1;
+    sampleSource1.connect(ctx.destination);
+    sampleSource1.start();
+}
+async function sedoorPlay(){
+    const sedoor = await decodeSe1();
+    playSe1(ctx,sedoor);
+}
+async function sedoorStop(){
+    sampleSource1?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let bgmplaying = false;
+let sampleSource2 = '';
+async function decodeSe2(){
+}
+function playSe2(ctx,audioBuffer2){
+    sampleSource2 = ctx.createBufferSource();
+    sampleSource2.buffer = audioBuffer2;
+    sampleSource2.loop = true;
+    /*音量を小さくする*/
+    const gainNode = ctx.createGain();
+    gainNode.gain.value = 0.3;
+    sampleSource2.connect(gainNode);
+    gainNode.connect(ctx.destination);
+    sampleSource2.start();
+    bgmplaying = true;
+}
+async function sebgmPlay(){
+    const sebgm = await decodeSe2();
+    playSe2(ctx,sebgm);
+}
+async function sebgmStop(){
+    sampleSource2?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let yukiekoeplaying = false;
+let sampleSource3 = '';
+async function decodeSe3(){
+    const response3 = await fetch("pse/kbsmkoe.mp3");
+    const arrayBuffer3 = await response3.arrayBuffer();
+    const audioBuffer3 = await ctx.decodeAudioData(arrayBuffer3);
+    return audioBuffer3;
+}
+function playSe3(ctx,audioBuffer3){
+    sampleSource3 = ctx.createBufferSource();
+    sampleSource3.buffer = audioBuffer3;
+    sampleSource3.connect(ctx.destination);
+    sampleSource3.start();
+    yukiekoeplaying = true;
+}
+async function seyukiekoePlay(){
+    const seyukiekoe = await decodeSe3();
+    playSe3(ctx,seyukiekoe);
+}
+async function seyukiekoeStop(){
+    sampleSource3?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let dollkoeplaying = false;
+let sampleSource4 = '';
+async function decodeSe4(){
+}
+function playSe4(ctx,audioBuffer4){
+    sampleSource4 = ctx.createBufferSource();
+    sampleSource4.buffer = audioBuffer4;
+    sampleSource4.connect(ctx.destination);
+    sampleSource4.start();
+    dollkoeplaying = true;
+}
+async function semaindollkoePlay(){
+    const semaindollkoe = await decodeSe4();
+    playSe4(ctx,semaindollkoe);
+}
+async function semaindollkoeStop(){
+    sampleSource4?.stop();
+}
+
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let mainent1 = document.getElementById('mainent1');
+let mainent2 = document.getElementById('mainent2');
+let entdoor1 = document.getElementById('entdoor1');
+let entdoor2 = document.getElementById('entdoor2');
+let mainpic1 = document.getElementById('mainpic1');
+let link1a = document.getElementById('link1a');
+let link1b = document.getElementById('link1b');
+let link1c = document.getElementById('link1c');
+let link1d = document.getElementById('link1d');
+let ghostarea = document.getElementById('ghostarea');
+let yukie = document.getElementById('yukie');
+//let bgm = document.getElementById('bgm');
+//let doorse = document.getElementById('doorse');
+//let yukiekoe = document.getElementById('yukiekoe');
+//let maindollkoe = document.getElementById('maindollkoe');
+//load(); play(); pause();
+let waitPoint = 1;
+
+let mainpic2 = document.getElementById('mainpic2');
+let hantei1 = document.getElementById('hantei1');
+let hantei2 = document.getElementById('hantei2');
+let hantei3 = document.getElementById('hantei3');
+let link2a = document.getElementById('link2a');
+let link2b = document.getElementById('link2b');
+let link2c = document.getElementById('link2c');
+let link2d = document.getElementById('link2d');
+//let dollkoe = document.getElementById('maindollkoe');
+
+entdoor1.addEventListener('mouseover',function(){entdoor1.style.cursor = 'pointer';});
+entdoor1.addEventListener('click',function(){
+    //doorse.load();
+    //doorse.play();
+    sedoorPlay();
+    decodeSe2();
+    decodeSe3();
+    decodeSe4();
+    mainent1.style.display = 'none';
+    entdoor1.style.display = 'none';
+    mainent2.style.display = 'inline';
+    entdoor2.style.display = 'inline';
+});
+entdoor2.addEventListener('mouseover',function(){entdoor2.style.cursor = 'pointer';});
+entdoor2.addEventListener('click',function(){
+    //bgm.load();
+    //bgm.play();
+    sebgmPlay();
+    mainent2.style.display = 'none';
+    entdoor2.style.display = 'none';
+        link2a.style.display = 'inline';
+        link2b.style.display = 'inline';
+        link2c.style.display = 'inline';
+        link2d.style.display = 'inline';
+});
+
+link1a.addEventListener('mouseover',function(){link1a.style.cursor = 'pointer';});
+link1a.addEventListener('click',function(){
+    if(bgmplaying===true){sebgmStop();}
+    if(yukiekoeplaying===true){seyukiekoeStop();}
+    if(dollkoeplaying===true){semaindollkoeStop();}
+    location.href = 'elijah.html';
+});
+
+link1b.addEventListener('mouseover',function(){link1b.style.cursor = 'pointer';});
+link1b.addEventListener('click',function(){
+    if(bgmplaying===true){sebgmStop();}
+    if(yukiekoeplaying===true){seyukiekoeStop();}
+    if(dollkoeplaying===true){semaindollkoeStop();}
+    location.href = 'chaos.html';
+});
+
+link1c.addEventListener('mouseover',function(){link1c.style.cursor = 'pointer';});
+link1c.addEventListener('click',function(){
+    if(bgmplaying===true){sebgmStop();}
+    if(yukiekoeplaying===true){seyukiekoeStop();}
+    if(dollkoeplaying===true){semaindollkoeStop();}
+    location.href = 'heven.html';
+});
+
+link1d.addEventListener('mouseover',function(){link1d.style.cursor = 'pointer';});
+link1d.addEventListener('click',function(){
+    if(bgmplaying===true){sebgmStop();}
+    if(yukiekoeplaying===true){seyukiekoeStop();}
+    if(dollkoeplaying===true){semaindollkoeStop();}
+    location.href = 'eden.html';
+});
+
+link2a.addEventListener('mouseover',function(){link2a.style.cursor = 'pointer';});
+link2a.addEventListener('click',function(){
+    if(bgmplaying===true){sebgmStop();}
+    if(yukiekoeplaying===true){seyukiekoeStop();}
+    if(dollkoeplaying===true){semaindollkoeStop();}
+    location.href = 'elijah.html';
+});
+
+link2b.addEventListener('mouseover',function(){link2b.style.cursor = 'pointer';});
+link2b.addEventListener('click',function(){
+    if(bgmplaying===true){sebgmStop();}
+    if(yukiekoeplaying===true){seyukiekoeStop();}
+    if(dollkoeplaying===true){semaindollkoeStop();}
+    location.href = 'chaos.html';
+});
+
+link2c.addEventListener('mouseover',function(){link2c.style.cursor = 'pointer';});
+link2c.addEventListener('click',function(){
+    if(bgmplaying===true){sebgmStop();}
+    if(yukiekoeplaying===true){seyukiekoeStop();}
+    if(dollkoeplaying===true){semaindollkoeStop();}
+    location.href = 'heven.html';
+});
+
+link2d.addEventListener('mouseover',function(){link2d.style.cursor = 'pointer';});
+link2d.addEventListener('click',function(){
+    if(bgmplaying===true){sebgmStop();}
+    if(yukiekoeplaying===true){seyukiekoeStop();}
+    if(dollkoeplaying===true){semaindollkoeStop();}
+    location.href = 'eden.html';
+});
+
+ghostarea.addEventListener('mouseover',function(){ghostarea.style.cursor = 'pointer';});
+ghostarea.addEventListener('click',function(){
+    //yukiekoe.load();
+    //yukiekoe.play();
+    seyukiekoePlay();
+    ghostarea.style.display = 'none';
+    yukie.style.display = 'inline';
+    let timerId = setInterval(function(){
+        if(waitPoint<=0){
+            yukie.style.display = 'none';
+        }
+        waitPoint--;
+    },240);
+});
+
+hantei1.addEventListener('mouseover',function(){hantei1.style.cursor = 'pointer';});
+hantei1.addEventListener('click',function(){
+    //dollkoe.load();
+    //dollkoe.play();
+    semaindollkoePlay();
+});
+
+hantei2.addEventListener('mouseover',function(){hantei2.style.cursor = 'pointer';});
+hantei2.addEventListener('click',function(){
+    //dollkoe.load();
+    //dollkoe.play();
+    semaindollkoePlay();
+});
+
+hantei3.addEventListener('mouseover',function(){hantei3.style.cursor = 'pointer';});
+hantei3.addEventListener('click',function(){
+    //dollkoe.load();
+    //dollkoe.play();
+    semaindollkoePlay();
+});
+</script>
+<!--
+<script src="js/.js"></script>
+-->
+</body>
+</html>

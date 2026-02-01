@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Expires" content="Fri, 15 Aug 2025 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>KEVONZ ISLAND</title>
+<link rel="icon"href="image/favicon.ico">
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#kai0{width:970px;height:580px;position:absolute;left:0px;top:0px;}
+#kai1{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai3{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai4{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai5{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai6{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai7{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai8{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai9{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai10{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai11{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai12{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai13{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai14{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai15{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai16{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai17{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai18{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai19{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai20{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai21{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai22{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai23{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai24{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai25{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai26{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai27{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#kai28{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#odo1{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#odo2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#odo3{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#chokushin{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#tapedrop{width:50px;height:60px;position:absolute;left:424px;top:170px;display:none;}
+#tapethum{width:170px;height:200px;position:absolute;left:334px;top:303px;display:none;}
+
+#tapeup{width:370px;height:580px;position:absolute;left:300px;top:0px;display:none;}
+#tstartbt{width:22px;height:59px;position:absolute;left:300px;top:160px;display:none;}
+#tokuribt1{width:22px;height:41px;position:absolute;left:300px;top:227px;display:none;}
+#tokuribt2{width:22px;height:41px;position:absolute;left:300px;top:227px;display:none;}
+#tapemove{width:127px;height:297px;position:absolute;left:505px;top:155px;display:none;}
+#pieyama{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#hitarea1{
+    width:380px;height:330px;
+    position:absolute;left:196px;top:249px;
+    background-color:#ffffff;opacity:0.0;
+}
+#hitarea2{width:55px;height:580px;position:absolute;left:0px;top:0px;opacity:0.5;display:none;}
+#hitarea3{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#ffffff;opacity:0.0;display:none;
+}
+#tochoku{width:970px;height:500px;position:absolute;left:0px;top:0px;opacity:0.5;display:none;}
+#todown{width:970px;height:80px;position:absolute;left:0px;bottom:0px;opacity:0.5;display:none;}
+#breaktarea{
+    width:108px;height:108px;
+    position:absolute;left:690px;top:466px;border-radius:50%;
+    background-color:#ff0000;opacity:0.0;display:none;
+}
+#telopeng{
+    font-size:20px;color:#ffffff;font-weight:bold;text-align:left;
+    line-height:1em;margin:0px;padding:0px;
+    position:absolute;left:170px;bottom:10px;
+}
+#nphitarea{
+    width:178px;height:262px;
+    position:absolute;left:356px;bottom:0px;
+    background-color:#ff42bd;opacity:0.0;display:none;
+}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<!--/*
+<audio id="kaidanoriruse" preload="auto">
+<source src="pse/kaidanoriru.wav" type="audio/wav">
+<source src="pse/kaidanoriru.mp3" type="audio/mp3">
+</audio>
+
+<audio id="walkse6" preload="auto">
+<source src="pse/walk6.wav" type="audio/wav">
+<source src="pse/walk6.mp3" type="audio/mp3">
+</audio>
+
+<audio id="tapekoe" preload="auto">
+<source src="pse/kaitkoe.wav" type="audio/wav">
+<source src="pse/kaitkoe.mp3" type="audio/mp3">
+</audio>
+
+<audio id="tapeskipkoe" preload="auto">
+<source src="pse/kaitkoeskip.wav" type="audio/wav">
+<source src="pse/kaitkoeskip.mp3" type="audio/mp3">
+</audio>
+
+<audio id="tapebtse" preload="auto">
+<source src="pse/tapebt.wav" type="audio/wav">
+<source src="pse/tapebt.mp3" type="audio/mp3">
+</audio>
+
+<audio id="pieyamakoe" preload="auto">
+<source src="pse/kaipiekoe.wav" type="audio/wav">
+<source src="pse/kaipiekoe.mp3" type="audio/mp3">
+</audio>
+
+<audio id="tapefallse" preload="auto">
+<source src="pse/kaitfall.wav" type="audio/wav">
+<source src="pse/kaitfall.mp3" type="audio/mp3">
+</audio>
+
+<audio id="tapebreakse" preload="auto">
+<source src="pse/kaitbreak.wav" type="audio/wav">
+<source src="pse/kaitbreak.mp3" type="audio/mp3">
+</audio>
+*/-->
+
+<div id="d1">
+<img src="pimg/kai0.jpg"id="kai0">
+<img src="pimg/kai1.jpg"id="kai1">
+<img src="pimg/kai2.jpg"id="kai2">
+<img src="pimg/kai3.jpg"id="kai3">
+<img src="pimg/kai4.jpg"id="kai4">
+<img src="pimg/kai5.jpg"id="kai5">
+<img src="pimg/kai6.jpg"id="kai6">
+<img src="pimg/kai7.jpg"id="kai7">
+<img src="pimg/kai8.jpg"id="kai8">
+<img src="pimg/kai9.jpg"id="kai9">
+<img src="pimg/kai10.jpg"id="kai10">
+<img src="pimg/kai11.jpg"id="kai11">
+<img src="pimg/kai12.jpg"id="kai12">
+<img src="pimg/kai13.jpg"id="kai13">
+<img src="pimg/kai14.jpg"id="kai14">
+<img src="pimg/kai15.jpg"id="kai15">
+<img src="pimg/kai16.jpg"id="kai16">
+<img src="pimg/kai17.jpg"id="kai17">
+<img src="pimg/kai18.jpg"id="kai18">
+<img src="pimg/kai19.jpg"id="kai19">
+<img src="pimg/kai20.jpg"id="kai20">
+<img src="pimg/kai21.jpg"id="kai21">
+<img src="pimg/kai22.jpg"id="kai22">
+<img src="pimg/kai23.jpg"id="kai23">
+<img src="pimg/kai24.jpg"id="kai24">
+<img src="pimg/kai25.jpg"id="kai25">
+<img src="pimg/kai26.jpg"id="kai26">
+<img src="pimg/kai27.jpg"id="kai27">
+<img src="pimg/kai28.jpg"id="kai28">
+<img src="pimg/kaiodo1.jpg"id="odo1">
+<img src="pimg/kaiodo2.jpg"id="odo2">
+<img src="pimg/kaiodo3.jpg"id="odo3">
+<img src="pimg/chokumatakaidan.gif"id="chokushin">
+<img src="pimg/kaidantape.png"id="tapedrop">
+<img src="pimg/kaidantape.png"id="tapethum">
+<img src="pimg/kaitup.png"id="tapeup">
+<img src="pimg/kaitstartbt.png"id="tstartbt">
+<img src="pimg/kaitokuribt.png"id="tokuribt1">
+<img src="pimg/kaitokuribt.png"id="tokuribt2">
+<img src="pimg/kaitmove.gif"id="tapemove">
+<img src="pimg/niggahamed.png"id="pieyama">
+<div id="hitarea1"></div>
+<img src="pimg/yamiyajileft.gif" id="hitarea2">
+<div id="hitarea3"></div>
+<img src="pimg/kaidantochoku.gif"id="tochoku">
+<img src="pimg/kaidantodown.gif"id="todown">
+<div id="breaktarea"></div>
+<p id="telopeng"></p>
+<div id="nphitarea"></div>
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+/*★には同じ数字、☆には同じスペル(変数、関数)、◇にはファイルのパスを入力
+let sampleSource★ = '';
+async function decodeSe★(){
+    const response★ = await fetch("◇◇◇");
+    const arrayBuffer★ = await response★.arrayBuffer();
+    const audioBuffer★ = await ctx.decodeAudioData(arrayBuffer★);
+    return audioBuffer★;
+}
+function playSe★(ctx,audioBuffer★){
+    sampleSource★ = ctx.createBufferSource();
+    sampleSource★.buffer = audioBuffer★;
+    sampleSource★.connect(ctx.destination);
+    sampleSource★.start();
+}
+async function se☆Play(){
+    const se☆ = await decodeSe★();
+    playSe★(ctx,se☆);
+}
+async function se☆Stop(){
+    sampleSource★?.stop();
+}
+*/
+
+/*
+<audio id="kaidanoriruse" preload="auto">
+<source src="pse/kaidanoriru.mp3" type="audio/mp3">【済】
+</audio>
+
+<audio id="walkse6" preload="auto">
+<source src="pse/walk6.mp3" type="audio/mp3">【済】
+</audio>
+
+<audio id="tapekoe" preload="auto">
+<source src="pse/kaitkoe.mp3" type="audio/mp3">【済】
+</audio>
+
+<audio id="tapeskipkoe" preload="auto">
+<source src="pse/kaitkoeskip.mp3" type="audio/mp3">【済】
+</audio>
+
+<audio id="tapebtse" preload="auto">
+<source src="pse/tapebt.mp3" type="audio/mp3">【済】
+</audio>
+
+<audio id="pieyamakoe" preload="auto">
+<source src="pse/kaipiekoe.mp3" type="audio/mp3">【済】
+</audio>
+
+<audio id="tapefallse" preload="auto">
+<source src="pse/kaitfall.mp3" type="audio/mp3">
+</audio>
+
+<audio id="tapebreakse" preload="auto">
+<source src="pse/kaitbreak.mp3" type="audio/mp3">
+</audio>
+*/
+
+/*★★★★★★★★★★★★★★★★★効果音のセット★★★★★★★★★★★★★★★★★★★★*/
+window.AudioContext = window.AudioContext||window.webkitAudioContext;
+const ctx = new AudioContext();
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let kudaruplaying = false;
+let sampleSource1 = '';
+async function decodeSe1(){
+    const response1 = await fetch("pse/kaidanoriru.mp3");
+    const arrayBuffer1 = await response1.arrayBuffer();
+    const audioBuffer1 = await ctx.decodeAudioData(arrayBuffer1);
+    return audioBuffer1;
+}
+function playSe1(ctx,audioBuffer1){
+    sampleSource1 = ctx.createBufferSource();
+    sampleSource1.buffer = audioBuffer1;
+    sampleSource1.connect(ctx.destination);
+    sampleSource1.start();
+    kudaruplaying = true;
+}
+async function sekaidanoriruPlay(){
+    const sekaidanoriru = await decodeSe1();
+    playSe1(ctx,sekaidanoriru);
+}
+async function sekaidanoriruStop(){
+    sampleSource1?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource2 = '';
+async function decodeSe2(){
+    const response2 = await fetch("pse/walk6.mp3");
+    const arrayBuffer2 = await response2.arrayBuffer();
+    const audioBuffer2 = await ctx.decodeAudioData(arrayBuffer2);
+    return audioBuffer2;
+}
+function playSe2(ctx,audioBuffer2){
+    sampleSource2 = ctx.createBufferSource();
+    sampleSource2.buffer = audioBuffer2;
+    sampleSource2.connect(ctx.destination);
+    sampleSource2.start();
+}
+async function sewalkPlay(){
+    const sewalk = await decodeSe2();
+    playSe2(ctx,sewalk);
+}
+async function sewalkStop(){
+    sampleSource2?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let tapekoeplaying = false;
+let sampleSource3 = '';
+async function decodeSe3(){
+    const response3 = await fetch("pse/kaitkoe.mp3");
+    const arrayBuffer3 = await response3.arrayBuffer();
+    const audioBuffer3 = await ctx.decodeAudioData(arrayBuffer3);
+    return audioBuffer3;
+}
+function playSe3(ctx,audioBuffer3){
+    sampleSource3 = ctx.createBufferSource();
+    sampleSource3.buffer = audioBuffer3;
+    sampleSource3.connect(ctx.destination);
+    sampleSource3.start();
+    tapekoeplaying = true;
+}
+async function setapekoePlay(){
+    const setapekoe = await decodeSe3();
+    playSe3(ctx,setapekoe);
+}
+async function setapekoeStop(){
+    sampleSource3?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource4 = '';
+async function decodeSe4(){
+    const response4 = await fetch("pse/kaitkoeskip.mp3");
+    const arrayBuffer4 = await response4.arrayBuffer();
+    const audioBuffer4 = await ctx.decodeAudioData(arrayBuffer4);
+    return audioBuffer4;
+}
+function playSe4(ctx,audioBuffer4){
+    sampleSource4 = ctx.createBufferSource();
+    sampleSource4.buffer = audioBuffer4;
+    sampleSource4.connect(ctx.destination);
+    sampleSource4.start();
+}
+async function setapeskipkoePlay(){
+    const setapeskipkoe = await decodeSe4();
+    playSe4(ctx,setapeskipkoe);
+}
+async function setapeskipkoeStop(){
+    sampleSource4?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource5 = '';
+async function decodeSe5(){
+    const response5 = await fetch("pse/tapebt.mp3");
+    const arrayBuffer5 = await response5.arrayBuffer();
+    const audioBuffer5 = await ctx.decodeAudioData(arrayBuffer5);
+    return audioBuffer5;
+}
+function playSe5(ctx,audioBuffer5){
+    sampleSource5 = ctx.createBufferSource();
+    sampleSource5.buffer = audioBuffer5;
+    sampleSource5.connect(ctx.destination);
+    sampleSource5.start();
+}
+async function setapebtPlay(){
+    const setapebt = await decodeSe5();
+    playSe5(ctx,setapebt);
+}
+async function setapebtStop(){
+    sampleSource5?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource6 = '';
+async function decodeSe6(){
+    const response6 = await fetch("pse/kaipiekoe.mp3");
+    const arrayBuffer6 = await response6.arrayBuffer();
+    const audioBuffer6 = await ctx.decodeAudioData(arrayBuffer6);
+    return audioBuffer6;
+}
+function playSe6(ctx,audioBuffer6){
+    sampleSource6 = ctx.createBufferSource();
+    sampleSource6.buffer = audioBuffer6;
+    sampleSource6.connect(ctx.destination);
+    sampleSource6.start();
+}
+async function sepieyamakoePlay(){
+    const sepieyamakoe = await decodeSe6();
+    playSe6(ctx,sepieyamakoe);
+}
+async function sepieyamakoeStop(){
+    sampleSource6?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource7 = '';
+async function decodeSe7(){
+    const response7 = await fetch("pse/kaitfall.mp3");
+    const arrayBuffer7 = await response7.arrayBuffer();
+    const audioBuffer7 = await ctx.decodeAudioData(arrayBuffer7);
+    return audioBuffer7;
+}
+function playSe7(ctx,audioBuffer7){
+    sampleSource7 = ctx.createBufferSource();
+    sampleSource7.buffer = audioBuffer7;
+    sampleSource7.connect(ctx.destination);
+    sampleSource7.start();
+}
+async function setapefallPlay(){
+    const setapefall = await decodeSe7();
+    playSe7(ctx,setapefall);
+}
+async function setapefallStop(){
+    sampleSource7?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource8 = '';
+async function decodeSe8(){
+    const response8 = await fetch("pse/kaitbreak.mp3");
+    const arrayBuffer8 = await response8.arrayBuffer();
+    const audioBuffer8 = await ctx.decodeAudioData(arrayBuffer8);
+    return audioBuffer8;
+}
+function playSe8(ctx,audioBuffer8){
+    sampleSource8 = ctx.createBufferSource();
+    sampleSource8.buffer = audioBuffer8;
+    sampleSource8.connect(ctx.destination);
+    sampleSource8.start();
+}
+async function setapebreakPlay(){
+    const setapebreak = await decodeSe8();
+    playSe8(ctx,setapebreak);
+}
+async function setapebreakStop(){
+    sampleSource8?.stop();
+}
+
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let body = document.getElementById('body');
+let kai0 = document.getElementById('kai0');
+let kai1 = document.getElementById('kai1');
+let kai2 = document.getElementById('kai2');
+let kai3 = document.getElementById('kai3');
+let kai4 = document.getElementById('kai4');
+let kai5 = document.getElementById('kai5');
+let kai6 = document.getElementById('kai6');
+let kai7 = document.getElementById('kai7');
+let kai8 = document.getElementById('kai8');
+let kai9 = document.getElementById('kai9');
+let kai10 = document.getElementById('kai10');
+let kai11 = document.getElementById('kai11');
+let kai12 = document.getElementById('kai12');
+let kai13 = document.getElementById('kai13');
+let kai14 = document.getElementById('kai14');
+let kai15 = document.getElementById('kai15');
+let kai16 = document.getElementById('kai16');
+let kai17 = document.getElementById('kai17');//ここで止める
+let kai18 = document.getElementById('kai18');
+let kai19 = document.getElementById('kai19');
+let kai20 = document.getElementById('kai20');
+let kai21 = document.getElementById('kai21');
+let kai22 = document.getElementById('kai22');
+let kai23 = document.getElementById('kai23');//踊り場で停止
+let kai24 = document.getElementById('kai24');
+let kai25 = document.getElementById('kai25');//踊り場で振り向いて停止
+let kai26 = document.getElementById('kai26');
+let kai27 = document.getElementById('kai27');
+let kai28 = document.getElementById('kai28');
+let odo1 = document.getElementById('odo1');
+let odo2 = document.getElementById('odo2');
+let odo3 = document.getElementById('odo3');
+let tapedrop = document.getElementById('tapedrop');
+let tapethum = document.getElementById('tapethum');
+let tapeup = document.getElementById('tapeup');
+let tstartbt = document.getElementById('tstartbt');
+let tokuribt1 = document.getElementById('tokuribt1');
+let tokuribt2 = document.getElementById('tokuribt2');
+let tapemove = document.getElementById('tapemove');
+let pieyama = document.getElementById('pieyama');
+let hitarea1 = document.getElementById('hitarea1');
+let hitarea2 = document.getElementById('hitarea2');
+let hitarea3 = document.getElementById('hitarea3');
+let tochoku = document.getElementById('tochoku');
+let todown = document.getElementById('todown');
+let breaktarea = document.getElementById('breaktarea');
+let chokushin = document.getElementById('chokushin');
+let telopeng = document.getElementById('telopeng');
+let nphitarea = document.getElementById('nphitarea');
+//効果音
+//let sekaidanoriru = document.getElementById('kaidanoriruse');
+//let sewalk6 = document.getElementById('walkse6');
+//let koetape = document.getElementById('tapekoe');
+//let koetapeskip = document.getElementById('tapeskipkoe');
+//let setapebt = document.getElementById('tapebtse');
+//let koepieyama = document.getElementById('pieyamakoe');
+//let setapefall = document.getElementById('tapefallse');
+//let setapebreak = document.getElementById('tapebreakse');
+//load(); play(); pause();
+//スコア・ポイント
+let fps1 = 0;
+let fps2 = 0;
+let fps3 = 0;
+let fps4 = 0;
+let fps5 = 0;
+let fps6 = 0;
+let fps7 = 0;
+let timerId4 = '';
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■階段降りる■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+hitarea1.addEventListener('mouseover',function(){hitarea1.style.cursor='pointer';});
+hitarea1.addEventListener('click',function(){
+    //sekaidanoriru.load();
+    //sekaidanoriru.play();
+    sekaidanoriruPlay();
+    decodeSe2();
+    decodeSe3();
+    decodeSe4();
+    decodeSe5();
+    decodeSe6();
+    decodeSe7();
+    decodeSe8();
+    fps1 = 0;
+    hitarea1.style.display = 'none';
+    kai0.style.display = 'none';
+    kai1.style.display = 'inline';
+    let timerId1 = setInterval(function(){
+        fps1++;
+        switch(fps1){
+            case 1:
+            kai1.style.display = 'none';
+            kai2.style.display = 'inline';
+            break;
+            case 2:
+            kai2.style.display = 'none';
+            kai3.style.display = 'inline';
+            break;
+            case 3:
+            kai3.style.display = 'none';
+            kai4.style.display = 'inline';
+            tapedrop.style.display = 'inline';
+            tapedrop.style.width = '50px';
+            tapedrop.style.height = '60px';
+            tapedrop.style.left = '424px';
+            tapedrop.style.top = '170px';
+            break;
+            case 4:
+            kai4.style.display = 'none';
+            kai5.style.display = 'inline';
+            tapedrop.style.width = '50px';
+            tapedrop.style.height = '60px';
+            tapedrop.style.left = '424px';
+            tapedrop.style.top = '150px';
+            break;
+            case 5:
+            kai5.style.display = 'none';
+            kai6.style.display = 'inline';
+            tapedrop.style.width = '68px';
+            tapedrop.style.height = '79px';
+            tapedrop.style.left = '444px';
+            tapedrop.style.top = '75px';
+            break;
+            case 6:
+            kai6.style.display = 'none';
+            kai7.style.display = 'inline';
+            tapedrop.style.width = '68px';
+            tapedrop.style.height = '79px';
+            tapedrop.style.left = '444px';
+            tapedrop.style.top = '55px';
+            break;
+            case 7:
+            kai7.style.display = 'none';
+            kai8.style.display = 'inline';
+            tapedrop.style.width = '87px';
+            tapedrop.style.height = '100px';
+            tapedrop.style.left = '379px';
+            tapedrop.style.top = '102px';
+            break;
+            case 8:
+            kai8.style.display = 'none';
+            kai9.style.display = 'inline';
+            tapedrop.style.width = '87px';
+            tapedrop.style.height = '100px';
+            tapedrop.style.left = '379px';
+            tapedrop.style.top = '82px';
+            break;
+            case 9:
+            kai9.style.display = 'none';
+            kai10.style.display = 'inline';
+            tapedrop.style.width = '105px';
+            tapedrop.style.height = '122px';
+            tapedrop.style.left = '361px';
+            tapedrop.style.top = '115px';
+            break;
+            case 10:
+            kai10.style.display = 'none';
+            kai11.style.display = 'inline';
+            tapedrop.style.width = '105px';
+            tapedrop.style.height = '122px';
+            tapedrop.style.left = '361px';
+            tapedrop.style.top = '94px';
+            break;
+            case 11:
+            kai11.style.display = 'none';
+            kai12.style.display = 'inline';
+            tapedrop.style.width = '123px';
+            tapedrop.style.height = '143px';
+            tapedrop.style.left = '364px';
+            tapedrop.style.top = '185px';
+            break;
+            case 12:
+            kai12.style.display = 'none';
+            kai13.style.display = 'inline';
+            tapedrop.style.width = '123px';
+            tapedrop.style.height = '143px';
+            tapedrop.style.left = '364px';
+            tapedrop.style.top = '164px';
+            break;
+            case 13:
+            kai13.style.display = 'none';
+            kai14.style.display = 'inline';
+            tapedrop.style.width = '142px';
+            tapedrop.style.height = '165px';
+            tapedrop.style.left = '370px';
+            tapedrop.style.top = '241px';
+            break;
+            case 14:
+            kai14.style.display = 'none';
+            kai15.style.display = 'inline';
+            tapedrop.style.width = '142px';
+            tapedrop.style.height = '165px';
+            tapedrop.style.left = '370px';
+            tapedrop.style.top = '221px';
+            break;
+            case 15:
+            kai15.style.display = 'none';
+            kai16.style.display = 'inline';
+            tapedrop.style.width = '170px';
+            tapedrop.style.height = '200px';
+            tapedrop.style.left = '334px';
+            tapedrop.style.top = '323px';
+            break;
+            case 16:
+            //sekaidanoriru.pause();
+            if(kudaruplaying===true){sekaidanoriruStop();}
+            kai16.style.display = 'none';
+            kai17.style.display = 'inline';
+            tapedrop.style.display = 'none';
+            tapethum.style.display = 'inline';
+            clearInterval(timerId1);
+            break;
+        }
+    },160);
+});
+//カセットテープを調べる
+tapethum.addEventListener('mouseover',function(){tapethum.style.cursor = 'pointer';});
+tapethum.addEventListener('click',function(){
+    tapethum.style.display = 'none';
+    tapeup.style.display = 'inline';
+    tstartbt.style.display = 'inline';
+    tokuribt1.style.display = 'inline';
+});
+//カセットテープ再生
+tstartbt.addEventListener('mouseover',function(){tstartbt.style.cursor = 'pointer';});
+tstartbt.addEventListener('click',function(){
+    //setapebt.load();
+    //setapebt.play();
+    //koetape.load();
+    //koetape.play();
+    setapebtPlay();
+    setapekoePlay();
+    tstartbt.style.display = 'none';
+    tokuribt1.style.display = 'none';
+    tokuribt2.style.display = 'inline';
+    tapemove.style.display = 'inline';
+    timerId4 = setInterval(function(){
+        fps4++;
+        switch(fps4){
+            case 117:
+            tokuribt2.style.display = 'none';
+            tokuribt1.style.display = 'inline';
+            break;
+            //パスワードテロップ
+            case 132:
+            telopeng.innerText = 'Th';
+            break;
+            case 133:
+            telopeng.innerText = 'The p';
+            break;
+            case 134:
+            telopeng.innerText = 'The pas';
+            break;
+            case 135:
+            telopeng.innerText = 'The passw';
+            break;
+            case 136:
+            telopeng.innerText = 'The passwor';
+            break;
+            case 137:
+            telopeng.innerText = 'The password t';
+            break;
+            case 138:
+            telopeng.innerText = 'The password to u';
+            break;
+            case 139:
+            telopeng.innerText = 'The password to unl';
+            break;
+            case 140:
+            telopeng.innerText = 'The password to unloc';
+            break;
+            case 141:
+            telopeng.innerText = 'The password to unlock t';
+            break;
+            case 142:
+            telopeng.innerText = 'The password to unlock the';
+            break;
+            case 143:
+            telopeng.innerText = 'The password to unlock the ne';
+            break;
+            case 144:
+            telopeng.innerText = 'The password to unlock the next';
+            break;
+            case 145:
+            telopeng.innerText = 'The password to unlock the next ro';
+            break;
+            case 146:
+            telopeng.innerText = 'The password to unlock the next room';
+            break;
+            case 147:
+            telopeng.innerText = 'The password to unlock the next room do';
+            break;
+            case 148:
+            telopeng.innerText = 'The password to unlock the next room door';
+            break;
+            case 149:
+            telopeng.innerText = 'The password to unlock the next room door is';
+            break;
+            case 150:
+            telopeng.innerText = 'The password to unlock the next room door is 4・';
+            break;
+            case 163:
+            telopeng.innerText = 'The password to unlock the next room door is 4・1・';
+            break;
+            case 173:
+            telopeng.innerText = 'The password to unlock the next room door is 4・1・2…';
+            break;
+            //ピエ山登場(テープ音声終了)
+            case 178:
+            //koepieyama.load();
+            //koepieyama.play();
+            sepieyamakoePlay();
+            telopeng.innerText = '';
+            tokuribt1.style.display = 'none';
+            tokuribt2.style.display = 'none';
+            tapemove.style.display = 'none';
+            tapeup.style.display = 'none';
+            kai17.style.display = 'none';
+            pieyama.style.display = 'inline';
+            break;
+            //テープが落ちて壊れた音
+            case 190:
+            //setapefall.load();
+            //setapefall.play();
+            setapefallPlay();
+            break;
+            //ピエ山引っ込む
+            case 205:
+            hitarea2.style.display = 'inline';
+            clearInterval(timerId4);
+            break;
+        }
+    },80);
+});
+//音声飛ばした場合
+tokuribt2.addEventListener('mouseover',function(){tokuribt2.style.cursor = 'pointer';});
+tokuribt2.addEventListener('click',function(){
+    clearInterval(timerId4);
+    tokuribt2.style.display = 'none';
+    //setapebt.load();
+    //setapebt.play();
+    //koetape.pause();
+    //koetapeskip.load();
+    //koetapeskip.play();
+    setapebtPlay();
+    if(tapekoeplaying===true){setapekoeStop();}
+    setapeskipkoePlay();
+    let timerId5 = setInterval(function(){
+        fps5++;
+        switch(fps5){
+            //パスワードテロップ
+            case 1:
+            telopeng.innerText = 'Th';
+            break;
+            case 2:
+            telopeng.innerText = 'The p';
+            break;
+            case 3:
+            telopeng.innerText = 'The pas';
+            break;
+            case 4:
+            telopeng.innerText = 'The passw';
+            break;
+            case 5:
+            telopeng.innerText = 'The passwor';
+            break;
+            case 6:
+            telopeng.innerText = 'The password t';
+            break;
+            case 7:
+            telopeng.innerText = 'The password to u';
+            break;
+            case 8:
+            telopeng.innerText = 'The password to unl';
+            break;
+            case 9:
+            telopeng.innerText = 'The password to unloc';
+            break;
+            case 10:
+            telopeng.innerText = 'The password to unlock t';
+            break;
+            case 11:
+            telopeng.innerText = 'The password to unlock the';
+            break;
+            case 12:
+            telopeng.innerText = 'The password to unlock the ne';
+            break;
+            case 13:
+            telopeng.innerText = 'The password to unlock the next';
+            break;
+            case 14:
+            telopeng.innerText = 'The password to unlock the next ro';
+            break;
+            case 15:
+            telopeng.innerText = 'The password to unlock the next room';
+            break;
+            case 16:
+            telopeng.innerText = 'The password to unlock the next room do';
+            break;
+            case 17:
+            telopeng.innerText = 'The password to unlock the next room door';
+            break;
+            case 18:
+            telopeng.innerText = 'The password to unlock the next room door is';
+            break;
+            case 19:
+            telopeng.innerText = 'The password to unlock the next room door is 4・';
+            break;
+            case 32:
+            telopeng.innerText = 'The password to unlock the next room door is 4・1・';
+            break;
+            case 42:
+            telopeng.innerText = 'The password to unlock the next room door is 4・1・2…';
+            break;
+            //ピエ山登場(テープ音声終了)
+            case 47:
+            //koepieyama.load();
+            //koepieyama.play();
+            sepieyamakoePlay();
+            telopeng.innerText = '';
+            tapemove.style.display = 'none';
+            tapeup.style.display = 'none';
+            kai17.style.display = 'none';
+            pieyama.style.display = 'inline';
+            break;
+            //テープが落ちて壊れた音
+            case 59:
+            //setapefall.load();
+            //setapefall.play();
+            setapefallPlay();
+            break;
+            //ピエ山引っ込む
+            case 74:
+            hitarea2.style.display = 'inline';
+            clearInterval(timerId5);
+            break;
+        }
+    },80);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■踊り場で振り向く■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+hitarea2.addEventListener('mouseover',function(){hitarea2.style.cursor='pointer';hitarea2.style.opacity='1.0';});
+hitarea2.addEventListener('mouseout',function(){hitarea2.style.opacity = '0.5';});
+hitarea2.addEventListener('click',function(){
+    fps2 = 0;
+    hitarea2.style.display = 'none';
+    pieyama.style.display = 'none';
+    kai23.style.display = 'none';
+    kai24.style.display = 'inline';
+    let timerId2 = setInterval(function(){
+        fps2++;
+        if(fps2 === 1){
+            kai24.style.display = 'none';
+            odo1.style.display = 'inline';
+            tochoku.style.display = 'inline';
+            todown.style.display = 'inline';
+            clearInterval(timerId2);
+        }
+    },80);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■踊り場を真っ直ぐ進む■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+tochoku.addEventListener('mouseover',function(){tochoku.style.cursor='pointer';tochoku.style.opacity = '1.0';});
+tochoku.addEventListener('mouseout',function(){tochoku.style.opacity = '0.5';});
+tochoku.addEventListener('click',function(){
+    fps3 = 0;
+    //sewalk6.load();
+    //sewalk6.play();
+    sewalkPlay();
+    tochoku.style.display = 'none';
+    todown.style.display = 'none';
+    odo1.style.display = 'none';
+    chokushin.style.display = 'inline';
+    let timerId3 = setInterval(function(){
+        fps3++;
+        switch(fps3){
+            case 36:
+            chokushin.style.display = 'none';
+            kai26.style.display = 'inline';
+            break;
+            case 38:
+            kai26.style.display = 'none';
+            kai27.style.display = 'inline';
+            break;
+            case 40:
+            kai27.style.display = 'none';
+            kai28.style.display = 'inline';
+            nphitarea.style.display = 'inline';
+            clearInterval(timerId3);
+            break;
+        }
+    },80);
+});
+//壊れたテープを見る
+todown.addEventListener('mouseover',function(){todown.style.cursor='pointer';todown.style.opacity = '1.0';});
+todown.addEventListener('mouseout',function(){todown.style.opacity = '0.5';});
+todown.addEventListener('click',function(){
+    fps6 = 0;
+    tochoku.style.display = 'none';
+    todown.style.display = 'none';
+    odo1.style.display = 'none';
+    odo2.style.display = 'inline';
+    let timerId6 = setInterval(function(){
+        fps6++;
+        if(fps6 === 1){
+            odo2.style.display = 'none';
+            odo3.style.display = 'inline';
+            breaktarea.style.display = 'inline';
+            clearInterval(timerId6);
+        }
+    },80);
+});
+//壊れたテープを調べて元へ戻る
+breaktarea.addEventListener('mouseover',function(){breaktarea.style.cursor='pointer';});
+breaktarea.addEventListener('click',function(){
+    breaktarea.style.display = 'none';
+    fps7 = 0;
+    //setapebreak.load();
+    //setapebreak.play();
+    setapebreakPlay();
+    telopeng.innerText = '壊れてしまったようだ。(The cassette tape was broken.)';
+    let timerId7 = setInterval(function(){
+        fps7++
+        switch(fps7){
+            case 33:
+            telopeng.innerText = '';
+            odo3.style.display = 'none';
+            odo2.style.display = 'inline';
+            break;
+            case 34:
+            odo2.style.display = 'none';
+            odo1.style.display = 'inline';
+            tochoku.style.display = 'inline';
+            todown.style.display = 'inline';
+            clearInterval(timerId7);
+            break;
+        }
+    },80);
+});
+nphitarea.addEventListener('mouseover',function(){nphitarea.style.cursor='pointer';});
+nphitarea.addEventListener('click',function(){
+    location.href = 'ujinoma.html';
+});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+</html>

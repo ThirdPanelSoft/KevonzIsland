@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Expires" content="Fri, 28 Nov 2025 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>KEVONZ ISLAND</title>
+<link rel="icon"href="image/favicon.ico">
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+/*【パソコン用表示】■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+@media screen and (min-width:961px){
+    #body{
+        background-color: #000000;
+        margin: 0px;
+        padding: 0px;
+        line-height: 1em;
+    }
+    #container{
+        width:100%;
+        height:auto;
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows:auto auto auto;
+    }
+    #header{
+        grid-column:1/2;grid-row:1/2;background-color:#ff9999;
+        box-sizing:border-box;padding-top:23px;padding-bottom:23px;padding-left:24px;text-align:left;
+    }
+    #contents{grid-column:1/2;grid-row:2/3;background-color:#ffdddd;box-sizing:border-box;padding-top:10px;padding-bottom:10px;}
+    #footer{
+        grid-column:1/2;grid-row:3/4;background-color:#ff9999;
+        box-sizing:border-box;padding-top:25px;padding-bottom:25px;
+    }
+    #kanban{width:201px;height:60px;}
+    #copyright2{color:#ffffff;font-size:13px;text-align:center;line-height:130%;margin:0;}
+    #d1{
+        width:970px;
+        height:580px;
+        margin:0 auto;
+        text-align: center;
+        position: relative;
+    }
+    #back1{width:970px;height:580px;position:absolute;left:0px;top:0px;}
+    #back2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #blacksanta{width:668px;height:416px;position:absolute;left:151px;top:10px;display:none;}
+    #blackwreath{width:323px;height:326px;position:absolute;left:0px;top:0px;display:none;}
+    #xmaswreath{width:323px;height:326px;position:absolute;left:0px;top:0px;}
+    #santa{width:668px;height:416px;position:absolute;left:151px;top:10px;}
+    #santaniko{width:251px;height:297px;position:absolute;left:378px;top:11px;}
+    
+    #fukidashi{
+        width:280px;height:189px;position:absolute;left:671px;top:22px;border-radius:30px;
+        background-color:#ffffff;box-sizing:border-box;border:2px solid #000000;display:none;
+        padding-left:20px;padding-top:20px;
+    }
+    #santaserifu{font-size:20px;color:#444444;text-align:left;margin:0px;padding:0px;line-height:140%;}
+    #santaserifueng{font-size:16px;color:#444444;text-align:left;margin:0px;padding:0px;line-height:140%;}
+    
+    #pbox1{width:180px;height:118px;position:absolute;left:120px;bottom:38px;display:none;}
+    #pbox2{width:180px;height:118px;position:absolute;left:406px;bottom:38px;display:none;}
+    #pbox3{width:180px;height:118px;position:absolute;left:692px;bottom:38px;display:none;}
+    #pboxarea1{width:158px;height:106px;position:absolute;left:120px;bottom:50px;background-color:#00ff00;opacity:0.0;display:none;}
+    #pboxarea2{width:158px;height:106px;position:absolute;left:406px;bottom:50px;background-color:#00ff00;opacity:0.0;display:none;}
+    #pboxarea3{width:158px;height:106px;position:absolute;left:692px;bottom:50px;background-color:#00ff00;opacity:0.0;display:none;}
+    /*
+    #pboxopen1{width:532px;height:580px;position:absolute;left:219px;top:0px;display:none;}
+    #pboxopen2{width:532px;height:580px;position:absolute;left:219px;top:0px;display:none;}
+    #pboxopen3{width:532px;height:580px;position:absolute;left:219px;top:0px;display:none;}
+    */
+    /*プレゼントボックス開封にまつわるアイテム*/
+    #housha1{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #housha2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #housha3{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #housha4{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+
+    #lightball1{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #lightball2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #lightball3{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #lightball4{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+
+    #boxblue100{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #boxblue85{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #boxblue70{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #boxred100{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #boxred85{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #boxred70{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #boxgreen100{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #boxgreen85{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #boxgreen70{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+
+    #blankbox100{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #blankbox115{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #blankbox130{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+
+    #hazure1{width:158px;height:106px;position:absolute;left:120px;top:424px;background-color:#ff0000;opacity:0.0;display:none;}
+    #hazure2{width:158px;height:106px;position:absolute;left:406px;top:424px;background-color:#ff0000;opacity:0.0;display:none;}
+    #hazure3{width:158px;height:106px;position:absolute;left:692px;top:424px;background-color:#ff0000;opacity:0.0;display:none;}
+
+    #hadou1{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #hadou2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #hadou3{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    /*ボスラッシュ*/
+    #obk0{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #obk1{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #obk2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #obk3{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #obk4{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #obk5{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #obk6{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #obk7{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #obk8{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #obk9{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #obk10{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #obk11{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #obk12{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #obk13{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #obk14{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #blackout{width:970px;height:580px;position:absolute;left:0px;top:0px;background-color:#000000;opacity:0.9;}
+    #bloodout{width:970px;height:580px;position:absolute;left:0px;top:0px;background-color:#8b0003;display:none;}
+    #fadefont{width:574px;height:229px;position:absolute;left:198px;top:174px;display:none;}
+    #blood1{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #blood2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #blood3{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #blood4{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    #blood5{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+    /*景品*/
+    #prize1{width:250px;height:360px;position:absolute;left:360px;top:45px;display:none;}
+    #prize2{width:250px;height:360px;position:absolute;left:360px;top:45px;display:none;}
+    #prize3{width:250px;height:360px;position:absolute;left:360px;top:45px;display:none;}
+    #prize4{width:250px;height:360px;position:absolute;left:360px;top:45px;display:none;}
+    #prize5{width:250px;height:360px;position:absolute;left:360px;top:45px;display:none;}
+
+    #tochutaisyutsuguard{width:970px;height:580px;position:absolute;left:0px;top:0px;background-color:#000000;display:none;}
+
+    #startbt{width:200px;height:50px;position:absolute;left:385px;top:400px;}
+    #restartbt{width:165px;height:50px;position:absolute;left:185px;bottom:10px;display:none;}
+    #greengotobt{width:165px;height:50px;position:absolute;left:620px;bottom:10px;display:none;}
+    #btnretry{width:351px;height:57px;position:absolute;left:89px;bottom:10px;display:none;}
+    #btngotominitop{width:351px;height:57px;position:absolute;left:530px;bottom:10px;display:none;}
+    /*#btngototop{width:351px;height:57px;position:absolute;left:530px;bottom:10px;display:none;}*/
+    #caution{
+        font-size:18px;color:#ffffff;text-align:center;margin: auto;padding: 0px;line-height:140%;
+        position:absolute;left:0px;right:0px;top:80px;
+    }
+    #copyright{
+        font-size:12px;color:#cccccc;text-align:left;margin:0px;padding:0px;line-height:1em;
+        position:absolute;left:5px;bottom:5px;
+    }
+    /*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+    #loadback{
+        width:970px;height:580px;
+        position:absolute;left:0px;top:0px;
+        background-color:#000000;
+    }
+    #nowloading{
+        width:231px;height:231px;
+        position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+        user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+    }
+}
+/*【スマホ用表示】■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+@media screen and (max-width:960px){
+    #body{
+        background-color: #000000;
+        margin: 0px;
+        padding: 0px;
+        line-height: 1em;
+    }
+    #container{
+        width:100%;
+        height:auto;
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows:auto auto auto;
+    }
+    #header{
+        grid-column:1/2;grid-row:1/2;background-color:#ff9999;
+        box-sizing:border-box;padding-top:5px;padding-bottom:5px;text-align:center;
+    }
+    #contents{grid-column:1/2;grid-row:2/3;background-color:#ffdddd;box-sizing:border-box;padding-top:10px;padding-bottom:10px;}
+    #footer{
+        grid-column:1/2;grid-row:3/4;background-color:#ff9999;
+        box-sizing:border-box;padding-top:25px;padding-bottom:25px;
+    }
+    #kanban{width:201px;height:60px;}
+    #copyright2{color:#ffffff;font-size:11px;text-align:center;line-height:130%;margin:0;}
+    #d1{/*配置変更済み*/
+        width:375px;
+        height:667px;
+        margin:0 auto;
+        text-align: center;
+        position: relative;
+    }
+    #back1{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;}/*配置変更済み*/
+    #back2{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #blacksanta{width:375px;height:234px;position:absolute;left:0px;top:227px;display:none;}/*配置変更済み*/
+    #blackwreath{width:301px;height:304px;position:absolute;left:37px;top:0px;display:none;}/*配置変更済み*/
+    #xmaswreath{width:301px;height:304px;position:absolute;left:37px;top:0px;}/*配置変更済み*/
+    #santa{width:375px;height:234px;position:absolute;left:0px;top:227px;}/*配置変更済み*/
+    #santaniko{width:142px;height:168px;position:absolute;left:127px;top:227px;}/*配置変更済み*/
+    
+    #fukidashi{/*配置変更済み*/
+        width:321px;height:196px;position:absolute;left:27px;top:5px;border-radius:30px;
+        background-color:#ffffff;box-sizing:border-box;border:2px solid #000000;display:none;
+        padding-left:20px;padding-top:20px;
+    }
+    #santaserifu{font-size:20px;color:#444444;text-align:left;margin:0px;padding:0px;line-height:140%;}/*配置変更済み*/
+    #santaserifueng{font-size:16px;color:#444444;text-align:left;margin:0px;padding:0px;line-height:140%;}/*配置変更済み*/
+    
+    #pbox1{width:125px;height:82px;position:absolute;left:0px;top:500px;display:none;}/*配置変更済み*/
+    #pbox2{width:125px;height:82px;position:absolute;left:125px;top:500px;display:none;}/*配置変更済み*/
+    #pbox3{width:125px;height:82px;position:absolute;left:250px;top:500px;display:none;}/*配置変更済み*/
+    #pboxarea1{width:110px;height:73px;position:absolute;left:0px;top:500px;background-color:#00ff00;opacity:0.0;display:none;}/*配置変更済み*/
+    #pboxarea2{width:110px;height:73px;position:absolute;left:125px;top:500px;background-color:#00ff00;opacity:0.0;display:none;}/*配置変更済み*/
+    #pboxarea3{width:110px;height:73px;position:absolute;left:250px;top:500px;background-color:#00ff00;opacity:0.0;display:none;}/*配置変更済み*/
+    /*
+    #pboxopen1{width:532px;height:580px;position:absolute;left:219px;top:0px;display:none;}
+    #pboxopen2{width:532px;height:580px;position:absolute;left:219px;top:0px;display:none;}
+    #pboxopen3{width:532px;height:580px;position:absolute;left:219px;top:0px;display:none;}
+    */
+    /*プレゼントボックス開封にまつわるアイテム*/
+    #housha1{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #housha2{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #housha3{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #housha4{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+
+    #lightball1{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #lightball2{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #lightball3{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #lightball4{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+
+    #boxblue100{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #boxblue85{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #boxblue70{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #boxred100{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #boxred85{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #boxred70{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #boxgreen100{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #boxgreen85{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #boxgreen70{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+
+    #blankbox100{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #blankbox115{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #blankbox130{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+
+    #hazure1{width:110px;height:73px;position:absolute;left:0px;top:500px;background-color:#ff0000;opacity:0.0;display:none;}/*配置変更済み*/
+    #hazure2{width:110px;height:73px;position:absolute;left:125px;top:500px;background-color:#ff0000;opacity:0.0;display:none;}/*配置変更済み*/
+    #hazure3{width:110px;height:73px;position:absolute;left:250px;top:500px;background-color:#ff0000;opacity:0.0;display:none;}/*配置変更済み*/
+    
+    #hadou1{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #hadou2{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #hadou3{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    /*ボスラッシュ*/
+    #obk0{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #obk1{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #obk2{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #obk3{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #obk4{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #obk5{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #obk6{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #obk7{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #obk8{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #obk9{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #obk10{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #obk11{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #obk12{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #obk13{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #obk14{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #blackout{width:375px;height:667px;position:absolute;left:0px;top:0px;background-color:#000000;opacity:0.9;}/*配置変更済み*/
+    #bloodout{width:375px;height:667px;position:absolute;left:0px;top:0px;background-color:#8b0003;display:none;}/*配置変更済み*/
+    #fadefont{width:375px;height:150px;position:absolute;left:0px;top:258px;display:none;}/*配置変更済み*/
+    #blood1{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #blood2{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #blood3{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #blood4{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    #blood5{width:375px;height:667px;position:absolute;left:0px;top:0px;object-fit:cover;display:none;}/*配置変更済み*/
+    /*景品*/
+    #prize1{width:250px;height:360px;position:absolute;left:62px;top:45px;display:none;}/*配置変更済み*/
+    #prize2{width:250px;height:360px;position:absolute;left:62px;top:45px;display:none;}/*配置変更済み*/
+    #prize3{width:250px;height:360px;position:absolute;left:62px;top:45px;display:none;}/*配置変更済み*/
+    #prize4{width:250px;height:360px;position:absolute;left:62px;top:45px;display:none;}/*配置変更済み*/
+    #prize5{width:250px;height:360px;position:absolute;left:62px;top:45px;display:none;}/*配置変更済み*/
+    
+    #tochutaisyutsuguard{width:375px;height:667px;position:absolute;left:0px;top:0px;background-color:#000000;display:none;}
+    
+    #startbt{width:200px;height:50px;position:absolute;left:87px;bottom:60px;}/*配置変更済み*/
+    #restartbt{width:165px;height:50px;position:absolute;left:15px;bottom:10px;display:none;}/*配置変更済み*/
+    #greengotobt{width:165px;height:50px;position:absolute;left:195px;bottom:10px;display:none;}
+    #btnretry{width:351px;height:57px;position:absolute;left:12px;bottom:87px;display:none;}
+    #btngotominitop{width:351px;height:57px;position:absolute;left:12px;bottom:10px;display:none;}
+    /*#btngototop{width:351px;height:57px;position:absolute;left:12px;bottom:10px;display:none;}*/
+    #caution{
+        font-size:18px;color:#ffffff;text-align:center;margin:auto;padding: 0px;line-height:140%;
+        position:absolute;left:0px;right:0px;top:80px;
+    }
+    #copyright{
+        font-size:12px;color:#cccccc;text-align:left;margin:0px;padding:0px;line-height:1em;
+        position:absolute;left:5px;bottom:5px;
+    }
+    /*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+    #loadback{/*配置変更済み*/
+        width:375px;height:667px;
+        position:absolute;left:0px;top:0px;
+        background-color:#000000;
+    }
+    #nowloading{
+        width:231px;height:231px;
+        position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+        user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+    }
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<!--
+<audio id="xmasbgm" preload="auto"loop>
+<source src="pse/xmasbgm.wav" type="audio/wav">
+<source src="pse/xmasbgm.mp3" type="audio/mp3">
+</audio>
+
+<audio id="gaaanse" preload="auto">
+<source src="pse/gaaan.wav" type="audio/wav">
+<source src="pse/gaaan.mp3" type="audio/mp3">
+</audio>
+
+<audio id="mojiokurise" preload="auto"loop>
+<source src="pse/mojiokuri.wav" type="audio/wav">
+<source src="pse/mojiokuri.mp3" type="audio/mp3">
+</audio>
+
+<audio id="tettelese" preload="auto">
+<source src="pse/tettele.wav" type="audio/wav">
+<source src="pse/tettele.mp3" type="audio/mp3">
+</audio>
+
+<audio id="hadouse" preload="auto">
+<source src="pse/medadyshun.wav" type="audio/wav">
+<source src="pse/medadyshun.mp3" type="audio/mp3">
+</audio>
+
+<audio id="screambgm" preload="auto">
+<source src="pse/jinglescream.wav" type="audio/wav">
+<source src="pse/jinglescream.mp3" type="audio/mp3">
+</audio>
+-->
+<div id="container">
+<div id="header">
+<img src="pimg/tsuikagazou/kanbantouka.png"id="kanban">
+</div>
+<div id="contents">
+<div id="d1"><!--▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ここにゲームのコンテンツを入れる▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
+<img src="pimg/xmas/back.png"id="back1">
+<img src="pimg/xmas/xmaswreath.png"id="xmaswreath">
+<img src="pimg/xmas/santa.png"id="santa">
+<img src="pimg/xmas/santaniko.png"id="santaniko">
+<div id="fukidashi">
+<p id="santaserifu"></p>
+<p id="santaserifueng"></p>
+</div>
+<img src="pimg/xmas/pbox1.png"id="pbox1">
+<img src="pimg/xmas/pbox2.png"id="pbox2">
+<img src="pimg/xmas/pbox3.png"id="pbox3">
+<img src="pimg/xmas/blackback.png"id="back2">
+<img src="pimg/xmas/blackwreath.png"id="blackwreath">
+<img src="pimg/xmas/blacksanta.png"id="blacksanta">
+<div id="pboxarea1"></div>
+<div id="pboxarea2"></div>
+<div id="pboxarea3"></div>
+<div id="hazure1"></div>
+<div id="hazure2"></div>
+<div id="hazure3"></div>
+<img src="pimg/xmas/hadou1kai.png"id="hadou1">
+<img src="pimg/xmas/hadou2kai.png"id="hadou2">
+<img src="pimg/xmas/hadou3kai.png"id="hadou3">
+<!--ボスラッシュ-->
+<img src="pimg/xmas/obk0.jpg"id="obk0">
+<img src="pimg/xmas/obk1.jpg"id="obk1">
+<img src="pimg/xmas/obk2.jpg"id="obk2">
+<img src="pimg/xmas/obk3.jpg"id="obk3">
+<img src="pimg/xmas/obk4.jpg"id="obk4">
+<img src="pimg/xmas/obk5.jpg"id="obk5">
+<img src="pimg/xmas/obk6.jpg"id="obk6">
+<img src="pimg/xmas/obk7.jpg"id="obk7">
+<img src="pimg/xmas/obk8.jpg"id="obk8">
+<img src="pimg/xmas/obk9.jpg"id="obk9">
+<img src="pimg/xmas/obk10.jpg"id="obk10">
+<img src="pimg/xmas/obk11.jpg"id="obk11">
+<img src="pimg/xmas/obk12.jpg"id="obk12">
+<img src="pimg/xmas/obk13.jpg"id="obk13">
+<img src="pimg/xmas/obk14.jpg"id="obk14">
+<div id="blackout"></div>
+<div id="bloodout"></div>
+<img src="pimg/xmas/fadefont.gif"id="fadefont">
+<img src="pimg/xmas/blood1.png"id="blood1">
+<img src="pimg/xmas/blood2.png"id="blood2">
+<img src="pimg/xmas/blood3.png"id="blood3">
+<img src="pimg/xmas/blood4.png"id="blood4">
+<img src="pimg/xmas/blood5.png"id="blood5">
+
+<!--
+<img src="pimg/xmas/pboxopen1.gif"id="pboxopen1">
+<img src="pimg/xmas/pboxopen2.gif"id="pboxopen2">
+<img src="pimg/xmas/pboxopen3.gif"id="pboxopen3">
+-->
+
+<!--/*プレゼントボックス開封にまつわるアイテム*/-->
+<img src="pimg/xmas/housha1.png"id="housha1">
+<img src="pimg/xmas/housha2.png"id="housha2">
+<img src="pimg/xmas/housha3.png"id="housha3">
+<img src="pimg/xmas/housha4.png"id="housha4">
+
+<img src="pimg/xmas/lightball1.png"id="lightball1">
+<img src="pimg/xmas/lightball2.png"id="lightball2">
+<img src="pimg/xmas/lightball3.png"id="lightball3">
+<img src="pimg/xmas/lightball4.png"id="lightball4">
+
+<img src="pimg/xmas/boxblue100.png"id="boxblue100">
+<img src="pimg/xmas/boxblue85.png"id="boxblue85">
+<img src="pimg/xmas/boxblue70.png"id="boxblue70">
+<img src="pimg/xmas/boxred100.png"id="boxred100">
+<img src="pimg/xmas/boxred85.png"id="boxred85">
+<img src="pimg/xmas/boxred70.png"id="boxred70">
+<img src="pimg/xmas/boxgreen100.png"id="boxgreen100">
+<img src="pimg/xmas/boxgreen85.png"id="boxgreen85">
+<img src="pimg/xmas/boxgreen70.png"id="boxgreen70">
+
+<img src="pimg/xmas/blankbox100.png"id="blankbox100">
+<img src="pimg/xmas/blankbox115.png"id="blankbox115">
+<img src="pimg/xmas/blankbox130.png"id="blankbox130">
+
+<!--景品-->
+<img src="pimg/xmas/prize1.png"id="prize1">
+<img src="pimg/xmas/prize2.png"id="prize2">
+<img src="pimg/xmas/prize3.png"id="prize3">
+<img src="pimg/xmas/prize4.png"id="prize4">
+<img src="pimg/xmas/prize5.png"id="prize5">
+<p id="caution"></p>
+<p id="copyright"></p>
+<div id="tochutaisyutsuguard"></div>
+<img src="pimg/xmas/startbt.png"id="startbt">
+<img src="pimg/xmas/greenbtnrestart.png"id="restartbt">
+<img src="pimg/xmas/greenbtnminitop.png"id="greengotobt">
+<img src="pimg/tsuikagazou/btnretry.png"id="btnretry">
+<img src="pimg/tsuikagazou/btngotominitop.png"id="btngotominitop">
+<!--<img src="pimg/tsuikagazou/btngototop.png"id="btngototop">-->
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div><!--▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ゲームコンテンツここまで▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲-->
+</div><!--★★★★★★★★★『contents』★★★★★★★★★の外枠-->
+<div id="footer"><p id="copyright2"></p></div>
+</div><!--▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲大枠ここまで▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲-->
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+/*★には同じ数字、☆には同じスペル(変数、関数)、◇にはファイルのパスを入力
+let sampleSource★ = '';
+async function decodeSe★(){
+    const response★ = await fetch("◇◇◇");
+    const arrayBuffer★ = await response★.arrayBuffer();
+    const audioBuffer★ = await ctx.decodeAudioData(arrayBuffer★);
+    return audioBuffer★;
+}
+function playSe★(ctx,audioBuffer★){
+    sampleSource★ = ctx.createBufferSource();
+    sampleSource★.buffer = audioBuffer★;
+    sampleSource★.connect(ctx.destination);
+    sampleSource★.start();
+}
+async function se☆Play(){
+    const se☆ = await decodeSe★();
+    playSe★(ctx,se☆);
+}
+async function se☆Stop(){
+    sampleSource★?.stop();
+}
+*/
+
+/*
+01<source src="pse/xmasbgm.mp3" id="xmasbgm"  loop>
+02<source src="pse/gaaan.mp3" id="gaaanse">
+03<source src="pse/mojiokuri.mp3" id="mojiokurise"  loop>
+04<source src="pse/tettele.mp3" id="tettelese">
+05<source src="pse/medadyshun.mp3" id="hadouse">
+06<source src="pse/jinglescream.mp3" id="screambgm">
+*/
+
+/*★★★★★★★★★★★★★★★★★効果音のセット★★★★★★★★★★★★★★★★★★★★*/
+window.AudioContext = window.AudioContext||window.webkitAudioContext;
+const ctx = new AudioContext();
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let fearbgmplaying = false;
+let sampleSource6 = '';
+async function decodeSe6(){
+    const response6 = await fetch("pse/jinglescream.mp3");
+    const arrayBuffer6 = await response6.arrayBuffer();
+    const audioBuffer6 = await ctx.decodeAudioData(arrayBuffer6);
+    return audioBuffer6;
+}
+function playSe6(ctx,audioBuffer6){
+    sampleSource6 = ctx.createBufferSource();
+    sampleSource6.buffer = audioBuffer6;
+    sampleSource6.connect(ctx.destination);
+    sampleSource6.start();
+    fearbgmplaying = true;
+}
+async function sescreambgmPlay(){
+    const sescreambgm = await decodeSe6();
+    playSe6(ctx,sescreambgm);
+}
+async function sescreambgmStop(){
+    sampleSource6?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource5 = '';
+async function decodeSe5(){
+    const response5 = await fetch("pse/medadyshun.mp3");
+    const arrayBuffer5 = await response5.arrayBuffer();
+    const audioBuffer5 = await ctx.decodeAudioData(arrayBuffer5);
+    return audioBuffer5;
+}
+function playSe5(ctx,audioBuffer5){
+    sampleSource5 = ctx.createBufferSource();
+    sampleSource5.buffer = audioBuffer5;
+    sampleSource5.connect(ctx.destination);
+    sampleSource5.start();
+}
+async function sehadouPlay(){
+    const sehadou = await decodeSe5();
+    playSe5(ctx,sehadou);
+}
+async function sehadouStop(){
+    sampleSource5?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource4 = '';
+async function decodeSe4(){
+    const response4 = await fetch("pse/tettele.mp3");
+    const arrayBuffer4 = await response4.arrayBuffer();
+    const audioBuffer4 = await ctx.decodeAudioData(arrayBuffer4);
+    return audioBuffer4;
+}
+function playSe4(ctx,audioBuffer4){
+    sampleSource4 = ctx.createBufferSource();
+    sampleSource4.buffer = audioBuffer4;
+    sampleSource4.connect(ctx.destination);
+    sampleSource4.start();
+}
+async function setettelePlay(){
+    const setettele = await decodeSe4();
+    playSe4(ctx,setettele);
+}
+async function setetteleStop(){
+    sampleSource4?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let mojiokuriplaying = false;
+let sampleSource3 = '';
+async function decodeSe3(){
+    const response3 = await fetch("pse/mojiokuri.mp3");
+    const arrayBuffer3 = await response3.arrayBuffer();
+    const audioBuffer3 = await ctx.decodeAudioData(arrayBuffer3);
+    return audioBuffer3;
+}
+function playSe3(ctx,audioBuffer3){
+    sampleSource3 = ctx.createBufferSource();
+    sampleSource3.buffer = audioBuffer3;
+    sampleSource3.loop = true;
+    sampleSource3.connect(ctx.destination);
+    sampleSource3.start();
+    mojiokuriplaying = true;
+}
+async function semojiokuriPlay(){
+    const semojiokuri = await decodeSe3();
+    playSe3(ctx,semojiokuri);
+}
+async function semojiokuriStop(){
+    sampleSource3?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource2 = '';
+async function decodeSe2(){
+    const response2 = await fetch("pse/gaaan.mp3");
+    const arrayBuffer2 = await response2.arrayBuffer();
+    const audioBuffer2 = await ctx.decodeAudioData(arrayBuffer2);
+    return audioBuffer2;
+}
+function playSe2(ctx,audioBuffer2){
+    sampleSource2 = ctx.createBufferSource();
+    sampleSource2.buffer = audioBuffer2;
+    sampleSource2.connect(ctx.destination);
+    sampleSource2.start();
+}
+async function segaaanPlay(){
+    const segaaan = await decodeSe2();
+    playSe2(ctx,segaaan);
+}
+async function segaaanStop(){
+    sampleSource2?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let bgmplaying = false;
+let sampleSource1 = '';
+async function decodeSe1(){
+    const response1 = await fetch("pse/xmasbgm.mp3");
+    const arrayBuffer1 = await response1.arrayBuffer();
+    const audioBuffer1 = await ctx.decodeAudioData(arrayBuffer1);
+    return audioBuffer1;
+}
+function playSe1(ctx,audioBuffer1){
+    sampleSource1 = ctx.createBufferSource();
+    sampleSource1.buffer = audioBuffer1;
+    sampleSource1.loop = true;
+    sampleSource1.connect(ctx.destination);
+    sampleSource1.start();
+    bgmplaying = true;
+}
+async function sexmasbgmPlay(){
+    const sexmasbgm = await decodeSe1();
+    playSe1(ctx,sexmasbgm);
+}
+async function sexmasbgmStop(){
+    sampleSource1?.stop();
+}
+
+let caution = document.getElementById('caution');
+let copyright = document.getElementById('copyright');
+function cautionYoui(){
+    caution.innerText = '■ご注意-CAUTION-■\n\nこのゲームは本編と同様に音が出ます。\n公共の場でプレイする際は周囲のご迷惑にならないよう\nイヤホンをつけてお楽しみください。\n(一部音量注意の為、予め端末の音量を下げてお楽しみ下さい。)\nビックリ要素を含むため、心臓の弱い方はプレイをお控え下さい。\nThis game sounds like the main part.\nWhen playing this game in a public place,\n please wear earphones to avoid inconvenience to others.\nThis game may make a loud sound, so please lower the volume beforehand.\nPlease note that this game contains scary expressions.';
+    copyright.innerText = '【最初の素敵なBGM】TAM Music Factory様【効果音】On Jin(音人)様【やっちまった時のBGM】幻想之人';
+}
+
+let copyright2 = document.getElementById('copyright2');
+let today = new Date();
+let kotoshi = today.getFullYear();
+copyright2.innerText = '当サイト内のコンテンツの無断転載・無断複製を固く禁止致します。\nCopyright©2010-'+kotoshi+'"Fancy Island" All Rights Reserved';
+
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+    cautionYoui();
+    decodeSe1();
+    decodeSe2();
+    decodeSe3();
+});
+let body = document.getElementById('body');
+let d1 = document.getElementById('d1');
+let header = document.getElementById('header');
+let kanban = document.getElementById('kanban');
+let contents = document.getElementById('contents');
+let footer = document.getElementById('footer');
+let back1 = document.getElementById('back1');
+let back2 = document.getElementById('back2');
+let blacksanta = document.getElementById('blacksanta');
+let blackwreath = document.getElementById('blackwreath');
+let santa = document.getElementById('santa');
+let santaniko = document.getElementById('santaniko');
+let fukidashi = document.getElementById('fukidashi');
+let pbox1 = document.getElementById('pbox1');
+let pbox2 = document.getElementById('pbox2');
+let pbox3 = document.getElementById('pbox3');
+let pboxarea1 = document.getElementById('pboxarea1');
+let pboxarea2 = document.getElementById('pboxarea2');
+let pboxarea3 = document.getElementById('pboxarea3');
+//let pboxopen1 = document.getElementById('pboxopen1');
+//let pboxopen2 = document.getElementById('pboxopen2');
+//let pboxopen3 = document.getElementById('pboxopen3');
+
+/*プレゼントボックス開封にまつわるアイテム*/
+let housha1 = document.getElementById('housha1');
+let housha2 = document.getElementById('housha2');
+let housha3 = document.getElementById('housha3');
+let housha4 = document.getElementById('housha4');
+
+let lightball1 = document.getElementById('lightball1');
+let lightball2 = document.getElementById('lightball2');
+let lightball3 = document.getElementById('lightball3');
+let lightball4 = document.getElementById('lightball4');
+
+let boxblue100 = document.getElementById('boxblue100');
+let boxblue85 = document.getElementById('boxblue85');
+let boxblue70 = document.getElementById('boxblue70');
+
+let boxred100 = document.getElementById('boxred100');
+let boxred85 = document.getElementById('boxred85');
+let boxred70 = document.getElementById('boxred70');
+
+let boxgreen100 = document.getElementById('boxgreen100');
+let boxgreen85 = document.getElementById('boxgreen85');
+let boxgreen70 = document.getElementById('boxgreen70');
+
+let blankbox100 = document.getElementById('blankbox100');
+let blankbox115 = document.getElementById('blankbox115');
+let blankbox130 = document.getElementById('blankbox130');
+
+let hazure1 = document.getElementById('hazure1');
+let hazure2 = document.getElementById('hazure2');
+let hazure3 = document.getElementById('hazure3');
+let hadou1 = document.getElementById('hadou1');
+let hadou2 = document.getElementById('hadou2');
+let hadou3 = document.getElementById('hadou3');
+/*ボスラッシュ*/
+let obk0 = document.getElementById('obk0');
+let obk1 = document.getElementById('obk1');
+let obk2 = document.getElementById('obk2');
+let obk3 = document.getElementById('obk3');
+let obk4 = document.getElementById('obk4');
+let obk5 = document.getElementById('obk5');
+let obk6 = document.getElementById('obk6');
+let obk7 = document.getElementById('obk7');
+let obk8 = document.getElementById('obk8');
+let obk9 = document.getElementById('obk9');
+let obk10 = document.getElementById('obk10');
+let obk11 = document.getElementById('obk11');
+let obk12 = document.getElementById('obk12');
+let obk13 = document.getElementById('obk13');
+let obk14 = document.getElementById('obk14');
+let blackout = document.getElementById('blackout');
+let bloodout = document.getElementById('bloodout');
+let fadefont = document.getElementById('fadefont');
+let blood1 = document.getElementById('blood1');
+let blood2 = document.getElementById('blood2');
+let blood3 = document.getElementById('blood3');
+let blood4 = document.getElementById('blood4');
+let blood5 = document.getElementById('blood5');
+let tochutaisyutsuguard = document.getElementById('tochutaisyutsuguard');
+let startbt = document.getElementById('startbt');
+let restartbt = document.getElementById('restartbt');
+let greengotobt = document.getElementById('greengotobt');
+let btnretry = document.getElementById('btnretry');
+let btngotominitop = document.getElementById('btngotominitop');
+//let btngototop = document.getElementById('btngototop');
+let santaserifu = document.getElementById('santaserifu');
+let santaserifueng = document.getElementById('santaserifueng');
+//景品
+let prize1 = document.getElementById('prize1');
+let prize2 = document.getElementById('prize2');
+let prize3 = document.getElementById('prize3');
+let prize4 = document.getElementById('prize4');
+let prize5 = document.getElementById('prize5');
+//効果音
+//let bgmxmas = document.getElementById('xmasbgm');
+//let segaaan = document.getElementById('gaaanse');
+//let semojiokuri = document.getElementById('mojiokurise');
+//let setettele = document.getElementById('tettelese');
+//let sehadou = document.getElementById('hadouse');
+//let bgmscream = document.getElementById('screambgm');
+//load(); play(); pause();
+//スコア
+let fps1 = 0;
+let fps2 = 0;
+let fps3 = 0;
+let fps4 = 0;
+let fps5 = 0;
+let prz1 = 0;
+let prz2 = 0;
+let prz3 = 0;
+let prz4 = 0;
+let prz5 = 0;
+
+/*ハズレをランダムに配置する*/
+function hazureRandom(){
+    let com = Math.floor(Math.random()*3)+1;
+    switch(com){
+        case 1:
+        hazure1.style.display = 'inline';
+        break;
+        case 2:
+        hazure2.style.display = 'inline';
+        break;
+        case 3:
+        hazure3.style.display = 'inline';
+        break;
+    }
+}
+
+startbt.addEventListener('mouseover',function(){startbt.style.cursor = 'pointer';});
+startbt.addEventListener('click',function(){
+    startbt.style.display = 'none';
+    caution.innerText = '';
+    copyright.innerText = '';
+    blackout.style.display = 'none';
+    //bgmscream.load();
+    //bgmxmas.load();
+    //bgmxmas.play();
+    decodeSe4();
+    decodeSe5();
+    decodeSe6();
+    sexmasbgmPlay();
+    fukidashi.style.display = 'inline';
+    let timerId1 = setInterval(function(){
+        fps1++;
+        switch(fps1){
+            case 1:
+            //semojiokuri.load();
+            //semojiokuri.play();
+            semojiokuriPlay();
+            santaserifu.innerText = '3';
+            break;
+            case 2:
+            santaserifu.innerText = '3つ';
+            santaserifueng.innerText = 'P';
+            break;
+            case 3:
+            santaserifu.innerText = '3つの';
+            santaserifueng.innerText = 'Ple';
+            break;
+            case 4:
+            santaserifu.innerText = '3つの中';
+            santaserifueng.innerText = 'Plea';
+            break;
+            case 5:
+            santaserifu.innerText = '3つの中か';
+            santaserifueng.innerText = 'Please';
+            break;
+            case 6:
+            santaserifu.innerText = '3つの中から';
+            santaserifueng.innerText = 'Please c';
+            break;
+            case 7:
+            santaserifu.innerText = '3つの中から1';
+            santaserifueng.innerText = 'Please cho';
+            break;
+            case 8:
+            santaserifu.innerText = '3つの中から1つ';
+            santaserifueng.innerText = 'Please choo';
+            break;
+            case 9:
+            santaserifu.innerText = '3つの中から1つ\n好';
+            santaserifueng.innerText = 'Please choose';
+            break;
+            case 10:
+            santaserifu.innerText = '3つの中から1つ\n好き';
+            santaserifueng.innerText = 'Please choose o';
+            break;
+            case 11:
+            santaserifu.innerText = '3つの中から1つ\n好きな';
+            santaserifueng.innerText = 'Please choose one';
+            break;
+            case 12:
+            santaserifu.innerText = '3つの中から1つ\n好きなプ';
+            santaserifueng.innerText = 'Please choose one o';
+            break;
+            case 13:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレ';
+            santaserifueng.innerText = 'Please choose one of\nt';
+            break;
+            case 14:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼ';
+            santaserifueng.innerText = 'Please choose one of\nth';
+            break;
+            case 15:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼン';
+            santaserifueng.innerText = 'Please choose one of\nthe t';
+            break;
+            case 16:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼント';
+            santaserifueng.innerText = 'Please choose one of\nthe th';
+            break;
+            case 17:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼントを';
+            santaserifueng.innerText = 'Please choose one of\nthe thre';
+            break;
+            case 18:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼントを\n選';
+            santaserifueng.innerText = 'Please choose one of\nthe three';
+            break;
+            case 19:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼントを\n選ぶ';
+            santaserifueng.innerText = 'Please choose one of\nthe three pr';
+            break;
+            case 20:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼントを\n選ぶの';
+            santaserifueng.innerText = 'Please choose one of\nthe three pre';
+            break;
+            case 21:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼントを\n選ぶのじ';
+            santaserifueng.innerText = 'Please choose one of\nthe three prese';
+            break;
+            case 22:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼントを\n選ぶのじゃ';
+            santaserifueng.innerText = 'Please choose one of\nthe three present';
+            break;
+            case 23:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼントを\n選ぶのじゃ。';
+            santaserifueng.innerText = 'Please choose one of\nthe three presents.';
+            //semojiokuri.pause();
+            if(mojiokuriplaying===true){semojiokuriStop();}
+            break;
+            case 35:
+            santaserifu.innerText = '';
+            santaserifueng.innerText = '';
+            fukidashi.style.display = 'none';
+            santaniko.style.display = 'none';
+            pbox1.style.display = 'inline';
+            pbox2.style.display = 'inline';
+            pbox3.style.display = 'inline';
+            pboxarea1.style.display = 'inline';
+            pboxarea2.style.display = 'inline';
+            pboxarea3.style.display = 'inline';
+            hazureRandom();
+            clearInterval(timerId1);
+            break;
+        }
+    },80);
+});
+//景品飛び出す演出
+function prizeApp(){
+    let com2 = Math.floor(Math.random()*5)+1;
+    switch(com2){
+        case 1://■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■景品1■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+        let prizeTimer1 = setInterval(function(){//■■数字変える
+            prz1++;//■■数字変える
+            switch(prz1){//■■数字変える
+                case 1:
+                //setettele.load();
+                //setettele.play();
+                setettelePlay();
+                prize1.style.display = 'inline';//■■数字変える
+                break;
+                case 2:
+                prize1.style.top = '48px';//■■数字変える
+                break;
+                case 3:
+                prize1.style.top = '45px';//■■数字変える
+                break;
+                case 39:
+                //pboxopen1.style.display = 'none';
+                //pboxopen2.style.display = 'none';
+                //pboxopen3.style.display = 'none';
+                blankbox100.style.display = 'none';
+                blackout.style.opacity = '0.6';
+                prize1.style.top = '95px';//■■数字変える
+                break;
+                case 40:
+                blackout.style.opacity = '0.4';
+                prize1.style.top = '135px';//■■数字変える
+                break;
+                case 41:
+                blackout.style.opacity = '0.2';
+                prize1.style.top = '175px';//■■数字変える
+                break;
+                case 42:
+                blackout.style.display = 'none';
+                prize1.style.top = '215px';//■■数字変える
+                santaniko.style.display = 'inline';
+                fukidashi.style.display = 'inline';
+                //santaserifu.style.left = '720px';
+                //santaserifu.style.top = '78px';
+                //santaserifueng.style.left = '750px';
+                //santaserifueng.style.top = '140px';
+                santaserifu.innerText = '『クマのぬいぐるみ』\nカワイイんじゃ！';//■文章変える
+                santaserifueng.innerText = 'You got a bear stuffed\nanimal. It is cute.';//■文章変える
+                restartbt.style.display = 'inline';
+                greengotobt.style.display = 'inline';
+                clearInterval(prizeTimer1);//■■数字変える
+                break;
+            }
+        },80);
+        break;//■■■■■■景品1ここまで■■■■■■
+        case 2://■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■景品2■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+        let prizeTimer2 = setInterval(function(){//■■数字変える
+            prz2++;//■■数字変える
+            switch(prz2){//■■数字変える
+                case 1:
+                //setettele.load();
+                //setettele.play();
+                setettelePlay();
+                prize2.style.display = 'inline';//■■数字変える
+                break;
+                case 2:
+                prize2.style.top = '48px';//■■数字変える
+                break;
+                case 3:
+                prize2.style.top = '45px';//■■数字変える
+                break;
+                case 39:
+                //pboxopen1.style.display = 'none';
+                //pboxopen2.style.display = 'none';
+                //pboxopen3.style.display = 'none';
+                blankbox100.style.display = 'none';
+                blackout.style.opacity = '0.6';
+                prize2.style.top = '95px';//■■数字変える
+                break;
+                case 40:
+                blackout.style.opacity = '0.4';
+                prize2.style.top = '135px';//■■数字変える
+                break;
+                case 41:
+                blackout.style.opacity = '0.2';
+                prize2.style.top = '175px';//■■数字変える
+                break;
+                case 42:
+                blackout.style.display = 'none';
+                prize2.style.top = '215px';//■■数字変える
+                santaniko.style.display = 'inline';
+                fukidashi.style.display = 'inline';
+                //santaserifu.style.left = '730px';
+                //santaserifu.style.top = '78px';
+                //santaserifueng.style.left = '730px';
+                //santaserifueng.style.top = '140px';
+                santaserifu.innerText = '『携帯ゲーム機』\n面白そうじゃ！';//■文章変える
+                santaserifueng.innerText = 'You got a small game console.\nIt looks interesting.';//■文章変える
+                restartbt.style.display = 'inline';
+                greengotobt.style.display = 'inline';
+                clearInterval(prizeTimer2);//■■数字変える
+                break;
+            }
+        },80);
+        break;//■■■■■■景品2ここまで■■■■■■
+        case 3://■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■景品3■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+        let prizeTimer3 = setInterval(function(){//■■数字変える
+            prz3++;//■■数字変える
+            switch(prz3){//■■数字変える
+                case 1:
+                //setettele.load();
+                //setettele.play();
+                setettelePlay();
+                prize3.style.display = 'inline';//■■数字変える
+                break;
+                case 2:
+                prize3.style.top = '48px';//■■数字変える
+                break;
+                case 3:
+                prize3.style.top = '45px';//■■数字変える
+                break;
+                case 39:
+                //pboxopen1.style.display = 'none';
+                //pboxopen2.style.display = 'none';
+                //pboxopen3.style.display = 'none';
+                blankbox100.style.display = 'none';
+                blackout.style.opacity = '0.6';
+                prize3.style.top = '95px';//■■数字変える
+                break;
+                case 40:
+                blackout.style.opacity = '0.4';
+                prize3.style.top = '135px';//■■数字変える
+                break;
+                case 41:
+                blackout.style.opacity = '0.2';
+                prize3.style.top = '175px';//■■数字変える
+                break;
+                case 42:
+                blackout.style.display = 'none';
+                prize3.style.top = '215px';//■■数字変える
+                santaniko.style.display = 'inline';
+                fukidashi.style.display = 'inline';
+                //santaserifu.style.left = '720px';
+                //santaserifu.style.top = '78px';
+                //santaserifueng.style.left = '750px';
+                //santaserifueng.style.top = '140px';
+                santaserifu.innerText = '『サッカーボール』\n蹴りまくりじゃ！';//■文章変える
+                santaserifueng.innerText = 'You got a soccer ball.\nLet us kick it a lot.';//■文章変える
+                restartbt.style.display = 'inline';
+                greengotobt.style.display = 'inline';
+                clearInterval(prizeTimer3);//■■数字変える
+                break;
+            }
+        },80);
+        break;//■■■■■■景品3ここまで■■■■■■
+        case 4://■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■景品4■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+        let prizeTimer4 = setInterval(function(){//■■数字変える
+            prz4++;//■■数字変える
+            switch(prz4){//■■数字変える
+                case 1:
+                //setettele.load();
+                //setettele.play();
+                setettelePlay();
+                prize4.style.display = 'inline';//■■数字変える
+                break;
+                case 2:
+                prize4.style.top = '48px';//■■数字変える
+                break;
+                case 3:
+                prize4.style.top = '45px';//■■数字変える
+                break;
+                case 39:
+                //pboxopen1.style.display = 'none';
+                //pboxopen2.style.display = 'none';
+                //pboxopen3.style.display = 'none';
+                blankbox100.style.display = 'none';
+                blackout.style.opacity = '0.6';
+                prize4.style.top = '95px';//■■数字変える
+                break;
+                case 40:
+                blackout.style.opacity = '0.4';
+                prize4.style.top = '135px';//■■数字変える
+                break;
+                case 41:
+                blackout.style.opacity = '0.2';
+                prize4.style.top = '175px';//■■数字変える
+                break;
+                case 42:
+                blackout.style.display = 'none';
+                prize4.style.top = '215px';//■■数字変える
+                santaniko.style.display = 'inline';
+                fukidashi.style.display = 'inline';
+                //santaserifu.style.left = '730px';
+                //santaserifu.style.top = '78px';
+                //santaserifueng.style.left = '740px';
+                //santaserifueng.style.top = '140px';
+                santaserifu.innerText = '『着せ替え人形』\nカワイイんじゃ！';//■文章変える
+                santaserifueng.innerText = 'You got a dress-up doll.\nIt is cute.';//■文章変える
+                restartbt.style.display = 'inline';
+                greengotobt.style.display = 'inline';
+                clearInterval(prizeTimer4);//■■数字変える
+                break;
+            }
+        },80);
+        break;//■■■■■■景品4ここまで■■■■■■
+        case 5://■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■景品5■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+        let prizeTimer5 = setInterval(function(){//■■数字変える
+            prz5++;//■■数字変える
+            switch(prz5){//■■数字変える
+                case 1:
+                //setettele.load();
+                //setettele.play();
+                setettelePlay();
+                prize5.style.display = 'inline';//■■数字変える
+                break;
+                case 2:
+                prize5.style.top = '48px';//■■数字変える
+                break;
+                case 3:
+                prize5.style.top = '45px';//■■数字変える
+                break;
+                case 39:
+                //pboxopen1.style.display = 'none';
+                //pboxopen2.style.display = 'none';
+                //pboxopen3.style.display = 'none';
+                blankbox100.style.display = 'none';
+                blackout.style.opacity = '0.6';
+                prize5.style.top = '95px';//■■数字変える
+                break;
+                case 40:
+                blackout.style.opacity = '0.4';
+                prize5.style.top = '135px';//■■数字変える
+                break;
+                case 41:
+                blackout.style.opacity = '0.2';
+                prize5.style.top = '175px';//■■数字変える
+                break;
+                case 42:
+                blackout.style.display = 'none';
+                prize5.style.top = '215px';//■■数字変える
+                santaniko.style.display = 'inline';
+                fukidashi.style.display = 'inline';
+                //santaserifu.style.left = '710px';
+                //santaserifu.style.top = '78px';
+                //santaserifueng.style.left = '740px';
+                //santaserifueng.style.top = '140px';
+                santaserifu.innerText = '『キックスケーター』\nこれでラクチンじゃ！';//■文章変える
+                santaserifueng.innerText = 'You got a kick scooter.\nIt makes moving easier.';//■文章変える
+                restartbt.style.display = 'inline';
+                greengotobt.style.display = 'inline';
+                clearInterval(prizeTimer5);//■■数字変える
+                break;
+            }
+        },80);
+        break;//■■■■■■景品5ここまで■■■■■■
+    }
+}
+
+restartbt.addEventListener('mouseover',function(){restartbt.style.cursor='pointer';});
+restartbt.addEventListener('click',function(){
+    window.location.reload();
+});
+
+greengotobt.addEventListener('mouseover',function(){greengotobt.style.cursor='pointer';});
+greengotobt.addEventListener('click',function(){
+    if(bgmplaying===true){sexmasbgmStop();}
+    location.href = 'eventpage.html';
+});
+
+//プレゼント赤を選択
+pboxarea1.addEventListener('mouseover',function(){pboxarea1.style.cursor='pointer';});//■■数字を変える
+pboxarea1.addEventListener('click',function(){//■■数字を変える
+    pbox1.style.display = 'none';
+    pbox2.style.display = 'none';
+    pbox3.style.display = 'none';
+    pboxarea1.style.display = 'none';
+    pboxarea2.style.display = 'none';
+    pboxarea3.style.display = 'none';
+    hazure1.style.display = 'none';
+    hazure2.style.display = 'none';
+    hazure3.style.display = 'none';
+    blackout.style.opacity = '0.2';
+    blackout.style.display = 'inline';
+    let timerId2 = setInterval(function(){//■■数字を変える
+        fps2++;//■■数字を変える
+        switch(fps2){//■■数字を変える
+            case 4:
+            blackout.style.opacity = '0.4';
+            break;
+            case 8:
+            blackout.style.opacity = '0.6';
+            break;
+            case 12:
+            blackout.style.opacity = '0.8';
+            //pboxopen1.style.display = 'inline';//■■数字を変える
+            boxred100.style.display = 'inline';
+            break;
+            case 14:
+            boxred100.style.display = 'none';
+            boxred85.style.display = 'inline';
+            break;
+            case 16:
+            boxred85.style.display = 'none';
+            boxred70.style.display = 'inline';
+            prizeApp();
+            break;
+            case 20:
+            boxred70.style.display = 'none';
+            boxred85.style.display = 'inline';
+            break;
+            case 21:
+            boxred85.style.display = 'none';
+            boxred100.style.display = 'inline';
+            break;
+            case 22:
+            boxred100.style.display = 'none';
+            blankbox115.style.display = 'inline';
+            break;
+            case 22:
+            blankbox115.style.display = 'none';
+            blankbox130.style.display = 'inline';
+            break;
+            case 23:
+            blankbox130.style.display = 'none';
+            blankbox115.style.display = 'inline';
+            lightball1.style.display = 'inline';
+            housha1.style.display = 'inline';
+            break;
+            case 25:
+            blankbox115.style.display = 'none';
+            blankbox100.style.display = 'inline';
+            break;
+            case 27:
+            lightball1.style.display = 'none';
+            housha1.style.display = 'none';
+            lightball2.style.display = 'inline';
+            housha2.style.display = 'inline';
+            break;
+            case 31:
+            lightball2.style.display = 'none';
+            housha2.style.display = 'none';
+            lightball3.style.display = 'inline';
+            housha3.style.display = 'inline';
+            break;
+            case 35:
+            lightball3.style.display = 'none';
+            housha3.style.display = 'none';
+            lightball4.style.display = 'inline';
+            housha4.style.display = 'inline';
+            break;
+            case 39:
+            lightball4.style.display = 'none';
+            housha4.style.display = 'none';
+            break;
+            case 43:
+            clearInterval(timerId2);//■■数字を変える
+            break;
+        }
+    },20);
+});
+//プレゼント緑を選択
+pboxarea2.addEventListener('mouseover',function(){pboxarea2.style.cursor='pointer';});//■■数字を変える
+pboxarea2.addEventListener('click',function(){//■■数字を変える
+    pbox1.style.display = 'none';
+    pbox2.style.display = 'none';
+    pbox3.style.display = 'none';
+    pboxarea1.style.display = 'none';
+    pboxarea2.style.display = 'none';
+    pboxarea3.style.display = 'none';
+    hazure1.style.display = 'none';
+    hazure2.style.display = 'none';
+    hazure3.style.display = 'none';
+    blackout.style.opacity = '0.2';
+    blackout.style.display = 'inline';
+    let timerId3 = setInterval(function(){//■■数字を変える
+        fps3++;//■■数字を変える
+        switch(fps3){//■■数字を変える
+            case 4:
+            blackout.style.opacity = '0.4';
+            break;
+            case 8:
+            blackout.style.opacity = '0.6';
+            break;
+            case 12:
+            blackout.style.opacity = '0.8';
+            //pboxopen1.style.display = 'inline';//■■数字を変える
+            boxgreen100.style.display = 'inline';
+            break;
+            case 14:
+            boxgreen100.style.display = 'none';
+            boxgreen85.style.display = 'inline';
+            break;
+            case 16:
+            boxgreen85.style.display = 'none';
+            boxgreen70.style.display = 'inline';
+            prizeApp();
+            break;
+            case 20:
+            boxgreen70.style.display = 'none';
+            boxgreen85.style.display = 'inline';
+            break;
+            case 21:
+            boxgreen85.style.display = 'none';
+            boxgreen100.style.display = 'inline';
+            break;
+            case 22:
+            boxgreen100.style.display = 'none';
+            blankbox115.style.display = 'inline';
+            break;
+            case 22:
+            blankbox115.style.display = 'none';
+            blankbox130.style.display = 'inline';
+            break;
+            case 23:
+            blankbox130.style.display = 'none';
+            blankbox115.style.display = 'inline';
+            lightball1.style.display = 'inline';
+            housha1.style.display = 'inline';
+            break;
+            case 25:
+            blankbox115.style.display = 'none';
+            blankbox100.style.display = 'inline';
+            break;
+            case 27:
+            lightball1.style.display = 'none';
+            housha1.style.display = 'none';
+            lightball2.style.display = 'inline';
+            housha2.style.display = 'inline';
+            break;
+            case 31:
+            lightball2.style.display = 'none';
+            housha2.style.display = 'none';
+            lightball3.style.display = 'inline';
+            housha3.style.display = 'inline';
+            break;
+            case 35:
+            lightball3.style.display = 'none';
+            housha3.style.display = 'none';
+            lightball4.style.display = 'inline';
+            housha4.style.display = 'inline';
+            break;
+            case 39:
+            lightball4.style.display = 'none';
+            housha4.style.display = 'none';
+            break;
+            case 43:
+            clearInterval(timerId3);//■■数字を変える
+            break;
+        }
+    },20);
+});
+//プレゼント青を選択
+pboxarea3.addEventListener('mouseover',function(){pboxarea3.style.cursor='pointer';});//■■数字を変える
+pboxarea3.addEventListener('click',function(){//■■数字を変える
+    pbox1.style.display = 'none';
+    pbox2.style.display = 'none';
+    pbox3.style.display = 'none';
+    pboxarea1.style.display = 'none';
+    pboxarea2.style.display = 'none';
+    pboxarea3.style.display = 'none';
+    hazure1.style.display = 'none';
+    hazure2.style.display = 'none';
+    hazure3.style.display = 'none';
+    blackout.style.opacity = '0.2';
+    blackout.style.display = 'inline';
+    let timerId4 = setInterval(function(){//■■数字を変える
+        fps4++;//■■数字を変える
+        switch(fps4){//■■数字を変える
+            case 4:
+            blackout.style.opacity = '0.4';
+            break;
+            case 8:
+            blackout.style.opacity = '0.6';
+            break;
+            case 12:
+            blackout.style.opacity = '0.8';
+            //pboxopen1.style.display = 'inline';//■■数字を変える
+            boxblue100.style.display = 'inline';
+            break;
+            case 14:
+            boxblue100.style.display = 'none';
+            boxblue85.style.display = 'inline';
+            break;
+            case 16:
+            boxblue85.style.display = 'none';
+            boxblue70.style.display = 'inline';
+            prizeApp();
+            break;
+            case 20:
+            boxblue70.style.display = 'none';
+            boxblue85.style.display = 'inline';
+            break;
+            case 21:
+            boxblue85.style.display = 'none';
+            boxblue100.style.display = 'inline';
+            break;
+            case 22:
+            boxblue100.style.display = 'none';
+            blankbox115.style.display = 'inline';
+            break;
+            case 22:
+            blankbox115.style.display = 'none';
+            blankbox130.style.display = 'inline';
+            break;
+            case 23:
+            blankbox130.style.display = 'none';
+            blankbox115.style.display = 'inline';
+            lightball1.style.display = 'inline';
+            housha1.style.display = 'inline';
+            break;
+            case 25:
+            blankbox115.style.display = 'none';
+            blankbox100.style.display = 'inline';
+            break;
+            case 27:
+            lightball1.style.display = 'none';
+            housha1.style.display = 'none';
+            lightball2.style.display = 'inline';
+            housha2.style.display = 'inline';
+            break;
+            case 31:
+            lightball2.style.display = 'none';
+            housha2.style.display = 'none';
+            lightball3.style.display = 'inline';
+            housha3.style.display = 'inline';
+            break;
+            case 35:
+            lightball3.style.display = 'none';
+            housha3.style.display = 'none';
+            lightball4.style.display = 'inline';
+            housha4.style.display = 'inline';
+            break;
+            case 39:
+            lightball4.style.display = 'none';
+            housha4.style.display = 'none';
+            break;
+            case 43:
+            clearInterval(timerId4);//■■数字を変える
+            break;
+        }
+    },20);
+});
+
+function hazureEnsyutsu(){
+    pboxarea1.style.display = 'none';
+    pboxarea2.style.display = 'none';
+    pboxarea3.style.display = 'none';
+    header.style.backgroundColor = '#000000';
+    contents.style.backgroundColor = '#333333';
+    footer.style.backgroundColor = '#000000';
+    //bgmxmas.pause();
+    //segaaan.load();
+    //segaaan.play();
+    if(bgmplaying===true){sexmasbgmStop();}
+    segaaanPlay();
+    back2.style.display = 'inline';
+    blacksanta.style.display = 'inline';
+    blackwreath.style.display = 'inline';
+    let timerId5 = setInterval(function(){
+        fps5++;
+        switch(fps5){
+            case 36:
+            //sehadou.load();
+            //sehadou.play();
+            sehadouPlay();
+            hadou1.style.display = 'inline';
+            break;
+            case 37:
+            hadou1.style.display = 'none';
+            hadou2.style.display = 'inline';
+            break;
+            case 38:
+            hadou2.style.display = 'none';
+            hadou3.style.display = 'inline';
+            //bloodout.style.opacity = '1.0';
+            break;
+            case 39:
+            hadou3.style.display = 'none';
+            bloodout.style.display = 'inline';
+            break;
+            case 40:
+            bloodout.style.backgroundColor = '#ffffff';
+            break;
+            case 41://■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ボスラッシュ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+            //bgmscream.play();
+            sescreambgmPlay();
+            bloodout.style.display = 'none';
+            obk0.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 45:
+            obk0.style.display = 'none';
+            obk1.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 50:
+            obk1.style.display = 'none';
+            obk2.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 59:
+            obk2.style.display = 'none';
+            obk3.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 63:
+            obk3.style.display = 'none';
+            obk4.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 68:
+            obk4.style.display = 'none';
+            obk5.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 76:
+            obk5.style.display = 'none';
+            obk6.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 80:
+            obk6.style.display = 'none';
+            obk7.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 86:
+            obk7.style.display = 'none';
+            obk8.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 93:
+            obk8.style.display = 'none';
+            obk9.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 95:
+            obk9.style.display = 'none';
+            obk10.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 113:
+            obk10.style.display = 'none';
+            obk11.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 118:
+            obk11.style.display = 'none';
+            obk12.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 122:
+            obk12.style.display = 'none';
+            obk13.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 129:
+            obk13.style.display = 'none';
+            obk14.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 132:
+            obk14.style.display = 'none';
+            obk1.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 136:
+            obk1.style.display = 'none';
+            obk2.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 141:
+            obk2.style.display = 'none';
+            obk3.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 145:
+            obk3.style.display = 'none';
+            obk4.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 147:
+            obk4.style.display = 'none';
+            obk5.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 150:
+            obk5.style.display = 'none';
+            obk6.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 154:
+            obk6.style.display = 'none';
+            obk7.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 159:
+            obk7.style.display = 'none';
+            obk8.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 163:
+            obk8.style.display = 'none';
+            obk9.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 168:
+            obk9.style.display = 'none';
+            obk10.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 173:
+            obk10.style.display = 'none';
+            obk11.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 186:
+            obk11.style.display = 'none';
+            obk12.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 190:
+            obk12.style.display = 'none';
+            obk13.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 195:
+            obk13.style.display = 'none';
+            obk14.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 204:
+            obk14.style.display = 'none';
+            obk1.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 209:
+            obk1.style.display = 'none';
+            obk2.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 213:
+            obk2.style.display = 'none';
+            obk3.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 223:
+            obk3.style.display = 'none';
+            obk4.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 227:
+            obk4.style.display = 'none';
+            obk5.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 232:
+            obk5.style.display = 'none';
+            obk6.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 238:
+            obk6.style.display = 'none';
+            obk7.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 241:
+            obk7.style.display = 'none';
+            obk8.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 259:
+            obk8.style.display = 'none';
+            obk9.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 263:
+            obk9.style.display = 'none';
+            obk10.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 268:
+            obk10.style.display = 'none';
+            obk11.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 275:
+            obk11.style.display = 'none';
+            obk12.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 277:
+            obk12.style.display = 'none';
+            obk13.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 282:
+            obk13.style.display = 'none';
+            obk14.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 286:
+            obk14.style.display = 'none';
+            obk1.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 291:
+            obk1.style.display = 'none';
+            obk2.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 293:
+            obk2.style.display = 'none';
+            obk3.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 295:
+            obk3.style.display = 'none';
+            obk4.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 300:
+            obk4.style.display = 'none';
+            obk5.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 304:
+            obk5.style.display = 'none';
+            obk6.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 309:
+            obk6.style.display = 'none';
+            obk7.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 313:
+            obk7.style.display = 'none';
+            obk0.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            bloodout.style.backgroundColor = '#8b0003';
+            bloodout.style.opacity = '0.1';
+            break;
+            case 376:
+            bloodout.style.display = 'inline';
+            break;
+            case 377:
+            bloodout.style.opacity = '0.2';
+            break;
+            case 378:
+            bloodout.style.opacity = '0.3';
+            break;
+            case 379:
+            bloodout.style.opacity = '0.4';
+            break;
+            case 380:
+            bloodout.style.opacity = '0.5';
+            break;
+            case 381:
+            bloodout.style.opacity = '0.6';
+            break;
+            case 382:
+            bloodout.style.opacity = '0.7';
+            break;
+            case 383:
+            bloodout.style.opacity = '0.8';
+            break;
+            case 384:
+            bloodout.style.opacity = '0.9';
+            break;
+            case 385:
+            bloodout.style.opacity = '1.0';
+            fadefont.style.display = 'inline';
+            break;
+            case 454:
+            blood1.style.display = 'inline';
+            body.style.backgroundColor = '#6e0002';
+            break;
+            case 455:
+            blood2.style.display = 'inline';
+            body.style.backgroundColor = '#530001';
+            break;
+            case 456:
+            blood3.style.display = 'inline';
+            body.style.backgroundColor = '#370001';
+            break;
+            case 457:
+            blood4.style.display = 'inline';
+            body.style.backgroundColor = '#1c0000';
+            break;
+            case 458:
+            blood5.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 459:
+            bloodout.style.backgroundColor = '#000000';
+            fadefont.style.display = 'none';
+            blood1.style.display = 'none';
+            blood2.style.display = 'none';
+            blood3.style.display = 'none';
+            blood4.style.display = 'none';
+            blood5.style.display = 'none';
+            btnretry.style.display = 'inline';
+            btngotominitop.style.display = 'inline';
+            //btngototop.style.display = 'inline';
+            //location.href = 'main.html';
+            clearInterval(timerId5);
+            break;
+        }  
+    },55);
+}
+
+btnretry.addEventListener('mouseover',function(){btnretry.style.cursor='pointer';});
+btnretry.addEventListener('click',function(){window.location.reload();});
+
+btngotominitop.addEventListener('mouseover',function(){btngotominitop.style.cursor='pointer';});
+btngotominitop.addEventListener('click',function(){location.href = 'eventpage.html';});
+
+kanban.addEventListener('mouseover',function(){kanban.style.cursor='pointer';});
+kanban.addEventListener('click',function(){
+    if(fearbgmplaying===true){sescreambgmStop();}
+    if(bgmplaying===true){sexmasbgmStop();}
+    tochutaisyutsuguard.style.display = 'inline';
+    btnretry.style.display = 'inline';
+    location.href = 'https://www.lomando.com/';
+});
+
+//ハズレを選択した場合
+hazure1.addEventListener('mouseover',function(){hazure1.style.cursor='pointer';});
+hazure1.addEventListener('click',function(){
+    hazure1.style.display = 'none';
+    hazureEnsyutsu();
+});
+
+hazure2.addEventListener('mouseover',function(){hazure2.style.cursor='pointer';});
+hazure2.addEventListener('click',function(){
+    hazure2.style.display = 'none';
+    hazureEnsyutsu();
+});
+
+hazure3.addEventListener('mouseover',function(){hazure3.style.cursor='pointer';});
+hazure3.addEventListener('click',function(){
+    hazure3.style.display = 'none';
+    hazureEnsyutsu();
+});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+</html>

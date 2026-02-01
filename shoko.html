@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Expires" content="Fri, 15 Aug 2025 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>KEVONZ ISLAND</title>
+<link rel="icon"href="image/favicon.ico">
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#fh0{width:970px;height:580px;position:absolute;top:0px;left:0px;}
+#fhdoor{width:188px;height:425px;position:absolute;top:9px;left:393px;}
+#fhdoornoclick{width:188px;height:425px;position:absolute;top:9px;left:393px;background-color:#ff0000;opacity:0.0;}
+#fh1{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#fh2{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#fh3{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+
+#telop{
+    color:#ffffff;font-size:20px;background-color:#000000;
+    margin: 0px;padding: 0px;line-height: 1em;text-align:left;
+    position:absolute;left:295px;bottom:5px;
+}
+#telopbt{
+    width:970px;height:580px;position:absolute;left:0px;top:0px;
+    background-color:#00ff00;opacity:0.0;display:none;
+}
+#tapthescreennavi{width:200px;height:20px;position:absolute;right:0px;bottom:5px;display:none;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<!--/*
+<audio id="fallholese" preload="auto">
+<source src="pse/fallholese.wav" type="audio/wav">
+<source src="pse/fallholese.mp3" type="audio/mp3">
+</audio>
+*/-->
+
+<div id="d1">
+<img src = "pimg/fhole0.jpg"id="fh0">
+<img src = "pimg/fhole1.gif"id="fh1">
+<img src = "pimg/fhole2.gif"id="fh2">
+<img src = "pimg/fhole3.gif"id="fh3">
+<img src = "pimg/fholedoor.jpg"id="fhdoor">
+<div id="fhdoornoclick"></div>
+<p id="telop"></p><!--追加したテロップイベント用-->
+<img src="rimg/dotsboy/navi.gif"id="tapthescreennavi"><!--追加したテロップイベント用-->
+<div id="telopbt"></div><!--追加したテロップイベント用-->
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+/*★には同じ数字、☆には同じスペル(変数、関数)、◇にはファイルのパスを入力
+let sampleSource★ = '';
+async function decodeSe★(){
+    const response★ = await fetch("◇◇◇");
+    const arrayBuffer★ = await response★.arrayBuffer();
+    const audioBuffer★ = await ctx.decodeAudioData(arrayBuffer★);
+    return audioBuffer★;
+}
+function playSe★(ctx,audioBuffer★){
+    sampleSource★ = ctx.createBufferSource();
+    sampleSource★.buffer = audioBuffer★;
+    sampleSource★.connect(ctx.destination);
+    sampleSource★.start();
+}
+async function se☆Play(){
+    const se☆ = await decodeSe★();
+    playSe★(ctx,se☆);
+}
+async function se☆Stop(){
+    sampleSource★?.stop();
+}
+*/
+
+/*
+<audio id="fallholese" preload="auto">
+<source src="pse/fallholese.mp3" type="audio/mp3">
+</audio>
+*/
+
+/*★★★★★★★★★★★★★★★★★効果音のセット★★★★★★★★★★★★★★★★★★★★*/
+window.AudioContext = window.AudioContext||window.webkitAudioContext;
+const ctx = new AudioContext();
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let onseiplaying = false;
+let sampleSource1 = '';
+async function decodeSe1(){
+    const response1 = await fetch("pse/fallholese.mp3");
+    const arrayBuffer1 = await response1.arrayBuffer();
+    const audioBuffer1 = await ctx.decodeAudioData(arrayBuffer1);
+    return audioBuffer1;
+}
+function playSe1(ctx,audioBuffer1){
+    sampleSource1 = ctx.createBufferSource();
+    sampleSource1.buffer = audioBuffer1;
+    sampleSource1.connect(ctx.destination);
+    sampleSource1.start();
+    onseiplaying = true;
+}
+async function sefallholePlay(){
+    const sefallhole = await decodeSe1();
+    playSe1(ctx,sefallhole);
+}
+async function sefallholeStop(){
+    sampleSource1?.stop();
+}
+
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+
+let body = document.getElementById('body');
+let fh0 = document.getElementById('fh0');
+let fh1 = document.getElementById('fh1');
+let fh2 = document.getElementById('fh2');
+let fh3 = document.getElementById('fh3');
+let fhdoor = document.getElementById('fhdoor');
+let fhdoornoclick = document.getElementById('fhdoornoclick');//追加したテロップイベント用
+let telop = document.getElementById('telop');//追加したテロップイベント用
+let telopbt = document.getElementById('telopbt');//追加したテロップイベント用
+let tapthescreennavi = document.getElementById('tapthescreennavi');//追加したテロップイベント用
+//let fhoto = document.getElementById('fallholese');
+let fps = 0;
+
+//音声読み込みの為、テロップを流す
+let timerId99 = '';
+let fps99 = 0;
+function telopNagasu(){
+    timerId99 = setInterval(function(){
+        fps99++;
+        switch(fps99){//19\n34
+            case 1:
+            telop.innerText = '「\n"T';
+            break;
+            case 2:
+            telop.innerText = '「画\n"Th';
+            break;
+            case 3:
+            telop.innerText = '「画廊\n"The';
+            break;
+            case 4:
+            telop.innerText = '「画廊の\n"The g';
+            break;
+            case 5:
+            telop.innerText = '「画廊の扉\n"The gal';
+            break;
+            case 6:
+            telop.innerText = '「画廊の扉が\n"The galle';
+            break;
+            case 7:
+            telop.innerText = '「画廊の扉が目\n"The gallery';
+            break;
+            case 8:
+            telop.innerText = '「画廊の扉が目の\n"The gallery do';
+            break;
+            case 9:
+            telop.innerText = '「画廊の扉が目の前\n"The gallery door';
+            break;
+            case 10:
+            telop.innerText = '「画廊の扉が目の前に\n"The gallery door is';
+            break;
+            case 11:
+            telop.innerText = '「画廊の扉が目の前にあ\n"The gallery door is ri';
+            break;
+            case 12:
+            telop.innerText = '「画廊の扉が目の前にある\n"The gallery door is righ';
+            break;
+            case 13:
+            telop.innerText = '「画廊の扉が目の前にあるじ\n"The gallery door is right i';
+            break;
+            case 14:
+            telop.innerText = '「画廊の扉が目の前にあるじゃ\n"The gallery door is right in f';
+            break;
+            case 15:
+            telop.innerText = '「画廊の扉が目の前にあるじゃな\n"The gallery door is right in fro';
+            break;
+            case 16:
+            telop.innerText = '「画廊の扉が目の前にあるじゃない\n"The gallery door is right in front';
+            break;
+            case 17:
+            telop.innerText = '「画廊の扉が目の前にあるじゃないか\n"The gallery door is right in front of';
+            break;
+            case 18:
+            telop.innerText = '「画廊の扉が目の前にあるじゃないか！\n"The gallery door is right in front of me';
+            break;
+            case 19:
+            telop.innerText = '「画廊の扉が目の前にあるじゃないか！」\n"The gallery door is right in front of me!"';
+            tapthescreennavi.style.display = 'inline';
+            telopbt.style.display = 'inline';
+            clearInterval(timerId99);
+            break;
+        }
+    },100);
+}
+
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示し、テロップを流す★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+    telopNagasu();
+});
+
+//全画面透明テロップボタンを押して次のテロップを出しながら音声読み込み
+let timerId100 = '';
+let fps100 = 0;
+let teloppoint = 1;
+telopbt.addEventListener('mouseover',function(){telopbt.style.cursor='pointer';});
+telopbt.addEventListener('click',function(){
+    telopbt.style.display = 'none';
+    tapthescreennavi.style.display = 'none';
+    if(teloppoint===1){
+        decodeSe1();//音声読み込み
+        timerId100 = setInterval(function(){
+            fps100++;
+            switch(fps100){//10\n14
+            case 1:
+            telop.style.left = '392px';
+            telop.innerText = '「\n"';
+            break;
+            case 2:
+            telop.innerText = '「や\n"T';
+            break;
+            case 3:
+            telop.innerText = '「やっ\n"Th';
+            break;
+            case 4:
+            telop.innerText = '「やった\n"Tha';
+            break;
+            case 5:
+            telop.innerText = '「やったゴ\n"That';
+            break;
+            case 6:
+            telop.innerText = '「やったゴー\n"That i';
+            break;
+            case 7:
+            telop.innerText = '「やったゴール\n"That is a';
+            break;
+            case 8:
+            telop.innerText = '「やったゴールだ\n"That is a go';
+            break;
+            case 9:
+            telop.innerText = '「やったゴールだ!\n"That is a goal';
+            break;
+            case 10:
+            telop.innerText = '「やったゴールだ!」\n"That is a goal!"';
+            teloppoint = 2;
+            telopbt.style.display = 'inline';
+            tapthescreennavi.style.display = 'inline';
+            clearInterval(timerId100);
+            break;
+            }
+        },100);
+    }else if(teloppoint===2){
+        telop.innerText = '';
+        fhdoornoclick.style.display = 'none';
+    }
+});
+
+
+fhdoor.addEventListener('mouseover',function(){fhdoor.style.cursor = 'pointer';});
+fhdoor.addEventListener('click',function(){
+    //fhoto.load();
+    //fhoto.play();
+    sefallholePlay();
+    fhdoor.style.display = 'none';
+    fh0.style.display = 'none';
+    fh1.style.display = 'inline';
+    let timerId = setInterval(function(){
+        switch(fps){
+            case 22:
+            fh1.style.display = 'none';
+            fh2.style.display = 'inline';
+            break;
+            case 58:
+            fh2.style.display = 'none';
+            fh3.style.display = 'inline';
+            break;
+            case 67:
+            body.style.backgroundColor = '#ff0000';
+            break;
+            case 82:
+            if(onseiplaying===true){sefallholeStop();}
+            clearInterval(timerId);
+            break;
+        }
+        fps++;
+    },80);
+});
+</script>
+<!--
+<script src="js/.js"></script>
+-->
+</body>
+</html>

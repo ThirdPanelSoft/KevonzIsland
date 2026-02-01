@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Expires" content="Fri, 15 Aug 2025 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>KEVONZ ISLAND</title>
+<link rel="icon"href="image/favicon.ico">
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#whiteout{
+    background-color: #ffffff;
+    width:970px;
+    height:800px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+#curseyo{
+    background-color: #ffffff;
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+#gameover{
+    background-color: #ffffff;
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    opacity:0.0;
+    display:none;
+}
+#tv{
+    width:700px;
+    height:709px;
+    position:absolute;
+    left:120px;
+    top:20px;
+}
+#button1{width:600px;height:800px;position:absolute;left:185px;top:0px;display:none;}
+#button2{width:600px;height:800px;position:absolute;left:185px;top:0px;display:none;}
+#button3{width:600px;height:800px;position:absolute;left:185px;top:0px;display:none;}
+#button4{width:600px;height:800px;position:absolute;left:185px;top:0px;display:none;}
+#button5{width:600px;height:800px;position:absolute;left:185px;top:0px;display:none;}
+
+#button6{width:600px;height:800px;position:absolute;left:185px;top:0px;display:none;}
+#button7{width:600px;height:800px;position:absolute;left:185px;top:0px;display:none;}
+#button8{width:600px;height:800px;position:absolute;left:185px;top:0px;display:none;}
+#button9{width:600px;height:800px;position:absolute;left:185px;top:0px;display:none;}
+#button10{width:600px;height:800px;position:absolute;left:185px;top:0px;display:none;}
+
+#button11{width:970px;height:800px;position:absolute;left:0px;top:0px;display:none;}
+#button12{width:970px;height:800px;position:absolute;left:0px;top:0px;display:none;}
+#button13{width:970px;height:800px;position:absolute;left:0px;top:0px;display:none;}
+#button14{width:970px;height:800px;position:absolute;left:0px;top:0px;display:none;}
+#button15{width:970px;height:800px;position:absolute;left:0px;top:0px;display:none;}
+
+#button16{width:970px;height:800px;position:absolute;left:0px;top:0px;display:none;}
+#button17{width:970px;height:800px;position:absolute;left:0px;top:0px;display:none;}
+#button18{width:970px;height:800px;position:absolute;left:0px;top:0px;display:none;}
+#button19{width:970px;height:800px;position:absolute;left:0px;top:0px;display:none;}
+#button20{width:970px;height:800px;position:absolute;left:0px;top:0px;display:none;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<!--/*
+<audio id="peee" preload="auto"loop>
+<source src="pse/vhsboo.wav" type="audio/wav">
+<source src="pse/vhsboo.mp3" type="audio/mp3">
+</audio>
+
+<audio id="scream" preload="auto">
+<source src="pse/scream.wav" type="audio/wav">
+<source src="pse/scream.mp3" type="audio/mp3">
+</audio>
+
+<audio id="dialog" preload="auto">
+<source src="pse/yobialog.wav" type="audio/wav">
+<source src="pse/yobialog.mp3" type="audio/mp3">
+</audio>
+*/-->
+
+<div id="d1">
+<img src="pimg/cursetv.png"id="tv">
+
+<img src="pimg/curse1.jpg"id="button1">
+<img src="pimg/curse1.jpg"id="button2">
+<img src="pimg/curse1.jpg"id="button3">
+<img src="pimg/curse1.jpg"id="button4">
+<img src="pimg/curse1.jpg"id="button5">
+
+<img src="pimg/curse2.jpg"id="button6">
+<img src="pimg/curse2.jpg"id="button7">
+<img src="pimg/curse2.jpg"id="button8">
+<img src="pimg/curse2.jpg"id="button9">
+<img src="pimg/curse2.jpg"id="button10">
+
+<img src="pimg/curse3.jpg"id="button11">
+<img src="pimg/curse3.jpg"id="button12">
+<img src="pimg/curse3.jpg"id="button13">
+<img src="pimg/curse3.jpg"id="button14">
+<img src="pimg/curse3.jpg"id="button15">
+
+<img src="pimg/curse4.jpg"id="button16">
+<img src="pimg/curse4.jpg"id="button17">
+<img src="pimg/curse4.jpg"id="button18">
+<img src="pimg/curse4.jpg"id="button19">
+<img src="pimg/curse4.jpg"id="button20">
+
+<div id="whiteout"></div>
+
+<img src="pimg/Fuckyou.png"id="curseyo">
+<img src="pimg/gameover.jpg"id="gameover">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+/*★には同じ数字、☆には同じスペル(変数、関数)、◇にはファイルのパスを入力
+let sampleSource★ = '';
+async function decodeSe★(){
+    const response★ = await fetch("◇◇◇");
+    const arrayBuffer★ = await response★.arrayBuffer();
+    const audioBuffer★ = await ctx.decodeAudioData(arrayBuffer★);
+    return audioBuffer★;
+}
+function playSe★(ctx,audioBuffer★){
+    sampleSource★ = ctx.createBufferSource();
+    sampleSource★.buffer = audioBuffer★;
+    sampleSource★.connect(ctx.destination);
+    sampleSource★.start();
+}
+async function se☆Play(){
+    const se☆ = await decodeSe★();
+    playSe★(ctx,se☆);
+}
+async function se☆Stop(){
+    sampleSource★?.stop();
+}
+*/
+
+/*
+<audio id="peee" preload="auto"loop>
+<source src="pse/vhsboo.mp3" type="audio/mp3">
+</audio>
+
+<audio id="scream" preload="auto">
+<source src="pse/scream.mp3" type="audio/mp3">
+</audio>
+
+<audio id="dialog" preload="auto">
+<source src="pse/yobialog.mp3" type="audio/mp3">
+</audio>
+*/
+
+/*★★★★★★★★★★★★★★★★★効果音のセット★★★★★★★★★★★★★★★★★★★★*/
+window.AudioContext = window.AudioContext||window.webkitAudioContext;
+const ctx = new AudioContext();
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let peeeplaying = false;
+let sampleSource1 = '';
+async function decodeSe1(){
+    const response1 = await fetch("pse/vhsboo.mp3");
+    const arrayBuffer1 = await response1.arrayBuffer();
+    const audioBuffer1 = await ctx.decodeAudioData(arrayBuffer1);
+    return audioBuffer1;
+}
+function playSe1(ctx,audioBuffer1){
+    sampleSource1 = ctx.createBufferSource();
+    sampleSource1.buffer = audioBuffer1;
+    sampleSource1.loop = true;
+    sampleSource1.connect(ctx.destination);
+    sampleSource1.start();
+    peeeplaying = true;
+}
+async function sepeeePlay(){
+    const sepeee = await decodeSe1();
+    playSe1(ctx,sepeee);
+}
+async function sepeeeStop(){
+    sampleSource1?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource2 = '';
+async function decodeSe2(){
+    const response2 = await fetch("pse/scream.mp3");
+    const arrayBuffer2 = await response2.arrayBuffer();
+    const audioBuffer2 = await ctx.decodeAudioData(arrayBuffer2);
+    return audioBuffer2;
+}
+function playSe2(ctx,audioBuffer2){
+    sampleSource2 = ctx.createBufferSource();
+    sampleSource2.buffer = audioBuffer2;
+    sampleSource2.connect(ctx.destination);
+    sampleSource2.start();
+}
+async function sescreamPlay(){
+    const sescream = await decodeSe2();
+    playSe2(ctx,sescream);
+}
+async function sescreamStop(){
+    sampleSource2?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource3 = '';
+async function decodeSe3(){
+    const response3 = await fetch("pse/yobialog.mp3");
+    const arrayBuffer3 = await response3.arrayBuffer();
+    const audioBuffer3 = await ctx.decodeAudioData(arrayBuffer3);
+    return audioBuffer3;
+}
+function playSe3(ctx,audioBuffer3){
+    sampleSource3 = ctx.createBufferSource();
+    sampleSource3.buffer = audioBuffer3;
+    sampleSource3.connect(ctx.destination);
+    sampleSource3.start();
+}
+async function sedialogPlay(){
+    const sedialog = await decodeSe3();
+    playSe3(ctx,sedialog);
+}
+async function sedialogStop(){
+    sampleSource3?.stop();
+}
+
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let body = document.getElementById('body');
+let d1 = document.getElementById('d1');
+let whiteout = document.getElementById('whiteout');
+
+let tvtvtv = document.getElementById('tv');
+
+let button1 = document.getElementById('button1');
+let button2 = document.getElementById('button2');
+let button3 = document.getElementById('button3');
+let button4 = document.getElementById('button4');
+let button5 = document.getElementById('button5');
+
+let button6 = document.getElementById('button6');
+let button7 = document.getElementById('button7');
+let button8 = document.getElementById('button8');
+let button9 = document.getElementById('button9');
+let button10 = document.getElementById('button10');
+
+let button11 = document.getElementById('button11');
+let button12 = document.getElementById('button12');
+let button13 = document.getElementById('button13');
+let button14 = document.getElementById('button14');
+let button15 = document.getElementById('button15');
+
+let button16 = document.getElementById('button16');
+let button17 = document.getElementById('button17');
+let button18 = document.getElementById('button18');
+let button19 = document.getElementById('button19');
+let button20 = document.getElementById('button20');
+let fps = 0;
+let fps2 = 0;
+let curseyo = document.getElementById('curseyo');
+let gameover = document.getElementById('gameover');
+//let sepeee = document.getElementById('peee');
+//let sescream = document.getElementById('scream');
+//let sedialog = document.getElementById('dialog');
+//load(); play(); pause();
+
+function whiteTimer(){
+    fps = 0;
+    whiteout.style.display = 'inline';
+    let timerId = setInterval(function(){
+        switch(fps){
+            case 1:
+            whiteout.style.display = 'none';
+            clearInterval(timerId);
+            break;
+        }
+        fps++;
+    },70);
+}
+
+tvtvtv.addEventListener('mouseover',function(){tvtvtv.style.cursor = 'pointer';});
+tvtvtv.addEventListener('click',function(){
+    //sepeee.load();
+    //sepeee.play();
+    sepeeePlay();
+    decodeSe2();
+    decodeSe3();
+    tvtvtv.style.display = 'none';
+    d1.style.height = '800px';
+    button1.style.display = 'inline';
+});
+//黒
+button1.addEventListener('click',function(){whiteTimer();button1.style.display = 'none';button2.style.display = 'inline';});
+button2.addEventListener('click',function(){whiteTimer();button2.style.display = 'none';button3.style.display = 'inline';});
+button3.addEventListener('click',function(){whiteTimer();button3.style.display = 'none';button4.style.display = 'inline';});
+button4.addEventListener('click',function(){whiteTimer();button4.style.display = 'none';button5.style.display = 'inline';});
+button5.addEventListener('click',function(){whiteTimer();button5.style.display = 'none';button6.style.display = 'inline';body.style.backgroundColor = '#ffffff';});
+//白
+button6.addEventListener('click',function(){whiteTimer();button6.style.display = 'none';button7.style.display = 'inline';});
+button7.addEventListener('click',function(){whiteTimer();button7.style.display = 'none';button8.style.display = 'inline';});
+button8.addEventListener('click',function(){whiteTimer();button8.style.display = 'none';button9.style.display = 'inline';});
+button9.addEventListener('click',function(){whiteTimer();button9.style.display = 'none';button10.style.display = 'inline';});
+button10.addEventListener('click',function(){whiteTimer();button10.style.display = 'none';button11.style.display = 'inline';});
+//白
+button11.addEventListener('click',function(){whiteTimer();button11.style.display = 'none';button12.style.display = 'inline';});
+button12.addEventListener('click',function(){whiteTimer();button12.style.display = 'none';button13.style.display = 'inline';});
+button13.addEventListener('click',function(){whiteTimer();button13.style.display = 'none';button14.style.display = 'inline';});
+button14.addEventListener('click',function(){whiteTimer();button14.style.display = 'none';button15.style.display = 'inline';});
+button15.addEventListener('click',function(){whiteTimer();button15.style.display = 'none';button16.style.display = 'inline';body.style.backgroundColor = '#ff0000';});
+//赤
+button16.addEventListener('click',function(){whiteTimer();button16.style.display = 'none';button17.style.display = 'inline';});
+button17.addEventListener('click',function(){whiteTimer();button17.style.display = 'none';button18.style.display = 'inline';});
+button18.addEventListener('click',function(){whiteTimer();button18.style.display = 'none';button19.style.display = 'inline';});
+button19.addEventListener('click',function(){whiteTimer();button19.style.display = 'none';button20.style.display = 'inline';});
+button20.addEventListener('click',function(){
+    whiteTimer();
+    button20.style.display = 'none';
+    body.style.backgroundColor = '#000000';
+    d1.style.height = '580px';
+    //sepeee.pause();
+    if(peeeplaying===true){sepeeeStop();}
+    //1行目
+    let bunsho1 = document.createElement('p');
+    bunsho1.innerHTML = 'こ';
+    bunsho1.style.textAlign = 'left';
+    bunsho1.style.fontSize = '15px';
+    bunsho1.style.color = '#ffffff';
+    d1.insertBefore(bunsho1,null);
+    //2行目
+    let bunsho2 = document.createElement('p');
+    bunsho2.innerHTML = 'お';
+    bunsho2.style.textAlign = 'left';
+    bunsho2.style.fontSize = '15px';
+    bunsho2.style.color = '#ffffff';
+    //文字送り
+    let timerId2 = setInterval(function(){
+        switch(fps2){
+            case 2:
+            bunsho1.innerText = 'ここ';
+            break;
+            case 4:
+            bunsho1.innerText = 'ここま';
+            break;
+            case 6:
+            bunsho1.innerText = 'ここまで';
+            break;
+            case 8:
+            bunsho1.innerText = 'ここまで来';
+            break;
+            case 10:
+            bunsho1.innerText = 'ここまで来て';
+            break;
+            case 12:
+            bunsho1.innerText = 'ここまで来てく';
+            break;
+            case 14:
+            bunsho1.innerText = 'ここまで来てくれ';
+            break;
+            case 16:
+            bunsho1.innerText = 'ここまで来てくれて';
+            break;
+            case 18:
+            bunsho1.innerText = 'ここまで来てくれてあ';
+            break;
+            case 20:
+            bunsho1.innerText = 'ここまで来てくれてあり';
+            break;
+            case 22:
+            bunsho1.innerText = 'ここまで来てくれてありが';
+            break;
+            case 24:
+            bunsho1.innerText = 'ここまで来てくれてありがと';
+            break;
+            case 26:
+            bunsho1.innerText = 'ここまで来てくれてありがとう';
+            break;
+            case 28:
+            bunsho1.innerText = 'ここまで来てくれてありがとう。';
+            break;
+            case 40:
+            d1.insertBefore(bunsho2,null);
+            break;
+            case 42:
+            bunsho2.innerText = 'お礼';
+            break;
+            case 44:
+            bunsho2.innerText = 'お礼に';
+            break;
+            case 46:
+            bunsho2.innerText = 'お礼にい';
+            break;
+            case 48:
+            bunsho2.innerText = 'お礼にいい';
+            break;
+            case 50:
+            bunsho2.innerText = 'お礼にいいも';
+            break;
+            case 52:
+            bunsho2.innerText = 'お礼にいいもの';
+            break;
+            case 54:
+            bunsho2.innerText = 'お礼にいいもの見';
+            break;
+            case 56:
+            bunsho2.innerText = 'お礼にいいもの見せ';
+            break;
+            case 58:
+            bunsho2.innerText = 'お礼にいいもの見せて';
+            break;
+            case 60:
+            bunsho2.innerText = 'お礼にいいもの見せてあ';
+            break;
+            case 62:
+            bunsho2.innerText = 'お礼にいいもの見せてあげ';
+            break;
+            case 64:
+            bunsho2.innerText = 'お礼にいいもの見せてあげる';
+            break;
+            case 66:
+            bunsho2.innerText = 'お礼にいいもの見せてあげる。';
+            break;
+            case 90:
+            curseyo.style.display = 'inline';
+            //sedialog.load();
+            //sedialog.play();
+            sedialogPlay();
+            break;
+            case 104:
+            //sescream.load();
+            //sescream.play();
+            sescreamPlay();
+            break;
+            case 135:
+            gameover.style.display = 'inline';
+            break;
+            case 136:
+            body.style.backgroundColor = '#330000';
+            gameover.style.opacity = '0.2';
+            break;
+            case 137:
+            body.style.backgroundColor = '#660000';
+            gameover.style.opacity = '0.4';
+            break;
+            case 138:
+            body.style.backgroundColor = '#990000';
+            gameover.style.opacity = '0.6';
+            break;
+            case 139:
+            body.style.backgroundColor = '#cc0000';
+            gameover.style.opacity = '0.8';
+            break;
+            case 140:
+            body.style.backgroundColor = '#ff0000';
+            gameover.style.opacity = '1.0';
+            clearInterval(timerId2);
+            break;
+        }
+        fps2++;
+    },80);
+});
+
+
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+</html>

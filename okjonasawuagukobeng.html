@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Expires" content="Fri, 15 Aug 2025 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>KEVONZ ISLAND</title>
+<link rel="icon"href="image/favicon.ico">
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:620px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#douga{position:absolute;left:205px;top:20px;}
+#panewaku{width:439px;height:160px;position:absolute;left:265px;top:420px;}
+/*■■■■■■■■■■■■■■■■■■■■1回目■■■■■■■■■■■■■■■■■■■■*/
+#gu1{width:118px;height:118px;position:absolute;left:286px;top:441px;}
+#gupush1{width:118px;height:118px;position:absolute;left:286px;top:441px;display:none;}
+#choki1{width:118px;height:118px;position:absolute;left:425px;top:441px;}
+#chokipush1{width:118px;height:118px;position:absolute;left:425px;top:441px;display:none;}
+#par1{width:118px;height:118px;position:absolute;left:565px;top:441px;}
+#parpush1{width:118px;height:118px;position:absolute;left:565px;top:441px;display:none;}
+/*■■■■■■■■■■■■■■■■■■■■2回目■■■■■■■■■■■■■■■■■■■■*/
+#gu2{width:118px;height:118px;position:absolute;left:286px;top:441px;display:none;}
+#gupush2{width:118px;height:118px;position:absolute;left:286px;top:441px;display:none;}
+#choki2{width:118px;height:118px;position:absolute;left:425px;top:441px;display:none;}
+#chokipush2{width:118px;height:118px;position:absolute;left:425px;top:441px;display:none;}
+#par2{width:118px;height:118px;position:absolute;left:565px;top:441px;display:none;}
+#parpush2{width:118px;height:118px;position:absolute;left:565px;top:441px;display:none;}
+/*■■■■■■■■■■■■■■■■■■■■3回目■■■■■■■■■■■■■■■■■■■■*/
+#gu3{width:118px;height:118px;position:absolute;left:286px;top:441px;display:none;}
+#gupush3{width:118px;height:118px;position:absolute;left:286px;top:441px;display:none;}
+#choki3{width:118px;height:118px;position:absolute;left:425px;top:441px;display:none;}
+#chokipush3{width:118px;height:118px;position:absolute;left:425px;top:441px;display:none;}
+#par3{width:118px;height:118px;position:absolute;left:565px;top:441px;display:none;}
+#parpush3{width:118px;height:118px;position:absolute;left:565px;top:441px;display:none;}
+/*■■■■■■■■■■■■■■■■■■■■4回目■■■■■■■■■■■■■■■■■■■■*/
+#gu4{width:118px;height:118px;position:absolute;left:286px;top:441px;display:none;}
+#gupush4{width:118px;height:118px;position:absolute;left:286px;top:441px;display:none;}
+#choki4{width:118px;height:118px;position:absolute;left:425px;top:441px;display:none;}
+#chokipush4{width:118px;height:118px;position:absolute;left:425px;top:441px;display:none;}
+#par4{width:118px;height:118px;position:absolute;left:565px;top:441px;display:none;}
+#parpush4{width:118px;height:118px;position:absolute;left:565px;top:441px;display:none;}
+/*■■■■■■■■■■■■■■■■■■■■5回目■■■■■■■■■■■■■■■■■■■■*/
+#gu5{width:118px;height:118px;position:absolute;left:286px;top:441px;display:none;}
+#gupush5{width:118px;height:118px;position:absolute;left:286px;top:441px;display:none;}
+#choki5{width:118px;height:118px;position:absolute;left:425px;top:441px;display:none;}
+#chokipush5{width:118px;height:118px;position:absolute;left:425px;top:441px;display:none;}
+#par5{width:118px;height:118px;position:absolute;left:565px;top:441px;display:none;}
+#parpush5{width:118px;height:118px;position:absolute;left:565px;top:441px;display:none;}
+/*■■■■■■■■■■■■■■■■■■■■6回目■■■■■■■■■■■■■■■■■■■■*/
+#gu6{width:118px;height:118px;position:absolute;left:286px;top:441px;display:none;}
+#gupush6{width:118px;height:118px;position:absolute;left:286px;top:441px;display:none;}
+#choki6{width:118px;height:118px;position:absolute;left:425px;top:441px;display:none;}
+#chokipush6{width:118px;height:118px;position:absolute;left:425px;top:441px;display:none;}
+#par6{width:118px;height:118px;position:absolute;left:565px;top:441px;display:none;}
+#parpush6{width:118px;height:118px;position:absolute;left:565px;top:441px;display:none;}
+
+#paneani{width:439px;height:200px;position:absolute;left:265px;bottom:0px;display:none;}
+#doorhantei{
+    background-color:#00ff00;
+    width:80px;
+    height:183px;
+    position:absolute;
+    left:445px;
+    bottom:0px;
+    opacity:0.0;
+    display:none;
+}
+#jalink{width:113px;height:15px;position:absolute;left:428px;top:390px;}
+#faceup{width:970px;height:270px;position:absolute;left:0px;bottom:0px;display:none;}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<!--
+<audio id="buttonse" preload="auto">
+<source src="pse/tokobutton.wav" type="audio/wav">
+<source src="pse/tokobutton.mp3" type="audio/mp3">
+</audio>
+
+<audio id="unlockse" preload="auto">
+<source src="pse/boxunlock.wav" type="audio/wav">
+<source src="pse/boxunlock.mp3" type="audio/mp3">
+</audio>
+
+<audio id="boykoe" preload="auto">
+<source src="pse/smpboyengse1.wav" type="audio/wav">
+<source src="pse/smpboyengse1.mp3" type="audio/mp3">
+</audio>
+
+<audio id="opense" preload="auto">
+<source src="pse/boxopen.wav" type="audio/wav">
+<source src="pse/boxopen.mp3" type="audio/mp3">
+</audio>
+
+<audio id="boykoe2" preload="auto">
+<source src="pse/smpboyengse2.wav" type="audio/wav">
+<source src="pse/smpboyengse2.mp3" type="audio/mp3">
+</audio>
+-->
+
+<div id="d1">
+<img src="pimg/jboypanewaku.jpg"id="panewaku">
+<!--/*■■■■■■■■■■■■■■■■■■■■1回目■■■■■■■■■■■■■■■■■■■■*/-->
+<img src="pimg/jboygu.jpg"id="gu1">
+<img src="pimg/jboygupush.jpg"id="gupush1">
+<img src="pimg/jboychoki.jpg"id="choki1">
+<img src="pimg/jboychokipush.jpg"id="chokipush1">
+<img src="pimg/jboypar.jpg"id="par1">
+<img src="pimg/jboyparpush.jpg"id="parpush1">
+<!--/*■■■■■■■■■■■■■■■■■■■■2回目■■■■■■■■■■■■■■■■■■■■*/-->
+<img src="pimg/jboygu.jpg"id="gu2">
+<img src="pimg/jboygupush.jpg"id="gupush2">
+<img src="pimg/jboychoki.jpg"id="choki2">
+<img src="pimg/jboychokipush.jpg"id="chokipush2">
+<img src="pimg/jboypar.jpg"id="par2">
+<img src="pimg/jboyparpush.jpg"id="parpush2">
+<!--/*■■■■■■■■■■■■■■■■■■■■3回目■■■■■■■■■■■■■■■■■■■■*/-->
+<img src="pimg/jboygu.jpg"id="gu3">
+<img src="pimg/jboygupush.jpg"id="gupush3">
+<img src="pimg/jboychoki.jpg"id="choki3">
+<img src="pimg/jboychokipush.jpg"id="chokipush3">
+<img src="pimg/jboypar.jpg"id="par3">
+<img src="pimg/jboyparpush.jpg"id="parpush3">
+<!--/*■■■■■■■■■■■■■■■■■■■■4回目■■■■■■■■■■■■■■■■■■■■*/-->
+<img src="pimg/jboygu.jpg"id="gu4">
+<img src="pimg/jboygupush.jpg"id="gupush4">
+<img src="pimg/jboychoki.jpg"id="choki4">
+<img src="pimg/jboychokipush.jpg"id="chokipush4">
+<img src="pimg/jboypar.jpg"id="par4">
+<img src="pimg/jboyparpush.jpg"id="parpush4">
+<!--/*■■■■■■■■■■■■■■■■■■■■5回目■■■■■■■■■■■■■■■■■■■■*/-->
+<img src="pimg/jboygu.jpg"id="gu5">
+<img src="pimg/jboygupush.jpg"id="gupush5">
+<img src="pimg/jboychoki.jpg"id="choki5">
+<img src="pimg/jboychokipush.jpg"id="chokipush5">
+<img src="pimg/jboypar.jpg"id="par5">
+<img src="pimg/jboyparpush.jpg"id="parpush5">
+<!--/*■■■■■■■■■■■■■■■■■■■■6回目■■■■■■■■■■■■■■■■■■■■*/-->
+<img src="pimg/jboygu.jpg"id="gu6">
+<img src="pimg/jboygupush.jpg"id="gupush6">
+<img src="pimg/jboychoki.jpg"id="choki6">
+<img src="pimg/jboychokipush.jpg"id="chokipush6">
+<img src="pimg/jboypar.jpg"id="par6">
+<img src="pimg/jboyparpush.jpg"id="parpush6">
+
+<img src="pimg/jboypaneani.gif"id="paneani">
+<div id="doorhantei"></div>
+
+<img src="pimg/jboyjalink.jpg"id="jalink">
+
+<img src="pimg/jboyfaceup.jpg"id="faceup">
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pMoChO8M0NQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+/*★には同じ数字、☆には同じスペル(変数、関数)、◇にはファイルのパスを入力
+let sampleSource★ = '';
+async function decodeSe★(){
+    const response★ = await fetch("◇◇◇");
+    const arrayBuffer★ = await response★.arrayBuffer();
+    const audioBuffer★ = await ctx.decodeAudioData(arrayBuffer★);
+    return audioBuffer★;
+}
+function playSe★(ctx,audioBuffer★){
+    sampleSource★ = ctx.createBufferSource();
+    sampleSource★.buffer = audioBuffer★;
+    sampleSource★.connect(ctx.destination);
+    sampleSource★.start();
+}
+async function se☆Play(){
+    const se☆ = await decodeSe★();
+    playSe★(ctx,se☆);
+}
+async function se☆Stop(){
+    sampleSource★?.stop();
+}
+*/
+
+/*
+01<source src="pse/tokobutton.mp3" id="buttonse">
+02<source src="pse/boxunlock.mp3" id="unlockse">
+03<source src="pse/smpboyengse1.mp3" id="boykoe">
+04<source src="pse/boxopen.mp3" id="opense">
+05<source src="pse/smpboyengse2.mp3" id="boykoe2">
+*/
+
+/*★★★★★★★★★★★★★★★★★効果音のセット★★★★★★★★★★★★★★★★★★★★*/
+window.AudioContext = window.AudioContext||window.webkitAudioContext;
+const ctx = new AudioContext();
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource5 = '';
+async function decodeSe5(){
+    const response5 = await fetch("pse/smpboyengse2.mp3");
+    const arrayBuffer5 = await response5.arrayBuffer();
+    const audioBuffer5 = await ctx.decodeAudioData(arrayBuffer5);
+    return audioBuffer5;
+}
+function playSe5(ctx,audioBuffer5){
+    sampleSource5 = ctx.createBufferSource();
+    sampleSource5.buffer = audioBuffer5;
+    sampleSource5.connect(ctx.destination);
+    sampleSource5.start();
+}
+async function seboykoe2Play(){
+    const seboykoe2 = await decodeSe5();
+    playSe5(ctx,seboykoe2);
+}
+async function seboykoe2Stop(){
+    sampleSource5?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let openplaying = false;
+let sampleSource4 = '';
+async function decodeSe4(){
+    const response4 = await fetch("pse/boxopen.mp3");
+    const arrayBuffer4 = await response4.arrayBuffer();
+    const audioBuffer4 = await ctx.decodeAudioData(arrayBuffer4);
+    return audioBuffer4;
+}
+function playSe4(ctx,audioBuffer4){
+    sampleSource4 = ctx.createBufferSource();
+    sampleSource4.buffer = audioBuffer4;
+    sampleSource4.connect(ctx.destination);
+    sampleSource4.start();
+    openplaying = true;
+}
+async function seopenPlay(){
+    const seopen = await decodeSe4();
+    playSe4(ctx,seopen);
+}
+async function seopenStop(){
+    sampleSource4?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource3 = '';
+async function decodeSe3(){
+    const response3 = await fetch("pse/smpboyengse1.mp3");
+    const arrayBuffer3 = await response3.arrayBuffer();
+    const audioBuffer3 = await ctx.decodeAudioData(arrayBuffer3);
+    return audioBuffer3;
+}
+function playSe3(ctx,audioBuffer3){
+    sampleSource3 = ctx.createBufferSource();
+    sampleSource3.buffer = audioBuffer3;
+    sampleSource3.connect(ctx.destination);
+    sampleSource3.start();
+}
+async function seboykoePlay(){
+    const seboykoe = await decodeSe3();
+    playSe3(ctx,seboykoe);
+}
+async function seboykoeStop(){
+    sampleSource3?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource2 = '';
+async function decodeSe2(){
+    const response2 = await fetch("pse/boxunlock.mp3");
+    const arrayBuffer2 = await response2.arrayBuffer();
+    const audioBuffer2 = await ctx.decodeAudioData(arrayBuffer2);
+    return audioBuffer2;
+}
+function playSe2(ctx,audioBuffer2){
+    sampleSource2 = ctx.createBufferSource();
+    sampleSource2.buffer = audioBuffer2;
+    sampleSource2.connect(ctx.destination);
+    sampleSource2.start();
+}
+async function seunlockPlay(){
+    const seunlock = await decodeSe2();
+    playSe2(ctx,seunlock);
+}
+async function seunlockStop(){
+    sampleSource2?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource1 = '';
+async function decodeSe1(){
+    const response1 = await fetch("pse/tokobutton.mp3");
+    const arrayBuffer1 = await response1.arrayBuffer();
+    const audioBuffer1 = await ctx.decodeAudioData(arrayBuffer1);
+    return audioBuffer1;
+}
+function playSe1(ctx,audioBuffer1){
+    sampleSource1 = ctx.createBufferSource();
+    sampleSource1.buffer = audioBuffer1;
+    sampleSource1.connect(ctx.destination);
+    sampleSource1.start();
+}
+async function sebuttonPlay(){
+    const sebutton = await decodeSe1();
+    playSe1(ctx,sebutton);
+}
+async function sebuttonStop(){
+    sampleSource1?.stop();
+}
+
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    decodeSe1();
+});
+
+let panewaku = document.getElementById('panewaku');
+/*■■■■■■■■■■■■■■■■■■■■1回目■■■■■■■■■■■■■■■■■■■■*/
+let gu1 = document.getElementById('gu1');
+let gupush1 = document.getElementById('gupush1');
+let choki1 = document.getElementById('choki1');
+let chokipush1 = document.getElementById('chokipush1');
+let par1 = document.getElementById('par1');
+let parpush1 = document.getElementById('parpush1');
+/*■■■■■■■■■■■■■■■■■■■■2回目■■■■■■■■■■■■■■■■■■■■*/
+let gu2 = document.getElementById('gu2');
+let gupush2 = document.getElementById('gupush2');
+let choki2 = document.getElementById('choki2');
+let chokipush2 = document.getElementById('chokipush2');
+let par2 = document.getElementById('par2');
+let parpush2 = document.getElementById('parpush2');
+/*■■■■■■■■■■■■■■■■■■■■3回目■■■■■■■■■■■■■■■■■■■■*/
+let gu3 = document.getElementById('gu3');
+let gupush3 = document.getElementById('gupush3');
+let choki3 = document.getElementById('choki3');
+let chokipush3 = document.getElementById('chokipush3');
+let par3 = document.getElementById('par3');
+let parpush3 = document.getElementById('parpush3');
+/*■■■■■■■■■■■■■■■■■■■■4回目■■■■■■■■■■■■■■■■■■■■*/
+let gu4 = document.getElementById('gu4');
+let gupush4 = document.getElementById('gupush4');
+let choki4 = document.getElementById('choki4');
+let chokipush4 = document.getElementById('chokipush4');
+let par4 = document.getElementById('par4');
+let parpush4 = document.getElementById('parpush4');
+/*■■■■■■■■■■■■■■■■■■■■5回目■■■■■■■■■■■■■■■■■■■■*/
+let gu5 = document.getElementById('gu5');
+let gupush5 = document.getElementById('gupush5');
+let choki5 = document.getElementById('choki5');
+let chokipush5 = document.getElementById('chokipush5');
+let par5 = document.getElementById('par5');
+let parpush5 = document.getElementById('parpush5');
+/*■■■■■■■■■■■■■■■■■■■■6回目■■■■■■■■■■■■■■■■■■■■*/
+let gu6 = document.getElementById('gu6');
+let gupush6 = document.getElementById('gupush6');
+let choki6 = document.getElementById('choki6');
+let chokipush6 = document.getElementById('chokipush6');
+let par6 = document.getElementById('par6');
+let parpush6 = document.getElementById('parpush6');
+/*■■■■■■■■■■■■■■■■■■■■サウンド■■■■■■■■■■■■■■■■■■■■*/
+//let sebutton = document.getElementById('buttonse');
+//let seunlock = document.getElementById('unlockse');
+//let koeboy = document.getElementById('boykoe');
+//let koeboy2 = document.getElementById('boykoe2');
+//let seopen = document.getElementById('opense');
+//load(); play(); pause();
+/*■■■■■■■■■■■■■■■■■■■■それ以外■■■■■■■■■■■■■■■■■■■■*/
+let paneani = document.getElementById('paneani');
+let doorhantei = document.getElementById('doorhantei');
+let faceup = document.getElementById('faceup');
+let jalink = document.getElementById('jalink');
+let hintbt = document.getElementById('hintbt');
+let hintbt2 = document.getElementById('hintbt2');
+let hint = document.getElementById('hint');
+let fps1 = 0;
+let fps2 = 0;
+let fps3 = 0;
+let fps4 = 0;
+let fps5 = 0;
+let fps6 = 0;
+let fps7 = 0;
+let fps8 = 0;
+let fps9 = 0;
+let fps10 = 0;
+let fps11 = 0;
+let fps12 = 0;
+let fps13 = 0;
+let fps14 = 0;
+let fps15 = 0;
+let fps16 = 0;
+let fps17 = 0;
+let fps18 = 0;
+let fps19 = 0;
+let score = 0;
+
+/*1回目に音声を読み込ませる関数*/
+let loadpoint = 0;
+function onseiLoad(){
+    if(loadpoint===0){
+        decodeSe2();
+        decodeSe3();
+        decodeSe4();
+        decodeSe5();
+        loadpoint = 1;
+    }
+}
+/*■■■■■■■■■■■■■■■■■■■■1回目■■■■■■■■■■■■■■■■■■■■*/
+gu1.addEventListener('mouseover',function(){gu1.style.cursor='pointer';});
+gu1.addEventListener('click',function(){
+    fps1 = 0;
+    //sebutton.load();
+    sebuttonPlay();//sebutton
+    onseiLoad();//音声を読み込ませる関数
+    gu1.style.display = 'none';
+    gupush1.style.display = 'inline';
+    let timerId1 = setInterval(function(){
+        fps1++;
+        if(fps1>=1){
+            gupush1.style.display = 'none';
+            //現在のパネル消して次のパネル用意
+            gu1.style.display = 'none';
+            choki1.style.display = 'none';
+            par1.style.display = 'none';
+            gu2.style.display = 'inline';
+            choki2.style.display = 'inline';
+            par2.style.display = 'inline';
+            clearInterval(timerId1);
+        }
+    },80);
+});
+choki1.addEventListener('mouseover',function(){choki1.style.cursor='pointer';});
+choki1.addEventListener('click',function(){
+    fps2 = 0;
+    //sebutton.load();
+    sebuttonPlay();//sebutton
+    onseiLoad();//音声を読み込ませる関数
+    choki1.style.display = 'none';
+    chokipush1.style.display = 'inline';
+    let timerId2 = setInterval(function(){
+        fps2++;
+        if(fps2>=1){
+            chokipush1.style.display = 'none';
+            //現在のパネル消して次のパネル用意
+            gu1.style.display = 'none';
+            choki1.style.display = 'none';
+            par1.style.display = 'none';
+            gu2.style.display = 'inline';
+            choki2.style.display = 'inline';
+            par2.style.display = 'inline';
+            score += 1;
+            clearInterval(timerId2);
+        }
+    },80);
+});
+par1.addEventListener('mouseover',function(){par1.style.cursor='pointer';});
+par1.addEventListener('click',function(){
+    fps3 = 0;
+    //sebutton.load();
+    sebuttonPlay();//sebutton
+    onseiLoad();//音声を読み込ませる関数
+    par1.style.display = 'none';
+    parpush1.style.display = 'inline';
+    let timerId3 = setInterval(function(){
+        fps3++;
+        if(fps3>=1){
+            parpush1.style.display = 'none';
+            //現在のパネル消して次のパネル用意
+            gu1.style.display = 'none';
+            choki1.style.display = 'none';
+            par1.style.display = 'none';
+            gu2.style.display = 'inline';
+            choki2.style.display = 'inline';
+            par2.style.display = 'inline';
+            clearInterval(timerId3);
+        }
+    },80);
+});
+/*■■■■■■■■■■■■■■■■■■■■2回目■■■■■■■■■■■■■■■■■■■■*/
+gu2.addEventListener('mouseover',function(){gu2.style.cursor='pointer';});
+gu2.addEventListener('click',function(){
+    fps4 = 0;
+    //sebutton.load();
+    sebuttonPlay();//sebutton
+    gu2.style.display = 'none';
+    gupush2.style.display = 'inline';
+    let timerId4 = setInterval(function(){
+        fps4++;
+        if(fps4>=1){
+            gupush2.style.display = 'none';
+            //現在のパネル消して次のパネル用意
+            gu2.style.display = 'none';
+            choki2.style.display = 'none';
+            par2.style.display = 'none';
+            gu3.style.display = 'inline';
+            choki3.style.display = 'inline';
+            par3.style.display = 'inline';
+            score += 1;
+            clearInterval(timerId4);
+        }
+    },80);
+});
+choki2.addEventListener('mouseover',function(){choki2.style.cursor='pointer';});
+choki2.addEventListener('click',function(){
+    fps5 = 0;
+    //sebutton.load();
+    sebuttonPlay();//sebutton
+    choki2.style.display = 'none';
+    chokipush2.style.display = 'inline';
+    let timerId5 = setInterval(function(){
+        fps5++;
+        if(fps5>=1){
+            chokipush2.style.display = 'none';
+            //現在のパネル消して次のパネル用意
+            gu2.style.display = 'none';
+            choki2.style.display = 'none';
+            par2.style.display = 'none';
+            gu3.style.display = 'inline';
+            choki3.style.display = 'inline';
+            par3.style.display = 'inline';
+            clearInterval(timerId5);
+        }
+    },80);
+});
+par2.addEventListener('mouseover',function(){par2.style.cursor='pointer';});
+par2.addEventListener('click',function(){
+    fps6 = 0;
+    //sebutton.load();
+    sebuttonPlay();//sebutton
+    par2.style.display = 'none';
+    parpush2.style.display = 'inline';
+    let timerId6 = setInterval(function(){
+        fps6++;
+        if(fps6>=1){
+            parpush2.style.display = 'none';
+            //現在のパネル消して次のパネル用意
+            gu2.style.display = 'none';
+            choki2.style.display = 'none';
+            par2.style.display = 'none';
+            gu3.style.display = 'inline';
+            choki3.style.display = 'inline';
+            par3.style.display = 'inline';
+            clearInterval(timerId6);
+        }
+    },80);
+});
+/*■■■■■■■■■■■■■■■■■■■■3回目■■■■■■■■■■■■■■■■■■■■*/
+gu3.addEventListener('mouseover',function(){gu3.style.cursor='pointer';});
+gu3.addEventListener('click',function(){
+    fps7 = 0;
+    //sebutton.load();
+    sebuttonPlay();//sebutton
+    gu3.style.display = 'none';
+    gupush3.style.display = 'inline';
+    let timerId7 = setInterval(function(){
+        fps7++;
+        if(fps7>=1){
+            gupush3.style.display = 'none';
+            //現在のパネル消して次のパネル用意
+            gu3.style.display = 'none';
+            choki3.style.display = 'none';
+            par3.style.display = 'none';
+            gu4.style.display = 'inline';
+            choki4.style.display = 'inline';
+            par4.style.display = 'inline';
+            clearInterval(timerId7);
+        }
+    },80);
+});
+choki3.addEventListener('mouseover',function(){choki3.style.cursor='pointer';});
+choki3.addEventListener('click',function(){
+    fps8 = 0;
+    //sebutton.load();
+    sebuttonPlay();//sebutton
+    choki3.style.display = 'none';
+    chokipush3.style.display = 'inline';
+    let timerId8 = setInterval(function(){
+        fps8++;
+        if(fps8>=1){
+            chokipush3.style.display = 'none';
+            //現在のパネル消して次のパネル用意
+            gu3.style.display = 'none';
+            choki3.style.display = 'none';
+            par3.style.display = 'none';
+            gu4.style.display = 'inline';
+            choki4.style.display = 'inline';
+            par4.style.display = 'inline';
+            clearInterval(timerId8);
+        }
+    },80);
+});
+par3.addEventListener('mouseover',function(){par3.style.cursor='pointer';});
+par3.addEventListener('click',function(){
+    fps9 = 0;
+    //sebutton.load();
+    sebuttonPlay();//sebutton
+    par3.style.display = 'none';
+    parpush3.style.display = 'inline';
+    let timerId9 = setInterval(function(){
+        fps9++;
+        if(fps9>=1){
+            parpush3.style.display = 'none';
+            //現在のパネル消して次のパネル用意
+            gu3.style.display = 'none';
+            choki3.style.display = 'none';
+            par3.style.display = 'none';
+            gu4.style.display = 'inline';
+            choki4.style.display = 'inline';
+            par4.style.display = 'inline';
+            score += 1;
+            clearInterval(timerId9);
+        }
+    },80);
+});
+/*■■■■■■■■■■■■■■■■■■■■4回目■■■■■■■■■■■■■■■■■■■■*/
+gu4.addEventListener('mouseover',function(){gu4.style.cursor='pointer';});
+gu4.addEventListener('click',function(){
+    fps10 = 0;
+    //sebutton.load();
+    sebuttonPlay();//sebutton
+    gu4.style.display = 'none';
+    gupush4.style.display = 'inline';
+    let timerId10 = setInterval(function(){
+        fps10++;
+        if(fps10>=1){
+            gupush4.style.display = 'none';
+            //現在のパネル消して次のパネル用意
+            gu4.style.display = 'none';
+            choki4.style.display = 'none';
+            par4.style.display = 'none';
+            gu5.style.display = 'inline';
+            choki5.style.display = 'inline';
+            par5.style.display = 'inline';
+            score += 1;
+            clearInterval(timerId10);
+        }
+    },80);
+});
+choki4.addEventListener('mouseover',function(){choki4.style.cursor='pointer';});
+choki4.addEventListener('click',function(){
+    fps11 = 0;
+    //sebutton.load();
+    sebuttonPlay();//sebutton
+    choki4.style.display = 'none';
+    chokipush4.style.display = 'inline';
+    let timerId11 = setInterval(function(){
+        fps11++;
+        if(fps11>=1){
+            chokipush4.style.display = 'none';
+            //現在のパネル消して次のパネル用意
+            gu4.style.display = 'none';
+            choki4.style.display = 'none';
+            par4.style.display = 'none';
+            gu5.style.display = 'inline';
+            choki5.style.display = 'inline';
+            par5.style.display = 'inline';
+            clearInterval(timerId11);
+        }
+    },80);
+});
+par4.addEventListener('mouseover',function(){par4.style.cursor='pointer';});
+par4.addEventListener('click',function(){
+    fps12 = 0;
+    //sebutton.load();
+    sebuttonPlay();//sebutton
+    par4.style.display = 'none';
+    parpush4.style.display = 'inline';
+    let timerId12 = setInterval(function(){
+        fps12++;
+        if(fps12>=1){
+            parpush4.style.display = 'none';
+            //現在のパネル消して次のパネル用意
+            gu4.style.display = 'none';
+            choki4.style.display = 'none';
+            par4.style.display = 'none';
+            gu5.style.display = 'inline';
+            choki5.style.display = 'inline';
+            par5.style.display = 'inline';
+            clearInterval(timerId12);
+        }
+    },80);
+});
+/*■■■■■■■■■■■■■■■■■■■■5回目■■■■■■■■■■■■■■■■■■■■*/
+gu5.addEventListener('mouseover',function(){gu5.style.cursor='pointer';});
+gu5.addEventListener('click',function(){
+    fps13 = 0;
+    //sebutton.load();
+    sebuttonPlay();//sebutton
+    gu5.style.display = 'none';
+    gupush5.style.display = 'inline';
+    let timerId13 = setInterval(function(){
+        fps13++;
+        if(fps13>=1){
+            gupush5.style.display = 'none';
+            //現在のパネル消して次のパネル用意
+            gu5.style.display = 'none';
+            choki5.style.display = 'none';
+            par5.style.display = 'none';
+            gu6.style.display = 'inline';
+            choki6.style.display = 'inline';
+            par6.style.display = 'inline';
+            score += 1;
+            clearInterval(timerId13);
+        }
+    },80);
+});
+choki5.addEventListener('mouseover',function(){choki5.style.cursor='pointer';});
+choki5.addEventListener('click',function(){
+    fps14 = 0;
+    //sebutton.load();
+    sebuttonPlay();//sebutton
+    choki5.style.display = 'none';
+    chokipush5.style.display = 'inline';
+    let timerId14 = setInterval(function(){
+        fps14++;
+        if(fps14>=1){
+            chokipush5.style.display = 'none';
+            //現在のパネル消して次のパネル用意
+            gu5.style.display = 'none';
+            choki5.style.display = 'none';
+            par5.style.display = 'none';
+            gu6.style.display = 'inline';
+            choki6.style.display = 'inline';
+            par6.style.display = 'inline';
+            clearInterval(timerId14);
+        }
+    },80);
+});
+par5.addEventListener('mouseover',function(){par5.style.cursor='pointer';});
+par5.addEventListener('click',function(){
+    fps15 = 0;
+    //sebutton.load();
+    sebuttonPlay();//sebutton
+    par5.style.display = 'none';
+    parpush5.style.display = 'inline';
+    let timerId15 = setInterval(function(){
+        fps15++;
+        if(fps15>=1){
+            parpush5.style.display = 'none';
+            //現在のパネル消して次のパネル用意
+            gu5.style.display = 'none';
+            choki5.style.display = 'none';
+            par5.style.display = 'none';
+            gu6.style.display = 'inline';
+            choki6.style.display = 'inline';
+            par6.style.display = 'inline';
+            clearInterval(timerId15);
+        }
+    },80);
+});
+/*■■■■■■■■■■■■■■■■■■■■6回目■■■■■■■■■■■■■■■■■■■■*/
+gu6.addEventListener('mouseover',function(){gu6.style.cursor='pointer';});
+gu6.addEventListener('click',function(){
+    fps16 = 0;
+    //sebutton.load();
+    sebuttonPlay();//sebutton
+    gu6.style.display = 'none';
+    gupush6.style.display = 'inline';
+    let timerId16 = setInterval(function(){
+        fps16++;
+        switch(fps16){
+            case 1:
+            //「違うよ」スコアリセット
+            //koeboy2.load();
+            //koeboy2.play();
+            seboykoe2Play();
+            faceup.style.display = 'inline';
+            score = 0;
+            //現在のパネル消して次のパネル用意
+            gupush6.style.display = 'none';
+            gu6.style.display = 'none';
+            choki6.style.display = 'none';
+            par6.style.display = 'none';
+            gu1.style.display = 'inline';
+            choki1.style.display = 'inline';
+            par1.style.display = 'inline';
+            break;
+            case 24:
+            faceup.style.display = 'none';
+            clearInterval(timerId16);
+            break;
+        }
+    },80);
+});
+choki6.addEventListener('mouseover',function(){choki6.style.cursor='pointer';});
+choki6.addEventListener('click',function(){
+    fps17 = 0;
+    //sebutton.load();
+    sebuttonPlay();//sebutton
+    choki6.style.display = 'none';
+    chokipush6.style.display = 'inline';
+    if(score<5){
+        let timerId17 = setInterval(function(){
+            fps17++;
+            switch(fps17){
+            case 1:
+            //「違うよ」スコアリセット
+            //koeboy2.load();
+            //koeboy2.play();
+            seboykoe2Play();
+            faceup.style.display = 'inline';
+            score = 0;
+            //現在のパネル消して次のパネル用意
+            chokipush6.style.display = 'none';
+            gu6.style.display = 'none';
+            choki6.style.display = 'none';
+            par6.style.display = 'none';
+            gu1.style.display = 'inline';
+            choki1.style.display = 'inline';
+            par1.style.display = 'inline';
+            break;
+            case 24:
+            faceup.style.display = 'none';
+            clearInterval(timerId17);
+            break;
+        }
+        },80);
+    }else{
+        let timerId18 = setInterval(function(){
+            fps18++;
+            switch(fps18){
+                case 1:
+                //seunlock.load();
+                //seunlock.play();
+                seunlockPlay();
+                //現在のパネルセット消す
+                gu6.style.display = 'none';
+                chokipush6.style.display = 'none';
+                par6.style.display = 'none';
+                panewaku.style.display = 'none';
+                //パネルオープンアニメ
+                paneani.style.display = 'inline';
+                break;
+                case 12:
+                //koeboy.load();
+                //koeboy.play();
+                seboykoePlay();
+                break;
+                case 25:
+                //seopen.load();
+                //seopen.play();
+                seopenPlay();
+                break;
+                case 30:
+                doorhantei.style.display = 'inline';
+                clearInterval(timerId18);
+                break;
+            }
+        },80);
+    }
+});
+par6.addEventListener('mouseover',function(){par6.style.cursor='pointer';});
+par6.addEventListener('click',function(){
+    fps19 = 0;
+    //sebutton.load();
+    sebuttonPlay();//sebutton
+    par6.style.display = 'none';
+    parpush6.style.display = 'inline';
+    let timerId19 = setInterval(function(){
+        fps19++;
+        switch(fps19){
+            case 1:
+            //「違うよ」スコアリセット
+            //koeboy2.load();
+            //koeboy2.play();
+            seboykoe2Play();
+            faceup.style.display = 'inline';
+            score = 0;
+            //現在のパネル消して次のパネル用意
+            parpush6.style.display = 'none';
+            gu6.style.display = 'none';
+            choki6.style.display = 'none';
+            par6.style.display = 'none';
+            gu1.style.display = 'inline';
+            choki1.style.display = 'inline';
+            par1.style.display = 'inline';
+            break;
+            case 24:
+            faceup.style.display = 'none';
+            clearInterval(timerId19);
+            break;
+        }
+    },80);
+});
+
+jalink.addEventListener('mouseover',function(){jalink.style.cursor='pointer';});
+jalink.addEventListener('click',function(){
+    location.href = 'uozokjonasawuagukob.html';
+});
+
+doorhantei.addEventListener('mouseover',function(){doorhantei.style.cursor='pointer';});
+doorhantei.addEventListener('click',function(){
+    if(openplaying===true){seopenStop();}
+    location.href = 'atelierdesu.html';
+});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+</html>

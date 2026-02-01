@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Expires" content="Fri, 15 Aug 2025 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>KEVONZ ISLAND</title>
+<link rel="icon"href="image/favicon.ico">
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+html {
+  animation: invertCycle 1s infinite linear;
+}
+@keyframes invertCycle {
+  0% {
+    filter: invert(0) hue-rotate(0deg);
+  }
+  50% {
+    filter: invert(1) hue-rotate(180deg);
+  }
+  100% {
+    filter: invert(0) hue-rotate(360deg);
+  }
+}
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:968px;
+    height:582px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+/*手左側6個*/
+#hl1{width:116px;height:97px;position:absolute;top:0px;left:0px;}
+#hl2{width:116px;height:97px;position:absolute;top:97px;left:0px;}
+#hl3{width:116px;height:97px;position:absolute;top:194px;left:0px;}
+#hl4{width:116px;height:97px;position:absolute;top:291px;left:0px;}
+#hl5{width:116px;height:97px;position:absolute;top:388px;left:0px;}
+#hl6{width:116px;height:97px;position:absolute;top:485px;left:0px;}
+/*手右側6個*/
+#hr1{width:116px;height:97px;position:absolute;top:0px;right:0px;}
+#hr2{width:116px;height:97px;position:absolute;top:97px;right:0px;}
+#hr3{width:116px;height:97px;position:absolute;top:194px;right:0px;}
+#hr4{width:116px;height:97px;position:absolute;top:291px;right:0px;}
+#hr5{width:116px;height:97px;position:absolute;top:388px;right:0px;}
+#hr6{width:116px;height:97px;position:absolute;top:485px;right:0px;}
+/*手上側8個*/
+#ht1{width:92px;height:116px;position:absolute;top:0px;left:116px;}
+#ht2{width:92px;height:116px;position:absolute;top:0px;left:208px;}
+#ht3{width:92px;height:116px;position:absolute;top:0px;left:300px;}
+#ht4{width:92px;height:116px;position:absolute;top:0px;left:392px;}
+#ht5{width:92px;height:116px;position:absolute;top:0px;left:484px;}
+#ht6{width:92px;height:116px;position:absolute;top:0px;left:576px;}
+#ht7{width:92px;height:116px;position:absolute;top:0px;left:668px;}
+#ht8{width:92px;height:116px;position:absolute;top:0px;left:760px;}
+/*手下側8個*/
+#hb1{width:92px;height:116px;position:absolute;bottom:0px;left:116px;}
+#hb2{width:92px;height:116px;position:absolute;bottom:0px;left:208px;}
+#hb3{width:92px;height:116px;position:absolute;bottom:0px;left:300px;}
+#hb4{width:92px;height:116px;position:absolute;bottom:0px;left:392px;}
+#hb5{width:92px;height:116px;position:absolute;bottom:0px;left:484px;}
+#hb6{width:92px;height:116px;position:absolute;bottom:0px;left:576px;}
+#hb7{width:92px;height:116px;position:absolute;bottom:0px;left:668px;}
+#hb8{width:92px;height:116px;position:absolute;bottom:0px;left:760px;}
+/*プロフィール*/
+#profile{width:250px;height:250px;position:absolute;top:166px;left:213px;border:2px solid #ffffff;}
+#profile2{width:250px;height:250px;position:absolute;top:166px;left:213px;border:2px solid #ffffff;display:none;}
+#profile3{width:250px;height:250px;position:absolute;top:166px;left:213px;border:2px solid #ffffff;display:none;}
+#profile4{width:250px;height:250px;position:absolute;top:166px;left:213px;border:2px solid #ffffff;display:none;}
+#profile5{width:250px;height:250px;position:absolute;top:166px;left:213px;border:2px solid #ffffff;display:none;}
+#profile6{width:250px;height:250px;position:absolute;top:166px;left:213px;border:2px solid #ffffff;display:none;}
+#profile7{width:250px;height:250px;position:absolute;top:166px;left:213px;border:2px solid #ffffff;display:none;}
+#profile8{width:250px;height:250px;position:absolute;top:166px;left:213px;border:2px solid #ffffff;display:none;}
+#profile9{width:250px;height:250px;position:absolute;top:166px;left:213px;border:2px solid #ffffff;display:none;}
+#profile10{width:250px;height:250px;position:absolute;top:166px;left:213px;border:2px solid #ffffff;display:none;}
+#profile11{width:250px;height:250px;position:absolute;top:166px;left:213px;border:2px solid #ffffff;display:none;}
+#profile12{width:250px;height:250px;position:absolute;top:166px;left:213px;border:2px solid #ffffff;display:none;}
+#p1{
+    font-family:serif;
+    font-size:15px;
+    color:#ffffff;
+    font-weight:bold;
+    text-align:left;
+    position:absolute;
+    top:180px;
+    left:493px;
+}
+#shinitai{width:970px;height:607px;position:absolute;top:0px;left:0px;display:none;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:968px;height:582px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<!--
+<audio id="sunaarashise" preload="auto" loop>
+<source src="pse/sunaarashi.wav" type="audio/wav">
+<source src="pse/sunaarashi.mp3" type="audio/mp3">
+</audio>
+-->
+<audio id="myAudio" loop>
+  <source src="rse\hey-everybody-i-m-looking-at-gay-porno.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<div id="d1">
+<!--手左側6個-->
+<img src="pimg/prohandleft.gif"id="hl1">
+<img src="pimg/prohandleft.gif"id="hl2">
+<img src="pimg/prohandleft.gif"id="hl3">
+<img src="pimg/prohandleft.gif"id="hl4">
+<img src="pimg/prohandleft.gif"id="hl5">
+<img src="pimg/prohandleft.gif"id="hl6">
+<!--手右側6個-->
+<img src="pimg/prohandright.gif"id="hr1">
+<img src="pimg/prohandright.gif"id="hr2">
+<img src="pimg/prohandright.gif"id="hr3">
+<img src="pimg/prohandright.gif"id="hr4">
+<img src="pimg/prohandright.gif"id="hr5">
+<img src="pimg/prohandright.gif"id="hr6">
+<!--手上側8個-->
+<img src="pimg/prohandtop.gif"id="ht1">
+<img src="pimg/prohandtop.gif"id="ht2">
+<img src="pimg/prohandtop.gif"id="ht3">
+<img src="pimg/prohandtop.gif"id="ht4">
+<img src="pimg/prohandtop.gif"id="ht5">
+<img src="pimg/prohandtop.gif"id="ht6">
+<img src="pimg/prohandtop.gif"id="ht7">
+<img src="pimg/prohandtop.gif"id="ht8">
+<!--手下側8個-->
+<img src="pimg/prohandbottom.gif"id="hb1">
+<img src="pimg/prohandbottom.gif"id="hb2">
+<img src="pimg/prohandbottom.gif"id="hb3">
+<img src="pimg/prohandbottom.gif"id="hb4">
+<img src="pimg/prohandbottom.gif"id="hb5">
+<img src="pimg/prohandbottom.gif"id="hb6">
+<img src="pimg/prohandbottom.gif"id="hb7">
+<img src="pimg/prohandbottom.gif"id="hb8">
+<!--プロフィール-->
+<img src="pimg/sissy.png"id="profile">
+<img src="pimg/profile/profile2.png"id="profile2">
+<img src="pimg/profile/profile3.png"id="profile3">
+<img src="pimg/profile/profile4.png"id="profile4">
+<img src="pimg/profile/profile5.png"id="profile5">
+<img src="pimg/profile/profile6.png"id="profile6">
+<img src="pimg/profile/profile7.png"id="profile7">
+<img src="pimg/profile/profile8.png"id="profile8">
+<img src="pimg/profile/profile9.png"id="profile9">
+<img src="pimg/profile/profile10.png"id="profile10">
+<img src="pimg/profile/profile11.png"id="profile11">
+<img src="pimg/profile/profile12.png"id="profile12">
+<p id="p1">
+<!--ふぁんしーあいらんど管理人<br>(～2010年4月04日)<br><br>詳細不明<br><br>unknown<br><br>詳細不明<br><br>unknown<br><br>詳細不明-->
+</p>
+<img src="pimg/shinitaichan.gif"id="shinitai">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+/*★には同じ数字、☆には同じスペル(変数、関数)、◇にはファイルのパスを入力
+let sampleSource★ = '';
+async function decodeSe★(){
+    const response★ = await fetch("◇◇◇");
+    const arrayBuffer★ = await response★.arrayBuffer();
+    const audioBuffer★ = await ctx.decodeAudioData(arrayBuffer★);
+    return audioBuffer★;
+}
+function playSe★(ctx,audioBuffer★){
+    sampleSource★ = ctx.createBufferSource();
+    sampleSource★.buffer = audioBuffer★;
+    sampleSource★.connect(ctx.destination);
+    sampleSource★.start();
+}
+async function se☆Play(){
+    const se☆ = await decodeSe★();
+    playSe★(ctx,se☆);
+}
+async function se☆Stop(){
+    sampleSource★?.stop();
+}
+*/
+
+/*
+<audio id="sunaarashise" preload="auto" loop>
+<source src="pse/sunaarashi.mp3" type="audio/mp3">
+</audio>
+*/
+
+/*★★★★★★★★★★★★★★★★★効果音のセット★★★★★★★★★★★★★★★★★★★★*/
+window.AudioContext = window.AudioContext||window.webkitAudioContext;
+const ctx = new AudioContext();
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource1 = '';
+async function decodeSe1(){
+    const response1 = await fetch("pse/sunaarashi.mp3");
+    const arrayBuffer1 = await response1.arrayBuffer();
+    const audioBuffer1 = await ctx.decodeAudioData(arrayBuffer1);
+    return audioBuffer1;
+}
+function playSe1(ctx,audioBuffer1){
+    sampleSource1 = ctx.createBufferSource();
+    sampleSource1.buffer = audioBuffer1;
+    sampleSource1.loop = true;
+    sampleSource1.connect(ctx.destination);
+    sampleSource1.start();
+}
+async function sesunaarashiPlay(){
+    const sesunaarashi = await decodeSe1();
+    playSe1(ctx,sesunaarashi);
+}
+async function sesunaarashiStop(){
+    sampleSource1?.stop();
+}
+
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+let p1 = document.getElementById('p1');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+    p1.innerText = 'Name: Duncan Incredible Gassy\nAge: 14\nOccupation: Retarded Deviantart Sissy\nDoxxed for reason:Because he exposed thy lord Kevonz as a pedophillings!\nStatus: Kidnapped to view 500 IShowSpeed porn pictures every day\nas a punishment';
+});
+/*手左側6個*/
+let hl1 = document.getElementById('hl1');
+let hl2 = document.getElementById('hl2');
+let hl3 = document.getElementById('hl3');
+let hl4 = document.getElementById('hl4');
+let hl5 = document.getElementById('hl5');
+let hl6 = document.getElementById('hl6');
+/*手右側6個*/
+let hr1 = document.getElementById('hr1');
+let hr2 = document.getElementById('hr2');
+let hr3 = document.getElementById('hr3');
+let hr4 = document.getElementById('hr4');
+let hr5 = document.getElementById('hr5');
+let hr6 = document.getElementById('hr6');
+/*手上側8個*/
+let ht1 = document.getElementById('ht1');
+let ht2 = document.getElementById('ht2');
+let ht3 = document.getElementById('ht3');
+let ht4 = document.getElementById('ht4');
+let ht5 = document.getElementById('ht5');
+let ht6 = document.getElementById('ht6');
+let ht7 = document.getElementById('ht7');
+let ht8 = document.getElementById('ht8');
+/*手下側8個*/
+let hb1 = document.getElementById('hb1');
+let hb2 = document.getElementById('hb2');
+let hb3 = document.getElementById('hb3');
+let hb4 = document.getElementById('hb4');
+let hb5 = document.getElementById('hb5');
+let hb6 = document.getElementById('hb6');
+let hb7 = document.getElementById('hb7');
+let hb8 = document.getElementById('hb8');
+/*プロフィール*/
+let profile = document.getElementById('profile');
+let profile2 = document.getElementById('profile2');
+let profile3 = document.getElementById('profile3');
+let profile4 = document.getElementById('profile4');
+let profile5 = document.getElementById('profile5');
+let profile6 = document.getElementById('profile6');
+let profile7 = document.getElementById('profile7');
+let profile8 = document.getElementById('profile8');
+let profile9 = document.getElementById('profile9');
+let profile10 = document.getElementById('profile10');
+let profile11 = document.getElementById('profile11');
+let profile12 = document.getElementById('profile12');
+let shinitai = document.getElementById('shinitai');
+//let sesunaarashi = document.getElementById('sunaarashise');
+//load(); play(); pause();
+
+let timerId = '';
+let fps1 = 0;
+profile.addEventListener('mouseover',function(){profile.style.cursor = 'pointer';});
+const audio = document.getElementById("myAudio");
+
+const controls = document.body.querySelectorAll("*");
+
+let teleporting = false;
+
+function randomPosition(el) {
+  const maxX = window.innerWidth - el.offsetWidth;
+  const maxY = window.innerHeight - el.offsetHeight;
+
+  el.style.position = "absolute";
+  el.style.left = Math.random() * maxX + "px";
+  el.style.top = Math.random() * maxY + "px";
+}
+
+profile.addEventListener("click", function () {
+  audio.play();
+
+  if (teleporting) return;
+  teleporting = true;
+
+  setInterval(() => {
+    controls.forEach(el => randomPosition(el));
+  }, 1);
+});
+
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+</html>

@@ -1,0 +1,2503 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Expires" content="Fri, 15 Aug 2025 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>KEVONZ ISLAND</title>
+<link rel="icon"href="image/favicon.ico">
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#back{width:970px;height:580px;position:absolute;left:0px;top:0px;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#back0{width:970px;height:580px;position:absolute;left:0px;top:0px;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#e1{
+    width:186px;
+    height:120px;
+    background-color: #000000;
+    border:3px solid #ffffff;
+    border-radius:10%;
+    position:absolute;
+    right:4px;
+    top:5px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#ep1{
+    text-align:center;
+    line-height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-size:17px;
+    color:#ffffff;
+    position:absolute;
+    right:20px;
+    top:17px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#ep2{
+    text-align:center;
+    line-height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-size:24px;
+    color:#ffffff;
+    position:absolute;
+    right:30px;
+    top:80px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#roulette{
+    width:100px;
+    height:120px;
+    position:absolute;
+    right:200px;
+    top:8px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#enegu{
+    width:100px;
+    height:120px;
+    position:absolute;
+    right:200px;
+    top:8px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#enechoki{
+    width:100px;
+    height:120px;
+    position:absolute;
+    right:200px;
+    top:8px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#enepar{
+    width:100px;
+    height:120px;
+    position:absolute;
+    right:200px;
+    top:8px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#v1{
+    width:186px;
+    height:120px;
+    background-color: #000000;
+    border:3px solid #ffffff;
+    border-radius:10%;
+    position:absolute;
+    left:4px;
+    bottom:5px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#vp1{
+    text-align:center;
+    line-height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-size:16px;
+    color:#ffffff;
+    position:absolute;
+    left:20px;
+    bottom:70px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#vp2{
+    text-align:center;
+    line-height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-size:24px;
+    color:#ffffff;
+    position:absolute;
+    left:30px;
+    bottom:35px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+/*round1*/
+#yougu{width:100px;height:40px;position:absolute;left:200px;bottom:88px;opacity:0.5;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#youchoki{width:100px;height:40px;position:absolute;left:200px;bottom:48px;opacity:0.5;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#youpar{width:100px;height:40px;position:absolute;left:200px;bottom:8px;opacity:0.5;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+
+#yougudm{
+    width:100px;
+    height:40px;
+    position:absolute;
+    left:200px;
+    bottom:88px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#youchokidm{
+    width:100px;
+    height:40px;
+    position:absolute;
+    left:200px;
+    bottom:48px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#youpardm{
+    width:100px;
+    height:40px;
+    position:absolute;
+    left:200px;
+    bottom:8px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#pieyama{
+    width:200px;
+    height:403px;
+    position: absolute;
+    left:384px;
+    top:88px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#pienoroi{
+    width:970px;
+    height:580px;
+    position: absolute;
+    left:0px;
+    top:0px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#pienata{
+    width:201px;
+    height:265px;
+    position: absolute;
+    left:385px;
+    top:126px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#barrier1{width:970px;height:580px;position: absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+
+#msgwindow{
+    width:776px;
+    height:115px;
+    background-color:#000000;
+    border:3px solid #ffffff;
+    position: absolute;
+    top:0px;
+    left:97px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#msg1{
+    font-size:10pt;
+    color:#ffffff;
+    text-align: center;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#msgwindow2{
+    width:776px;
+    height:54px;
+    background-color:#000000;
+    border:3px solid #ffffff;
+    position: absolute;
+    top:385px;
+    left:97px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#msg3{
+    font-size:15pt;
+    color:#ffffff;
+    text-align: center;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#door{
+    width:290px;
+    height:411px;
+    position:absolute;
+    left:338px;
+    top:88px;
+    opacity:0.0;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#nextdoor{
+    width:314px;
+    height:194px;
+    position:absolute;
+    left:327px;
+    top:199px;
+    opacity:0.0;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#blackout{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    opacity: 0.0;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#gameover{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    opacity: 0.0;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#encount{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#aikokun{width:970px;height:306px;position:absolute;top:137px;right:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+
+#kusari{width:300px;height:130px;position: absolute;left:1px;bottom:2px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#fireworks1{width:970px;height:580px;position: absolute;left:0px;bottom:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#fireworks2{width:970px;height:580px;position: absolute;left:0px;bottom:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#smoke1{width:60px;height:177px;position: absolute;left:455px;bottom:327px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#smoke2{width:36px;height:212px;position: absolute;left:467px;bottom:327px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#smoke3{width:18px;height:246px;position: absolute;left:476px;bottom:327px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#smoke4{width:6px;height:253px;position: absolute;left:482px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#shotgun1{width:383px;height:394px;position: absolute;left:279px;bottom:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#shotgun2{width:411px;height:415px;position: absolute;left:265px;bottom:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#whiteback{
+    width:970px;height:580px;
+    position: absolute;left:0px;bottom:0px;
+    background-color:#ffffff;display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#kyutaibaria{width:613px;height:463px;position: absolute;left:180px;top:60px;opacity:0.6;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#natazanzou1{width:95px;height:193px;position: absolute;left:489px;top:97px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#natazanzou2{width:190px;height:382px;position: absolute;left:389px;top:97px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#natazanzou3{width:95px;height:193px;position: absolute;left:389px;top:296px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#firstmsgwd{
+    width:862px;height:153px;
+    position: absolute;left:58px;bottom:10px;
+    background-color:#000000;border:3px solid #ffffff;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#firstmsg{
+    font-size:15pt;color:#ffffff;text-align:left;
+    margin: 0px;padding: 0px;line-height: 1em;
+    position:absolute;left:81px;top:440px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#makenopen{width:314px;height:194px;position:absolute;left:327px;top:199px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#makenkara{width:314px;height:194px;position:absolute;left:327px;top:199px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#makenarea{
+    width:252px;height:153px;
+    position:absolute;left:358px;top:217px;
+    background-color:#00ff00;opacity:0.0;display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#kurohaikei{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;opacity:0.7;display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#maken{width:460px;height:460px;position:absolute;left:255px;top:60px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#cbutton{width:90px;height:41px;position:absolute;right:30px;bottom:21px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#weaponname{
+    font-size:15pt;color:#00ff00;text-align:left;font-weight:bold;
+    position:absolute;left:624px;top:286px;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#weaponint{
+    font-size:15pt;color:#ffffff;text-align:left;
+    margin: 0px;padding: 0px;line-height: 1em;
+    position:absolute;left:624px;top:324px;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#neckghost1{width:458px;height:580px;position:absolute;left:256px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckghost2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckarea{
+    width:458px;height:580px;
+    position:absolute;left:256px;top:0px;
+    background-color:#00ff00;opacity:0.0;display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#waap1{width:186px;height:534px;position:absolute;left:392px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#waap2{width:186px;height:534px;position:absolute;left:392px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#waaparea{
+    width:186px;height:96px;
+    position:absolute;left:392px;top:438px;
+    background-color:#00ff00;opacity:0.0;display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#whiteout{
+    width:970px;height:580px;
+    position:absolute;top:0px;left:0px;
+    background-color:#ffffff;opacity:0.2;display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<!--/*
+<audio id="sentoubgm" preload="auto" loop>
+<source src="pse/medadybgm.wav" type="audio/wav">
+<source src="pse/medadybgm.mp3" type="audio/mp3">
+</audio>
+
+<audio id="tamese" preload="auto">
+<source src="pse/medadytame.wav" type="audio/wav">
+<source src="pse/medadytame.mp3" type="audio/mp3">
+</audio>
+
+<audio id="shunse" preload="auto">
+<source src="pse/medadyshun.wav" type="audio/wav">
+<source src="pse/medadyshun.mp3" type="audio/mp3">
+</audio>
+
+<audio id="fireballse" preload="auto">
+<source src="pse/medadyfireball.wav" type="audio/wav">
+<source src="pse/medadyfireball.mp3" type="audio/mp3">
+</audio>
+
+<audio id="bariase" preload="auto">
+<source src="pse/medadybariar.wav" type="audio/wav">
+<source src="pse/medadybariar.mp3" type="audio/mp3">
+</audio>
+
+<audio id="kusarise" preload="auto">
+<source src="pse/medadykusari.wav" type="audio/wav">
+<source src="pse/medadykusari.mp3" type="audio/mp3">
+</audio>
+
+<audio id="buttonse" preload="auto">
+<source src="pse/janbutton.wav" type="audio/wav">
+<source src="pse/janbutton.mp3" type="audio/mp3">
+</audio>
+
+<audio id="piedeathse" preload="auto">
+<source src="pse/janpiedeath.wav" type="audio/wav">
+<source src="pse/janpiedeath.mp3" type="audio/mp3">
+</audio>
+
+<audio id="ydamagese" preload="auto">
+<source src="pse/janyoudamage.wav" type="audio/wav">
+<source src="pse/janyoudamage.mp3" type="audio/mp3">
+</audio>
+
+<audio id="edamagese" preload="auto">
+<source src="pse/janenedamage.wav" type="audio/wav">
+<source src="pse/janenedamage.mp3" type="audio/mp3">
+</audio>
+
+<audio id="pienoroise" preload="auto">
+<source src="pse/janpienoroi.wav" type="audio/wav">
+<source src="pse/janpienoroi.mp3" type="audio/mp3">
+</audio>
+
+<audio id="aikokunse" preload="auto">
+<source src="se/takawarai.wav" type="audio/wav">
+<source src="se/takawarai.mp3" type="audio/mp3">
+</audio>
+
+<audio id="encountse" preload="auto">
+<source src="pse/janencount.wav" type="audio/wav">
+<source src="pse/janencount.mp3" type="audio/mp3">
+</audio>
+
+<audio id="shotse" preload="auto">
+<source src="pse/bomber.wav" type="audio/wav">
+<source src="pse/bomber.mp3" type="audio/mp3">
+</audio>
+
+<audio id="gunreturnse" preload="auto">
+<source src="pse/gunreturn.wav" type="audio/wav">
+<source src="pse/gunreturn.mp3" type="audio/mp3">
+</audio>
+
+<audio id="mojiokurise" preload="auto">
+<source src="pse/mojiokuri.wav" type="audio/wav">
+<source src="pse/mojiokuri.mp3" type="audio/mp3">
+</audio>
+
+<audio id="gateopense" preload="auto">
+<source src="pse/gateopense.wav" type="audio/wav">
+<source src="pse/gateopense.mp3" type="audio/mp3">
+</audio>
+
+<audio id="itemgetse" preload="auto">
+<source src="pse/itemgetevent.wav" type="audio/wav">
+<source src="pse/itemgetevent.mp3" type="audio/mp3">
+</audio>
+
+<audio id="oowaraikoe" preload="auto">
+<source src="pse/oowarai.wav" type="audio/wav">
+<source src="pse/oowarai.mp3" type="audio/mp3">
+</audio>
+*/-->
+<div id="d1">
+<img src="pimg/medaddy/medadyback.jpg"id="back">
+<img src="pimg/medaddy/medadydance.gif"id="back0">
+<img src="pimg/door.jpg"id="door">
+<img src="pimg/medaddy/medady.png"id="pieyama">
+<img src="pimg/medaddy/medadybeam.gif"id="pienoroi">
+<img src="pimg/janplanata.gif"id="pienata">
+<img src="pimg/medaddy/medadybaria.gif"id="barrier1">
+<!--ショットガンセット-->
+<img src="pimg/medaddy/kyutaibaria.png"id="kyutaibaria">
+<img src="pimg/medaddy/fireworks1.png"id="fireworks1">
+<img src="pimg/medaddy/fireworks2.png"id="fireworks2">
+<img src="pimg/medaddy/smoke1.png"id="smoke1">
+<img src="pimg/medaddy/smoke2.png"id="smoke2">
+<img src="pimg/medaddy/smoke3.png"id="smoke3">
+<img src="pimg/medaddy/smoke4.png"id="smoke4">
+<img src="pimg/medaddy/shotgun1.png"id="shotgun1">
+<img src="pimg/medaddy/shotgun2.png"id="shotgun2">
+<div id="whiteback"></div>
+<!--ナタ残像-->
+<img src="pimg/medaddy/natazanzou1.png"id="natazanzou1">
+<img src="pimg/medaddy/natazanzou2.png"id="natazanzou2">
+<img src="pimg/medaddy/natazanzou1.png"id="natazanzou3">
+<!--パラメータ表示-->
+<div id="e1"></div>
+<p id="ep1"></p>
+<p id="ep2"></p>
+<div id="v1"></div>
+<p id="vp1"></p>
+<p id="vp2"></p>
+<!--メッセージウィンドウ1-->
+<div id="msgwindow"><p id="msg1"></p></div>
+<!--メッセージウィンドウ2-->
+<div id="msgwindow2"><p id="msg3"></p></div>
+<!--round1-->
+<img src="pimg/medaddy/janguy.jpg"id="yougu">
+<img src="pimg/medaddy/janchokiy.jpg"id="youchoki">
+<img src="pimg/medaddy/janpary.jpg"id="youpar">
+<img src="pimg/medaddy/janerandom.gif"id="roulette">
+<img src="pimg/medaddy/janguy.jpg"id="yougudm">
+<img src="pimg/medaddy/janchokiy.jpg"id="youchokidm">
+<img src="pimg/medaddy/janpary.jpg"id="youpardm">
+<img src="pimg/medaddy/jangue.jpg"id="enegu">
+<img src="pimg/medaddy/janchokie.jpg"id="enechoki">
+<img src="pimg/medaddy/janpare.jpg"id="enepar">
+<div id="firstmsgwd"></div>
+<p id="firstmsg"></p>
+<img src="pimg/medaddy/medadyencount.gif"id="encount"><!--エンカウント演出-->
+<img src="pimg/janaikokun.jpg"id="aikokun">
+<img src="pimg/medaddy/kusari.png"id="kusari">
+<!--生首-->
+<img src="pimg/medaddy/neckghost1.gif"id="neckghost1">
+<img src="pimg/medaddy/neckghost2.gif"id="neckghost2">
+<div id="neckarea"></div>
+<!--勝敗判定後-->
+<img src="pimg/door.jpg"id="nextdoor">
+<img src="pimg/blackout.jpg"id="blackout">
+<img src="pimg/gameover.jpg"id="gameover">
+<!--魔剣入手イベント-->
+<img src="pimg/medaddy/makenkara.jpg"id="makenkara">
+<img src="pimg/medaddy/makenopen.gif"id="makenopen">
+<div id="makenarea"></div>
+<div id="kurohaikei"></div>
+<img src="pimg/medaddy/maken.png"id="maken">
+<img src="pimg/closebutton.jpg"id="cbutton">
+<span id="weaponname"></span>
+<p id="weaponint"></p>
+<!--ワープ出現-->
+<img src="pimg/medaddy/waap1.gif"id="waap1">
+<img src="pimg/medaddy/waap2.gif"id="waap2">
+<div id="waaparea"></div>
+<div id="whiteout"></div>
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+/*★には同じ数字、☆には同じスペル(変数、関数)、◇にはファイルのパスを入力
+let sampleSource★ = '';
+async function decodeSe★(){
+    const response★ = await fetch("◇◇◇");
+    const arrayBuffer★ = await response★.arrayBuffer();
+    const audioBuffer★ = await ctx.decodeAudioData(arrayBuffer★);
+    return audioBuffer★;
+}
+function playSe★(ctx,audioBuffer★){
+    sampleSource★ = ctx.createBufferSource();
+    sampleSource★.buffer = audioBuffer★;
+    sampleSource★.connect(ctx.destination);
+    sampleSource★.start();
+}
+async function se☆Play(){
+    const se☆ = await decodeSe★();
+    playSe★(ctx,se☆);
+}
+async function se☆Stop(){
+    sampleSource★?.stop();
+}
+*/
+
+/*
+1 <source src="pse/medadybgm.mp3" id="sentoubgm">【済】
+
+2 <source src="pse/medadytame.mp3" id="tamese">【済】
+
+3 <source src="pse/medadyshun.mp3" id="shunse">【済】
+
+4 <source src="pse/medadyfireball.mp3" id="fireballse">【済】
+
+5 <source src="pse/medadybariar.mp3" id="bariase">【済】
+
+6 <source src="pse/medadykusari.mp3" id="kusarise">【済】
+
+7 <source src="pse/janbutton.mp3" id="buttonse">【済】
+
+8 <source src="pse/janpiedeath.mp3" id="piedeathse">【済】
+
+9 <source src="pse/janyoudamage.mp3" id="ydamagese">【済】
+
+10 <source src="pse/janenedamage.mp3" id="edamagese">【済】
+
+11 <source src="pse/janpienoroi.mp3" id="pienoroise">【済】
+
+12 <source src="se/takawarai.mp3" id="aikokunse">【済】
+
+13 <source src="pse/janencount.mp3" id="encountse">【済】
+
+14 <source src="pse/bomber.mp3" id="shotse">【済】
+
+15 <source src="pse/gunreturn.mp3" id="gunreturnse">【済】
+
+16 <source src="pse/mojiokuri.mp3" id="mojiokurise">【済】
+
+17 <source src="pse/gateopense.mp3" id="gateopense">【済】
+
+18 <source src="pse/itemgetevent.mp3" id="itemgetse">【済】
+
+19 <source src="pse/oowarai.mp3" id="oowaraikoe">【済】
+*/
+
+/*★★★★★★★★★★★★★★★★★効果音のセット★★★★★★★★★★★★★★★★★★★★*/
+window.AudioContext = window.AudioContext||window.webkitAudioContext;
+const ctx = new AudioContext();
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let oowaraiplaying = false;
+let sampleSource19 = '';
+async function decodeSe19(){
+    const response19 = await fetch("pse/oowarai.mp3");
+    const arrayBuffer19 = await response19.arrayBuffer();
+    const audioBuffer19 = await ctx.decodeAudioData(arrayBuffer19);
+    return audioBuffer19;
+}
+function playSe19(ctx,audioBuffer19){
+    sampleSource19 = ctx.createBufferSource();
+    sampleSource19.buffer = audioBuffer19;
+    sampleSource19.connect(ctx.destination);
+    sampleSource19.start();
+    oowaraiplaying = true;
+}
+async function seoowaraikoePlay(){
+    const seoowaraikoe = await decodeSe19();
+    playSe19(ctx,seoowaraikoe);
+}
+async function seoowaraikoeStop(){
+    sampleSource19?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource18 = '';
+async function decodeSe18(){
+    const response18 = await fetch("pse/itemgetevent.mp3");
+    const arrayBuffer18 = await response18.arrayBuffer();
+    const audioBuffer18 = await ctx.decodeAudioData(arrayBuffer18);
+    return audioBuffer18;
+}
+function playSe18(ctx,audioBuffer18){
+    sampleSource18 = ctx.createBufferSource();
+    sampleSource18.buffer = audioBuffer18;
+    sampleSource18.connect(ctx.destination);
+    sampleSource18.start();
+}
+async function seitemgetPlay(){
+    const seitemget = await decodeSe18();
+    playSe18(ctx,seitemget);
+}
+async function seitemgetStop(){
+    sampleSource18?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource17 = '';
+async function decodeSe17(){
+    const response17 = await fetch("pse/gateopense.mp3");
+    const arrayBuffer17 = await response17.arrayBuffer();
+    const audioBuffer17 = await ctx.decodeAudioData(arrayBuffer17);
+    return audioBuffer17;
+}
+function playSe17(ctx,audioBuffer17){
+    sampleSource17 = ctx.createBufferSource();
+    sampleSource17.buffer = audioBuffer17;
+    sampleSource17.connect(ctx.destination);
+    sampleSource17.start();
+}
+async function segateopenPlay(){
+    const segateopen = await decodeSe17();
+    playSe17(ctx,segateopen);
+}
+async function segateopenStop(){
+    sampleSource17?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource16 = '';
+async function decodeSe16(){
+    const response16 = await fetch("pse/mojiokuri.mp3");
+    const arrayBuffer16 = await response16.arrayBuffer();
+    const audioBuffer16 = await ctx.decodeAudioData(arrayBuffer16);
+    return audioBuffer16;
+}
+function playSe16(ctx,audioBuffer16){
+    sampleSource16 = ctx.createBufferSource();
+    sampleSource16.buffer = audioBuffer16;
+    sampleSource16.connect(ctx.destination);
+    sampleSource16.start();
+}
+async function semojiokuriPlay(){
+    const semojiokuri = await decodeSe16();
+    playSe16(ctx,semojiokuri);
+}
+async function semojiokuriStop(){
+    sampleSource16?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource15 = '';
+async function decodeSe15(){
+    const response15 = await fetch("pse/gunreturn.mp3");
+    const arrayBuffer15 = await response15.arrayBuffer();
+    const audioBuffer15 = await ctx.decodeAudioData(arrayBuffer15);
+    return audioBuffer15;
+}
+function playSe15(ctx,audioBuffer15){
+    sampleSource15 = ctx.createBufferSource();
+    sampleSource15.buffer = audioBuffer15;
+    sampleSource15.connect(ctx.destination);
+    sampleSource15.start();
+}
+async function segunreturnPlay(){
+    const segunreturn = await decodeSe15();
+    playSe15(ctx,segunreturn);
+}
+async function segunreturnStop(){
+    sampleSource15?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource14 = '';
+async function decodeSe14(){
+    const response14 = await fetch("pse/bomber.mp3");
+    const arrayBuffer14 = await response14.arrayBuffer();
+    const audioBuffer14 = await ctx.decodeAudioData(arrayBuffer14);
+    return audioBuffer14;
+}
+function playSe14(ctx,audioBuffer14){
+    sampleSource14 = ctx.createBufferSource();
+    sampleSource14.buffer = audioBuffer14;
+    sampleSource14.connect(ctx.destination);
+    sampleSource14.start();
+}
+async function seshotPlay(){
+    const seshot = await decodeSe14();
+    playSe14(ctx,seshot);
+}
+async function seshotStop(){
+    sampleSource14?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let encountplaying = false;
+let sampleSource13 = '';
+async function decodeSe13(){
+    const response13 = await fetch("pse/janencount.mp3");
+    const arrayBuffer13 = await response13.arrayBuffer();
+    const audioBuffer13 = await ctx.decodeAudioData(arrayBuffer13);
+    return audioBuffer13;
+}
+function playSe13(ctx,audioBuffer13){
+    sampleSource13 = ctx.createBufferSource();
+    sampleSource13.buffer = audioBuffer13;
+    sampleSource13.connect(ctx.destination);
+    sampleSource13.start();
+    encountplaying = true;
+}
+async function seencountPlay(){
+    const seencount = await decodeSe13();
+    playSe13(ctx,seencount);
+}
+async function seencountStop(){
+    sampleSource13?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource12 = '';
+async function decodeSe12(){
+    const response12 = await fetch("se/takawarai.mp3");
+    const arrayBuffer12 = await response12.arrayBuffer();
+    const audioBuffer12 = await ctx.decodeAudioData(arrayBuffer12);
+    return audioBuffer12;
+}
+function playSe12(ctx,audioBuffer12){
+    sampleSource12 = ctx.createBufferSource();
+    sampleSource12.buffer = audioBuffer12;
+    sampleSource12.connect(ctx.destination);
+    sampleSource12.start();
+}
+async function seaikokunPlay(){
+    const seaikokun = await decodeSe12();
+    playSe12(ctx,seaikokun);
+}
+async function seaikokunStop(){
+    sampleSource12?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource11 = '';
+async function decodeSe11(){
+    const response11 = await fetch("pse/janpienoroi.mp3");
+    const arrayBuffer11 = await response11.arrayBuffer();
+    const audioBuffer11 = await ctx.decodeAudioData(arrayBuffer11);
+    return audioBuffer11;
+}
+function playSe11(ctx,audioBuffer11){
+    sampleSource11 = ctx.createBufferSource();
+    sampleSource11.buffer = audioBuffer11;
+    sampleSource11.connect(ctx.destination);
+    sampleSource11.start();
+}
+async function sepienoroiPlay(){
+    const sepienoroi = await decodeSe11();
+    playSe11(ctx,sepienoroi);
+}
+async function sepienoroiStop(){
+    sampleSource11?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let bgmplaying = false;
+let sampleSource1 = '';
+async function decodeSe1(){
+    const response1 = await fetch("pse/medadybgm.mp3");
+    const arrayBuffer1 = await response1.arrayBuffer();
+    const audioBuffer1 = await ctx.decodeAudioData(arrayBuffer1);
+    return audioBuffer1;
+}
+function playSe1(ctx,audioBuffer1){
+    sampleSource1 = ctx.createBufferSource();
+    sampleSource1.buffer = audioBuffer1;
+    sampleSource1.loop = true;
+    /*音量を小さくする*/
+    const gainNode = ctx.createGain();
+    gainNode.gain.value = 0.3;
+    sampleSource1.connect(gainNode);
+    gainNode.connect(ctx.destination);
+    sampleSource1.start();
+    bgmplaying = true;
+}
+async function sesentoubgmPlay(){
+    const sesentoubgm = await decodeSe1();
+    playSe1(ctx,sesentoubgm);
+}
+async function sesentoubgmStop(){
+    sampleSource1?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let tameplaying = false;
+let sampleSource2 = '';
+async function decodeSe2(){
+    const response2 = await fetch("pse/medadytame.mp3");
+    const arrayBuffer2 = await response2.arrayBuffer();
+    const audioBuffer2 = await ctx.decodeAudioData(arrayBuffer2);
+    return audioBuffer2;
+}
+function playSe2(ctx,audioBuffer2){
+    sampleSource2 = ctx.createBufferSource();
+    sampleSource2.buffer = audioBuffer2;
+    sampleSource2.connect(ctx.destination);
+    sampleSource2.start();
+    tameplaying = true;
+}
+async function setamePlay(){
+    const setame = await decodeSe2();
+    playSe2(ctx,setame);
+}
+async function setameStop(){
+    sampleSource2?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource3 = '';
+async function decodeSe3(){
+    const response3 = await fetch("pse/medadyshun.mp3");
+    const arrayBuffer3 = await response3.arrayBuffer();
+    const audioBuffer3 = await ctx.decodeAudioData(arrayBuffer3);
+    return audioBuffer3;
+}
+function playSe3(ctx,audioBuffer3){
+    sampleSource3 = ctx.createBufferSource();
+    sampleSource3.buffer = audioBuffer3;
+    sampleSource3.connect(ctx.destination);
+    sampleSource3.start();
+}
+async function seshunPlay(){
+    const seshun = await decodeSe3();
+    playSe3(ctx,seshun);
+}
+async function seshunStop(){
+    sampleSource3?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource4 = '';
+async function decodeSe4(){
+    const response4 = await fetch("pse/medadyfireball.mp3");
+    const arrayBuffer4 = await response4.arrayBuffer();
+    const audioBuffer4 = await ctx.decodeAudioData(arrayBuffer4);
+    return audioBuffer4;
+}
+function playSe4(ctx,audioBuffer4){
+    sampleSource4 = ctx.createBufferSource();
+    sampleSource4.buffer = audioBuffer4;
+    sampleSource4.connect(ctx.destination);
+    sampleSource4.start();
+}
+async function sefireballPlay(){
+    const sefireball = await decodeSe4();
+    playSe4(ctx,sefireball);
+}
+async function sefireballStop(){
+    sampleSource4?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource5 = '';
+async function decodeSe5(){
+    const response5 = await fetch("pse/medadybariar.mp3");
+    const arrayBuffer5 = await response5.arrayBuffer();
+    const audioBuffer5 = await ctx.decodeAudioData(arrayBuffer5);
+    return audioBuffer5;
+}
+function playSe5(ctx,audioBuffer5){
+    sampleSource5 = ctx.createBufferSource();
+    sampleSource5.buffer = audioBuffer5;
+    sampleSource5.connect(ctx.destination);
+    sampleSource5.start();
+}
+async function sebariaPlay(){
+    const sebaria = await decodeSe5();
+    playSe5(ctx,sebaria);
+}
+async function sebariaStop(){
+    sampleSource5?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource6 = '';
+async function decodeSe6(){
+    const response6 = await fetch("pse/medadykusari.mp3");
+    const arrayBuffer6 = await response6.arrayBuffer();
+    const audioBuffer6 = await ctx.decodeAudioData(arrayBuffer6);
+    return audioBuffer6;
+}
+function playSe6(ctx,audioBuffer6){
+    sampleSource6 = ctx.createBufferSource();
+    sampleSource6.buffer = audioBuffer6;
+    sampleSource6.connect(ctx.destination);
+    sampleSource6.start();
+}
+async function sekusariPlay(){
+    const sekusari = await decodeSe6();
+    playSe6(ctx,sekusari);
+}
+async function sekusariStop(){
+    sampleSource6?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource7 = '';
+async function decodeSe7(){
+    const response7 = await fetch("pse/janbutton.mp3");
+    const arrayBuffer7 = await response7.arrayBuffer();
+    const audioBuffer7 = await ctx.decodeAudioData(arrayBuffer7);
+    return audioBuffer7;
+}
+function playSe7(ctx,audioBuffer7){
+    sampleSource7 = ctx.createBufferSource();
+    sampleSource7.buffer = audioBuffer7;
+    sampleSource7.connect(ctx.destination);
+    sampleSource7.start();
+}
+async function sebuttonPlay(){
+    const sebutton = await decodeSe7();
+    playSe7(ctx,sebutton);
+}
+async function sebuttonStop(){
+    sampleSource7?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource8 = '';
+async function decodeSe8(){
+    const response8 = await fetch("pse/janpiedeath.mp3");
+    const arrayBuffer8 = await response8.arrayBuffer();
+    const audioBuffer8 = await ctx.decodeAudioData(arrayBuffer8);
+    return audioBuffer8;
+}
+function playSe8(ctx,audioBuffer8){
+    sampleSource8 = ctx.createBufferSource();
+    sampleSource8.buffer = audioBuffer8;
+    sampleSource8.connect(ctx.destination);
+    sampleSource8.start();
+}
+async function sepiedeathPlay(){
+    const sepiedeath = await decodeSe8();
+    playSe8(ctx,sepiedeath);
+}
+async function sepiedeathStop(){
+    sampleSource8?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource9 = '';
+async function decodeSe9(){
+    const response9 = await fetch("pse/janyoudamage.mp3");
+    const arrayBuffer9 = await response9.arrayBuffer();
+    const audioBuffer9 = await ctx.decodeAudioData(arrayBuffer9);
+    return audioBuffer9;
+}
+function playSe9(ctx,audioBuffer9){
+    sampleSource9 = ctx.createBufferSource();
+    sampleSource9.buffer = audioBuffer9;
+    sampleSource9.connect(ctx.destination);
+    sampleSource9.start();
+}
+async function seydamagePlay(){
+    const seydamage = await decodeSe9();
+    playSe9(ctx,seydamage);
+}
+async function seydamageStop(){
+    sampleSource9?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource10 = '';
+async function decodeSe10(){
+    const response10 = await fetch("pse/janenedamage.mp3");
+    const arrayBuffer10 = await response10.arrayBuffer();
+    const audioBuffer10 = await ctx.decodeAudioData(arrayBuffer10);
+    return audioBuffer10;
+}
+function playSe10(ctx,audioBuffer10){
+    sampleSource10 = ctx.createBufferSource();
+    sampleSource10.buffer = audioBuffer10;
+    sampleSource10.connect(ctx.destination);
+    sampleSource10.start();
+}
+async function seedamagePlay(){
+    const seedamage = await decodeSe10();
+    playSe10(ctx,seedamage);
+}
+async function seedamageStop(){
+    sampleSource10?.stop();
+}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let body = document.getElementById('body');
+let back0 = document.getElementById('back0');
+let back = document.getElementById('back');
+let door = document.getElementById('door');
+let firstmsgwd = document.getElementById('firstmsgwd');
+let firstmsg = document.getElementById('firstmsg');
+let encount = document.getElementById('encount');
+let pieyama = document.getElementById('pieyama');
+let pienoroi = document.getElementById('pienoroi');
+let pienata = document.getElementById('pienata');
+let barrier1 = document.getElementById('barrier1');
+let gas1 = document.getElementById('gas1');
+let gas2 = document.getElementById('gas2');
+let gas3 = document.getElementById('gas3');
+let gas4 = document.getElementById('gas4');
+let msgwindow = document.getElementById('msgwindow');
+let msg1 = document.getElementById('msg1');
+let msgwindow2 = document.getElementById('msgwindow2');
+let msg3 = document.getElementById('msg3');
+let e1 = document.getElementById('e1');
+let ep1 = document.getElementById('ep1');
+let ep2 = document.getElementById('ep2');
+let v1 = document.getElementById('v1');
+let vp1 = document.getElementById('vp1');
+let vp2 = document.getElementById('vp2');
+let roulette = document.getElementById('roulette');
+//round1
+let yougu = document.getElementById('yougu');
+let youchoki = document.getElementById('youchoki');
+let youpar = document.getElementById('youpar');
+//それ以外
+let yougudm = document.getElementById('yougudm');
+let youchokidm = document.getElementById('youchokidm');
+let youpardm = document.getElementById('youpardm');
+let enegu = document.getElementById('enegu');
+let enechoki = document.getElementById('enechoki');
+let enepar = document.getElementById('enepar');
+let aikokun = document.getElementById('aikokun');
+let kusari = document.getElementById('kusari');
+//ショットガン
+let fireworks1 = document.getElementById('fireworks1');
+let fireworks2 = document.getElementById('fireworks2');
+let smoke1 = document.getElementById('smoke1');
+let smoke2 = document.getElementById('smoke2');
+let smoke3 = document.getElementById('smoke3');
+let smoke4 = document.getElementById('smoke4');
+let shotgun1 = document.getElementById('shotgun1');
+let shotgun2 = document.getElementById('shotgun2');
+let whiteback = document.getElementById('whiteback');
+let kyutaibaria = document.getElementById('kyutaibaria');
+//ナタ残像
+let natazanzou1 = document.getElementById('natazanzou1');
+let natazanzou2 = document.getElementById('natazanzou2');
+let natazanzou3 = document.getElementById('natazanzou3');
+let fps1 = 0;
+//こっちと相手のHP
+let youhp = 200;
+let enehp = 200;
+//1st round********************************************************
+const GU = 1;
+const CHOKI = 2;
+const PAR = 3;
+//こっちがグー
+let humhand1 = 0;
+let comhand1 = 0;
+let fps2 = 0;
+let fps3 = 0;
+let fps4 = 0;
+//こっちがチョキ
+let humhand2 = 0;
+let comhand2 = 0;
+let fps5 = 0;
+let fps6 = 0;
+let fps7 = 0;
+//こっちがパー
+let humhand3 = 0;
+let comhand3 = 0;
+let fps8 = 0;
+let fps9 = 0;
+let fps10 = 0;
+let fps99 = 0;
+//金縛りパターン
+let fps95 = 0;
+let fps96 = 0;
+let fps97 = 0;
+let fps98 = 0;
+//ガス(使わない)
+let renzokutimer = '';
+let gasTimer = '';
+
+//勝敗判定時
+let fpswin = 0;
+let fpslose = 0;
+let fpslose2 = 0;
+let blackout = document.getElementById('blackout');
+let gameover = document.getElementById('gameover');
+let nextdoor = document.getElementById('nextdoor');
+
+//SE・BGM
+//let bgmsentou = document.getElementById('sentoubgm');
+//let sebutton = document.getElementById('buttonse');
+//let sepiedeath = document.getElementById('piedeathse');
+//let seydamage = document.getElementById('ydamagese');
+//let seedamage = document.getElementById('edamagese');
+//let sepienoroi = document.getElementById('pienoroise');
+//let seaikokun = document.getElementById('aikokunse');
+//let seencount = document.getElementById('encountse');
+//let setame = document.getElementById('tamese');
+//let seshun = document.getElementById('shunse');
+//let sefireball = document.getElementById('fireballse');
+//let sebaria = document.getElementById('bariase');
+//let sekusari = document.getElementById('kusarise');
+//let seshot = document.getElementById('shotse');
+//let segunreturn = document.getElementById('gunreturnse');
+//let semojiokuri = document.getElementById('mojiokurise');
+//load(); play(); pause();
+
+//要素全消し
+function allnone(){
+    e1.style.display = 'none';
+    ep1.style.display = 'none';
+    ep2.style.display = 'none';
+    v1.style.display = 'none';
+    vp1.style.display = 'none';
+    vp2.style.display = 'none';
+    msgwindow2.style.display = 'none';
+    msg3.style.display = 'none';
+    yougudm.style.display = 'none';
+    youchokidm.style.display = 'none';
+    youpardm.style.display = 'none';
+    enegu.style.display = 'none';
+    enechoki.style.display = 'none';
+    enepar.style.display = 'none';
+}
+
+//ジャンケンゲーム用意
+function janReady(){
+    msg1.style.display = 'none';
+    msgwindow.style.display = 'none';
+    msgwindow2.style.display = 'block';
+    msg3.style.display = 'block';
+    msg3.innerText = '下の3つの手札から1枚選んでクリックして下さい。';
+    e1.style.display = 'block';
+    ep1.style.display = 'block';
+    ep1.innerText = 'Eye Daddy\n--------------------';
+    ep2.style.display = 'block';
+    ep2.innerText = 'HP:200/200';
+    v1.style.display = 'block';
+    vp1.style.display = 'block';
+    vp1.innerText = 'You\n--------------------';
+    vp2.style.display = 'block';
+    vp2.innerText = 'HP:200/200';
+    roulette.style.display = 'inline';
+    yougu.style.display = 'inline';
+    youchoki.style.display = 'inline';
+    youpar.style.display = 'inline';
+}
+//最初に出てくるドアをクリックした時
+door.addEventListener('mouseover',function(){door.style.cursor = 'pointer';});
+door.addEventListener('click',function(){
+    door.style.display = 'none';
+    firstmsgwd.style.display = 'inline';
+    decodeSe1();//BGM
+    decodeSe13();//戦闘突入
+    decodeSe16();//文字送り
+    decodeSe2();
+    decodeSe3();
+    decodeSe4();
+    decodeSe5();
+    //encount.style.display = 'inline';
+    let timerId1 = setInterval(function(){
+        fps1++;
+        switch(fps1){
+            case 1:
+            //semojiokuri.load();
+            //semojiokuri.play();
+            semojiokuriPlay();
+            firstmsg.style.display = 'inline';
+            firstmsg.innerText = '目ダディ';
+            break;
+            case 2:
+            firstmsg.innerText = '目ダディ「';
+            break;
+            case 3:
+            firstmsg.innerText = '目ダディ「新';
+            break;
+            case 4:
+            firstmsg.innerText = '目ダディ「新た';
+            break;
+            case 5:
+            firstmsg.innerText = '目ダディ「新たな';
+            break;
+            case 6:
+            firstmsg.innerText = '目ダディ「新たな力';
+            break;
+            case 7:
+            firstmsg.innerText = '目ダディ「新たな力が';
+            break;
+            case 8:
+            firstmsg.innerText = '目ダディ「新たな力が欲';
+            break;
+            case 9:
+            firstmsg.innerText = '目ダディ「新たな力が欲し';
+            break;
+            case 10:
+            firstmsg.innerText = '目ダディ「新たな力が欲しけ';
+            break;
+            case 11:
+            firstmsg.innerText = '目ダディ「新たな力が欲しけれ';
+            break;
+            case 12:
+            firstmsg.innerText = '目ダディ「新たな力が欲しければ';
+            break;
+            case 13:
+            firstmsg.innerText = '目ダディ「新たな力が欲しければ我';
+            break;
+            case 14:
+            firstmsg.innerText = '目ダディ「新たな力が欲しければ我を';
+            break;
+            case 15:
+            firstmsg.innerText = '目ダディ「新たな力が欲しければ我を倒';
+            break;
+            case 16:
+            firstmsg.innerText = '目ダディ「新たな力が欲しければ我を倒し';
+            break;
+            case 17:
+            firstmsg.innerText = '目ダディ「新たな力が欲しければ我を倒して';
+            break;
+            case 18:
+            firstmsg.innerText = '目ダディ「新たな力が欲しければ我を倒してみ';
+            break;
+            case 19:
+            firstmsg.innerText = '目ダディ「新たな力が欲しければ我を倒してみせ';
+            break;
+            case 20:
+            firstmsg.innerText = '目ダディ「新たな力が欲しければ我を倒してみせよ';
+            break;
+            case 21:
+            firstmsg.innerText = '目ダディ「新たな力が欲しければ我を倒してみせよ。';
+            break;
+            case 22:
+            firstmsg.innerText = '目ダディ「新たな力が欲しければ我を倒してみせよ。」';
+            break;
+            case 34:
+            encount.style.display = 'inline';
+            //seencount.load();
+            //seencount.play();
+            seencountPlay();
+            break;
+            case 35:
+            body.style.backgroundColor = '#333333';
+            break;
+            case 36:
+            body.style.backgroundColor = '#666666';
+            break;
+            case 37:
+            body.style.backgroundColor = '#999999';
+            break;
+            case 38:
+            body.style.backgroundColor = '#cccccc';
+            break;
+            case 39:
+            body.style.backgroundColor = '#ffffff';
+            break;
+            case 42:
+            back0.style.display = 'none';
+            firstmsgwd.style.display = 'none';
+            firstmsg.innerText = '';
+            whiteback.style.display = 'inline';
+            encount.style.display = 'none';
+            pieyama.style.display = 'inline';
+            decodeSe6();
+            decodeSe7();
+            decodeSe8();
+            decodeSe9();
+            decodeSe10();
+            decodeSe11();
+            break;
+            case 65:
+            body.style.backgroundColor = '#cccccc';
+            whiteback.style.opacity = '0.8';
+            break;
+            case 66:
+            body.style.backgroundColor = '#999999';
+            whiteback.style.opacity = '0.6';
+            break;
+            case 67:
+            body.style.backgroundColor = '#666666';
+            whiteback.style.opacity = '0.4';
+            break;
+            case 68:
+            body.style.backgroundColor = '#333333';
+            whiteback.style.opacity = '0.2';
+            break;
+            case 69:
+            body.style.backgroundColor = '#000000';
+            whiteback.style.display = 'none';
+            whiteback.style.opacity = '0.5';
+            break;
+            case 70:
+            //bgmsentou.load();
+            //bgmsentou.play();
+            sesentoubgmPlay();
+            decodeSe12();
+            decodeSe14();
+            decodeSe15();
+            decodeSe17();
+            decodeSe18();
+            decodeSe19();
+            msgwindow.style.display = 'block';
+            msg1.style.display = 'block';
+            msg1.innerText = '\n\n目ダディ「さあ、どこからでもかかってきなさい。」';
+            break;
+            case 94:
+            janReady();
+            clearInterval(timerId1);
+        }
+    },80);
+});
+
+//役を押した時に音を鳴らし、こっちの手札3つを押せないように非表示にする
+function BtseAndJanbthide(){
+    //sebutton.load();
+    //sebutton.play();
+    sebuttonPlay();
+    yougu.style.display = 'none';
+    youchoki.style.display = 'none';
+    youpar.style.display = 'none';
+}
+
+//現在のラウンドの数値を初期化・表示を非表示にして次のラウンドを用意する
+function roundYoui(){
+    humhand1 = 0;
+    humhand2 = 0;
+    humhand3 = 0;
+    comhand1 = 0;
+    comhand2 = 0;
+    comhand3 = 0;
+    fps2 = 0;
+    fps3 = 0;
+    fps4 = 0;
+    fps5 = 0;
+    fps6 = 0;
+    fps7 = 0;
+    fps8 = 0;
+    fps9 = 0;
+    fps10 = 0;
+    fps95 = 0;
+    fps96 = 0;
+    fps97 = 0;
+    fps98 = 0;
+    fps99 = 0;
+    kusari.style.display = 'none';
+    yougudm.style.display = 'none';
+    youchokidm.style.display = 'none';
+    youpardm.style.display = 'none';
+    yougudm.style.opacity = '1.0';
+    youchokidm.style.opacity = '1.0';
+    youpardm.style.opacity = '1.0';
+    enegu.style.display = 'none';
+    enechoki.style.display = 'none';
+    enepar.style.display = 'none';
+    yougu.style.display = 'inline';
+    youchoki.style.display = 'inline';
+    youpar.style.display = 'inline';
+    roulette.style.display = 'inline';
+    msg3.innerText = '下の3つの手札から1枚選んでクリックして下さい。';
+}
+
+//互いの残りHPの表示変更(残りHPが0以下になった場合、負の数は0で表示する)
+function hpHenkou(){
+    //こっちのHP
+    if(youhp<=0){
+        vp2.innerText = 'HP:000/200';
+    }else if(youhp<200 && youhp>=100){
+        vp2.innerText = 'HP:'+youhp+'/200';
+    }else if(youhp<100 && youhp>=10){
+        vp2.innerText = 'HP:0'+youhp+'/200';
+    }else if(youhp<10 && youhp>=1){
+        vp2.innerText = 'HP:00'+youhp+'/200';
+    }else{
+        vp2.innerText = 'HP:200/200';
+    }
+    //相手のHP
+    if(enehp<=0){
+        ep2.innerText = 'HP:000/200';
+    }else if(enehp<200 && enehp>=100){
+        ep2.innerText = 'HP:'+enehp+'/200';
+    }else if(enehp<100 && enehp>=10){
+        ep2.innerText = 'HP:0'+enehp+'/200';
+    }else if(enehp<10 && enehp>=1){
+        ep2.innerText = 'HP:00'+enehp+'/200';
+    }else{
+        ep2.innerText = 'HP:200/200';
+    }
+}
+//互いのHPの値が変わった後に残りHPをチェックして値に応じて処理を変える
+function hpCheck(){
+    if((youhp>0 && enehp<=0)||(youhp<=0 && enehp<=0)){
+        let wintimer = setInterval(function(){
+            switch(fpswin){
+                case 1:
+                msg3.innerText = '目ダディを倒した！';
+                //sepiedeath.load();
+                //sepiedeath.play();
+                sepiedeathPlay();
+                break;
+                case 2:
+                pieyama.style.opacity = '0.8';
+                break;
+                case 4:
+                pieyama.style.opacity = '0.6';
+                break;
+                case 6:
+                pieyama.style.opacity = '0.4';
+                break;
+                case 8:
+                pieyama.style.opacity = '0.2';
+                break;
+                case 10:
+                pieyama.style.display = 'none';
+                blackout.style.display = 'inline';
+                break;
+                case 12:
+                blackout.style.opacity = '0.2';
+                break;
+                case 14:
+                blackout.style.opacity = '0.4';
+                break;
+                case 16:
+                blackout.style.opacity = '0.6';
+                break;
+                case 18:
+                blackout.style.opacity = '0.8';
+                break;
+                case 20:
+                blackout.style.opacity = '1.0';
+                //bgmsentou.pause();
+                if(bgmplaying===true){sesentoubgmStop();}
+                allnone();
+                break;
+                case 22:
+                blackout.style.opacity = '0.8';
+                break;
+                case 24:
+                blackout.style.opacity = '0.6';
+                break;
+                case 26:
+                blackout.style.opacity = '0.4';
+                break;
+                case 28:
+                blackout.style.opacity = '0.2';
+                break;
+                case 30:
+                blackout.style.display = 'none';
+                nextdoor.style.display = 'inline';
+                clearInterval(wintimer);
+                break;
+                }
+                fpswin++;
+                },80);
+    }else if(youhp<=0 && enehp>0){
+        let losetimer = setInterval(function(){
+            switch(fpslose){
+                case 1:
+                msg3.innerText = '目ダディに敗北した・・・。';
+                break;
+                case 12:
+                gameover.style.display = 'inline';
+                break;
+                case 14:
+                gameover.style.opacity = '0.2';
+                body.style.backgroundColor = '#330000';
+                break;
+                case 16:
+                gameover.style.opacity = '0.4';
+                body.style.backgroundColor = '#660000';
+                break;
+                case 18:
+                gameover.style.opacity = '0.6';
+                body.style.backgroundColor = '#990000';
+                break;
+                case 20:
+                gameover.style.opacity = '0.8';
+                body.style.backgroundColor = '#cc0000';
+                break;
+                case 22:
+                gameover.style.opacity = '1.0';
+                body.style.backgroundColor = '#ff0000';
+                //bgmsentou.pause();
+                if(bgmplaying===true){sesentoubgmStop();}
+                allnone();
+                break;
+                case 34:
+                location.href = 'topd.html';
+                clearInterval(losetimer);
+                break;
+                }
+                fpslose++;
+                },80);
+    }else{
+        roundYoui();
+    }
+}
+//互いのHPの値が変わった後に残りHPをチェックして値に応じて処理を変える(金縛り時)
+function hpCheck2(){
+    if(youhp<=0 && enehp>0){
+        let losetimer2 = setInterval(function(){
+            switch(fpslose2){
+                case 1:
+                msg3.innerText = '目ダディに敗北した・・・。';
+                break;
+                case 12:
+                gameover.style.display = 'inline';
+                break;
+                case 14:
+                gameover.style.opacity = '0.2';
+                body.style.backgroundColor = '#330000';
+                break;
+                case 16:
+                gameover.style.opacity = '0.4';
+                body.style.backgroundColor = '#660000';
+                break;
+                case 18:
+                gameover.style.opacity = '0.6';
+                body.style.backgroundColor = '#990000';
+                break;
+                case 20:
+                gameover.style.opacity = '0.8';
+                body.style.backgroundColor = '#cc0000';
+                break;
+                case 22:
+                gameover.style.opacity = '1.0';
+                body.style.backgroundColor = '#ff0000';
+                //bgmsentou.pause();
+                if(bgmplaying===true){sesentoubgmStop();}
+                allnone();
+                break;
+                case 34:
+                location.href = 'topd.html';
+                clearInterval(losetimer2);
+                break;
+            }
+            fpslose2++;
+        },80);
+    }else{
+        shibariAttack2();
+    }
+}
+//■■■■■■■■■■■■■■■■■■■■■■■■■■■金縛りを受けた時の敵の攻撃パターン2つ(1回目)■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+function shibariAttack(){
+    enegu.style.display = 'none';
+    enechoki.style.display = 'none';
+    enepar.style.display = 'none';
+    roulette.style.display = 'inline';
+    msg3.innerText = '金縛りで身動きが取れない・・・。';
+    let sacom = Math.floor(Math.random()*2)+1;
+    if(sacom === 1){
+        let timerId95 = setInterval(function(){
+            fps95++;
+            switch(fps95){
+                case 12:
+                //sebutton.load();
+                //sebutton.play();
+                sebuttonPlay();
+                roulette.style.display = 'none';
+                enegu.style.display = 'inline';
+                break;
+                case 24:
+                msg3.innerText = '目ダディはドロップキックを繰り出した。';
+                break;
+                case 36:
+                v1.style.backgroundColor = '#ff0000';
+                //seydamage.load();
+                //seydamage.play();
+                seydamagePlay();
+                youhp -= 20;
+                hpHenkou();
+                msg3.innerText = 'あなたは20のダメージを受けた。';
+                break;
+                case 37:
+                v1.style.backgroundColor = '#000000';
+                break;
+                case 48:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck2();
+                //ここまで
+                clearInterval(timerId95);
+                break;
+            }
+        },80);
+    }else if(sacom === 2){
+        let timerId96 = setInterval(function(){
+            fps96++;
+            switch(fps96){
+                case 12:
+                //sebutton.load();
+                //sebutton.play();
+                sebuttonPlay();
+                roulette.style.display = 'none';
+                enepar.style.display = 'inline';
+                break;
+                case 24:
+                //setame.load();
+                //setame.play();
+                setamePlay();
+                pieyama.style.display = 'none';
+                pienoroi.style.display = 'inline';
+                msg3.innerText = '目ダディは灼熱の熱視線を放った！';
+                break;
+                case 31:
+                //setame.pause();
+                //seshun.load();
+                //seshun.play();
+                if(tameplaying===true){setameStop();}
+                seshunPlay();
+                break;
+                case 35:
+                pienoroi.style.display = 'none';
+                pieyama.style.display = 'inline';
+                v1.style.backgroundColor = '#ff0000';
+                //sefireball.load();
+                //sefireball.play();
+                sefireballPlay();
+                youhp -= 70;
+                hpHenkou();
+                msg3.innerText = 'あなたは70のダメージを受けた。';
+                break;
+                case 36:
+                v1.style.backgroundColor = '#000000';
+                break;
+                case 48:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck2();
+                //ここまで
+                clearInterval(timerId96);
+                break;
+            }
+        },80);
+    }
+}
+//■■■■■■■■■■■■■■■■■■■■■■■■■■■金縛りを受けた時の敵の攻撃パターン2つ(2回目)■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+function shibariAttack2(){
+    enegu.style.display = 'none';
+    enechoki.style.display = 'none';
+    enepar.style.display = 'none';
+    roulette.style.display = 'inline';
+    msg3.innerText = '金縛りで身動きが取れない・・・。';
+    let sacom2 = Math.floor(Math.random()*2)+1;
+    if(sacom2 === 1){
+        let timerId97 = setInterval(function(){
+            fps97++;
+            switch(fps97){
+                case 12:
+                //sebutton.load();
+                //sebutton.play();
+                sebuttonPlay();
+                roulette.style.display = 'none';
+                enegu.style.display = 'inline';
+                break;
+                case 24:
+                msg3.innerText = '目ダディはドロップキックを繰り出した。';
+                break;
+                case 36:
+                v1.style.backgroundColor = '#ff0000';
+                //seydamage.load();
+                //seydamage.play();
+                seydamagePlay();
+                youhp -= 20;
+                hpHenkou();
+                msg3.innerText = 'あなたは20のダメージを受けた。';
+                break;
+                case 37:
+                v1.style.backgroundColor = '#000000';
+                break;
+                case 48:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId97);
+                break;
+            }
+        },80);
+    }else if(sacom2 === 2){
+        let timerId98 = setInterval(function(){
+            fps98++;
+            switch(fps98){
+                case 12:
+                //sebutton.load();
+                //sebutton.play();
+                sebuttonPlay();
+                roulette.style.display = 'none';
+                enepar.style.display = 'inline';
+                break;
+                case 24:
+                //setame.load();
+                //setame.play();
+                setamePlay();
+                pieyama.style.display = 'none';
+                pienoroi.style.display = 'inline';
+                msg3.innerText = '目ダディは灼熱の熱視線を放った！';
+                break;
+                case 31:
+                //setame.pause();
+                //seshun.load();
+                //seshun.play();
+                if(tameplaying===true){setameStop();}
+                seshunPlay();
+                break;
+                case 35:
+                pienoroi.style.display = 'none';
+                pieyama.style.display = 'inline';
+                v1.style.backgroundColor = '#ff0000';
+                //sefireball.load();
+                //sefireball.play();
+                sefireballPlay();
+                youhp -= 70;
+                hpHenkou();
+                msg3.innerText = 'あなたは70のダメージを受けた。';
+                break;
+                case 36:
+                v1.style.backgroundColor = '#000000';
+                break;
+                case 48:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId98);
+                break;
+            }
+        },80);
+    }
+}
+//■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■こっちがグー出した時のパターン■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+yougu.addEventListener('mouseover',function(){yougu.style.opacity = '1.0';yougu.style.cursor = 'pointer';});
+yougu.addEventListener('mouseout',function(){yougu.style.opacity = '0.5';});
+yougu.addEventListener('click',function(){
+    BtseAndJanbthide();
+    yougudm.style.display = 'inline';
+    humhand1 = GU;
+    comhand1 = Math.floor(Math.random()*3)+1;
+    switch(comhand1){
+        //■■■■■■■■■■こっちグー相手グーであいこ■■■■■■■■■■
+        case GU:
+        roulette.style.display = 'none';
+        enegu.style.display = 'inline';
+        let timerId2 = setInterval(function(){
+            switch(fps2){
+                case 12:
+                //seaikokun.load();
+                //seaikokun.play();
+                seaikokunPlay();
+                aikokun.style.display = 'inline';
+                break;
+                case 24:
+                v1.style.backgroundColor = '#ff0000';
+                e1.style.backgroundColor = '#ff0000';
+                //seydamage.load();
+                //seydamage.play();
+                seydamagePlay();
+                enehp -= 20;
+                youhp -= 20;
+                hpHenkou();
+                break;
+                case 25:
+                v1.style.backgroundColor = '#000000';
+                e1.style.backgroundColor = '#000000';
+                break;
+                case 37:
+                aikokun.style.display = 'none';
+                break;
+                case 38:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId2);
+                break;
+            }
+            fps2++;
+        },83);
+        break;
+        //■■■■■■■■■■こっちグー相手チョキで相手負け■■■■■■■■■■
+        case CHOKI:
+        roulette.style.display = 'none';
+        enechoki.style.display = 'inline';
+        let timerId3 = setInterval(function(){
+            switch(fps3){
+                case 12:
+                msg3.innerText = 'あなたはナタで斬りつけた！';
+                break;
+                case 21:
+                natazanzou1.style.display = 'inline';
+                break;
+                case 22:
+                natazanzou1.style.display = 'none';
+                natazanzou2.style.display = 'inline';
+                break;
+                case 23:
+                natazanzou2.style.display = 'none';
+                natazanzou3.style.display = 'inline';
+                break;
+                case 24:
+                natazanzou3.style.display = 'none';
+                pieyama.style.display = 'none';
+                e1.style.backgroundColor = '#ff0000';
+                //seedamage.load();
+                //seedamage.play();
+                seedamagePlay();
+                enehp -= 40;
+                hpHenkou();
+                msg3.innerText = '目ダディに40のダメージを与えた！';
+                break;
+                case 25:
+                pieyama.style.display = 'inline';
+                e1.style.backgroundColor = '#000000';
+                break;
+                case 36:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId3);
+                break;
+            }
+            fps3++;
+        },83);
+        break;
+        //■■■■■■■■■■こっちグー相手パーでこっち負け■■■■■■■■■■
+        case PAR:
+        roulette.style.display = 'none';
+        enepar.style.display = 'inline';
+        let timerId4 = setInterval(function(){
+            switch(fps4){
+                case 12:
+                //setame.load();
+                //setame.play();
+                setamePlay();
+                pieyama.style.display = 'none';
+                pienoroi.style.display = 'inline';
+                msg3.innerText = '目ダディは灼熱の熱視線を放った！';
+                break;
+                case 19:
+                //setame.pause();
+                //seshun.load();
+                //seshun.play();
+                if(tameplaying===true){setameStop();}
+                seshunPlay();
+                break;
+                case 23:
+                pienoroi.style.display = 'none';
+                pieyama.style.display = 'inline';
+                v1.style.backgroundColor = '#ff0000';
+                //sefireball.load();
+                //sefireball.play();
+                sefireballPlay();
+                youhp -= 70;
+                hpHenkou();
+                msg3.innerText = 'あなたは70のダメージを受けた。';
+                break;
+                case 24:
+                v1.style.backgroundColor = '#000000';
+                break;
+                case 36:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId4);
+                break;
+            }
+            fps4++;
+        },83);
+        break;
+    }
+});
+//■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■こっちがチョキ出した時のパターン■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+youchoki.addEventListener('mouseover',function(){youchoki.style.opacity = '1.0';youchoki.style.cursor = 'pointer';});
+youchoki.addEventListener('mouseout',function(){youchoki.style.opacity = '0.5';});
+youchoki.addEventListener('click',function(){
+    BtseAndJanbthide();
+    youchokidm.style.display = 'inline';
+    humhand2 = CHOKI;
+    comhand2 = Math.floor(Math.random()*3)+1;
+    switch(comhand2){
+        //■■■■■■■■■■こっちチョキ相手グーでこっち負け■■■■■■■■■■
+        case GU:
+        roulette.style.display = 'none';
+        enegu.style.display = 'inline';
+        let egubunki = Math.floor(Math.random()*2)+1;
+        if(egubunki === 1){
+            /*■■■■【敵の技1】金縛り■■■■*/
+            let timerId99 = setInterval(function(){
+                fps99++;
+                switch(fps99){
+                    case 12:
+                    yougudm.style.display = 'inline';
+                    youpardm.style.display = 'inline';
+                    msg3.innerText = '目ダディはあなたに金縛りをかけた！';
+                    break;
+                    case 24:
+                    //sekusari.load();
+                    //sekusari.play();
+                    sekusariPlay();
+                    kusari.style.display = 'inline';
+                    v1.style.backgroundColor = '#ff0000';
+                    yougudm.style.opacity = '0.5';
+                    youchokidm.style.opacity = '0.5';
+                    youpardm.style.opacity = '0.5';
+                    msg3.innerText = 'あなたは2ターン動きを封じられた。';
+                    break;
+                    case 25:
+                    v1.style.backgroundColor = '#000000';
+                    break;
+                    case 36:
+                    shibariAttack();
+                    clearInterval(timerId99);
+                    break;
+                }
+            },80);
+        }else if(egubunki === 2){
+            let timerId5 = setInterval(function(){
+                switch(fps5){
+                case 12:
+                msg3.innerText = '目ダディはドロップキックを繰り出した。';
+                break;
+                case 24:
+                v1.style.backgroundColor = '#ff0000';
+                //seydamage.load();
+                //seydamage.play();
+                seydamagePlay();
+                youhp -= 20;
+                hpHenkou();
+                msg3.innerText = 'あなたは20のダメージを受けた。';
+                break;
+                case 25:
+                v1.style.backgroundColor = '#000000';
+                break;
+                case 36:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId5);
+                break;
+                }
+                fps5++;
+            },83);
+        }
+        break;
+        //■■■■■■■■■■こっちチョキ相手チョキであいこ■■■■■■■■■■
+        case CHOKI:
+        roulette.style.display = 'none';
+        enechoki.style.display = 'inline';
+        let timerId6 = setInterval(function(){
+            switch(fps6){
+                case 12:
+                //seaikokun.load();
+                //seaikokun.play();
+                seaikokunPlay();
+                aikokun.style.display = 'inline';
+                break;
+                case 24:
+                v1.style.backgroundColor = '#ff0000';
+                e1.style.backgroundColor = '#ff0000';
+                //seydamage.load();
+                //seydamage.play();
+                seydamagePlay();
+                enehp -= 20;
+                youhp -= 20;
+                hpHenkou();
+                break;
+                case 25:
+                v1.style.backgroundColor = '#000000';
+                e1.style.backgroundColor = '#000000';
+                break;
+                case 37:
+                aikokun.style.display = 'none';
+                break;
+                case 38:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId6);
+                break;
+            }
+            fps6++;
+        },83);
+        break;
+        //■■■■■■■■■■こっちチョキ相手パーで相手負け■■■■■■■■■■
+        case PAR:
+        roulette.style.display = 'none';
+        enepar.style.display = 'inline';
+        let timerId7 = setInterval(function(){
+            fps7++;
+            switch(fps7){
+                case 12:
+                //setame.load();
+                //setame.play();
+                setamePlay();
+                barrier1.style.display = 'inline';
+                msg3.innerText = '目ダディは灼熱の熱視線を放った！';
+                break;
+                case 19:
+                //setame.pause();
+                //seshun.load();
+                //seshun.play();
+                if(tameplaying===true){setameStop();}
+                seshunPlay();
+                break;
+                case 24:
+                //sebaria.load();
+                //sebaria.play();
+                sebariaPlay();
+                msg3.innerText = 'あなたは結界で跳ね返した！';
+                break;
+                case 34:
+                //seshun.load();
+                //seshun.play();
+                seshunPlay();
+                break;
+                case 37:
+                pieyama.style.display = 'none';
+                e1.style.backgroundColor = '#ff0000';
+                //sefireball.load();
+                //sefireball.play();
+                sefireballPlay();
+                enehp -= 60;
+                hpHenkou();
+                barrier1.style.display = 'none';
+                msg3.innerText = '目ダディに60のダメージを与えた！';
+                break;
+                case 38:
+                pieyama.style.display = 'inline';
+                e1.style.backgroundColor = '#000000';
+                break;
+                case 50:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId7);
+                break;
+            }
+        },80);
+        break;
+    }
+});
+//■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■こっちがパー出した時のパターン■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+youpar.addEventListener('mouseover',function(){youpar.style.opacity = '1.0';youpar.style.cursor = 'pointer';});
+youpar.addEventListener('mouseout',function(){youpar.style.opacity = '0.5';});
+youpar.addEventListener('click',function(){
+    BtseAndJanbthide();
+    youpardm.style.display = 'inline';
+    humhand3 = PAR;
+    comhand3 = Math.floor(Math.random()*3)+1;
+    switch(comhand3){
+        //■■■■■■■■■■こっちパー相手グーで相手負け■■■■■■■■■■
+        case GU:
+        roulette.style.display = 'none';
+        enegu.style.display = 'inline';
+        let timerId8 = setInterval(function(){
+            fps8++;
+            switch(fps8){
+                case 12:
+                msg3.innerText = 'あなたはショットガンで撃った！';
+                shotgun1.style.display = 'inline';
+                break;
+                case 17:
+                shotgun1.style.display = 'none';
+                shotgun2.style.display = 'inline';
+                break;
+                case 18:
+                //seshot.load();
+                //seshot.play();
+                seshotPlay();
+                whiteback.style.display = 'inline';
+                break;
+                case 19:
+                whiteback.style.display = 'none';
+                shotgun2.style.display = 'none';
+                shotgun1.style.display = 'inline';
+                fireworks1.style.display = 'inline';
+                smoke1.style.display = 'inline';
+                break;
+                case 20:
+                fireworks1.style.display = 'none';
+                fireworks2.style.display = 'inline';
+                smoke1.style.display = 'none';
+                smoke2.style.display = 'inline';
+                break;
+                case 21:
+                fireworks2.style.display = 'none';
+                smoke2.style.display = 'none';
+                smoke3.style.display = 'inline';
+                break;
+                case 22:
+                smoke3.style.display = 'none';
+                smoke4.style.display = 'inline';
+                break;
+                case 23:
+                smoke4.style.display = 'none';
+                break;
+                case 24:
+                //seedamage.load();
+                //seedamage.play();
+                seedamagePlay();
+                e1.style.backgroundColor = '#ff0000';
+                pieyama.style.display = 'none';
+                enehp -= 20;
+                hpHenkou();
+                msg3.innerText = '目ダディに20のダメージを与えた！';
+                break;
+                case 25:
+                e1.style.backgroundColor = '#000000';
+                pieyama.style.display = 'inline';
+                break;
+                case 29:
+                shotgun1.style.display = 'none';
+                break;
+                case 36:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId8);
+                break;
+            }
+        },80);
+        break;
+        //■■■■■■■■■■こっちパー相手チョキでこっち負け■■■■■■■■■■
+        case CHOKI:
+        roulette.style.display = 'none';
+        enechoki.style.display = 'inline';
+        let timerId9 = setInterval(function(){
+            switch(fps9){
+                case 12:
+                msg3.innerText = '目ダディはショットガン攻撃を跳ね返した！';
+                shotgun1.style.display = 'inline';
+                break;
+                case 17:
+                shotgun1.style.display = 'none';
+                shotgun2.style.display = 'inline';
+                break;
+                case 18:
+                //seshot.load();
+                //seshot.play();
+                seshotPlay();
+                whiteback.style.display = 'inline';
+                kyutaibaria.style.display = 'inline';
+                break;
+                case 19:
+                //segunreturn.load();
+                //segunreturn.play();
+                segunreturnPlay();
+                kyutaibaria.style.opacity = '0.8';
+                whiteback.style.display = 'none';
+                shotgun2.style.display = 'none';
+                shotgun1.style.display = 'inline';
+                fireworks1.style.display = 'inline';
+                smoke1.style.display = 'inline';
+                break;
+                case 20:
+                kyutaibaria.style.opacity = '1.0';
+                fireworks1.style.display = 'none';
+                fireworks2.style.display = 'inline';
+                smoke1.style.display = 'none';
+                smoke2.style.display = 'inline';
+                break;
+                case 21:
+                kyutaibaria.style.opacity = '0.8';
+                fireworks2.style.display = 'none';
+                smoke2.style.display = 'none';
+                smoke3.style.display = 'inline';
+                break;
+                case 22:
+                kyutaibaria.style.opacity = '0.6';
+                smoke3.style.display = 'none';
+                smoke4.style.display = 'inline';
+                break;
+                case 23:
+                kyutaibaria.style.display = 'none';
+                smoke4.style.display = 'none';
+                break;
+                case 24:
+                v1.style.backgroundColor = '#ff0000';
+                //seydamage.load();
+                //seydamage.play();
+                seydamagePlay();
+                youhp -= 40;
+                hpHenkou();
+                msg3.innerText = 'あなたは40のダメージを受けた。';
+                break;
+                case 25:
+                v1.style.backgroundColor = '#000000';
+                break;
+                case 29:
+                shotgun1.style.display = 'none';
+                break;
+                case 36:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId9);
+                break;
+            }
+            fps9++;
+        },80);
+        break;
+        //■■■■■■■■■■こっちパー相手パーであいこ■■■■■■■■■■
+        case PAR:
+        roulette.style.display = 'none';
+        enepar.style.display = 'inline';
+        let timerId10 = setInterval(function(){
+            switch(fps10){
+                case 12:
+                //seaikokun.load();
+                //seaikokun.play();
+                seaikokunPlay();
+                aikokun.style.display = 'inline';
+                break;
+                case 24:
+                v1.style.backgroundColor = '#ff0000';
+                e1.style.backgroundColor = '#ff0000';
+                //seydamage.load();
+                //seydamage.play();
+                seydamagePlay();
+                enehp -= 20;
+                youhp -= 20;
+                hpHenkou();
+                break;
+                case 25:
+                v1.style.backgroundColor = '#000000';
+                e1.style.backgroundColor = '#000000';
+                break;
+                case 37:
+                aikokun.style.display = 'none';
+                break;
+                case 38:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId10);
+                break;
+            }
+            fps10++;
+        },83);
+        break;
+    }
+});
+
+//魔剣入手イベントアイテム
+let yfp = 0;
+let makenkara = document.getElementById('makenkara');
+let makenopen = document.getElementById('makenopen');
+let makenarea = document.getElementById('makenarea');
+//let segateopen = document.getElementById('gateopense');
+//let seitemget = document.getElementById('itemgetse');
+let kurohaikei = document.getElementById('kurohaikei');
+let maken = document.getElementById('maken');
+let cbutton = document.getElementById('cbutton');
+let weaponname = document.getElementById('weaponname');
+let weaponint = document.getElementById('weaponint');
+//生首イベントアイテム
+let neckfps = 0;
+let neckTimer = '';
+let neckghost1 = document.getElementById('neckghost1');
+let neckghost2 = document.getElementById('neckghost2');
+let neckarea = document.getElementById('neckarea');
+//let koeoowarai = document.getElementById('oowaraikoe');
+//ワープイベントアイテム
+let waapfps = 0;
+let waap1 = document.getElementById('waap1');
+let waap2 = document.getElementById('waap2');
+let waaparea = document.getElementById('waaparea');
+let nextfps = 0;
+let whiteout = document.getElementById('whiteout');
+
+//魔剣入手イベント
+nextdoor.addEventListener('mouseover',function(){nextdoor.style.cursor = 'pointer';});
+nextdoor.addEventListener('click',function(){
+    nextdoor.style.display = 'none';
+    //segateopen.load();
+    //segateopen.play();
+    segateopenPlay();
+    makenopen.style.display = 'inline';
+    let timerMaken = setInterval(function(){
+        yfp++;
+        if(yfp>=10){
+            makenarea.style.display = 'inline';
+            clearInterval(timerMaken);
+        }
+    },80);
+});
+makenarea.addEventListener('mouseover',function(){makenarea.style.cursor = 'pointer';});
+makenarea.addEventListener('click',function(){
+    //seitemget.load();
+    //seitemget.play();
+    seitemgetPlay();
+    makenarea.style.display = 'none';
+    makenopen.style.display = 'none';
+    makenkara.style.display = 'inline';
+    kurohaikei.style.display = 'inline';
+    maken.style.display = 'inline';
+    cbutton.style.display = 'inline';
+    weaponname.innerText = '突然の魔剣';
+    weaponint.innerText = '強制ワープに耐性を持ち、\nとある敵を倒すことができる。';
+});
+cbutton.addEventListener('mouseover',function(){cbutton.style.cursor = 'pointer';});
+cbutton.addEventListener('click',function(){
+    kurohaikei.style.display = 'none';
+    maken.style.display = 'none';
+    makenkara.style.display = 'none';
+    cbutton.style.display = 'none';
+    weaponname.innerText = '';
+    weaponint.innerText = '';
+    //koeoowarai.load();
+    //koeoowarai.play();
+    seoowaraikoePlay();
+    neckghost1.style.display = 'inline';
+    neckTimer = setInterval(function(){
+        neckfps++;
+        switch(neckfps){
+            case 3:
+            neckarea.style.display = 'inline';
+            break;
+            case 39:
+            neckarea.style.display = 'none';
+            gameover.style.display = 'inline';
+            gameover.style.opacity = '0.2';
+            body.style.backgroundColor = '#330000';
+            break;
+            case 40:
+            gameover.style.opacity = '0.4';
+            body.style.backgroundColor = '#660000';
+            break;
+            case 41:
+            gameover.style.opacity = '0.6';
+            body.style.backgroundColor = '#990000';
+            break;
+            case 42:
+            gameover.style.opacity = '0.8';
+            body.style.backgroundColor = '#cc0000';
+            break;
+            case 43:
+            gameover.style.opacity = '1.0';
+            body.style.backgroundColor = '#ff0000';
+            break;
+            case 55:
+            location.href = 'topd.html';
+            clearInterval(neckTimer);
+            break;
+        }
+    },60);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■現れる生首を倒すとワープが出現■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+neckarea.addEventListener('mouseover',function(){neckarea.style.cursor = 'pointer';});
+neckarea.addEventListener('click',function(){
+    neckarea.style.display = 'none';
+    clearInterval(neckTimer);
+    neckghost1.style.display = 'none';
+    //koeoowarai.pause();
+    //seedamage.load();
+    //seedamage.play();
+    if(oowaraiplaying===true){seoowaraikoeStop();}
+    seedamagePlay();
+    neckghost2.style.display = 'inline';
+    let waapTimer = setInterval(function(){
+        waapfps++;
+        switch(waapfps){
+            case 5:
+            neckghost2.style.display = 'none';
+            makenkara.style.display = 'inline';
+            break;
+            case 11:
+            //sepienoroi.load();
+            //sepienoroi.play();
+            sepienoroiPlay();
+            waap1.style.display = 'inline';
+            break;
+            case 18:
+            waap1.style.display = 'none';
+            waap2.style.display = 'inline';
+            break;
+            case 25:
+            waaparea.style.display = 'inline';
+            clearInterval(waapTimer);
+            break;
+        }
+    },80);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ワープを調べる■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+waaparea.addEventListener('mouseover',function(){waaparea.style.cursor = 'pointer';});
+waaparea.addEventListener('click',function(){
+    waaparea.style.display = 'none';
+    //seencount.load();
+    //seencount.play();
+    seencountPlay();
+    whiteout.style.display = 'inline';
+    body.style.backgroundColor = '#333333';
+    let nextTimer = setInterval(function(){
+        nextfps++;
+        switch(nextfps){
+            case 1:
+            whiteout.style.opacity = '0.4';
+            body.style.backgroundColor = '#666666';
+            break;
+            case 2:
+            whiteout.style.opacity = '0.6';
+            body.style.backgroundColor = '#999999';
+            break;
+            case 3:
+            whiteout.style.opacity = '0.8';
+            body.style.backgroundColor = '#cccccc';
+            break;
+            case 4:
+            whiteout.style.opacity = '1.0';
+            body.style.backgroundColor = '#ffffff';
+            break;
+            case 40:
+            if(encountplaying===true){seencountStop();}
+            location.href = 'maamolqgep2sp.html';
+            clearInterval(nextTimer);
+            break;
+        }
+    },80);
+});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+</html>

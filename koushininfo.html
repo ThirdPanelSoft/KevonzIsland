@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Expires" content="Fri, 28 Nov 2025 21:30:00 GMT">
+<meta charset="UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width">
+<title>KEVONZ ISLAND</title>
+<link rel="icon"href="image/favicon.ico">
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■【CSS3】■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<style type="text/css">
+/*【パソコン用表示】■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+@media screen and (min-width:961px){
+    .display_koushinhead_bigwidthlong{width:728px;height:90px;}
+    .display_koushinmiddle{width:728px;height:90px;}
+    .display_koushinfoot_bigwidthlong{width:728px;height:90px;}
+    #body{padding:0;margin:0;line-height:1em;}
+    #container{
+        width:100%;height:auto;
+        display:grid;
+        grid-template-columns:1fr 4fr;
+        grid-template-rows:105px auto auto auto auto auto auto auto auto;
+    }
+    #kanbansp{grid-column:1/2;grid-row:1/2;background-color:#ff9999;text-align:left;padding-top:32px;padding-left:24px;}
+    #kanban{width:201px;height:40px;}
+    .normalmoji{color:#333333;font-size:15px;}
+    #twittersp{grid-column:2/3;grid-row:1/2;background-color:#ff9999;text-align:center;padding-top:5px;box-sizing:border-box;}
+    #xinlinewaku{width:600px;height:95px;background-color:#ffffff;margin:0 auto;border-radius:10px;padding-top:5px;box-sizing:border-box;}
+    #rsslinkbn{width:250px;height:50px;}
+    /*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ヘッド広告の塊▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    #headadsp{
+        width:100%;height:auto;
+        grid-column:1/3;grid-row:2/3;background-color:#ffdddd;
+        display:grid;grid-template-columns:1fr;grid-template-rows:auto auto;
+    }
+    #headadmojibu{grid-column:1/2;grid-row:1/2;text-align:center;line-height:15px;padding-top:10px;padding-bottom:10px;}
+    #headadkoukokubu{grid-column:1/2;grid-row:2/3;display:flex;justify-content:center;align-items:center;padding-bottom:20px;}
+    /*#example1{width:1200px;height:280px;background-color:aquamarine;display:flex;justify-content:center;align-items:center;}後で消す*/
+    /*▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+    #midashisp{grid-column:1/3;grid-row:3/4;background-color:#ffdddd;box-sizing:border-box;padding-left:100px;padding-right:100px;}
+    #midashibox{
+        width:100%;height:auto;background-color:#ffffff;box-sizing:border-box;border:2px solid #ff9999;
+        border-radius:20px;text-align:center;line-height:15pt;padding-top:10px;padding-bottom:10px;
+    }
+    #midashimoji{font-size:15pt;color:#333333;}
+
+    /*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ミドル広告の塊▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    #middleadsp{
+        width:100%;height:auto;
+        grid-column:1/3;grid-row:4/5;background-color:#ffdddd;
+        display:grid;grid-template-columns:1fr;grid-template-rows:auto auto;
+    }
+    #middleadmojibu{grid-column:1/2;grid-row:1/2;text-align:center;line-height:15px;padding-top:10px;padding-bottom:10px;}
+    #middleadkoukokubu{grid-column:1/2;grid-row:2/3;display:flex;justify-content:center;align-items:center;}
+    /*#example3{width:728px;height:90px;background-color:aquamarine;display:flex;justify-content:center;align-items:center;}後で消す*/
+    /*▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+
+    /*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ナビの塊▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    #navisp{
+        width:100%;height:auto;
+        grid-column:1/3;grid-row:5/6;background-color:#ffdddd;display:grid;
+        grid-template-columns:1fr 4fr 4fr 4fr 4fr 1fr;grid-template-rows:auto 60px;
+    }
+    #naviyohaku{grid-column:1/7;grid-row:1/2;box-sizing:border-box;padding-top:10px;padding-bottom:10px;}
+    .thispageint{color:#333333;font-size:15px;line-height:15px;text-align:center;margin:0;}
+    #navipadleft{grid-column:1/2;grid-row:2/3;}
+    #navi1{grid-column:2/3;grid-row:2/3;background-color:#ff6262;border-radius:20px 20px 0px 0px;text-align:center;padding-top:15px;}
+    #navi2{grid-column:3/4;grid-row:2/3;background-color:#ff994f;border-radius:20px 20px 0px 0px;text-align:center;padding-top:15px;}
+    #navi3{grid-column:4/5;grid-row:2/3;background-color:#826dd5;border-radius:20px 20px 0px 0px;text-align:center;padding-top:15px;}
+    #navi4{grid-column:5/6;grid-row:2/3;background-color:#00cc00;border-radius:20px 20px 0px 0px;text-align:center;padding-top:15px;}
+    #navipadright{grid-column:6/7;grid-row:2/3;}
+    .navimoji{font-size:15px;color:#ffffff;font-weight:bold;}
+    /*▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+    #contentssp{
+        grid-column:1/3;grid-row:6/7;background-color:#ffdddd;
+        /*box-sizing:border-box;padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:0px;*/
+    }
+    #contentsbox{width:1240px;height:auto;background-color:#ff6262;border-radius:20px;padding-top:20px;padding-bottom:20px;margin:0 auto;}
+    #kijisp{width:1000px;height:auto;background-color:#ffffff;padding:20px;text-align:left;margin:0 auto;border-radius:20px;}
+    #kijimoji{color:#333333;font-size:15px;line-height:25px;}
+    /*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼フッター広告の塊▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    #footadsp{
+        width:100%;height:auto;
+        grid-column:1/3;grid-row:7/8;background-color:#ffdddd;
+        display:grid;grid-template-columns:1fr;grid-template-rows:auto auto;
+    }
+    #footadmojibu{grid-column:1/2;grid-row:1/2;text-align:center;line-height:15px;padding-top:10px;padding-bottom:10px;}
+    #footadkoukokubu{grid-column:1/2;grid-row:2/3;display:flex;justify-content:center;align-items:center;padding-bottom:20px;}
+    /*#example2{width:1200px;height:280px;background-color:aquamarine;display:flex;justify-content:center;align-items:center;}後で消す*/
+    /*▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+
+    /*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼各種リンクの塊▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    #linksp{grid-column:1/3;grid-row:8/9;background-color:#ffdddd;padding-top:2px;box-sizing:border-box;border-top:2px solid #ff9999;}
+    #linkspnaitable{width:810px;height:auto;display:grid;grid-template-columns:270px 270px 270px;grid-template-rows:auto 95px;margin:0 auto;}
+    #cell1{grid-column:1/2;grid-row:1/2;background-color:#ffdddd;padding-top:10px;padding-bottom:10px;text-align:center;line-height:15px;border-bottom:2px solid #ff9999;}
+    #cell2{grid-column:2/3;grid-row:1/2;background-color:#ffdddd;padding-top:10px;padding-bottom:10px;text-align:center;line-height:15px;border-bottom:2px solid #ff9999;}
+    #cell3{grid-column:3/4;grid-row:1/2;background-color:#ffdddd;padding-top:10px;padding-bottom:10px;text-align:center;line-height:15px;border-bottom:2px solid #ff9999;}
+    #cell4{grid-column:1/2;grid-row:2/3;background-color:#ffdddd;padding-top:10px;text-align:center;}
+    #cell5{grid-column:2/3;grid-row:2/3;background-color:#ffdddd;padding-top:10px;text-align:center;}
+    #cell6{grid-column:3/4;grid-row:2/3;background-color:#ffdddd;padding-top:10px;text-align:center;}
+    .shiromoji{font-size:15px;color:#333333}
+    /*▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+
+    #copyrightsp{grid-column:1/3;grid-row:9/10;background-color:#ff9999;}
+    #copyright{color:#ffffff;font-size:13px;text-align:center;line-height:130%;}
+}
+/*【スマホ用表示】■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+@media screen and (max-width:960px){
+    .display_koushinhead_bigwidthlong{width:336px;height:280px;}
+    .display_koushinmiddle{width:300px;height:100px;}
+    .display_koushinfoot_bigwidthlong{width:336px;height:280px;}
+    #body{padding:0;margin:0;line-height:1em;}
+    #container{
+        width:100%;height:auto;
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows:50px auto auto auto auto auto auto auto auto auto;
+    }
+    #kanbansp{grid-column:1/2;grid-row:1/2;background-color:#ff9999;text-align:center;padding-top:5px;}
+    #kanban{width:201px;height:40px;}
+    .normalmoji{color:#333333;font-size:15px;}
+    /*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ヘッド広告の塊▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    #headadsp{
+        width:100%;height:auto;
+        grid-column:1/2;grid-row:2/3;background-color:#ffdddd;
+        display:grid;grid-template-columns:1fr;grid-template-rows:auto auto;
+    }
+    #headadmojibu{grid-column:1/2;grid-row:1/2;text-align:center;line-height:15px;padding-top:10px;padding-bottom:10px;}
+    #headadkoukokubu{grid-column:1/2;grid-row:2/3;display:flex;justify-content:center;align-items:center;padding-bottom:20px;}
+    /*#example1{width:300px;height:300px;background-color:aquamarine;display:flex;justify-content:center;align-items:center;}後で消す*/
+    /*▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+    #midashisp{grid-column:1/2;grid-row:3/4;background-color:#ffdddd;box-sizing:border-box;padding-left:10px;padding-right:10px;}
+    #midashibox{
+        width:100%;height:auto;background-color:#ffffff;box-sizing:border-box;border:2px solid #ff9999;
+        border-radius:20px;text-align:center;line-height:15pt;padding-top:10px;padding-bottom:10px;
+    }
+    #midashimoji{font-size:13pt;color:#333333;}
+
+    /*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ミドル広告の塊▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    #middleadsp{
+        width:100%;height:auto;
+        grid-column:1/2;grid-row:4/5;background-color:#ffdddd;
+        display:grid;grid-template-columns:1fr;grid-template-rows:auto auto;
+    }
+    #middleadmojibu{grid-column:1/2;grid-row:1/2;text-align:center;line-height:15px;padding-top:10px;padding-bottom:10px;}
+    #middleadkoukokubu{grid-column:1/2;grid-row:2/3;display:flex;justify-content:center;align-items:center;}
+    /*#example3{width:320px;height:100px;background-color:aquamarine;display:flex;justify-content:center;align-items:center;}後で消す*/
+    /*▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+
+    /*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ナビの塊▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    #navisp{
+        width:100%;height:auto;
+        grid-column:1/2;grid-row:5/6;background-color:#ffdddd;display:grid;
+        grid-template-columns:1fr 3fr 3fr 3fr 3fr 1fr;grid-template-rows:auto 70px;
+    }
+    #naviyohaku{grid-column:1/7;grid-row:1/2;box-sizing:border-box;padding-top:10px;padding-bottom:10px;}
+   .thispageint{color:#333333;font-size:14px;line-height:14px;text-align:center;margin:0;}
+    #navipadleft{grid-column:1/2;grid-row:2/3;}
+    #navi1{grid-column:2/3;grid-row:2/3;background-color:#ff6262;border-radius:20px 20px 0px 0px;text-align:center;padding-top:5px;line-height:12px;}
+    #navi2{grid-column:3/4;grid-row:2/3;background-color:#ff994f;border-radius:20px 20px 0px 0px;text-align:center;padding-top:5px;line-height:12px;}
+    #navi3{grid-column:4/5;grid-row:2/3;background-color:#826dd5;border-radius:20px 20px 0px 0px;text-align:center;padding-top:5px;line-height:12px;}
+    #navi4{grid-column:5/6;grid-row:2/3;background-color:#00cc00;border-radius:20px 20px 0px 0px;text-align:center;padding-top:5px;line-height:12px;}
+    #navipadright{grid-column:6/7;grid-row:2/3;}
+    .navimoji{font-size:12px;color:#ffffff;font-weight:bold;}
+    /*▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+    #contentssp{
+        grid-column:1/2;grid-row:6/7;background-color:#ffdddd;
+        /*box-sizing:border-box;padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:0px;*/
+    }
+    #contentsbox{width:100%;height:auto;background-color:#ff6262;border-radius:20px;padding-top:20px;padding-bottom:20px;margin:0 auto;}
+    #kijisp{width:340px;height:auto;background-color:#ffffff;padding:20px;text-align:left;margin:0 auto;border-radius:20px;}
+    #kijimoji{color:#333333;font-size:15px;line-height:25px;}
+    
+    #twittersp{
+        grid-column:1/2;grid-row:7/8;background-color:#ffdddd;text-align:center;
+        box-sizing:border-box;padding-left:5px;padding-right:5px;padding-top:10px;padding-bottom:10px;
+    }
+    #xinlinewaku{
+        width:100%;height:auto;background-color:#ffffff;box-sizing:border-box;border:1px solid #ff6262;
+        border-radius:10px;padding-top:10px;padding-bottom:10px;text-align:center;
+    }
+    #rsslinkbn{width:250px;height:50px;}
+    /*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼フッター広告の塊▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    #footadsp{
+        width:100%;height:auto;
+        grid-column:1/2;grid-row:8/9;background-color:#ffdddd;
+        display:grid;grid-template-columns:1fr;grid-template-rows:auto auto;
+    }
+    #footadmojibu{grid-column:1/2;grid-row:1/2;text-align:center;line-height:15px;padding-top:10px;padding-bottom:10px;}
+    #footadkoukokubu{grid-column:1/2;grid-row:2/3;display:flex;justify-content:center;align-items:center;padding-bottom:20px;}
+    /*#example2{width:300px;height:300px;background-color:aquamarine;display:flex;justify-content:center;align-items:center;}後で消す*/
+    /*▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+
+    /*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼各種リンクの塊▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    #linksp{grid-column:1/2;grid-row:9/10;background-color:#ffdddd;padding-top:2px;box-sizing:border-box;border-top:2px solid #ff9999;}
+    #linkspnaitable{width:300px;height:auto;display:grid;grid-template-columns:1fr;grid-template-rows:auto auto auto auto auto auto;margin:0 auto;}
+    #cell1{grid-column:1/2;grid-row:1/2;background-color:#ffdddd;padding-top:10px;padding-bottom:10px;text-align:center;line-height:15px;border-bottom:2px solid #ff9999;}
+    #cell4{grid-column:1/2;grid-row:2/3;background-color:#ffdddd;padding-top:10px;text-align:center;}
+    #cell2{grid-column:1/2;grid-row:3/4;background-color:#ffdddd;padding-top:10px;padding-bottom:10px;text-align:center;line-height:15px;border-bottom:2px solid #ff9999;}
+    #cell5{grid-column:1/2;grid-row:4/5;background-color:#ffdddd;padding-top:10px;text-align:center;}
+    #cell3{grid-column:1/2;grid-row:5/6;background-color:#ffdddd;padding-top:10px;padding-bottom:10px;text-align:center;line-height:15px;border-bottom:2px solid #ff9999;}
+    #cell6{grid-column:1/2;grid-row:6/7;background-color:#ffdddd;padding-top:10px;text-align:center;padding-bottom:10px;}
+    .shiromoji{font-size:15px;color:#333333}
+    /*▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+
+    #copyrightsp{grid-column:1/2;grid-row:10/11;background-color:#ff9999;}
+    #copyright{color:#ffffff;font-size:12px;text-align:center;line-height:130%;}
+}
+</style>
+</head>
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■【HTML】■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<body id="body">
+<div id="container"><!--▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼大枠▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
+<!--■■■■■看板■■■■■-->
+<div id="kanbansp"><img src="pimg/ptop/newmenubar/kanban.png"id="kanban"></div>
+<div id="twittersp">
+<div id="xinlinewaku">
+<a href="https://twitter.com/fancy_islandrss"target="_blank"><img src="pimg/ptop/rsslinkbn.png"id="rsslinkbn"></a>
+<p class="thispageint">↑Xでも更新情報をポストしてます↑<br>This is my X account, which posts updates on this site.</p>
+</div>
+</div>
+<!--■■■■■ヘッダー広告■■■■■-->
+<div id="headadsp">
+<div id="headadmojibu"><span class="normalmoji">広告(AD)</span></div>
+<div id="headadkoukokubu">
+<!--<div id="example1"><span class="normalmoji">後で消す</span></div>-->
+<!--▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ヘッダー広告▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9642990549530289" crossorigin="anonymous"></script>
+<!-- display_koushinhead_bigwidthlong -->
+<ins class="adsbygoogle display_koushinhead_bigwidthlong"
+     style="display:block"
+     data-ad-client="ca-pub-9642990549530289"
+     data-ad-slot="9651606848"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!--▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲-->
+</div>
+</div>
+<!--■■■■■見出し■■■■■-->
+<div id="midashisp"><div id="midashibox"><h1 id="midashimoji">各コンテンツの更新情報<br>(Update information for each content)</h1></div></div>
+<!--■■■■■ミドル広告■■■■■-->
+<div id="middleadsp">
+<div id="middleadmojibu"><span class="normalmoji">広告(AD)</span></div>
+<div id="middleadkoukokubu">
+<!--<div id="example3"><span class="normalmoji">後で消す</span></div>-->
+<!--▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ミドル広告▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9642990549530289" crossorigin="anonymous"></script>
+<!-- display_koushinmiddle -->
+<ins class="adsbygoogle display_koushinmiddle"
+     style="display:block"
+     data-ad-client="ca-pub-9642990549530289"
+     data-ad-slot="1773116829"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!--▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲-->
+</div>
+</div>
+<!--■■■■■ナビ■■■■■-->
+<div id="navisp">
+<div id="naviyohaku">
+<p class="thispageint">
+このページでは全てのシリーズの更新・修正情報を<br>
+タブ毎にまとめて記載しております。<br>
+下のいずれかのタブをクリックしてご覧下さい。<br>
+This page lists all update and correction<br>
+information for the series, organized by tab.<br>
+Please click on one of the tabs below to view.
+</p>
+</div>
+<div id="navipadleft"></div>
+<div id="navi1"><span class="navimoji">通常PC版<br>(Normal PC version)</span></div>
+<div id="navi2"><span class="navimoji">通常スマホ版<br>(Normal smartphone version)</span></div>
+<div id="navi3"><span class="navimoji">深層編<br>(Depth edition)</span></div>
+<div id="navi4"><span class="navimoji">ミニゲーム<br>(Mini game)</span></div>
+<div id="navipadright"></div>
+</div>
+<!--■■■■■コンテンツ■■■■■-->
+<div id="contentssp">
+<div id="contentsbox">
+<div id="kijisp"><p id="kijimoji"></p></div>
+</div>
+</div>
+<!--■■■■■フッター広告■■■■■-->
+<div id="footadsp">
+<div id="footadmojibu"><span class="normalmoji">広告(AD)</span></div>
+<div id="footadkoukokubu">
+<!--<div id="example2"><span class="normalmoji">後で消す</span></div>-->
+<!--▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼フッター広告▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9642990549530289" crossorigin="anonymous"></script>
+<!-- display_koushinfoot_bigwidthlong -->
+<ins class="adsbygoogle display_koushinfoot_bigwidthlong"
+     style="display:block"
+     data-ad-client="ca-pub-9642990549530289"
+     data-ad-slot="1452008034"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!--▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲-->
+</div>
+</div>
+<!--■■■■■各種リンク■■■■■-->
+<div id="linksp">
+<div id="linkspnaitable">
+<div id="cell1"><span class="shiromoji">【通常PC版トップ】<br>(Regular PC version top)</span></div>
+<div id="cell2"><span class="shiromoji">【通常スマホ版トップ】<br>(Regular smartphone version top)</span></div>
+<div id="cell3"><span class="shiromoji">【深層版トップ】<br>(Deep Version Top)</span></div>
+<div id="cell4"><a href="index.html"target="_top"><img src="rimg/top/returntopbt.gif"style="width:250px;height:75px;"></a></div>
+<div id="cell5"><a href="smpindex.html"target="_top"><img src="rimg/top/normaltopsmp.png"style="width:250px;height:75px;"></a></div>
+<div id="cell6"><a href="deeptop.html"target="_top"><img src="rimg/top/deepbunner25075.png"style="width:250px;height:75px;"></a></div>
+</div>
+</div>
+<!--■■■■■コピーライト■■■■■-->
+<div id="copyrightsp"><p id="copyright"></p></div>
+</div><!--▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲大枠ここまで▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲-->
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■【JAVA SCRIPT】■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<script>
+let navi1 = document.getElementById('navi1');
+let navi2 = document.getElementById('navi2');
+let navi3 = document.getElementById('navi3');
+let navi4 = document.getElementById('navi4');
+let contentsbox = document.getElementById('contentsbox');
+let kijimoji = document.getElementById('kijimoji');
+
+/*ロードされたら記事内の文章を表示*/
+window.addEventListener('load',function(){
+    kijimoji.innerText = '【2025年8月末～2025年10月中旬】\n(1)全ページ音声の出し方を変更。\n(2)カーソルを合わせないと現れない矢印を最初から表示。\n(3)次どこに行けばいいか分かりやすくする為に、特定のページでナビゲーションミラーが出現。\n(4)終盤の目玉パズルルートの直前に1ページ追加。(解答の為の切れ端を見つけず目玉パズルまで行った方が、最初の方まで戻らず済むように作ったページです。)\n(5)押入れの間、管理人プロフィールページの演出変更。\n(6)落とし穴のページ等、数ヶ所にモノローグを追加。\n\n【2025年6月頃】\nトップページデザインを変更。\n\n【August 15,2025 - October 15,2025】\n(1)Changed the audio output on all pages.\n(2)Arrows that previously only appear when the cursor is over them are now displayed from the beginning.\n(3)Navigation mirrors appear on certain pages to make it easier to understand where to go next.\n(4)One page added just before the eyeball puzzle route that appears at the end of the game. (this page allows players who reach the puzzle without finding the solution fragment to avoid having to go back to the beginning.)\n(5)Changed the presentation of the Closet Room and the Manager Profile Page - Added monologues to several places, including the Pitfalls page.\n(6)Added monologues to several places, including the Pitfalls page.\n\n【June,2025】\nThe top page design has been changed.';
+});
+
+/*コピーライト表記*/
+let copyright = document.getElementById('copyright');
+let today = new Date();
+let kotoshi = today.getFullYear();
+copyright.innerText = '当サイト内のコンテンツの無断転載・無断複製を固く禁止致します。\nCopyright©2010-'+kotoshi+'"Fancy Island" All Rights Reserved';
+
+/*押されたナビボタンによって表示を変える*/
+navi1.addEventListener('mouseover',function(){navi1.style.cursor='pointer';});
+navi1.addEventListener('click',function(){
+    contentsbox.style.backgroundColor = '#ff6262';
+    kijimoji.innerText = '【2025年8月末～2025年10月中旬】\n(1)全ページ音声の出し方を変更。\n(2)カーソルを合わせないと現れない矢印を最初から表示。\n(3)次どこに行けばいいか分かりやすくする為に、特定のページでナビゲーションミラーが出現。\n(4)終盤の目玉パズルルートの直前に1ページ追加。(解答の為の切れ端を見つけず目玉パズルまで行った方が、最初の方まで戻らず済むように作ったページです。)\n(5)押入れの間、管理人プロフィールページの演出変更。\n(6)落とし穴のページ等、数ヶ所にモノローグを追加。\n\n【2025年6月頃】\nトップページデザインを変更。\n\n【August 15,2025 - October 15,2025】\n(1)Changed the audio output on all pages.\n(2)Arrows that previously only appear when the cursor is over them are now displayed from the beginning.\n(3)Navigation mirrors appear on certain pages to make it easier to understand where to go next.\n(4)One page added just before the eyeball puzzle route that appears at the end of the game. (this page allows players who reach the puzzle without finding the solution fragment to avoid having to go back to the beginning.)\n(5)Changed the presentation of the Closet Room and the Manager Profile Page - Added monologues to several places, including the Pitfalls page.\n(6)Added monologues to several places, including the Pitfalls page.\n\n【June,2025】\nThe top page design has been changed.';
+});
+
+navi2.addEventListener('mouseover',function(){navi2.style.cursor='pointer';});
+navi2.addEventListener('click',function(){
+    contentsbox.style.backgroundColor = '#ff994f';
+    kijimoji.innerText = '【2025年6月頃】\nトップページデザインを変更。\n\n【June,2025】\nThe top page design has been changed.';
+});
+
+navi3.addEventListener('mouseover',function(){navi3.style.cursor='pointer';});
+navi3.addEventListener('click',function(){
+    contentsbox.style.backgroundColor = '#826dd5';
+    kijimoji.innerText = '【2025年11月3日】\n全ページ音声の出し方を変更。\n\n【2025年6月頃】\nトップページデザインを変更。\n\n【2025年5月17日】\n(1)スマホデザインの最初のページ以外のヘッダー画像(屋根の画像)が無くなりました。\n(2)ゲームオーバー画面にリトライボタンを追加。\n(3)一部ページの幽霊の出現率を変更しました。\n\n【2023年3月29日】\n1ページ追加。\n\n【2023年1月6日】\nふぁんしーあいらんど(深層編)が誕生。\n\n【November 3,2025】\nChanged the audio output on all pages.\n\n【June,2025】\nThe top page design has been changed.\n\n【May 17,2025】\n(1)The header image (roof image) has been removed from the smartphone design except for the first page.\n(2)A retry button has been added to the game over screen.\n(3)Changed the ghost appearance rate on some pages.\n\n【March 29,2023】\n1 page added.\n\n【January 6,2023】\nFancy Island (Deep Version) was born.';
+});
+
+navi4.addEventListener('mouseover',function(){navi4.style.cursor='pointer';});
+navi4.addEventListener('click',function(){
+    contentsbox.style.backgroundColor = '#00cc00';
+    kijimoji.innerText = '【2025年12月24日】\n「ふぁんしークリスマスチャレンジ」の音声の出し方を変更し、レスポンシブデザインにしました。\n\n【2019年12月4日】\n「サンタクロースからの贈り物」が「ふぁんしークリスマスチャレンジ」にリニューアル。\n\n【December 24,2025】\nThe way the audio is played on the "Fancy Island Christmas Challenge" has changed. The page now has a responsive design.\n\n【December 4,2019】\n"Gifts from Santa Claus" has been revamped into "Fancy Christmas Challenge."';
+});
+</script>
+</body>    
+</html>

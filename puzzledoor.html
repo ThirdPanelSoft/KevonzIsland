@@ -1,0 +1,2397 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Expires" content="Fri, 15 Aug 2025 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>KEVONZ ISLAND</title>
+<link rel="icon"href="image/favicon.ico">
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right:auto;
+    margin-left:auto;
+    text-align:center;
+    position:relative;
+}
+#doorfar{width:271px;height:573px;position:absolute;left:350px;top:7px;}
+#doornear{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+/*■■■■■■■■■■1マス目■■■■■■■■■■*/
+#pza1{width:114px;height:114px;position:absolute;left:106px;top:152px;display:none;}
+#pza2{width:114px;height:114px;position:absolute;left:106px;top:152px;display:none;}
+#pza3{width:114px;height:114px;position:absolute;left:106px;top:152px;display:none;}
+#pza4{width:114px;height:114px;position:absolute;left:106px;top:152px;display:none;}
+#pza5{width:114px;height:114px;position:absolute;left:106px;top:152px;display:none;}
+#pza6{width:114px;height:114px;position:absolute;left:106px;top:152px;display:none;}
+#pza7{width:114px;height:114px;position:absolute;left:106px;top:152px;display:none;}
+#pza8{width:114px;height:114px;position:absolute;left:106px;top:152px;display:none;}
+#pza9{width:114px;height:114px;position:absolute;left:106px;top:152px;display:none;}
+#pzamove1{width:114px;height:114px;position:absolute;left:106px;top:152px;display:none;}
+#pzamove2{width:114px;height:114px;position:absolute;left:106px;top:152px;display:none;}
+/*■■■■■■■■■■2マス目■■■■■■■■■■*/
+#pzb1{width:114px;height:114px;position:absolute;left:234px;top:152px;display:none;}
+#pzb2{width:114px;height:114px;position:absolute;left:234px;top:152px;display:none;}
+#pzb3{width:114px;height:114px;position:absolute;left:234px;top:152px;display:none;}
+#pzb4{width:114px;height:114px;position:absolute;left:234px;top:152px;display:none;}
+#pzb5{width:114px;height:114px;position:absolute;left:234px;top:152px;display:none;}
+#pzb6{width:114px;height:114px;position:absolute;left:234px;top:152px;display:none;}
+#pzb7{width:114px;height:114px;position:absolute;left:234px;top:152px;display:none;}
+#pzb8{width:114px;height:114px;position:absolute;left:234px;top:152px;display:none;}
+#pzb9{width:114px;height:114px;position:absolute;left:234px;top:152px;display:none;}
+#pzbmove1{width:114px;height:114px;position:absolute;left:234px;top:152px;display:none;}
+#pzbmove2{width:114px;height:114px;position:absolute;left:234px;top:152px;display:none;}
+/*■■■■■■■■■■3マス目■■■■■■■■■■*/
+#pzc1{width:114px;height:114px;position:absolute;left:362px;top:152px;display:none;}
+#pzc2{width:114px;height:114px;position:absolute;left:362px;top:152px;display:none;}
+#pzc3{width:114px;height:114px;position:absolute;left:362px;top:152px;display:none;}
+#pzc4{width:114px;height:114px;position:absolute;left:362px;top:152px;display:none;}
+#pzc5{width:114px;height:114px;position:absolute;left:362px;top:152px;display:none;}
+#pzc6{width:114px;height:114px;position:absolute;left:362px;top:152px;display:none;}
+#pzc7{width:114px;height:114px;position:absolute;left:362px;top:152px;display:none;}
+#pzc8{width:114px;height:114px;position:absolute;left:362px;top:152px;display:none;}
+#pzc9{width:114px;height:114px;position:absolute;left:362px;top:152px;display:none;}
+#pzcmove1{width:114px;height:114px;position:absolute;left:362px;top:152px;display:none;}
+#pzcmove2{width:114px;height:114px;position:absolute;left:362px;top:152px;display:none;}
+/*■■■■■■■■■■4マス目■■■■■■■■■■*/
+#pzd1{width:114px;height:114px;position:absolute;left:490px;top:152px;display:none;}
+#pzd2{width:114px;height:114px;position:absolute;left:490px;top:152px;display:none;}
+#pzd3{width:114px;height:114px;position:absolute;left:490px;top:152px;display:none;}
+#pzd4{width:114px;height:114px;position:absolute;left:490px;top:152px;display:none;}
+#pzd5{width:114px;height:114px;position:absolute;left:490px;top:152px;display:none;}
+#pzd6{width:114px;height:114px;position:absolute;left:490px;top:152px;display:none;}
+#pzd7{width:114px;height:114px;position:absolute;left:490px;top:152px;display:none;}
+#pzd8{width:114px;height:114px;position:absolute;left:490px;top:152px;display:none;}
+#pzd9{width:114px;height:114px;position:absolute;left:490px;top:152px;display:none;}
+#pzdmove1{width:114px;height:114px;position:absolute;left:490px;top:152px;display:none;}
+#pzdmove2{width:114px;height:114px;position:absolute;left:490px;top:152px;display:none;}
+/*■■■■■■■■■■5マス目■■■■■■■■■■*/
+#pze1{width:114px;height:114px;position:absolute;left:106px;top:314px;display:none;}
+#pze2{width:114px;height:114px;position:absolute;left:106px;top:314px;display:none;}
+#pze3{width:114px;height:114px;position:absolute;left:106px;top:314px;display:none;}
+#pze4{width:114px;height:114px;position:absolute;left:106px;top:314px;display:none;}
+#pze5{width:114px;height:114px;position:absolute;left:106px;top:314px;display:none;}
+#pze6{width:114px;height:114px;position:absolute;left:106px;top:314px;display:none;}
+#pze7{width:114px;height:114px;position:absolute;left:106px;top:314px;display:none;}
+#pze8{width:114px;height:114px;position:absolute;left:106px;top:314px;display:none;}
+#pze9{width:114px;height:114px;position:absolute;left:106px;top:314px;display:none;}
+#pzemove1{width:114px;height:114px;position:absolute;left:106px;top:314px;display:none;}
+#pzemove2{width:114px;height:114px;position:absolute;left:106px;top:314px;display:none;}
+/*■■■■■■■■■■6マス目■■■■■■■■■■*/
+#pzf1{width:114px;height:114px;position:absolute;left:234px;top:314px;display:none;}
+#pzf2{width:114px;height:114px;position:absolute;left:234px;top:314px;display:none;}
+#pzf3{width:114px;height:114px;position:absolute;left:234px;top:314px;display:none;}
+#pzf4{width:114px;height:114px;position:absolute;left:234px;top:314px;display:none;}
+#pzf5{width:114px;height:114px;position:absolute;left:234px;top:314px;display:none;}
+#pzf6{width:114px;height:114px;position:absolute;left:234px;top:314px;display:none;}
+#pzf7{width:114px;height:114px;position:absolute;left:234px;top:314px;display:none;}
+#pzf8{width:114px;height:114px;position:absolute;left:234px;top:314px;display:none;}
+#pzf9{width:114px;height:114px;position:absolute;left:234px;top:314px;display:none;}
+#pzfmove1{width:114px;height:114px;position:absolute;left:234px;top:314px;display:none;}
+#pzfmove2{width:114px;height:114px;position:absolute;left:234px;top:314px;display:none;}
+/*■■■■■■■■■■7マス目■■■■■■■■■■*/
+#pzg1{width:114px;height:114px;position:absolute;left:362px;top:314px;display:none;}
+#pzg2{width:114px;height:114px;position:absolute;left:362px;top:314px;display:none;}
+#pzg3{width:114px;height:114px;position:absolute;left:362px;top:314px;display:none;}
+#pzg4{width:114px;height:114px;position:absolute;left:362px;top:314px;display:none;}
+#pzg5{width:114px;height:114px;position:absolute;left:362px;top:314px;display:none;}
+#pzg6{width:114px;height:114px;position:absolute;left:362px;top:314px;display:none;}
+#pzg7{width:114px;height:114px;position:absolute;left:362px;top:314px;display:none;}
+#pzg8{width:114px;height:114px;position:absolute;left:362px;top:314px;display:none;}
+#pzg9{width:114px;height:114px;position:absolute;left:362px;top:314px;display:none;}
+#pzgmove1{width:114px;height:114px;position:absolute;left:362px;top:314px;display:none;}
+#pzgmove2{width:114px;height:114px;position:absolute;left:362px;top:314px;display:none;}
+/*■■■■■■■■■■8マス目■■■■■■■■■■*/
+#pzh1{width:114px;height:114px;position:absolute;left:490px;top:314px;display:none;}
+#pzh2{width:114px;height:114px;position:absolute;left:490px;top:314px;display:none;}
+#pzh3{width:114px;height:114px;position:absolute;left:490px;top:314px;display:none;}
+#pzh4{width:114px;height:114px;position:absolute;left:490px;top:314px;display:none;}
+#pzh5{width:114px;height:114px;position:absolute;left:490px;top:314px;display:none;}
+#pzh6{width:114px;height:114px;position:absolute;left:490px;top:314px;display:none;}
+#pzh7{width:114px;height:114px;position:absolute;left:490px;top:314px;display:none;}
+#pzh8{width:114px;height:114px;position:absolute;left:490px;top:314px;display:none;}
+#pzh9{width:114px;height:114px;position:absolute;left:490px;top:314px;display:none;}
+#pzhmove1{width:114px;height:114px;position:absolute;left:490px;top:314px;display:none;}
+#pzhmove2{width:114px;height:114px;position:absolute;left:490px;top:314px;display:none;}
+/*■■■■■■■■■■アンロックイベント■■■■■■■■■■*/
+#sucnear{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#blackout{width:970px;height:580px;position:absolute;left:0px;top:0px;opacity:0.0;display:none;}
+#sf100{width:271px;height:573px;position:absolute;left:350px;top:7px;display:none;}
+#sf80{width:271px;height:573px;position:absolute;left:350px;top:7px;display:none;}
+#sf60{width:271px;height:573px;position:absolute;left:350px;top:7px;display:none;}
+#sf40{width:271px;height:573px;position:absolute;left:350px;top:7px;display:none;}
+#sf20{width:271px;height:573px;position:absolute;left:350px;top:7px;display:none;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<!--
+<audio id="panese" preload="auto">
+<source src="pse/boxpane.wav" type="audio/wav">
+<source src="pse/boxpane.mp3" type="audio/mp3">
+</audio>
+
+<audio id="unlockse" preload="auto">
+<source src="pse/boxunlock.wav" type="audio/wav">
+<source src="pse/boxunlock.mp3" type="audio/mp3">
+</audio>
+
+<audio id="doorse" preload="auto">
+<source src="pse/doorkishimi.wav" type="audio/wav">
+<source src="pse/doorkishimi.mp3" type="audio/mp3">
+</audio>
+-->
+
+<div id="d1">
+<img src="pimg/pzfardoor.jpg"id="doorfar">
+<img src="pimg/pzneardoor.jpg"id="doornear">
+<!--/*■■■■■■■■■■1マス目■■■■■■■■■■*/-->
+<img src="pimg/pz1.jpg"id="pza1">
+<img src="pimg/pz2.jpg"id="pza2">
+<img src="pimg/pz3.jpg"id="pza3">
+<img src="pimg/pz4.jpg"id="pza4">
+<img src="pimg/pz5.jpg"id="pza5">
+<img src="pimg/pz6.jpg"id="pza6">
+<img src="pimg/pz7.jpg"id="pza7">
+<img src="pimg/pz8.jpg"id="pza8">
+<img src="pimg/pz9.jpg"id="pza9">
+<img src="pimg/pzmove1.jpg"id="pzamove1">
+<img src="pimg/pzmove2.jpg"id="pzamove2">
+<!--/*■■■■■■■■■■2マス目■■■■■■■■■■*/-->
+<img src="pimg/pz1.jpg"id="pzb1">
+<img src="pimg/pz2.jpg"id="pzb2">
+<img src="pimg/pz3.jpg"id="pzb3">
+<img src="pimg/pz4.jpg"id="pzb4">
+<img src="pimg/pz5.jpg"id="pzb5">
+<img src="pimg/pz6.jpg"id="pzb6">
+<img src="pimg/pz7.jpg"id="pzb7">
+<img src="pimg/pz8.jpg"id="pzb8">
+<img src="pimg/pz9.jpg"id="pzb9">
+<img src="pimg/pzmove1.jpg"id="pzbmove1">
+<img src="pimg/pzmove2.jpg"id="pzbmove2">
+<!--/*■■■■■■■■■■3マス目■■■■■■■■■■*/-->
+<img src="pimg/pz1.jpg"id="pzc1">
+<img src="pimg/pz2.jpg"id="pzc2">
+<img src="pimg/pz3.jpg"id="pzc3">
+<img src="pimg/pz4.jpg"id="pzc4">
+<img src="pimg/pz5.jpg"id="pzc5">
+<img src="pimg/pz6.jpg"id="pzc6">
+<img src="pimg/pz7.jpg"id="pzc7">
+<img src="pimg/pz8.jpg"id="pzc8">
+<img src="pimg/pz9.jpg"id="pzc9">
+<img src="pimg/pzmove1.jpg"id="pzcmove1">
+<img src="pimg/pzmove2.jpg"id="pzcmove2">
+<!--/*■■■■■■■■■■4マス目■■■■■■■■■■*/-->
+<img src="pimg/pz1.jpg"id="pzd1">
+<img src="pimg/pz2.jpg"id="pzd2">
+<img src="pimg/pz3.jpg"id="pzd3">
+<img src="pimg/pz4.jpg"id="pzd4">
+<img src="pimg/pz5.jpg"id="pzd5">
+<img src="pimg/pz6.jpg"id="pzd6">
+<img src="pimg/pz7.jpg"id="pzd7">
+<img src="pimg/pz8.jpg"id="pzd8">
+<img src="pimg/pz9.jpg"id="pzd9">
+<img src="pimg/pzmove1.jpg"id="pzdmove1">
+<img src="pimg/pzmove2.jpg"id="pzdmove2">
+<!--/*■■■■■■■■■■5マス目■■■■■■■■■■*/-->
+<img src="pimg/pz1.jpg"id="pze1">
+<img src="pimg/pz2.jpg"id="pze2">
+<img src="pimg/pz3.jpg"id="pze3">
+<img src="pimg/pz4.jpg"id="pze4">
+<img src="pimg/pz5.jpg"id="pze5">
+<img src="pimg/pz6.jpg"id="pze6">
+<img src="pimg/pz7.jpg"id="pze7">
+<img src="pimg/pz8.jpg"id="pze8">
+<img src="pimg/pz9.jpg"id="pze9">
+<img src="pimg/pzmove1.jpg"id="pzemove1">
+<img src="pimg/pzmove2.jpg"id="pzemove2">
+<!--/*■■■■■■■■■■6マス目■■■■■■■■■■*/-->
+<img src="pimg/pz1.jpg"id="pzf1">
+<img src="pimg/pz2.jpg"id="pzf2">
+<img src="pimg/pz3.jpg"id="pzf3">
+<img src="pimg/pz4.jpg"id="pzf4">
+<img src="pimg/pz5.jpg"id="pzf5">
+<img src="pimg/pz6.jpg"id="pzf6">
+<img src="pimg/pz7.jpg"id="pzf7">
+<img src="pimg/pz8.jpg"id="pzf8">
+<img src="pimg/pz9.jpg"id="pzf9">
+<img src="pimg/pzmove1.jpg"id="pzfmove1">
+<img src="pimg/pzmove2.jpg"id="pzfmove2">
+<!--/*■■■■■■■■■■7マス目■■■■■■■■■■*/-->
+<img src="pimg/pz1.jpg"id="pzg1">
+<img src="pimg/pz2.jpg"id="pzg2">
+<img src="pimg/pz3.jpg"id="pzg3">
+<img src="pimg/pz4.jpg"id="pzg4">
+<img src="pimg/pz5.jpg"id="pzg5">
+<img src="pimg/pz6.jpg"id="pzg6">
+<img src="pimg/pz7.jpg"id="pzg7">
+<img src="pimg/pz8.jpg"id="pzg8">
+<img src="pimg/pz9.jpg"id="pzg9">
+<img src="pimg/pzmove1.jpg"id="pzgmove1">
+<img src="pimg/pzmove2.jpg"id="pzgmove2">
+<!--/*■■■■■■■■■■8マス目■■■■■■■■■■*/-->
+<img src="pimg/pz1.jpg"id="pzh1">
+<img src="pimg/pz2.jpg"id="pzh2">
+<img src="pimg/pz3.jpg"id="pzh3">
+<img src="pimg/pz4.jpg"id="pzh4">
+<img src="pimg/pz5.jpg"id="pzh5">
+<img src="pimg/pz6.jpg"id="pzh6">
+<img src="pimg/pz7.jpg"id="pzh7">
+<img src="pimg/pz8.jpg"id="pzh8">
+<img src="pimg/pz9.jpg"id="pzh9">
+<img src="pimg/pzmove1.jpg"id="pzhmove1">
+<img src="pimg/pzmove2.jpg"id="pzhmove2">
+<!--/*■■■■■■■■■■アンロックイベント■■■■■■■■■■*/-->
+<img src="pimg/pzsucnear.jpg"id="sucnear">
+<img src="pimg/pzsucfar100.jpg"id="sf100">
+<img src="pimg/pzsucfar80.jpg"id="sf80">
+<img src="pimg/pzsucfar60.jpg"id="sf60">
+<img src="pimg/pzsucfar40.jpg"id="sf40">
+<img src="pimg/pzsucfar20.jpg"id="sf20">
+<img src="pimg/blackout.jpg"id="blackout">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+/*★には同じ数字、☆には同じスペル(変数、関数)、◇にはファイルのパスを入力
+let sampleSource★ = '';
+async function decodeSe★(){
+    const response★ = await fetch("◇◇◇");
+    const arrayBuffer★ = await response★.arrayBuffer();
+    const audioBuffer★ = await ctx.decodeAudioData(arrayBuffer★);
+    return audioBuffer★;
+}
+function playSe★(ctx,audioBuffer★){
+    sampleSource★ = ctx.createBufferSource();
+    sampleSource★.buffer = audioBuffer★;
+    sampleSource★.connect(ctx.destination);
+    sampleSource★.start();
+}
+async function se☆Play(){
+    const se☆ = await decodeSe★();
+    playSe★(ctx,se☆);
+}
+async function se☆Stop(){
+    sampleSource★?.stop();
+}
+*/
+
+/*
+<audio id="panese" preload="auto">
+<source src="pse/boxpane.mp3" type="audio/mp3">
+</audio>
+
+<audio id="unlockse" preload="auto">
+<source src="pse/boxunlock.mp3" type="audio/mp3">
+</audio>
+
+<audio id="doorse" preload="auto">
+<source src="pse/doorkishimi.mp3" type="audio/mp3">
+</audio>
+*/
+
+/*★★★★★★★★★★★★★★★★★効果音のセット★★★★★★★★★★★★★★★★★★★★*/
+window.AudioContext = window.AudioContext||window.webkitAudioContext;
+const ctx = new AudioContext();
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource1 = '';
+async function decodeSe1(){
+    const response1 = await fetch("pse/boxpane.mp3");
+    const arrayBuffer1 = await response1.arrayBuffer();
+    const audioBuffer1 = await ctx.decodeAudioData(arrayBuffer1);
+    return audioBuffer1;
+}
+function playSe1(ctx,audioBuffer1){
+    sampleSource1 = ctx.createBufferSource();
+    sampleSource1.buffer = audioBuffer1;
+    sampleSource1.connect(ctx.destination);
+    sampleSource1.start();
+}
+async function sepanePlay(){
+    const sepane = await decodeSe1();
+    playSe1(ctx,sepane);
+}
+async function sepaneStop(){
+    sampleSource1?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource2 = '';
+async function decodeSe2(){
+    const response2 = await fetch("pse/boxunlock.mp3");
+    const arrayBuffer2 = await response2.arrayBuffer();
+    const audioBuffer2 = await ctx.decodeAudioData(arrayBuffer2);
+    return audioBuffer2;
+}
+function playSe2(ctx,audioBuffer2){
+    sampleSource2 = ctx.createBufferSource();
+    sampleSource2.buffer = audioBuffer2;
+    sampleSource2.connect(ctx.destination);
+    sampleSource2.start();
+}
+async function seunlockPlay(){
+    const seunlock = await decodeSe2();
+    playSe2(ctx,seunlock);
+}
+async function seunlockStop(){
+    sampleSource2?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let kishimiplaying = false;
+let sampleSource3 = '';
+async function decodeSe3(){
+    const response3 = await fetch("pse/doorkishimi.mp3");
+    const arrayBuffer3 = await response3.arrayBuffer();
+    const audioBuffer3 = await ctx.decodeAudioData(arrayBuffer3);
+    return audioBuffer3;
+}
+function playSe3(ctx,audioBuffer3){
+    sampleSource3 = ctx.createBufferSource();
+    sampleSource3.buffer = audioBuffer3;
+    sampleSource3.connect(ctx.destination);
+    sampleSource3.start();
+    kishimiplaying = true;
+}
+async function sedoorPlay(){
+    const sedoor = await decodeSe3();
+    playSe3(ctx,sedoor);
+}
+async function sedoorStop(){
+    sampleSource3?.stop();
+}
+
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+    decodeSe1();
+    decodeSe2();
+    decodeSe3();
+});
+let doorfar = document.getElementById('doorfar');
+let doornear = document.getElementById('doornear');
+/*■■■■■■■■■■1マス目■■■■■■■■■■*/
+let pza1 = document.getElementById('pza1');
+let pza2 = document.getElementById('pza2');
+let pza3 = document.getElementById('pza3');
+let pza4 = document.getElementById('pza4');
+let pza5 = document.getElementById('pza5');
+let pza6 = document.getElementById('pza6');
+let pza7 = document.getElementById('pza7');
+let pza8 = document.getElementById('pza8');
+let pza9 = document.getElementById('pza9');
+let pzamove1 = document.getElementById('pzamove1');
+let pzamove2 = document.getElementById('pzamove2');
+/*■■■■■■■■■■2マス目■■■■■■■■■■*/
+let pzb1 = document.getElementById('pzb1');
+let pzb2 = document.getElementById('pzb2');
+let pzb3 = document.getElementById('pzb3');
+let pzb4 = document.getElementById('pzb4');
+let pzb5 = document.getElementById('pzb5');
+let pzb6 = document.getElementById('pzb6');
+let pzb7 = document.getElementById('pzb7');
+let pzb8 = document.getElementById('pzb8');
+let pzb9 = document.getElementById('pzb9');
+let pzbmove1 = document.getElementById('pzbmove1');
+let pzbmove2 = document.getElementById('pzbmove2');
+/*■■■■■■■■■■3マス目■■■■■■■■■■*/
+let pzc1 = document.getElementById('pzc1');
+let pzc2 = document.getElementById('pzc2');
+let pzc3 = document.getElementById('pzc3');
+let pzc4 = document.getElementById('pzc4');
+let pzc5 = document.getElementById('pzc5');
+let pzc6 = document.getElementById('pzc6');
+let pzc7 = document.getElementById('pzc7');
+let pzc8 = document.getElementById('pzc8');
+let pzc9 = document.getElementById('pzc9');
+let pzcmove1 = document.getElementById('pzcmove1');
+let pzcmove2 = document.getElementById('pzcmove2');
+/*■■■■■■■■■■4マス目■■■■■■■■■■*/
+let pzd1 = document.getElementById('pzd1');
+let pzd2 = document.getElementById('pzd2');
+let pzd3 = document.getElementById('pzd3');
+let pzd4 = document.getElementById('pzd4');
+let pzd5 = document.getElementById('pzd5');
+let pzd6 = document.getElementById('pzd6');
+let pzd7 = document.getElementById('pzd7');
+let pzd8 = document.getElementById('pzd8');
+let pzd9 = document.getElementById('pzd9');
+let pzdmove1 = document.getElementById('pzdmove1');
+let pzdmove2 = document.getElementById('pzdmove2');
+/*■■■■■■■■■■5マス目■■■■■■■■■■*/
+let pze1 = document.getElementById('pze1');
+let pze2 = document.getElementById('pze2');
+let pze3 = document.getElementById('pze3');
+let pze4 = document.getElementById('pze4');
+let pze5 = document.getElementById('pze5');
+let pze6 = document.getElementById('pze6');
+let pze7 = document.getElementById('pze7');
+let pze8 = document.getElementById('pze8');
+let pze9 = document.getElementById('pze9');
+let pzemove1 = document.getElementById('pzemove1');
+let pzemove2 = document.getElementById('pzemove2');
+/*■■■■■■■■■■6マス目■■■■■■■■■■*/
+let pzf1 = document.getElementById('pzf1');
+let pzf2 = document.getElementById('pzf2');
+let pzf3 = document.getElementById('pzf3');
+let pzf4 = document.getElementById('pzf4');
+let pzf5 = document.getElementById('pzf5');
+let pzf6 = document.getElementById('pzf6');
+let pzf7 = document.getElementById('pzf7');
+let pzf8 = document.getElementById('pzf8');
+let pzf9 = document.getElementById('pzf9');
+let pzfmove1 = document.getElementById('pzfmove1');
+let pzfmove2 = document.getElementById('pzfmove2');
+/*■■■■■■■■■■7マス目■■■■■■■■■■*/
+let pzg1 = document.getElementById('pzg1');
+let pzg2 = document.getElementById('pzg2');
+let pzg3 = document.getElementById('pzg3');
+let pzg4 = document.getElementById('pzg4');
+let pzg5 = document.getElementById('pzg5');
+let pzg6 = document.getElementById('pzg6');
+let pzg7 = document.getElementById('pzg7');
+let pzg8 = document.getElementById('pzg8');
+let pzg9 = document.getElementById('pzg9');
+let pzgmove1 = document.getElementById('pzgmove1');
+let pzgmove2 = document.getElementById('pzgmove2');
+/*■■■■■■■■■■8マス目■■■■■■■■■■*/
+let pzh1 = document.getElementById('pzh1');
+let pzh2 = document.getElementById('pzh2');
+let pzh3 = document.getElementById('pzh3');
+let pzh4 = document.getElementById('pzh4');
+let pzh5 = document.getElementById('pzh5');
+let pzh6 = document.getElementById('pzh6');
+let pzh7 = document.getElementById('pzh7');
+let pzh8 = document.getElementById('pzh8');
+let pzh9 = document.getElementById('pzh9');
+let pzhmove1 = document.getElementById('pzhmove1');
+let pzhmove2 = document.getElementById('pzhmove2');
+/*■■■■■■■■■■アンロックイベント■■■■■■■■■■*/
+let sucnear = document.getElementById('sucnear');
+let blackout = document.getElementById('blackout');
+let sf100 = document.getElementById('sf100');
+let sf80 = document.getElementById('sf80');
+let sf60 = document.getElementById('sf60');
+let sf40 = document.getElementById('sf40');
+let sf20 = document.getElementById('sf20');
+/*■■■■■■■■■■効果音■■■■■■■■■■*/
+//let sepane = document.getElementById('panese');
+//let seunlock = document.getElementById('unlockse');
+//let sedoor = document.getElementById('doorse');
+//load(); play(); pause();
+/*■■■■■■■■■■スコア■■■■■■■■■■*/
+let fps1 = 0;
+let fps2 = 0;
+let fps3 = 0;
+let fps4 = 0;
+let fps5 = 0;
+let fps6 = 0;
+let fps7 = 0;
+let fps8 = 0;
+let fps9 = 0;
+
+let fps10 = 0;
+let fps11 = 0;
+let fps12 = 0;
+let fps13 = 0;
+let fps14 = 0;
+let fps15 = 0;
+let fps16 = 0;
+let fps17 = 0;
+let fps18 = 0;
+
+let fps19 = 0;
+let fps20 = 0;
+let fps21 = 0;
+let fps22 = 0;
+let fps23 = 0;
+let fps24 = 0;
+let fps25 = 0;
+let fps26 = 0;
+let fps27 = 0;
+
+let fps28 = 0;
+let fps29 = 0;
+let fps30 = 0;
+let fps31 = 0;
+let fps32 = 0;
+let fps33 = 0;
+let fps34 = 0;
+let fps35 = 0;
+let fps36 = 0;
+
+let fps37 = 0;
+let fps38 = 0;
+let fps39 = 0;
+let fps40 = 0;
+let fps41 = 0;
+let fps42 = 0;
+let fps43 = 0;
+let fps44 = 0;
+let fps45 = 0;
+
+let fps46 = 0;
+let fps47 = 0;
+let fps48 = 0;
+let fps49 = 0;
+let fps50 = 0;
+let fps51 = 0;
+let fps52 = 0;
+let fps53 = 0;
+let fps54 = 0;
+
+let fps55 = 0;
+let fps56 = 0;
+let fps57 = 0;
+let fps58 = 0;
+let fps59 = 0;
+let fps60 = 0;
+let fps61 = 0;
+let fps62 = 0;
+let fps63 = 0;
+
+let fps64 = 0;
+let fps65 = 0;
+let fps66 = 0;
+let fps67 = 0;
+let fps68 = 0;
+let fps69 = 0;
+let fps70 = 0;
+let fps71 = 0;
+let fps72 = 0;
+let fps73 = 0;
+let fps74 = 0;
+let score = 20;
+
+doorfar.addEventListener('mouseover',function(){doorfar.style.cursor = 'pointer';});
+doorfar.addEventListener('click',function(){
+    doorfar.style.display = 'none';
+    doornear.style.display = 'inline';
+    pza1.style.display = 'inline';
+    pzb1.style.display = 'inline';
+    pzc1.style.display = 'inline';
+    pzd1.style.display = 'inline';
+    pze1.style.display = 'inline';
+    pzf1.style.display = 'inline';
+    pzg1.style.display = 'inline';
+    pzh1.style.display = 'inline';
+});
+
+/*最後のパネルが正解の時もしスコア70以上だったらアンロックイベント発生*/
+function unlock(){
+    if(score>=70){
+        //seunlock.load();
+        //seunlock.play();
+        seunlockPlay();
+        sucnear.style.display = 'inline';
+        let timerId73 = setInterval(function(){
+            fps73++;
+            switch(fps73){
+                case 12:
+                blackout.style.display = 'inline';
+                blackout.style.opacity = '0.2';
+                break;
+                case 13:
+                blackout.style.opacity = '0.4';
+                break;
+                case 14:
+                blackout.style.opacity = '0.6';
+                break;
+                case 15:
+                blackout.style.opacity = '0.8';
+                break;
+                case 16:
+                blackout.style.opacity = '1.0';
+                sucnear.style.display = 'none';
+                pza1.style.display = 'none';
+                pzb9.style.display = 'none';
+                pzc8.style.display = 'none';
+                pzd2.style.display = 'none';
+                pze3.style.display = 'none';
+                pzf1.style.display = 'none';
+                pzg5.style.display = 'none';
+                pzh4.style.display = 'none';
+                doornear.style.display = 'none';
+                sf100.style.display = 'inline';
+                break;
+                case 17:
+                blackout.style.opacity = '0.8';
+                break;
+                case 18:
+                blackout.style.opacity = '0.6';
+                break;
+                case 19:
+                blackout.style.opacity = '0.4';
+                break;
+                case 20:
+                blackout.style.opacity = '0.2';
+                break;
+                case 21:
+                blackout.style.display = 'none';
+                clearInterval(timerId73);
+                break;
+            }
+        },80);
+    }else{
+        score += 10;
+    }
+}
+
+sf100.addEventListener('mouseover',function(){sf100.style.cursor = 'pointer';});
+sf100.addEventListener('click',function(){
+    //sedoor.load();
+    //sedoor.play();
+    sedoorPlay();
+    let timerId74 = setInterval(function(){
+        fps74++;
+        switch(fps74){
+            case 1:
+            sf100.style.display = 'none';
+            sf80.style.display = 'inline';
+            break;
+            case 2:
+            sf80.style.display = 'none';
+            sf60.style.display = 'inline';
+            break;
+            case 3:
+            sf60.style.display = 'none';
+            sf40.style.display = 'inline';
+            break;
+            case 4:
+            sf40.style.display = 'none';
+            sf20.style.display = 'inline';
+            break;
+            case 16:
+            clearInterval(timerId74);
+            if(kishimiplaying===true){sedoorStop();}
+            location.href = 'uozokjonasawuagukob.html';
+            break;
+        }    
+    },80);
+});
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■パネル1を回転させる■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+pza1.addEventListener('mouseover',function(){pza1.style.cursor = 'pointer';});//■変える
+pza1.addEventListener('click',function(){//■変える
+    fps1 = 0;
+    //sepane.load();
+    sepanePlay();//sepane
+    pza1.style.display = 'none';//■変える
+    pzamove1.style.display = 'inline';
+    let timerId1 = setInterval(function(){//■変える
+        fps1++;//■変える
+        switch(fps1){//■変える
+            case 1:
+            pzamove1.style.display = 'none';
+            pzamove2.style.display = 'inline';
+            break;
+            case 2:
+            pzamove2.style.display = 'none';
+            pza2.style.display = 'inline';//■変える
+            score -= 10;
+            clearInterval(timerId1);//■変える
+            break;
+        }
+    },80);
+});
+
+pza2.addEventListener('mouseover',function(){pza2.style.cursor = 'pointer';});//■変える
+pza2.addEventListener('click',function(){//■変える
+    fps2 = 0;
+    //sepane.load();
+    sepanePlay();//sepane
+    pza2.style.display = 'none';//■変える
+    pzamove1.style.display = 'inline';
+    let timerId2 = setInterval(function(){//■変える
+        fps2++;//■変える
+        switch(fps2){//■変える
+            case 1:
+            pzamove1.style.display = 'none';
+            pzamove2.style.display = 'inline';
+            break;
+            case 2:
+            pzamove2.style.display = 'none';
+            pza3.style.display = 'inline';//■変える
+            clearInterval(timerId2);//■変える
+            break;
+        }
+    },80);
+});
+
+pza3.addEventListener('mouseover',function(){pza3.style.cursor = 'pointer';});//■変える
+pza3.addEventListener('click',function(){//■変える
+    fps3 = 0;
+    //sepane.load();
+    sepanePlay();//sepane
+    pza3.style.display = 'none';//■変える
+    pzamove1.style.display = 'inline';
+    let timerId3 = setInterval(function(){//■変える
+        fps3++;//■変える
+        switch(fps3){//■変える
+            case 1:
+            pzamove1.style.display = 'none';
+            pzamove2.style.display = 'inline';
+            break;
+            case 2:
+            pzamove2.style.display = 'none';
+            pza4.style.display = 'inline';//■変える
+            clearInterval(timerId3);//■変える
+            break;
+        }
+    },80);
+});
+
+pza4.addEventListener('mouseover',function(){pza4.style.cursor = 'pointer';});//■変える
+pza4.addEventListener('click',function(){//■変える
+    fps4 = 0;
+    //sepane.load();
+    sepanePlay();//sepane
+    pza4.style.display = 'none';//■変える
+    pzamove1.style.display = 'inline';
+    let timerId4 = setInterval(function(){//■変える
+        fps4++;//■変える
+        switch(fps4){//■変える
+            case 1:
+            pzamove1.style.display = 'none';
+            pzamove2.style.display = 'inline';
+            break;
+            case 2:
+            pzamove2.style.display = 'none';
+            pza5.style.display = 'inline';//■変える
+            clearInterval(timerId4);//■変える
+            break;
+        }
+    },80);
+});
+
+pza5.addEventListener('mouseover',function(){pza5.style.cursor = 'pointer';});//■変える
+pza5.addEventListener('click',function(){//■変える
+    fps5 = 0;
+    //sepane.load();
+    sepanePlay();//sepane
+    pza5.style.display = 'none';//■変える
+    pzamove1.style.display = 'inline';
+    let timerId5 = setInterval(function(){//■変える
+        fps5++;//■変える
+        switch(fps5){//■変える
+            case 1:
+            pzamove1.style.display = 'none';
+            pzamove2.style.display = 'inline';
+            break;
+            case 2:
+            pzamove2.style.display = 'none';
+            pza6.style.display = 'inline';//■変える
+            clearInterval(timerId5);//■変える
+            break;
+        }
+    },80);
+});
+
+pza6.addEventListener('mouseover',function(){pza6.style.cursor = 'pointer';});//■変える
+pza6.addEventListener('click',function(){//■変える
+    fps6 = 0;
+    //sepane.load();
+    sepanePlay();//sepane
+    pza6.style.display = 'none';//■変える
+    pzamove1.style.display = 'inline';
+    let timerId6 = setInterval(function(){//■変える
+        fps6++;//■変える
+        switch(fps6){//■変える
+            case 1:
+            pzamove1.style.display = 'none';
+            pzamove2.style.display = 'inline';
+            break;
+            case 2:
+            pzamove2.style.display = 'none';
+            pza7.style.display = 'inline';//■変える
+            clearInterval(timerId6);//■変える
+            break;
+        }
+    },80);
+});
+
+pza7.addEventListener('mouseover',function(){pza7.style.cursor = 'pointer';});//■変える
+pza7.addEventListener('click',function(){//■変える
+    fps7 = 0;
+    //sepane.load();
+    sepanePlay();//sepane
+    pza7.style.display = 'none';//■変える
+    pzamove1.style.display = 'inline';
+    let timerId7 = setInterval(function(){//■変える
+        fps7++;//■変える
+        switch(fps7){//■変える
+            case 1:
+            pzamove1.style.display = 'none';
+            pzamove2.style.display = 'inline';
+            break;
+            case 2:
+            pzamove2.style.display = 'none';
+            pza8.style.display = 'inline';//■変える
+            clearInterval(timerId7);//■変える
+            break;
+        }
+    },80);
+});
+
+pza8.addEventListener('mouseover',function(){pza8.style.cursor = 'pointer';});//■変える
+pza8.addEventListener('click',function(){//■変える
+    fps8 = 0;
+    //sepane.load();
+    sepanePlay();//sepane
+    pza8.style.display = 'none';//■変える
+    pzamove1.style.display = 'inline';
+    let timerId8 = setInterval(function(){//■変える
+        fps8++;//■変える
+        switch(fps8){//■変える
+            case 1:
+            pzamove1.style.display = 'none';
+            pzamove2.style.display = 'inline';
+            break;
+            case 2:
+            pzamove2.style.display = 'none';
+            pza9.style.display = 'inline';//■変える
+            clearInterval(timerId8);//■変える
+            break;
+        }
+    },80);
+});
+
+pza9.addEventListener('mouseover',function(){pza9.style.cursor = 'pointer';});//■変える
+pza9.addEventListener('click',function(){//■変える
+    fps9 = 0;
+    //sepane.load();
+    sepanePlay();//sepane
+    pza9.style.display = 'none';//■変える
+    pzamove1.style.display = 'inline';
+    let timerId9 = setInterval(function(){//■変える
+        fps9++;//■変える
+        switch(fps9){//■変える
+            case 1:
+            pzamove1.style.display = 'none';
+            pzamove2.style.display = 'inline';
+            break;
+            case 2:
+            pzamove2.style.display = 'none';
+            pza1.style.display = 'inline';//■変える
+            unlock();
+            clearInterval(timerId9);//■変える
+            break;
+        }
+    },80);
+});
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■パネル2を回転させる■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+pzb1.addEventListener('mouseover',function(){pzb1.style.cursor = 'pointer';});//■変える
+pzb1.addEventListener('click',function(){//■変える
+    fps10 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzb1.style.display = 'none';//■変える
+    pzbmove1.style.display = 'inline';
+    let timerId10 = setInterval(function(){//■変える
+        fps10++;//■変える
+        switch(fps10){//■変える
+            case 1:
+            pzbmove1.style.display = 'none';
+            pzbmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzbmove2.style.display = 'none';
+            pzb2.style.display = 'inline';//■変える
+            clearInterval(timerId10);//■変える
+            break;
+        }
+    },80);
+});
+
+pzb2.addEventListener('mouseover',function(){pzb2.style.cursor = 'pointer';});//■変える
+pzb2.addEventListener('click',function(){//■変える
+    fps11 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzb2.style.display = 'none';//■変える
+    pzbmove1.style.display = 'inline';
+    let timerId11 = setInterval(function(){//■変える
+        fps11++;//■変える
+        switch(fps11){//■変える
+            case 1:
+            pzbmove1.style.display = 'none';
+            pzbmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzbmove2.style.display = 'none';
+            pzb3.style.display = 'inline';//■変える
+            clearInterval(timerId11);//■変える
+            break;
+        }
+    },80);
+});
+
+pzb3.addEventListener('mouseover',function(){pzb3.style.cursor = 'pointer';});//■変える
+pzb3.addEventListener('click',function(){//■変える
+    fps12 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzb3.style.display = 'none';//■変える
+    pzbmove1.style.display = 'inline';
+    let timerId12 = setInterval(function(){//■変える
+        fps12++;//■変える
+        switch(fps12){//■変える
+            case 1:
+            pzbmove1.style.display = 'none';
+            pzbmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzbmove2.style.display = 'none';
+            pzb4.style.display = 'inline';//■変える
+            clearInterval(timerId12);//■変える
+            break;
+        }
+    },80);
+});
+
+pzb4.addEventListener('mouseover',function(){pzb4.style.cursor = 'pointer';});//■変える
+pzb4.addEventListener('click',function(){//■変える
+    fps13 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzb4.style.display = 'none';//■変える
+    pzbmove1.style.display = 'inline';
+    let timerId13 = setInterval(function(){//■変える
+        fps13++;//■変える
+        switch(fps13){//■変える
+            case 1:
+            pzbmove1.style.display = 'none';
+            pzbmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzbmove2.style.display = 'none';
+            pzb5.style.display = 'inline';//■変える
+            clearInterval(timerId13);//■変える
+            break;
+        }
+    },80);
+});
+
+pzb5.addEventListener('mouseover',function(){pzb5.style.cursor = 'pointer';});//■変える
+pzb5.addEventListener('click',function(){//■変える
+    fps14 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzb5.style.display = 'none';//■変える
+    pzbmove1.style.display = 'inline';
+    let timerId14 = setInterval(function(){//■変える
+        fps14++;//■変える
+        switch(fps14){//■変える
+            case 1:
+            pzbmove1.style.display = 'none';
+            pzbmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzbmove2.style.display = 'none';
+            pzb6.style.display = 'inline';//■変える
+            clearInterval(timerId14);//■変える
+            break;
+        }
+    },80);
+});
+
+pzb6.addEventListener('mouseover',function(){pzb6.style.cursor = 'pointer';});//■変える
+pzb6.addEventListener('click',function(){//■変える
+    fps15 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzb6.style.display = 'none';//■変える
+    pzbmove1.style.display = 'inline';
+    let timerId15 = setInterval(function(){//■変える
+        fps15++;//■変える
+        switch(fps15){//■変える
+            case 1:
+            pzbmove1.style.display = 'none';
+            pzbmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzbmove2.style.display = 'none';
+            pzb7.style.display = 'inline';//■変える
+            clearInterval(timerId15);//■変える
+            break;
+        }
+    },80);
+});
+
+pzb7.addEventListener('mouseover',function(){pzb7.style.cursor = 'pointer';});//■変える
+pzb7.addEventListener('click',function(){//■変える
+    fps16 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzb7.style.display = 'none';//■変える
+    pzbmove1.style.display = 'inline';
+    let timerId16 = setInterval(function(){//■変える
+        fps16++;//■変える
+        switch(fps16){//■変える
+            case 1:
+            pzbmove1.style.display = 'none';
+            pzbmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzbmove2.style.display = 'none';
+            pzb8.style.display = 'inline';//■変える
+            clearInterval(timerId16);//■変える
+            break;
+        }
+    },80);
+});
+
+pzb8.addEventListener('mouseover',function(){pzb8.style.cursor = 'pointer';});//■変える
+pzb8.addEventListener('click',function(){//■変える
+    fps17 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzb8.style.display = 'none';//■変える
+    pzbmove1.style.display = 'inline';
+    let timerId17 = setInterval(function(){//■変える
+        fps17++;//■変える
+        switch(fps17){//■変える
+            case 1:
+            pzbmove1.style.display = 'none';
+            pzbmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzbmove2.style.display = 'none';
+            pzb9.style.display = 'inline';//■変える
+            unlock();
+            clearInterval(timerId17);//■変える
+            break;
+        }
+    },80);
+});
+
+pzb9.addEventListener('mouseover',function(){pzb9.style.cursor = 'pointer';});//■変える
+pzb9.addEventListener('click',function(){//■変える
+    fps18 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzb9.style.display = 'none';//■変える
+    pzbmove1.style.display = 'inline';
+    let timerId18 = setInterval(function(){//■変える
+        fps18++;//■変える
+        switch(fps18){//■変える
+            case 1:
+            pzbmove1.style.display = 'none';
+            pzbmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzbmove2.style.display = 'none';
+            pzb1.style.display = 'inline';//■変える
+            score -= 10;
+            clearInterval(timerId18);//■変える
+            break;
+        }
+    },80);
+});
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■パネル3を回転させる■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+pzc1.addEventListener('mouseover',function(){pzc1.style.cursor = 'pointer';});//■変える
+pzc1.addEventListener('click',function(){//■変える
+    fps19 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzc1.style.display = 'none';//■変える
+    pzcmove1.style.display = 'inline';
+    let timerId19 = setInterval(function(){//■変える
+        fps19++;//■変える
+        switch(fps19){//■変える
+            case 1:
+            pzcmove1.style.display = 'none';
+            pzcmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzcmove2.style.display = 'none';
+            pzc2.style.display = 'inline';//■変える
+            clearInterval(timerId19);//■変える
+            break;
+        }
+    },80);
+});
+
+pzc2.addEventListener('mouseover',function(){pzc2.style.cursor = 'pointer';});//■変える
+pzc2.addEventListener('click',function(){//■変える
+    fps20 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzc2.style.display = 'none';//■変える
+    pzcmove1.style.display = 'inline';
+    let timerId20 = setInterval(function(){//■変える
+        fps20++;//■変える
+        switch(fps20){//■変える
+            case 1:
+            pzcmove1.style.display = 'none';
+            pzcmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzcmove2.style.display = 'none';
+            pzc3.style.display = 'inline';//■変える
+            clearInterval(timerId20);//■変える
+            break;
+        }
+    },80);
+});
+
+pzc3.addEventListener('mouseover',function(){pzc3.style.cursor = 'pointer';});//■変える
+pzc3.addEventListener('click',function(){//■変える
+    fps21 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzc3.style.display = 'none';//■変える
+    pzcmove1.style.display = 'inline';
+    let timerId21 = setInterval(function(){//■変える
+        fps21++;//■変える
+        switch(fps21){//■変える
+            case 1:
+            pzcmove1.style.display = 'none';
+            pzcmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzcmove2.style.display = 'none';
+            pzc4.style.display = 'inline';//■変える
+            clearInterval(timerId21);//■変える
+            break;
+        }
+    },80);
+});
+
+pzc4.addEventListener('mouseover',function(){pzc4.style.cursor = 'pointer';});//■変える
+pzc4.addEventListener('click',function(){//■変える
+    fps22 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzc4.style.display = 'none';//■変える
+    pzcmove1.style.display = 'inline';
+    let timerId22 = setInterval(function(){//■変える
+        fps22++;//■変える
+        switch(fps22){//■変える
+            case 1:
+            pzcmove1.style.display = 'none';
+            pzcmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzcmove2.style.display = 'none';
+            pzc5.style.display = 'inline';//■変える
+            clearInterval(timerId22);//■変える
+            break;
+        }
+    },80);
+});
+
+pzc5.addEventListener('mouseover',function(){pzc5.style.cursor = 'pointer';});//■変える
+pzc5.addEventListener('click',function(){//■変える
+    fps23 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzc5.style.display = 'none';//■変える
+    pzcmove1.style.display = 'inline';
+    let timerId23 = setInterval(function(){//■変える
+        fps23++;//■変える
+        switch(fps23){//■変える
+            case 1:
+            pzcmove1.style.display = 'none';
+            pzcmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzcmove2.style.display = 'none';
+            pzc6.style.display = 'inline';//■変える
+            clearInterval(timerId23);//■変える
+            break;
+        }
+    },80);
+});
+
+pzc6.addEventListener('mouseover',function(){pzc6.style.cursor = 'pointer';});//■変える
+pzc6.addEventListener('click',function(){//■変える
+    fps24 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzc6.style.display = 'none';//■変える
+    pzcmove1.style.display = 'inline';
+    let timerId24 = setInterval(function(){//■変える
+        fps24++;//■変える
+        switch(fps24){//■変える
+            case 1:
+            pzcmove1.style.display = 'none';
+            pzcmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzcmove2.style.display = 'none';
+            pzc7.style.display = 'inline';//■変える
+            clearInterval(timerId24);//■変える
+            break;
+        }
+    },80);
+});
+
+pzc7.addEventListener('mouseover',function(){pzc7.style.cursor = 'pointer';});//■変える
+pzc7.addEventListener('click',function(){//■変える
+    fps25 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzc7.style.display = 'none';//■変える
+    pzcmove1.style.display = 'inline';
+    let timerId25 = setInterval(function(){//■変える
+        fps25++;//■変える
+        switch(fps25){//■変える
+            case 1:
+            pzcmove1.style.display = 'none';
+            pzcmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzcmove2.style.display = 'none';
+            pzc8.style.display = 'inline';//■変える
+            unlock();
+            clearInterval(timerId25);//■変える
+            break;
+        }
+    },80);
+});
+
+pzc8.addEventListener('mouseover',function(){pzc8.style.cursor = 'pointer';});//■変える
+pzc8.addEventListener('click',function(){//■変える
+    fps26 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzc8.style.display = 'none';//■変える
+    pzcmove1.style.display = 'inline';
+    let timerId26 = setInterval(function(){//■変える
+        fps26++;//■変える
+        switch(fps26){//■変える
+            case 1:
+            pzcmove1.style.display = 'none';
+            pzcmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzcmove2.style.display = 'none';
+            pzc9.style.display = 'inline';//■変える
+            score -= 10;
+            clearInterval(timerId26);//■変える
+            break;
+        }
+    },80);
+});
+
+pzc9.addEventListener('mouseover',function(){pzc9.style.cursor = 'pointer';});//■変える
+pzc9.addEventListener('click',function(){//■変える
+    fps27 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzc9.style.display = 'none';//■変える
+    pzcmove1.style.display = 'inline';
+    let timerId27 = setInterval(function(){//■変える
+        fps27++;//■変える
+        switch(fps27){//■変える
+            case 1:
+            pzcmove1.style.display = 'none';
+            pzcmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzcmove2.style.display = 'none';
+            pzc1.style.display = 'inline';//■変える
+            clearInterval(timerId27);//■変える
+            break;
+        }
+    },80);
+});
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■パネル4を回転させる■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+pzd1.addEventListener('mouseover',function(){pzd1.style.cursor = 'pointer';});//■変える
+pzd1.addEventListener('click',function(){//■変える
+    fps28 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzd1.style.display = 'none';//■変える
+    pzdmove1.style.display = 'inline';
+    let timerId28 = setInterval(function(){//■変える
+        fps28++;//■変える
+        switch(fps28){//■変える
+            case 1:
+            pzdmove1.style.display = 'none';
+            pzdmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzdmove2.style.display = 'none';
+            pzd2.style.display = 'inline';//■変える
+            unlock();
+            clearInterval(timerId28);//■変える
+            break;
+        }
+    },80);
+});
+
+pzd2.addEventListener('mouseover',function(){pzd2.style.cursor = 'pointer';});//■変える
+pzd2.addEventListener('click',function(){//■変える
+    fps29 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzd2.style.display = 'none';//■変える
+    pzdmove1.style.display = 'inline';
+    let timerId29 = setInterval(function(){//■変える
+        fps29++;//■変える
+        switch(fps29){//■変える
+            case 1:
+            pzdmove1.style.display = 'none';
+            pzdmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzdmove2.style.display = 'none';
+            pzd3.style.display = 'inline';//■変える
+            score -= 10;
+            clearInterval(timerId29);//■変える
+            break;
+        }
+    },80);
+});
+
+pzd3.addEventListener('mouseover',function(){pzd3.style.cursor = 'pointer';});//■変える
+pzd3.addEventListener('click',function(){//■変える
+    fps30 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzd3.style.display = 'none';//■変える
+    pzdmove1.style.display = 'inline';
+    let timerId30 = setInterval(function(){//■変える
+        fps30++;//■変える
+        switch(fps30){//■変える
+            case 1:
+            pzdmove1.style.display = 'none';
+            pzdmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzdmove2.style.display = 'none';
+            pzd4.style.display = 'inline';//■変える
+            clearInterval(timerId30);//■変える
+            break;
+        }
+    },80);
+});
+
+pzd4.addEventListener('mouseover',function(){pzd4.style.cursor = 'pointer';});//■変える
+pzd4.addEventListener('click',function(){//■変える
+    fps31 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzd4.style.display = 'none';//■変える
+    pzdmove1.style.display = 'inline';
+    let timerId31 = setInterval(function(){//■変える
+        fps31++;//■変える
+        switch(fps31){//■変える
+            case 1:
+            pzdmove1.style.display = 'none';
+            pzdmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzdmove2.style.display = 'none';
+            pzd5.style.display = 'inline';//■変える
+            clearInterval(timerId31);//■変える
+            break;
+        }
+    },80);
+});
+
+pzd5.addEventListener('mouseover',function(){pzd5.style.cursor = 'pointer';});//■変える
+pzd5.addEventListener('click',function(){//■変える
+    fps32 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzd5.style.display = 'none';//■変える
+    pzdmove1.style.display = 'inline';
+    let timerId32 = setInterval(function(){//■変える
+        fps32++;//■変える
+        switch(fps32){//■変える
+            case 1:
+            pzdmove1.style.display = 'none';
+            pzdmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzdmove2.style.display = 'none';
+            pzd6.style.display = 'inline';//■変える
+            clearInterval(timerId32);//■変える
+            break;
+        }
+    },80);
+});
+
+pzd6.addEventListener('mouseover',function(){pzd6.style.cursor = 'pointer';});//■変える
+pzd6.addEventListener('click',function(){//■変える
+    fps33 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzd6.style.display = 'none';//■変える
+    pzdmove1.style.display = 'inline';
+    let timerId33 = setInterval(function(){//■変える
+        fps33++;//■変える
+        switch(fps33){//■変える
+            case 1:
+            pzdmove1.style.display = 'none';
+            pzdmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzdmove2.style.display = 'none';
+            pzd7.style.display = 'inline';//■変える
+            clearInterval(timerId33);//■変える
+            break;
+        }
+    },80);
+});
+
+pzd7.addEventListener('mouseover',function(){pzd7.style.cursor = 'pointer';});//■変える
+pzd7.addEventListener('click',function(){//■変える
+    fps34 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzd7.style.display = 'none';//■変える
+    pzdmove1.style.display = 'inline';
+    let timerId34 = setInterval(function(){//■変える
+        fps34++;//■変える
+        switch(fps34){//■変える
+            case 1:
+            pzdmove1.style.display = 'none';
+            pzdmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzdmove2.style.display = 'none';
+            pzd8.style.display = 'inline';//■変える
+            clearInterval(timerId34);//■変える
+            break;
+        }
+    },80);
+});
+
+pzd8.addEventListener('mouseover',function(){pzd8.style.cursor = 'pointer';});//■変える
+pzd8.addEventListener('click',function(){//■変える
+    fps35 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzd8.style.display = 'none';//■変える
+    pzdmove1.style.display = 'inline';
+    let timerId35 = setInterval(function(){//■変える
+        fps35++;//■変える
+        switch(fps35){//■変える
+            case 1:
+            pzdmove1.style.display = 'none';
+            pzdmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzdmove2.style.display = 'none';
+            pzd9.style.display = 'inline';//■変える
+            clearInterval(timerId35);//■変える
+            break;
+        }
+    },80);
+});
+
+pzd9.addEventListener('mouseover',function(){pzd9.style.cursor = 'pointer';});//■変える
+pzd9.addEventListener('click',function(){//■変える
+    fps36 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzd9.style.display = 'none';//■変える
+    pzdmove1.style.display = 'inline';
+    let timerId36 = setInterval(function(){//■変える
+        fps36++;//■変える
+        switch(fps36){//■変える
+            case 1:
+            pzdmove1.style.display = 'none';
+            pzdmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzdmove2.style.display = 'none';
+            pzd1.style.display = 'inline';//■変える
+            clearInterval(timerId36);//■変える
+            break;
+        }
+    },80);
+});
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■パネル5を回転させる■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+pze1.addEventListener('mouseover',function(){pze1.style.cursor = 'pointer';});//■変える
+pze1.addEventListener('click',function(){//■変える
+    fps37 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pze1.style.display = 'none';//■変える
+    pzemove1.style.display = 'inline';
+    let timerId37 = setInterval(function(){//■変える
+        fps37++;//■変える
+        switch(fps37){//■変える
+            case 1:
+            pzemove1.style.display = 'none';
+            pzemove2.style.display = 'inline';
+            break;
+            case 2:
+            pzemove2.style.display = 'none';
+            pze2.style.display = 'inline';//■変える
+            clearInterval(timerId37);//■変える
+            break;
+        }
+    },80);
+});
+
+pze2.addEventListener('mouseover',function(){pze2.style.cursor = 'pointer';});//■変える
+pze2.addEventListener('click',function(){//■変える
+    fps38 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pze2.style.display = 'none';//■変える
+    pzemove1.style.display = 'inline';
+    let timerId38 = setInterval(function(){//■変える
+        fps38++;//■変える
+        switch(fps38){//■変える
+            case 1:
+            pzemove1.style.display = 'none';
+            pzemove2.style.display = 'inline';
+            break;
+            case 2:
+            pzemove2.style.display = 'none';
+            pze3.style.display = 'inline';//■変える
+            unlock();
+            clearInterval(timerId38);//■変える
+            break;
+        }
+    },80);
+});
+
+pze3.addEventListener('mouseover',function(){pze3.style.cursor = 'pointer';});//■変える
+pze3.addEventListener('click',function(){//■変える
+    fps39 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pze3.style.display = 'none';//■変える
+    pzemove1.style.display = 'inline';
+    let timerId39 = setInterval(function(){//■変える
+        fps39++;//■変える
+        switch(fps39){//■変える
+            case 1:
+            pzemove1.style.display = 'none';
+            pzemove2.style.display = 'inline';
+            break;
+            case 2:
+            pzemove2.style.display = 'none';
+            pze4.style.display = 'inline';//■変える
+            score -= 10;
+            clearInterval(timerId39);//■変える
+            break;
+        }
+    },80);
+});
+
+pze4.addEventListener('mouseover',function(){pze4.style.cursor = 'pointer';});//■変える
+pze4.addEventListener('click',function(){//■変える
+    fps40 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pze4.style.display = 'none';//■変える
+    pzemove1.style.display = 'inline';
+    let timerId40 = setInterval(function(){//■変える
+        fps40++;//■変える
+        switch(fps40){//■変える
+            case 1:
+            pzemove1.style.display = 'none';
+            pzemove2.style.display = 'inline';
+            break;
+            case 2:
+            pzemove2.style.display = 'none';
+            pze5.style.display = 'inline';//■変える
+            clearInterval(timerId40);//■変える
+            break;
+        }
+    },80);
+});
+
+pze5.addEventListener('mouseover',function(){pze5.style.cursor = 'pointer';});//■変える
+pze5.addEventListener('click',function(){//■変える
+    fps41 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pze5.style.display = 'none';//■変える
+    pzemove1.style.display = 'inline';
+    let timerId41 = setInterval(function(){//■変える
+        fps41++;//■変える
+        switch(fps41){//■変える
+            case 1:
+            pzemove1.style.display = 'none';
+            pzemove2.style.display = 'inline';
+            break;
+            case 2:
+            pzemove2.style.display = 'none';
+            pze6.style.display = 'inline';//■変える
+            clearInterval(timerId41);//■変える
+            break;
+        }
+    },80);
+});
+
+pze6.addEventListener('mouseover',function(){pze6.style.cursor = 'pointer';});//■変える
+pze6.addEventListener('click',function(){//■変える
+    fps42 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pze6.style.display = 'none';//■変える
+    pzemove1.style.display = 'inline';
+    let timerId42 = setInterval(function(){//■変える
+        fps42++;//■変える
+        switch(fps42){//■変える
+            case 1:
+            pzemove1.style.display = 'none';
+            pzemove2.style.display = 'inline';
+            break;
+            case 2:
+            pzemove2.style.display = 'none';
+            pze7.style.display = 'inline';//■変える
+            clearInterval(timerId42);//■変える
+            break;
+        }
+    },80);
+});
+
+pze7.addEventListener('mouseover',function(){pze7.style.cursor = 'pointer';});//■変える
+pze7.addEventListener('click',function(){//■変える
+    fps43 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pze7.style.display = 'none';//■変える
+    pzemove1.style.display = 'inline';
+    let timerId43 = setInterval(function(){//■変える
+        fps43++;//■変える
+        switch(fps43){//■変える
+            case 1:
+            pzemove1.style.display = 'none';
+            pzemove2.style.display = 'inline';
+            break;
+            case 2:
+            pzemove2.style.display = 'none';
+            pze8.style.display = 'inline';//■変える
+            clearInterval(timerId43);//■変える
+            break;
+        }
+    },80);
+});
+
+pze8.addEventListener('mouseover',function(){pze8.style.cursor = 'pointer';});//■変える
+pze8.addEventListener('click',function(){//■変える
+    fps44 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pze8.style.display = 'none';//■変える
+    pzemove1.style.display = 'inline';
+    let timerId44 = setInterval(function(){//■変える
+        fps44++;//■変える
+        switch(fps44){//■変える
+            case 1:
+            pzemove1.style.display = 'none';
+            pzemove2.style.display = 'inline';
+            break;
+            case 2:
+            pzemove2.style.display = 'none';
+            pze9.style.display = 'inline';//■変える
+            clearInterval(timerId44);//■変える
+            break;
+        }
+    },80);
+});
+
+pze9.addEventListener('mouseover',function(){pze9.style.cursor = 'pointer';});//■変える
+pze9.addEventListener('click',function(){//■変える
+    fps45 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pze9.style.display = 'none';//■変える
+    pzemove1.style.display = 'inline';
+    let timerId45 = setInterval(function(){//■変える
+        fps45++;//■変える
+        switch(fps45){//■変える
+            case 1:
+            pzemove1.style.display = 'none';
+            pzemove2.style.display = 'inline';
+            break;
+            case 2:
+            pzemove2.style.display = 'none';
+            pze1.style.display = 'inline';//■変える
+            clearInterval(timerId45);//■変える
+            break;
+        }
+    },80);
+});
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■パネル6を回転させる■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+pzf1.addEventListener('mouseover',function(){pzf1.style.cursor = 'pointer';});//■変える
+pzf1.addEventListener('click',function(){//■変える
+    fps46 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzf1.style.display = 'none';//■変える
+    pzfmove1.style.display = 'inline';
+    let timerId46 = setInterval(function(){//■変える
+        fps46++;//■変える
+        switch(fps46){//■変える
+            case 1:
+            pzfmove1.style.display = 'none';
+            pzfmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzfmove2.style.display = 'none';
+            pzf2.style.display = 'inline';//■変える
+            score -= 10;
+            clearInterval(timerId46);//■変える
+            break;
+        }
+    },80);
+});
+
+pzf2.addEventListener('mouseover',function(){pzf2.style.cursor = 'pointer';});//■変える
+pzf2.addEventListener('click',function(){//■変える
+    fps47 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzf2.style.display = 'none';//■変える
+    pzfmove1.style.display = 'inline';
+    let timerId47 = setInterval(function(){//■変える
+        fps47++;//■変える
+        switch(fps47){//■変える
+            case 1:
+            pzfmove1.style.display = 'none';
+            pzfmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzfmove2.style.display = 'none';
+            pzf3.style.display = 'inline';//■変える
+            clearInterval(timerId47);//■変える
+            break;
+        }
+    },80);
+});
+
+pzf3.addEventListener('mouseover',function(){pzf3.style.cursor = 'pointer';});//■変える
+pzf3.addEventListener('click',function(){//■変える
+    fps48 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzf3.style.display = 'none';//■変える
+    pzfmove1.style.display = 'inline';
+    let timerId48 = setInterval(function(){//■変える
+        fps48++;//■変える
+        switch(fps48){//■変える
+            case 1:
+            pzfmove1.style.display = 'none';
+            pzfmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzfmove2.style.display = 'none';
+            pzf4.style.display = 'inline';//■変える
+            clearInterval(timerId48);//■変える
+            break;
+        }
+    },80);
+});
+
+pzf4.addEventListener('mouseover',function(){pzf4.style.cursor = 'pointer';});//■変える
+pzf4.addEventListener('click',function(){//■変える
+    fps49 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzf4.style.display = 'none';//■変える
+    pzfmove1.style.display = 'inline';
+    let timerId49 = setInterval(function(){//■変える
+        fps49++;//■変える
+        switch(fps49){//■変える
+            case 1:
+            pzfmove1.style.display = 'none';
+            pzfmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzfmove2.style.display = 'none';
+            pzf5.style.display = 'inline';//■変える
+            clearInterval(timerId49);//■変える
+            break;
+        }
+    },80);
+});
+
+pzf5.addEventListener('mouseover',function(){pzf5.style.cursor = 'pointer';});//■変える
+pzf5.addEventListener('click',function(){//■変える
+    fps50 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzf5.style.display = 'none';//■変える
+    pzfmove1.style.display = 'inline';
+    let timerId50 = setInterval(function(){//■変える
+        fps50++;//■変える
+        switch(fps50){//■変える
+            case 1:
+            pzfmove1.style.display = 'none';
+            pzfmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzfmove2.style.display = 'none';
+            pzf6.style.display = 'inline';//■変える
+            clearInterval(timerId50);//■変える
+            break;
+        }
+    },80);
+});
+
+pzf6.addEventListener('mouseover',function(){pzf6.style.cursor = 'pointer';});//■変える
+pzf6.addEventListener('click',function(){//■変える
+    fps51 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzf6.style.display = 'none';//■変える
+    pzfmove1.style.display = 'inline';
+    let timerId51 = setInterval(function(){//■変える
+        fps51++;//■変える
+        switch(fps51){//■変える
+            case 1:
+            pzfmove1.style.display = 'none';
+            pzfmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzfmove2.style.display = 'none';
+            pzf7.style.display = 'inline';//■変える
+            clearInterval(timerId51);//■変える
+            break;
+        }
+    },80);
+});
+
+pzf7.addEventListener('mouseover',function(){pzf7.style.cursor = 'pointer';});//■変える
+pzf7.addEventListener('click',function(){//■変える
+    fps52 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzf7.style.display = 'none';//■変える
+    pzfmove1.style.display = 'inline';
+    let timerId52 = setInterval(function(){//■変える
+        fps52++;//■変える
+        switch(fps52){//■変える
+            case 1:
+            pzfmove1.style.display = 'none';
+            pzfmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzfmove2.style.display = 'none';
+            pzf8.style.display = 'inline';//■変える
+            clearInterval(timerId52);//■変える
+            break;
+        }
+    },80);
+});
+
+pzf8.addEventListener('mouseover',function(){pzf8.style.cursor = 'pointer';});//■変える
+pzf8.addEventListener('click',function(){//■変える
+    fps53 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzf8.style.display = 'none';//■変える
+    pzfmove1.style.display = 'inline';
+    let timerId53 = setInterval(function(){//■変える
+        fps53++;//■変える
+        switch(fps53){//■変える
+            case 1:
+            pzfmove1.style.display = 'none';
+            pzfmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzfmove2.style.display = 'none';
+            pzf9.style.display = 'inline';//■変える
+            clearInterval(timerId53);//■変える
+            break;
+        }
+    },80);
+});
+
+pzf9.addEventListener('mouseover',function(){pzf9.style.cursor = 'pointer';});//■変える
+pzf9.addEventListener('click',function(){//■変える
+    fps54 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzf9.style.display = 'none';//■変える
+    pzfmove1.style.display = 'inline';
+    let timerId54 = setInterval(function(){//■変える
+        fps54++;//■変える
+        switch(fps54){//■変える
+            case 1:
+            pzfmove1.style.display = 'none';
+            pzfmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzfmove2.style.display = 'none';
+            pzf1.style.display = 'inline';//■変える
+            unlock();
+            clearInterval(timerId54);//■変える
+            break;
+        }
+    },80);
+});
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■パネル7を回転させる■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+pzg1.addEventListener('mouseover',function(){pzg1.style.cursor = 'pointer';});//■変える
+pzg1.addEventListener('click',function(){//■変える
+    fps55 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzg1.style.display = 'none';//■変える
+    pzgmove1.style.display = 'inline';
+    let timerId55 = setInterval(function(){//■変える
+        fps55++;//■変える
+        switch(fps55){//■変える
+            case 1:
+            pzgmove1.style.display = 'none';
+            pzgmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzgmove2.style.display = 'none';
+            pzg2.style.display = 'inline';//■変える
+            clearInterval(timerId55);//■変える
+            break;
+        }
+    },80);
+});
+
+pzg2.addEventListener('mouseover',function(){pzg2.style.cursor = 'pointer';});//■変える
+pzg2.addEventListener('click',function(){//■変える
+    fps56 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzg2.style.display = 'none';//■変える
+    pzgmove1.style.display = 'inline';
+    let timerId56 = setInterval(function(){//■変える
+        fps56++;//■変える
+        switch(fps56){//■変える
+            case 1:
+            pzgmove1.style.display = 'none';
+            pzgmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzgmove2.style.display = 'none';
+            pzg3.style.display = 'inline';//■変える
+            clearInterval(timerId56);//■変える
+            break;
+        }
+    },80);
+});
+
+pzg3.addEventListener('mouseover',function(){pzg3.style.cursor = 'pointer';});//■変える
+pzg3.addEventListener('click',function(){//■変える
+    fps57 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzg3.style.display = 'none';//■変える
+    pzgmove1.style.display = 'inline';
+    let timerId57 = setInterval(function(){//■変える
+        fps57++;//■変える
+        switch(fps57){//■変える
+            case 1:
+            pzgmove1.style.display = 'none';
+            pzgmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzgmove2.style.display = 'none';
+            pzg4.style.display = 'inline';//■変える
+            clearInterval(timerId57);//■変える
+            break;
+        }
+    },80);
+});
+
+pzg4.addEventListener('mouseover',function(){pzg4.style.cursor = 'pointer';});//■変える
+pzg4.addEventListener('click',function(){//■変える
+    fps58 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzg4.style.display = 'none';//■変える
+    pzgmove1.style.display = 'inline';
+    let timerId58 = setInterval(function(){//■変える
+        fps58++;//■変える
+        switch(fps58){//■変える
+            case 1:
+            pzgmove1.style.display = 'none';
+            pzgmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzgmove2.style.display = 'none';
+            pzg5.style.display = 'inline';//■変える
+            unlock();
+            clearInterval(timerId58);//■変える
+            break;
+        }
+    },80);
+});
+
+pzg5.addEventListener('mouseover',function(){pzg5.style.cursor = 'pointer';});//■変える
+pzg5.addEventListener('click',function(){//■変える
+    fps59 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzg5.style.display = 'none';//■変える
+    pzgmove1.style.display = 'inline';
+    let timerId59 = setInterval(function(){//■変える
+        fps59++;//■変える
+        switch(fps59){//■変える
+            case 1:
+            pzgmove1.style.display = 'none';
+            pzgmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzgmove2.style.display = 'none';
+            pzg6.style.display = 'inline';//■変える
+            score -= 10;
+            clearInterval(timerId59);//■変える
+            break;
+        }
+    },80);
+});
+
+pzg6.addEventListener('mouseover',function(){pzg6.style.cursor = 'pointer';});//■変える
+pzg6.addEventListener('click',function(){//■変える
+    fps60 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzg6.style.display = 'none';//■変える
+    pzgmove1.style.display = 'inline';
+    let timerId60 = setInterval(function(){//■変える
+        fps60++;//■変える
+        switch(fps60){//■変える
+            case 1:
+            pzgmove1.style.display = 'none';
+            pzgmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzgmove2.style.display = 'none';
+            pzg7.style.display = 'inline';//■変える
+            clearInterval(timerId60);//■変える
+            break;
+        }
+    },80);
+});
+
+pzg7.addEventListener('mouseover',function(){pzg7.style.cursor = 'pointer';});//■変える
+pzg7.addEventListener('click',function(){//■変える
+    fps61 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzg7.style.display = 'none';//■変える
+    pzgmove1.style.display = 'inline';
+    let timerId61 = setInterval(function(){//■変える
+        fps61++;//■変える
+        switch(fps61){//■変える
+            case 1:
+            pzgmove1.style.display = 'none';
+            pzgmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzgmove2.style.display = 'none';
+            pzg8.style.display = 'inline';//■変える
+            clearInterval(timerId61);//■変える
+            break;
+        }
+    },80);
+});
+
+pzg8.addEventListener('mouseover',function(){pzg8.style.cursor = 'pointer';});//■変える
+pzg8.addEventListener('click',function(){//■変える
+    fps62 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzg8.style.display = 'none';//■変える
+    pzgmove1.style.display = 'inline';
+    let timerId62 = setInterval(function(){//■変える
+        fps62++;//■変える
+        switch(fps62){//■変える
+            case 1:
+            pzgmove1.style.display = 'none';
+            pzgmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzgmove2.style.display = 'none';
+            pzg9.style.display = 'inline';//■変える
+            clearInterval(timerId62);//■変える
+            break;
+        }
+    },80);
+});
+
+pzg9.addEventListener('mouseover',function(){pzg9.style.cursor = 'pointer';});//■変える
+pzg9.addEventListener('click',function(){//■変える
+    fps63 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzg9.style.display = 'none';//■変える
+    pzgmove1.style.display = 'inline';
+    let timerId63 = setInterval(function(){//■変える
+        fps63++;//■変える
+        switch(fps63){//■変える
+            case 1:
+            pzgmove1.style.display = 'none';
+            pzgmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzgmove2.style.display = 'none';
+            pzg1.style.display = 'inline';//■変える
+            clearInterval(timerId63);//■変える
+            break;
+        }
+    },80);
+});
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■パネル8を回転させる■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+pzh1.addEventListener('mouseover',function(){pzh1.style.cursor = 'pointer';});//■変える
+pzh1.addEventListener('click',function(){//■変える
+    fps64 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzh1.style.display = 'none';//■変える
+    pzhmove1.style.display = 'inline';
+    let timerId64 = setInterval(function(){//■変える
+        fps64++;//■変える
+        switch(fps64){//■変える
+            case 1:
+            pzhmove1.style.display = 'none';
+            pzhmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzhmove2.style.display = 'none';
+            pzh2.style.display = 'inline';//■変える
+            clearInterval(timerId64);//■変える
+            break;
+        }
+    },80);
+});
+
+pzh2.addEventListener('mouseover',function(){pzh2.style.cursor = 'pointer';});//■変える
+pzh2.addEventListener('click',function(){//■変える
+    fps65 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzh2.style.display = 'none';//■変える
+    pzhmove1.style.display = 'inline';
+    let timerId65 = setInterval(function(){//■変える
+        fps65++;//■変える
+        switch(fps65){//■変える
+            case 1:
+            pzhmove1.style.display = 'none';
+            pzhmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzhmove2.style.display = 'none';
+            pzh3.style.display = 'inline';//■変える
+            clearInterval(timerId65);//■変える
+            break;
+        }
+    },80);
+});
+
+pzh3.addEventListener('mouseover',function(){pzh3.style.cursor = 'pointer';});//■変える
+pzh3.addEventListener('click',function(){//■変える
+    fps66 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzh3.style.display = 'none';//■変える
+    pzhmove1.style.display = 'inline';
+    let timerId66 = setInterval(function(){//■変える
+        fps66++;//■変える
+        switch(fps66){//■変える
+            case 1:
+            pzhmove1.style.display = 'none';
+            pzhmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzhmove2.style.display = 'none';
+            pzh4.style.display = 'inline';//■変える
+            unlock();
+            clearInterval(timerId66);//■変える
+            break;
+        }
+    },80);
+});
+
+pzh4.addEventListener('mouseover',function(){pzh4.style.cursor = 'pointer';});//■変える
+pzh4.addEventListener('click',function(){//■変える
+    fps67 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzh4.style.display = 'none';//■変える
+    pzhmove1.style.display = 'inline';
+    let timerId67 = setInterval(function(){//■変える
+        fps67++;//■変える
+        switch(fps67){//■変える
+            case 1:
+            pzhmove1.style.display = 'none';
+            pzhmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzhmove2.style.display = 'none';
+            pzh5.style.display = 'inline';//■変える
+            score -= 10;
+            clearInterval(timerId67);//■変える
+            break;
+        }
+    },80);
+});
+
+pzh5.addEventListener('mouseover',function(){pzh5.style.cursor = 'pointer';});//■変える
+pzh5.addEventListener('click',function(){//■変える
+    fps68 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzh5.style.display = 'none';//■変える
+    pzhmove1.style.display = 'inline';
+    let timerId68 = setInterval(function(){//■変える
+        fps68++;//■変える
+        switch(fps68){//■変える
+            case 1:
+            pzhmove1.style.display = 'none';
+            pzhmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzhmove2.style.display = 'none';
+            pzh6.style.display = 'inline';//■変える
+            clearInterval(timerId68);//■変える
+            break;
+        }
+    },80);
+});
+
+pzh6.addEventListener('mouseover',function(){pzh6.style.cursor = 'pointer';});//■変える
+pzh6.addEventListener('click',function(){//■変える
+    fps69 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzh6.style.display = 'none';//■変える
+    pzhmove1.style.display = 'inline';
+    let timerId69 = setInterval(function(){//■変える
+        fps69++;//■変える
+        switch(fps69){//■変える
+            case 1:
+            pzhmove1.style.display = 'none';
+            pzhmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzhmove2.style.display = 'none';
+            pzh7.style.display = 'inline';//■変える
+            clearInterval(timerId69);//■変える
+            break;
+        }
+    },80);
+});
+
+pzh7.addEventListener('mouseover',function(){pzh7.style.cursor = 'pointer';});//■変える
+pzh7.addEventListener('click',function(){//■変える
+    fps70 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzh7.style.display = 'none';//■変える
+    pzhmove1.style.display = 'inline';
+    let timerId70 = setInterval(function(){//■変える
+        fps70++;//■変える
+        switch(fps70){//■変える
+            case 1:
+            pzhmove1.style.display = 'none';
+            pzhmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzhmove2.style.display = 'none';
+            pzh8.style.display = 'inline';//■変える
+            clearInterval(timerId70);//■変える
+            break;
+        }
+    },80);
+});
+
+pzh8.addEventListener('mouseover',function(){pzh8.style.cursor = 'pointer';});//■変える
+pzh8.addEventListener('click',function(){//■変える
+    fps71 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzh8.style.display = 'none';//■変える
+    pzhmove1.style.display = 'inline';
+    let timerId71 = setInterval(function(){//■変える
+        fps71++;//■変える
+        switch(fps71){//■変える
+            case 1:
+            pzhmove1.style.display = 'none';
+            pzhmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzhmove2.style.display = 'none';
+            pzh9.style.display = 'inline';//■変える
+            clearInterval(timerId71);//■変える
+            break;
+        }
+    },80);
+});
+
+pzh9.addEventListener('mouseover',function(){pzh9.style.cursor = 'pointer';});//■変える
+pzh9.addEventListener('click',function(){//■変える
+    fps72 = 0;//■変える
+    //sepane.load();
+    sepanePlay();//sepane
+    pzh9.style.display = 'none';//■変える
+    pzhmove1.style.display = 'inline';
+    let timerId72 = setInterval(function(){//■変える
+        fps72++;//■変える
+        switch(fps72){//■変える
+            case 1:
+            pzhmove1.style.display = 'none';
+            pzhmove2.style.display = 'inline';
+            break;
+            case 2:
+            pzhmove2.style.display = 'none';
+            pzh1.style.display = 'inline';//■変える
+            clearInterval(timerId72);//■変える
+            break;
+        }
+    },80);
+});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+</html>

@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Expires" content="Sun, 10 Aug 2025 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>KEVONZ ISLAND</title>
+<link rel="icon"href="image/favicon.ico">
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+@keyframes hitareamove{
+    0%{left:400px;top:75px;}
+    17%{left:720px;top:150px;}
+    34%{left:720px;top:0px;}
+    51%{left:400px;top:75px;}
+    68%{left:63px;top:150px;}
+    85%{left:63px;top:0px;}
+    100%{left:400px;top:75px;}
+}
+@-webkit-keyframes hitareamove{
+    0%{left:400px;top:75px;}
+    17%{left:720px;top:150px;}
+    34%{left:720px;top:0px;}
+    51%{left:400px;top:75px;}
+    68%{left:63px;top:150px;}
+    85%{left:63px;top:0px;}
+    100%{left:400px;top:75px;}
+}
+@keyframes ningyoumove{
+    0%{left:329px;top:75px;}
+    17%{left:658px;top:150px;}
+    34%{left:658px;top:0px;}
+    51%{left:329px;top:75px;}
+    68%{left:0px;top:150px;}
+    85%{left:0px;top:0px;}
+    100%{left:329px;top:75px;}
+}
+@-webkit-keyframes ningyoumove{
+    0%{left:329px;top:75px;}
+    17%{left:658px;top:150px;}
+    34%{left:658px;top:0px;}
+    51%{left:329px;top:75px;}
+    68%{left:0px;top:150px;}
+    85%{left:0px;top:0px;}
+    100%{left:329px;top:75px;}
+}
+@keyframes heartmove{
+    0%{left:0px;top:404px;}
+    25%{left:0px;top:0px;}
+    50%{left:770px;top:404px;}
+    75%{left:770px;top:0px;}
+    100%{left:0px;top:404px;}
+}
+@-webkit-keyframes heartmove{
+    0%{left:0px;top:404px;}
+    25%{left:0px;top:0px;}
+    50%{left:770px;top:404px;}
+    75%{left:770px;top:0px;}
+    100%{left:0px;top:404px;}
+}
+#heart1{
+    width:200px;height:176px;position:absolute;
+    -webkit-animation-name:heartmove;-webkit-animation-duration:3s;
+    -webkit-animation-iteration-count:infinite;
+    animation-name:heartmove;animation-duration:3s;
+    animation-iteration-count:infinite;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#heart2{
+    width:200px;height:176px;position:absolute;
+    -webkit-animation-name:heartmove;-webkit-animation-duration:3s;
+    -webkit-animation-iteration-count:infinite;
+    animation-name:heartmove;animation-duration:3s;
+    animation-iteration-count:infinite;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#back{width:970px;height:580px;position:absolute;left:0px;top:0px;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou0{width:312px;height:430px;position:absolute;left:329px;top:75px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou1{
+    width:312px;height:430px;position:absolute;
+    -webkit-animation-name:ningyoumove;-webkit-animation-duration:5s;
+    -webkit-animation-iteration-count:infinite;
+    animation-name:ningyoumove;animation-duration:5s;
+    animation-iteration-count:infinite;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#ningyou2{
+    width:312px;height:430px;position:absolute;
+    -webkit-animation-name:ningyoumove;-webkit-animation-duration:5s;
+    -webkit-animation-iteration-count:infinite;
+    animation-name:ningyoumove;animation-duration:5s;
+    animation-iteration-count:infinite;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#ningyou3{
+    width:312px;height:430px;position:absolute;
+    -webkit-animation-name:ningyoumove;-webkit-animation-duration:5s;
+    -webkit-animation-iteration-count:infinite;
+    animation-name:ningyoumove;animation-duration:5s;
+    animation-iteration-count:infinite;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#ningyou4{
+    width:312px;height:430px;position:absolute;
+    -webkit-animation-name:ningyoumove;-webkit-animation-duration:5s;
+    -webkit-animation-iteration-count:infinite;
+    animation-name:ningyoumove;animation-duration:5s;
+    animation-iteration-count:infinite;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#ningyou5{width:312px;height:430px;position:absolute;left:321px;top:73px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyoubomb{width:312px;height:430px;position:absolute;left:321px;top:73px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyouhikaru{
+    width:312px;height:430px;position:absolute;opacity:0.0;
+    -webkit-animation-name:ningyoumove;-webkit-animation-duration:5s;
+    -webkit-animation-iteration-count:infinite;
+    animation-name:ningyoumove;animation-duration:5s;
+    animation-iteration-count:infinite;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#kage1{width:312px;height:430px;position:absolute;left:0px;top:75px;opacity:0.0;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#kage2{width:312px;height:430px;position:absolute;right:0px;top:75px;opacity:0.0;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#hitarea{
+    width:170px;height:430px;
+    background-color:#00ff00;opacity:0.0;position:absolute;
+    -webkit-animation-name:hitareamove;-webkit-animation-duration:5s;
+    -webkit-animation-iteration-count:infinite;
+    animation-name:hitareamove;animation-duration:5s;
+    animation-iteration-count:infinite;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#sechyouji{
+    font-size:15px;
+    color:#ffffff;
+    text-align:left;
+    position:absolute;
+    left:35px;
+    top:20px;
+    font-weight:bold;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#hppara{
+    font-size:15px;
+    color:#00ff00;
+    text-align:left;
+    position:absolute;
+    right:35px;
+    bottom:25px;
+    font-weight:bold;
+    text-shadow:#000000 0px 0px 1px;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#bossname{
+    font-size:15px;
+    color:#ffffff;
+    text-align:left;
+    position:absolute;
+    left:35px;
+    bottom:25px;
+    font-weight:bold;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#hpwaku{
+    width:900px;
+    height:10px;
+    background-color:#000000;
+    border:3px solid #ffffff;
+    position:absolute;
+    left:32px;
+    bottom:10px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#hpbar{
+    width:900px;
+    height:10px;
+    background-color:#ff42bd;
+    position:absolute;
+    left:35px;
+    bottom:13px;
+    box-shadow:#000000 0px 0px 2px 1px inset;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#hpbarnobiru{width:906px;height:16px;position:absolute;left:32px;bottom:10px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#hpbarchidimu{width:906px;height:16px;position:absolute;left:32px;bottom:10px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#bossmaeroom{width:970px;height:580px;position:absolute;left:0px;bottom:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#bossmaebaria{width:196px;height:195px;position:absolute;left:388px;top:259px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#kidan1{width:312px;height:430px;position:absolute;left:329px;top:75px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#kidan2{width:598px;height:580px;position:absolute;left:186px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#kidan3{width:966px;height:580px;position:absolute;left:2px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*ボスラッシュ*/
+#rush1{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rush2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rush3{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rush4{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rush5{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*ワープ出現*/
+#waap1{width:186px;height:534px;position:absolute;left:392px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#waap2{width:186px;height:534px;position:absolute;left:392px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#waaparea{
+    width:186px;height:96px;
+    position:absolute;left:392px;top:438px;
+    background-color:#00ff00;opacity:0.0;display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#redeffect{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#ff0000;opacity:0.1;display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#whiteeffect{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#ffffff;opacity:0.1;display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#pieel1{width:290px;height:194px;position:absolute;left:340px;bottom:193px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#pieel2{width:580px;height:388px;position:absolute;left:195px;bottom:96px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#pieel3{width:870px;height:580px;position:absolute;left:50px;bottom:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#pieel4{width:970px;height:580px;position:absolute;left:0px;bottom:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#pieel5{width:970px;height:580px;position:absolute;left:0px;bottom:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#pieel6{width:970px;height:580px;position:absolute;left:0px;bottom:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#pieel7{width:970px;height:580px;position:absolute;left:0px;bottom:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#pieelbreak{width:970px;height:580px;position:absolute;left:0px;bottom:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#blackout{width:970px;height:580px;position:absolute;left:0px;top:0px;background-color:#000000;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#awateru1{width:114px;height:147px;position:absolute;left:428px;top:216px;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#awateru2{width:114px;height:147px;position:absolute;left:428px;top:216px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<!--
+/*
+<bossbgm = "pse/ichimatsubgm.mp3">
+<kiruse = "pse/janenedamage.mp3">
+<bombse = "pse/ningyoubomb.mp3">
+<bombse2 = "pse/ningyoubomb2.mp3">
+<pieelkoe = "pse/kaipiekoe.mp3">
+<grasshibise = "pse/grasshibi.mp3">
+<grassbreakse = "pse/grassbreak.mp3">
+<syoujyokoe = "pse/syoujyo.mp3">
+<bunlockse = "pse/bariaunlock.mp3">
+<pienoroise = "pse/janpienoroi.mp3">
+<encountse = "pse/janencount.mp3">
+<kidantamese = "pse/medadybariar.mp3">
+<kidanshotse = "pse/medadyshun.mp3">
+<screamkoe = "pse/screamlong.mp3">
+<takawaraikoe = "pse/takawarai.mp3">
+<oowaraikoe = "pse/oowarai.mp3">
+*/
+-->
+
+<div id="d1">
+<img src = "pimg/ichimatsu2/back.jpg"id="back">
+<img src = "pimg/ichimatsu2/ningyou5.png"id="ningyou5">
+<img src = "pimg/ichimatsu2/ningyou4.png"id="ningyou4">
+<img src = "pimg/ichimatsu2/ningyou3.png"id="ningyou3">
+<img src = "pimg/ichimatsu2/ningyou2.png"id="ningyou2">
+<img src = "pimg/ichimatsu2/ningyou.png"id="ningyou1">
+<img src = "pimg/ichimatsu2/ningyou.png"id="ningyou0">
+<img src = "pimg/ichimatsu2/ningyoukage.png"id="kage1">
+<img src = "pimg/ichimatsu2/ningyoukage.png"id="kage2">
+<img src = "pimg/ichimatsu2/ningyouhikaru.png"id="ningyouhikaru">
+<img src = "pimg/ichimatsu2/hpbarnobiru.gif"id="hpbarnobiru">
+<img src = "pimg/ichimatsu2/hpbarchidimu.gif"id="hpbarchidimu">
+<img src = "pimg/ichimatsu2/ningyoubomb.gif"id="ningyoubomb">
+<div id="hitarea"></div>
+<img src = "pimg/ichimatsu2/heart2.png"id="heart2">
+<img src = "pimg/ichimatsu2/heart1.png"id="heart1">
+<!--ピエエルセット-->
+<img src = "pimg/ichimatsu2/pieel1.png"id="pieel1">
+<img src = "pimg/ichimatsu2/pieel2.png"id="pieel2">
+<img src = "pimg/ichimatsu2/pieel3.png"id="pieel3">
+<img src = "pimg/ichimatsu2/pieel4.jpg"id="pieel4">
+<img src = "pimg/ichimatsu2/pieel5.jpg"id="pieel5">
+<img src = "pimg/ichimatsu2/pieel6.jpg"id="pieel6">
+<img src = "pimg/ichimatsu2/pieel7.jpg"id="pieel7">
+<img src = "pimg/ichimatsu2/pieelbreak.gif"id="pieelbreak">
+<div id="hpwaku"></div>
+<div id="hpbar"></div>
+<span id="hppara"></span>
+<span id="bossname"></span>
+<span id="sechyouji"></span>
+<img src = "pimg/bossmae/back.jpg"id="bossmaeroom">
+<img src = "pimg/bossmae/doorbarrier.gif"id="bossmaebaria">
+<!--ワープ出現-->
+<img src="pimg/ichimatsu2/waap1.gif"id="waap1">
+<img src="pimg/ichimatsu2/waap2.gif"id="waap2">
+<div id="waaparea"></div>
+<!--市松子気弾発射-->
+<img src="pimg/ichimatsu2/kidan1.gif"id="kidan1">
+<img src="pimg/ichimatsu2/kidan2.png"id="kidan2">
+<img src="pimg/ichimatsu2/kidan3.png"id="kidan3">
+<!--ボスラッシュ-->
+<img src ="pimg/tokorush1.jpg"id="rush1">
+<img src ="pimg/tokorush2.jpg"id="rush2">
+<img src ="pimg/tokorush3.jpg"id="rush3">
+<img src ="pimg/tokorush4.gif"id="rush4">
+<img src ="pimg/tokorush5.jpg"id="rush5">
+<!--画面エフェクト-->
+<div id="redeffect"></div>
+<div id="whiteeffect"></div>
+<div id="blackout"></div>
+<img src = "pimg/ichimatsu2/awateru1.gif"id="awateru1">
+<img src = "pimg/ichimatsu2/awateru2.gif"id="awateru2">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+/*★には同じ数字、☆には同じスペル(変数、関数)、◇にはファイルのパスを入力
+let sampleSource★ = '';
+async function decodeSe★(){
+    const response★ = await fetch("◇◇◇");
+    const arrayBuffer★ = await response★.arrayBuffer();
+    const audioBuffer★ = await ctx.decodeAudioData(arrayBuffer★);
+    return audioBuffer★;
+}
+function playSe★(ctx,audioBuffer★){
+    sampleSource★ = ctx.createBufferSource();
+    sampleSource★.buffer = audioBuffer★;
+    sampleSource★.connect(ctx.destination);
+    sampleSource★.start();
+}
+async function se☆Play(){
+    const se☆ = await decodeSe★();
+    playSe★(ctx,se☆);
+}
+async function se☆Stop(){
+    sampleSource★?.stop();
+}
+*/
+/*
+<bossbgm = "pse/ichimatsubgm.mp3">【済】
+<kiruse = "pse/janenedamage.mp3">【済】
+<bombse = "pse/ningyoubomb.mp3">【済】
+<bombse2 = "pse/ningyoubomb2.mp3">【済】
+<pieelkoe = "pse/kaipiekoe.mp3">【済】
+<grasshibise = "pse/grasshibi.mp3">【済】
+<grassbreakse = "pse/grassbreak.mp3">【済】
+<syoujyokoe = "pse/syoujyo.mp3">【済】
+<bunlockse = "pse/bariaunlock.mp3">【済】
+<pienoroise = "pse/janpienoroi.mp3">【済】
+<encountse = "pse/janencount.mp3">【済】
+<kidantamese = "pse/medadybariar.mp3">【済】
+<kidanshotse = "pse/medadyshun.mp3">【済】
+<screamkoe = "pse/screamlong.mp3">【済】
+<takawaraikoe = "pse/takawarai.mp3">【済】
+<oowaraikoe = "pse/oowarai.mp3">【済】
+*/
+/*★★★★★★★★★★★★★★★★★効果音のセット★★★★★★★★★★★★★★★★★★★★*/
+window.AudioContext = window.AudioContext||window.webkitAudioContext;
+const ctx = new AudioContext();
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource1 = '';
+async function decodeSe1(){
+    const response1 = await fetch("pse/ichimatsubgm.mp3");
+    const arrayBuffer1 = await response1.arrayBuffer();
+    const audioBuffer1 = await ctx.decodeAudioData(arrayBuffer1);
+    return audioBuffer1;
+}
+function playSe1(ctx,audioBuffer1){
+    sampleSource1 = ctx.createBufferSource();
+    sampleSource1.buffer = audioBuffer1;
+    sampleSource1.loop = true;
+    sampleSource1.connect(ctx.destination);
+    sampleSource1.start();
+}
+async function sebossbgmPlay(){
+    const sebossbgm = await decodeSe1();
+    playSe1(ctx,sebossbgm);
+}
+async function sebossbgmStop(){
+    sampleSource1?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource2 = '';
+async function decodeSe2(){
+    const response2 = await fetch("pse/janenedamage.mp3");
+    const arrayBuffer2 = await response2.arrayBuffer();
+    const audioBuffer2 = await ctx.decodeAudioData(arrayBuffer2);
+    return audioBuffer2;
+}
+function playSe2(ctx,audioBuffer2){
+    sampleSource2 = ctx.createBufferSource();
+    sampleSource2.buffer = audioBuffer2;
+    sampleSource2.connect(ctx.destination);
+    sampleSource2.start();
+}
+async function sekiruPlay(){
+    const sekiru = await decodeSe2();
+    playSe2(ctx,sekiru);
+}
+async function sekiruStop(){
+    sampleSource2?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource3 = '';
+async function decodeSe3(){
+    const response3 = await fetch("pse/ningyoubomb.mp3");
+    const arrayBuffer3 = await response3.arrayBuffer();
+    const audioBuffer3 = await ctx.decodeAudioData(arrayBuffer3);
+    return audioBuffer3;
+}
+function playSe3(ctx,audioBuffer3){
+    sampleSource3 = ctx.createBufferSource();
+    sampleSource3.buffer = audioBuffer3;
+    sampleSource3.connect(ctx.destination);
+    sampleSource3.start();
+}
+async function sebombPlay(){
+    const sebomb = await decodeSe3();
+    playSe3(ctx,sebomb);
+}
+async function sebombStop(){
+    sampleSource3?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource4 = '';
+async function decodeSe4(){
+    const response4 = await fetch("pse/ningyoubomb2.mp3");
+    const arrayBuffer4 = await response4.arrayBuffer();
+    const audioBuffer4 = await ctx.decodeAudioData(arrayBuffer4);
+    return audioBuffer4;
+}
+function playSe4(ctx,audioBuffer4){
+    sampleSource4 = ctx.createBufferSource();
+    sampleSource4.buffer = audioBuffer4;
+    sampleSource4.connect(ctx.destination);
+    sampleSource4.start();
+}
+async function sebomb2Play(){
+    const sebomb2 = await decodeSe4();
+    playSe4(ctx,sebomb2);
+}
+async function sebomb2Stop(){
+    sampleSource4?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource5 = '';
+let pieelvoicePlaying = false;
+async function decodeSe5(){
+    const response5 = await fetch("pse/kaipiekoe.mp3");
+    const arrayBuffer5 = await response5.arrayBuffer();
+    const audioBuffer5 = await ctx.decodeAudioData(arrayBuffer5);
+    return audioBuffer5;
+}
+function playSe5(ctx,audioBuffer5){
+    sampleSource5 = ctx.createBufferSource();
+    sampleSource5.buffer = audioBuffer5;
+    sampleSource5.connect(ctx.destination);
+    sampleSource5.start();
+    pieelvoicePlaying = true;
+}
+async function sepieelPlay(){
+    const sepieel = await decodeSe5();
+    playSe5(ctx,sepieel);
+}
+async function sepieelStop(){
+    sampleSource5?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource6 = '';
+async function decodeSe6(){
+    const response6 = await fetch("pse/grasshibi.mp3");
+    const arrayBuffer6 = await response6.arrayBuffer();
+    const audioBuffer6 = await ctx.decodeAudioData(arrayBuffer6);
+    return audioBuffer6;
+}
+function playSe6(ctx,audioBuffer6){
+    sampleSource6 = ctx.createBufferSource();
+    sampleSource6.buffer = audioBuffer6;
+    sampleSource6.connect(ctx.destination);
+    sampleSource6.start();
+}
+async function segrasshibiPlay(){
+    const segrasshibi = await decodeSe6();
+    playSe6(ctx,segrasshibi);
+}
+async function segrasshibiStop(){
+    sampleSource6?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource7 = '';
+async function decodeSe7(){
+    const response7 = await fetch("pse/grassbreak.mp3");
+    const arrayBuffer7 = await response7.arrayBuffer();
+    const audioBuffer7 = await ctx.decodeAudioData(arrayBuffer7);
+    return audioBuffer7;
+}
+function playSe7(ctx,audioBuffer7){
+    sampleSource7 = ctx.createBufferSource();
+    sampleSource7.buffer = audioBuffer7;
+    sampleSource7.connect(ctx.destination);
+    sampleSource7.start();
+}
+async function segrassbreakPlay(){
+    const segrassbreak = await decodeSe7();
+    playSe7(ctx,segrassbreak);
+}
+async function segrassbreakStop(){
+    sampleSource7?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource8 = '';
+async function decodeSe8(){
+    const response8 = await fetch("pse/syoujyo.mp3");
+    const arrayBuffer8 = await response8.arrayBuffer();
+    const audioBuffer8 = await ctx.decodeAudioData(arrayBuffer8);
+    return audioBuffer8;
+}
+function playSe8(ctx,audioBuffer8){
+    sampleSource8 = ctx.createBufferSource();
+    sampleSource8.buffer = audioBuffer8;
+    sampleSource8.connect(ctx.destination);
+    sampleSource8.start();
+}
+async function sesyoujyoPlay(){
+    const sesyoujyo = await decodeSe8();
+    playSe8(ctx,sesyoujyo);
+}
+async function sesyoujyoStop(){
+    sampleSource8?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource9 = '';
+async function decodeSe9(){
+    const response9 = await fetch("pse/bariaunlock.mp3");
+    const arrayBuffer9 = await response9.arrayBuffer();
+    const audioBuffer9 = await ctx.decodeAudioData(arrayBuffer9);
+    return audioBuffer9;
+}
+function playSe9(ctx,audioBuffer9){
+    sampleSource9 = ctx.createBufferSource();
+    sampleSource9.buffer = audioBuffer9;
+    sampleSource9.connect(ctx.destination);
+    sampleSource9.start();
+}
+async function sebunlockPlay(){
+    const sebunlock = await decodeSe9();
+    playSe9(ctx,sebunlock);
+}
+async function sebunlockStop(){
+    sampleSource9?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource10 = '';
+async function decodeSe10(){
+    const response10 = await fetch("pse/janpienoroi.mp3");
+    const arrayBuffer10 = await response10.arrayBuffer();
+    const audioBuffer10 = await ctx.decodeAudioData(arrayBuffer10);
+    return audioBuffer10;
+}
+function playSe10(ctx,audioBuffer10){
+    sampleSource10 = ctx.createBufferSource();
+    sampleSource10.buffer = audioBuffer10;
+    sampleSource10.connect(ctx.destination);
+    sampleSource10.start();
+}
+async function sepienoroiPlay(){
+    const sepienoroi = await decodeSe10();
+    playSe10(ctx,sepienoroi);
+}
+async function sepienoroiStop(){
+    sampleSource10?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource11 = '';
+async function decodeSe11(){
+    const response11 = await fetch("pse/janencount.mp3");
+    const arrayBuffer11 = await response11.arrayBuffer();
+    const audioBuffer11 = await ctx.decodeAudioData(arrayBuffer11);
+    return audioBuffer11;
+}
+function playSe11(ctx,audioBuffer11){
+    sampleSource11 = ctx.createBufferSource();
+    sampleSource11.buffer = audioBuffer11;
+    sampleSource11.connect(ctx.destination);
+    sampleSource11.start();
+}
+async function seencountPlay(){
+    const seencount = await decodeSe11();
+    playSe11(ctx,seencount);
+}
+async function seencountStop(){
+    sampleSource11?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource12 = '';
+async function decodeSe12(){
+    const response12 = await fetch("pse/medadybariar.mp3");
+    const arrayBuffer12 = await response12.arrayBuffer();
+    const audioBuffer12 = await ctx.decodeAudioData(arrayBuffer12);
+    return audioBuffer12;
+}
+function playSe12(ctx,audioBuffer12){
+    sampleSource12 = ctx.createBufferSource();
+    sampleSource12.buffer = audioBuffer12;
+    sampleSource12.connect(ctx.destination);
+    sampleSource12.start();
+}
+async function sekidantamePlay(){
+    const sekidantame = await decodeSe12();
+    playSe12(ctx,sekidantame);
+}
+async function sekidantameStop(){
+    sampleSource12?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource13 = '';
+async function decodeSe13(){
+    const response13 = await fetch("pse/medadyshun.mp3");
+    const arrayBuffer13 = await response13.arrayBuffer();
+    const audioBuffer13 = await ctx.decodeAudioData(arrayBuffer13);
+    return audioBuffer13;
+}
+function playSe13(ctx,audioBuffer13){
+    sampleSource13 = ctx.createBufferSource();
+    sampleSource13.buffer = audioBuffer13;
+    sampleSource13.connect(ctx.destination);
+    sampleSource13.start();
+}
+async function sekidanshotPlay(){
+    const sekidanshot = await decodeSe13();
+    playSe13(ctx,sekidanshot);
+}
+async function sekidanshotStop(){
+    sampleSource13?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource14 = '';
+async function decodeSe14(){
+    const response14 = await fetch("pse/screamlong.mp3");
+    const arrayBuffer14 = await response14.arrayBuffer();
+    const audioBuffer14 = await ctx.decodeAudioData(arrayBuffer14);
+    return audioBuffer14;
+}
+function playSe14(ctx,audioBuffer14){
+    sampleSource14 = ctx.createBufferSource();
+    sampleSource14.buffer = audioBuffer14;
+    sampleSource14.connect(ctx.destination);
+    sampleSource14.start();
+}
+async function sescreamPlay(){
+    const sescream = await decodeSe14();
+    playSe14(ctx,sescream);
+}
+async function sescreamStop(){
+    sampleSource14?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource15 = '';
+async function decodeSe15(){
+    const response15 = await fetch("pse/takawarai.mp3");
+    const arrayBuffer15 = await response15.arrayBuffer();
+    const audioBuffer15 = await ctx.decodeAudioData(arrayBuffer15);
+    return audioBuffer15;
+}
+function playSe15(ctx,audioBuffer15){
+    sampleSource15 = ctx.createBufferSource();
+    sampleSource15.buffer = audioBuffer15;
+    sampleSource15.connect(ctx.destination);
+    sampleSource15.start();
+}
+async function setakawaraiPlay(){
+    const setakawarai = await decodeSe15();
+    playSe15(ctx,setakawarai);
+}
+async function setakawaraiStop(){
+    sampleSource15?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource16 = '';
+async function decodeSe16(){
+    const response16 = await fetch("pse/oowarai.mp3");
+    const arrayBuffer16 = await response16.arrayBuffer();
+    const audioBuffer16 = await ctx.decodeAudioData(arrayBuffer16);
+    return audioBuffer16;
+}
+function playSe16(ctx,audioBuffer16){
+    sampleSource16 = ctx.createBufferSource();
+    sampleSource16.buffer = audioBuffer16;
+    sampleSource16.connect(ctx.destination);
+    sampleSource16.start();
+}
+async function seoowaraiPlay(){
+    const seoowarai = await decodeSe16();
+    playSe16(ctx,seoowarai);
+}
+async function seoowaraiStop(){
+    sampleSource16?.stop();
+}
+
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+    decodeSe5();
+    decodeSe8();
+});
+let body = document.getElementById('body');
+let d1 = document.getElementById('d1');
+let back = document.getElementById('back');
+let heart1 = document.getElementById('heart1');
+let heart2 = document.getElementById('heart2');
+let ningyou0 = document.getElementById('ningyou0');
+let ningyou1 = document.getElementById('ningyou1');
+let ningyou2 = document.getElementById('ningyou2');
+let ningyou3 = document.getElementById('ningyou3');
+let ningyou4 = document.getElementById('ningyou4');
+let ningyou5 = document.getElementById('ningyou5');
+let ningyoubomb = document.getElementById('ningyoubomb');
+let ningyouhikaru = document.getElementById('ningyouhikaru');
+let hitarea = document.getElementById('hitarea');
+let kage1 = document.getElementById('kage1');
+let kage2 = document.getElementById('kage2');
+let sechyouji = document.getElementById('sechyouji');
+let hppara = document.getElementById('hppara');
+let bossname = document.getElementById('bossname');
+let hpwaku = document.getElementById('hpwaku');
+let hpbar = document.getElementById('hpbar');
+let hpbarnobiru = document.getElementById('hpbarnobiru');
+let hpbarchidimu = document.getElementById('hpbarchidimu');
+let redeffect = document.getElementById('redeffect');
+let whiteeffect = document.getElementById('whiteeffect');
+let pieel1 = document.getElementById('pieel1');
+let pieel2 = document.getElementById('pieel2');
+let pieel3 = document.getElementById('pieel3');
+let pieel4 = document.getElementById('pieel4');
+let pieel5 = document.getElementById('pieel5');
+let pieel6 = document.getElementById('pieel6');
+let pieel7 = document.getElementById('pieel7');
+let pieelbreak = document.getElementById('pieelbreak');
+let bossmaeroom = document.getElementById('bossmaeroom');
+let bossmaebaria = document.getElementById('bossmaebaria');
+let blackout = document.getElementById('blackout');
+let awateru1 = document.getElementById('awateru1');
+let awateru2 = document.getElementById('awateru2');
+let waap1 = document.getElementById('waap1');
+let waap2 = document.getElementById('waap2');
+let waaparea = document.getElementById('waaparea');
+let kidan1 = document.getElementById('kidan1');
+let kidan2 = document.getElementById('kidan2');
+let kidan3 = document.getElementById('kidan3');
+//ボスラッシュ
+let rush1 = document.getElementById('rush1');
+let rush2 = document.getElementById('rush2');
+let rush3 = document.getElementById('rush3');
+let rush4 = document.getElementById('rush4');
+let rush5 = document.getElementById('rush5');
+//効果音
+/*
+let bgmboss = document.getElementById('bossbgm');
+let sekiru = document.getElementById('kiruse');
+let sebomb = document.getElementById('bombse');
+let sebomb2 = document.getElementById('bombse2');
+let koepieel = document.getElementById('pieelkoe');
+let segrasshibi = document.getElementById('grasshibise');
+let segrassbreak = document.getElementById('grassbreakse');
+let koesyoujyo = document.getElementById('syoujyokoe');
+let sebunlock = document.getElementById('bunlockse');
+let sepienoroi = document.getElementById('pienoroise');
+let sekidantame = document.getElementById('kidantamese');
+let sekidanshot = document.getElementById('kidanshotse');
+let koescream = document.getElementById('screamkoe');
+let koetakawarai = document.getElementById('takawaraikoe');
+let koeoowarai = document.getElementById('oowaraikoe');
+*/
+//数値とか
+let timerCount = '';
+let timepoint = 40;
+let hitpoint = 300;
+let timerId4 = '';//ピエエル出現
+let fps0 = 0;
+let fps1 = 0;
+let fps2 = 0;
+let fps3 = 0;
+let fps4 = 0;
+let fps5 = 0;
+let fps6 = 0;
+let fps7 = 0;
+let fps8 = 0;
+let fps9 = 0;
+let fps10 = 0;
+let gofps = 0;
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ピエエル出現■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+function pieelApp(){
+    let com = Math.floor(Math.random()*25)+1;
+    if(com === 25){
+        fps4 = 0;
+        timerId4 = setInterval(function(){
+            fps4++;
+            switch(fps4){
+                case 1:
+                pieel1.style.display = 'inline';
+                break;
+                case 2:
+                pieel1.style.display = 'none';
+                pieel2.style.display = 'inline';
+                break;
+                case 3:
+                pieel2.style.display = 'none';
+                pieel3.style.display = 'inline';
+                break;
+                case 4:
+                pieel3.style.display = 'none';
+                pieel4.style.display = 'inline';
+                //koepieel.load();
+                //koepieel.play();
+                sepieelPlay();
+                clearInterval(timerId4);
+                break;
+            }
+        },80);
+    }
+}
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■クリアイベント■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+function clearEvent(){
+    clearInterval(timerCount);
+    //bgmboss.pause();
+    //sebomb.load();
+    //sebomb2.load();
+    //sebunlock.load();
+    //sepienoroi.load();
+    sebossbgmStop();
+    decodeSe3();
+    decodeSe4();
+    decodeSe9();
+    decodeSe10();
+    hitarea.style.display = 'none';
+    ningyouhikaru.style.display = 'none';
+    ningyou4.style.display = 'none';
+    hpbar.style.display = 'none';
+    hpwaku.style.display = 'none';
+    heart1.style.display = 'none';
+    heart2.style.display = 'none';
+    hppara.innerText = '';
+    bossname.innerText = '';
+    sechyouji.innerText = '';
+    ningyou5.style.display = 'inline';
+    hpbarchidimu.style.display = 'inline';
+    let timerId3 = setInterval(function(){
+        fps3++;
+        switch(fps3){
+            case 12:
+            ningyou5.style.display = 'none';
+            ningyoubomb.style.display = 'inline';
+            redeffect.style.display = 'inline';
+            //sebomb.play();
+            sebombPlay();
+            break;
+            case 48:
+            //sebomb2.play();
+            sebomb2Play();
+            redeffect.style.opacity = '0.2';
+            whiteeffect.style.display = 'inline';
+            body.style.backgroundColor = '#1a1a1a';
+            break;
+            case 49:
+            whiteeffect.style.opacity = '0.2';
+            body.style.backgroundColor = '#333333';
+            break;
+            case 50:
+            whiteeffect.style.opacity = '0.3';
+            body.style.backgroundColor = '#4d4d4d';
+            break;
+            case 51:
+            whiteeffect.style.opacity = '0.4';
+            body.style.backgroundColor = '#666666';
+            break;
+            case 52:
+            whiteeffect.style.opacity = '0.5';
+            body.style.backgroundColor = '#808080';
+            break;
+            case 53:
+            whiteeffect.style.opacity = '0.6';
+            body.style.backgroundColor = '#999999';
+            break;
+            case 54:
+            whiteeffect.style.opacity = '0.7';
+            body.style.backgroundColor = '#b3b3b3';
+            break;
+            case 55:
+            whiteeffect.style.opacity = '0.8';
+            body.style.backgroundColor = '#cccccc';
+            break;
+            case 56:
+            whiteeffect.style.opacity = '0.9';
+            body.style.backgroundColor = '#e6e6e6';
+            break;
+            case 57:
+            body.style.backgroundColor = '#ffffff';
+            whiteeffect.style.opacity = '1.0';
+            ningyoubomb.style.display = 'none';
+            redeffect.style.display = 'none';
+            hpbarchidimu.style.display = 'none';
+            break;
+            case 82:
+            whiteeffect.style.opacity = '0.9';
+            body.style.backgroundColor = '#e6e6e6';
+            break;
+            case 83:
+            whiteeffect.style.opacity = '0.8';
+            body.style.backgroundColor = '#cccccc';
+            break;
+            case 84:
+            whiteeffect.style.opacity = '0.7';
+            body.style.backgroundColor = '#b3b3b3';
+            break;
+            case 85:
+            whiteeffect.style.opacity = '0.6';
+            body.style.backgroundColor = '#999999';
+            break;
+            case 86:
+            whiteeffect.style.opacity = '0.5';
+            body.style.backgroundColor = '#808080';
+            break;
+            case 87:
+            whiteeffect.style.opacity = '0.4';
+            body.style.backgroundColor = '#666666';
+            break;
+            case 88:
+            whiteeffect.style.opacity = '0.3';
+            body.style.backgroundColor = '#4d4d4d';
+            break;
+            case 89:
+            whiteeffect.style.opacity = '0.2';
+            body.style.backgroundColor = '#333333';
+            break;
+            case 90:
+            whiteeffect.style.opacity = '0.1';
+            body.style.backgroundColor = '#1a1a1a';
+            break;
+            case 91:
+            whiteeffect.style.display = 'none';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 103:
+            blackout.style.display = 'inline';
+            break;
+            case 104:
+            blackout.style.opacity = '0.4';
+            break;
+            case 105:
+            blackout.style.opacity = '0.6';
+            break;
+            case 106:
+            blackout.style.opacity = '0.8';
+            break;
+            case 107:
+            blackout.style.opacity = '1.0';
+            bossmaeroom.style.display = 'inline';
+            bossmaebaria.style.display = 'inline';
+            break;
+            case 113:
+            blackout.style.opacity = '0.8';
+            break;
+            case 114:
+            blackout.style.opacity = '0.6';
+            break;
+            case 115:
+            blackout.style.opacity = '0.4';
+            break;
+            case 116:
+            blackout.style.opacity = '0.2';
+            break;
+            case 117:
+            blackout.style.display = 'none';
+            break;
+            case 129:
+            //sebunlock.play();
+            sebunlockPlay();
+            bossmaebaria.style.opacity = '0.8';
+            break;
+            case 130:
+            bossmaebaria.style.opacity = '0.6';
+            break;
+            case 131:
+            bossmaebaria.style.opacity = '0.4';
+            break;
+            case 132:
+            bossmaebaria.style.opacity = '0.2';
+            break;
+            case 133:
+            bossmaebaria.style.display = 'none';
+            break;
+            case 145:
+            blackout.style.display = 'inline';
+            break;
+            case 146:
+            blackout.style.opacity = '0.4';
+            break;
+            case 147:
+            blackout.style.opacity = '0.6';
+            break;
+            case 148:
+            blackout.style.opacity = '0.8';
+            break;
+           case 149:
+            blackout.style.opacity = '1.0';
+            bossmaeroom.style.display = 'none';
+            break;
+            case 155:
+            blackout.style.opacity = '0.8';
+            break;
+            case 156:
+            blackout.style.opacity = '0.6';
+            break;
+            case 157:
+            blackout.style.opacity = '0.4';
+            break;
+            case 158:
+            blackout.style.opacity = '0.2';
+            break;
+            case 159:
+            blackout.style.display = 'none';
+            break;
+            case 171:
+            //sepienoroi.play();
+            sepienoroiPlay();
+            waap1.style.display = 'inline';
+            break;
+            case 178:
+            waap1.style.display = 'none';
+            waap2.style.display = 'inline';
+            break;
+            case 185:
+            waaparea.style.display = 'inline';
+            clearInterval(timerId3);
+            break;
+        }
+    },80);   
+}
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■時間カウント■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+function timeLimit(){
+    sechyouji.innerText = '残り'+timepoint+'秒';
+    timerCount = setInterval(function(){
+        timepoint--;
+        if(timepoint>=10){
+            sechyouji.innerText = '残り'+timepoint+'秒';
+        }else if(timepoint<10 && timepoint>0){
+            sechyouji.innerText = '残り0'+timepoint+'秒';
+        }else if(timepoint<=0 && hitpoint<=0){
+            clearEvent();
+        }else if(timepoint<=0 && hitpoint>=1){
+            clearInterval(timerCount);
+            //bgmboss.pause();
+            //koepieel.pause();
+            //sekidantame.load();
+            //sekidanshot.load();
+            //koescream.load();
+            //koetakawarai.load();
+            //koeoowarai.load();
+            sebossbgmStop();
+            if(pieelvoicePlaying = true){
+                sepieelStop();
+            }
+            decodeSe12();
+            decodeSe13();
+            decodeSe14();
+            decodeSe15();
+            decodeSe16();
+            hitarea.style.display = 'none';
+            ningyouhikaru.style.display = 'none';
+            ningyou1.style.display = 'none';
+            ningyou2.style.display = 'none';
+            ningyou3.style.display = 'none';
+            ningyou4.style.display = 'none';
+            hpbar.style.display = 'none';
+            hpwaku.style.display = 'none';
+            heart1.style.display = 'none';
+            heart2.style.display = 'none';
+            pieel1.style.display = 'none';
+            pieel2.style.display = 'none';
+            pieel3.style.display = 'none';
+            pieel4.style.display = 'none';
+            pieel5.style.display = 'none';
+            pieel6.style.display = 'none';
+            pieel7.style.display = 'none';
+            hppara.innerText = '';
+            bossname.innerText = '';
+            sechyouji.innerText = '';
+            kidan1.style.display = 'inline';
+            let goverTimer = setInterval(function(){
+                gofps++;
+                switch(gofps){
+                    case 9:
+                    //sekidantame.play();
+                    sekidantamePlay();
+                    break;
+                    case 21:
+                    //sekidanshot.play();
+                    sekidanshotPlay();
+                    break;
+                    case 22:
+                    kidan1.style.display = 'none';
+                    kidan2.style.display = 'inline';
+                    break;
+                    case 23:
+                    kidan2.style.display = 'none';
+                    kidan3.style.display = 'inline';
+                    blackout.style.opacity = '1.0';
+                    break;
+                    case 24:
+                    kidan3.style.display = 'none';
+                    blackout.style.display = 'inline';
+                    whiteeffect.style.opacity = '1.0';
+                    break;
+                    case 25:
+                    blackout.style.display = 'none';
+                    whiteeffect.style.display = 'inline';
+                    body.style.backgroundColor = '#ffffff';
+                    break;
+                    case 26:
+                    //koescream.play();
+                    sescreamPlay();
+                    body.style.backgroundColor = '#000000';
+                    whiteeffect.style.display = 'none';
+                    rush1.style.display = 'inline';
+                    break;
+                    case 54://画面白
+                    body.style.backgroundColor = '#ffffff';
+                    rush1.style.display = 'none';
+                    whiteeffect.style.display = 'inline';
+                    break;
+                    case 55:
+                    //koetakawarai.play();
+                    setakawaraiPlay();
+                    body.style.backgroundColor = '#000000';
+                    whiteeffect.style.display = 'none';
+                    rush2.style.display = 'inline';
+                    break;
+                    case 79://画面白
+                    body.style.backgroundColor = '#ffffff';
+                    rush2.style.display = 'none';
+                    whiteeffect.style.display = 'inline';
+                    break;
+                    case 80:
+                    //koescream.play();
+                    sescreamPlay();
+                    body.style.backgroundColor = '#000000';
+                    whiteeffect.style.display = 'none';
+                    rush3.style.display = 'inline';
+                    break;
+                    case 104://画面白
+                    body.style.backgroundColor = '#ffffff';
+                    rush3.style.display = 'none';
+                    whiteeffect.style.display = 'inline';
+                    break;
+                    case 105:
+                    //koeoowarai.play();
+                    seoowaraiPlay();
+                    body.style.backgroundColor = '#000000';
+                    whiteeffect.style.display = 'none';
+                    rush4.style.display = 'inline';
+                    break;
+                    case 129://画面白
+                    body.style.backgroundColor = '#ffffff';
+                    rush4.style.display = 'none';
+                    whiteeffect.style.display = 'inline';
+                    break;
+                    case 130:
+                    //koescream.play();
+                    sescreamPlay();
+                    body.style.backgroundColor = '#000000';
+                    whiteeffect.style.display = 'none';
+                    rush5.style.display = 'inline';
+                    break;
+                    case 154:
+                    location.href = 'topd.html';
+                    clearInterval(goverTimer);
+                    break;
+                }
+            },80);
+        }
+    },1000);
+}
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■人形現れる■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+function ningyouApp(){
+    let timerId1 = setInterval(function(){
+        fps1++;
+        switch(fps1){
+            case 1:
+            kage1.style.left = '10px';
+            kage2.style.right = '10px';
+            break;
+            case 2:
+            kage1.style.left = '20px';
+            kage2.style.right = '20px';
+            break;
+            case 3:
+            kage1.style.left = '30px';
+            kage2.style.right = '30px';
+            kage1.style.opacity = '0.1';
+            kage2.style.opacity = '0.1';
+            break;
+            case 4:
+            kage1.style.left = '40px';
+            kage2.style.right = '40px';
+            break;
+            case 5:
+            kage1.style.left = '50px';
+            kage2.style.right = '50px';
+            break;
+            case 6:
+            kage1.style.left = '60px';
+            kage2.style.right = '60px';
+            kage1.style.opacity = '0.2';
+            kage2.style.opacity = '0.2';
+            break;
+            case 7:
+            kage1.style.left = '70px';
+            kage2.style.right = '70px';
+            break;
+            case 8:
+            kage1.style.left = '80px';
+            kage2.style.right = '80px';
+            break;
+            case 9:
+            kage1.style.left = '90px';
+            kage2.style.right = '90px';
+            kage1.style.opacity = '0.3';
+            kage2.style.opacity = '0.3';
+            break;
+            case 10:
+            kage1.style.left = '100px';
+            kage2.style.right = '100px';
+            break;
+            case 11:
+            kage1.style.left = '110px';
+            kage2.style.right = '110px';
+            break;
+            case 12:
+            kage1.style.left = '120px';
+            kage2.style.right = '120px';
+            kage1.style.opacity = '0.4';
+            kage2.style.opacity = '0.4';
+            break;
+            case 13:
+            kage1.style.left = '130px';
+            kage2.style.right = '130px';
+            break;
+            case 14:
+            kage1.style.left = '140px';
+            kage2.style.right = '140px';
+            break;
+            case 15:
+            kage1.style.left = '150px';
+            kage2.style.right = '150px';
+            kage1.style.opacity = '0.5';
+            kage2.style.opacity = '0.5';
+            break;
+            case 16:
+            kage1.style.left = '160px';
+            kage2.style.right = '160px';
+            break;
+            case 17:
+            kage1.style.left = '170px';
+            kage2.style.right = '170px';
+            break;
+            case 18:
+            kage1.style.left = '180px';
+            kage2.style.right = '180px';
+            kage1.style.opacity = '0.6';
+            kage2.style.opacity = '0.6';
+            break;
+            case 19:
+            kage1.style.left = '190px';
+            kage2.style.right = '190px';
+            break;
+            case 20:
+            kage1.style.left = '200px';
+            kage2.style.right = '200px';
+            break;
+            case 21:
+            kage1.style.left = '210px';
+            kage2.style.right = '210px';
+            kage1.style.opacity = '0.7';
+            kage2.style.opacity = '0.7';
+            break;
+            case 22:
+            kage1.style.left = '220px';
+            kage2.style.right = '220px';
+            break;
+            case 23:
+            kage1.style.left = '230px';
+            kage2.style.right = '230px';
+            break;
+            case 24:
+            kage1.style.left = '240px';
+            kage2.style.right = '240px';
+            kage1.style.opacity = '0.8';
+            kage2.style.opacity = '0.8';
+            break;
+            case 25:
+            kage1.style.left = '250px';
+            kage2.style.right = '250px';
+            break;
+            case 26:
+            kage1.style.left = '260px';
+            kage2.style.right = '260px';
+            break;
+            case 27:
+            kage1.style.left = '270px';
+            kage2.style.right = '270px';
+            kage1.style.opacity = '0.9';
+            kage2.style.opacity = '0.9';
+            break;
+            case 28:
+            kage1.style.left = '280px';
+            kage2.style.right = '280px';
+            break;
+            case 29:
+            kage1.style.left = '290px';
+            kage2.style.right = '290px';
+            break;
+            case 30:
+            kage1.style.left = '300px';
+            kage2.style.right = '300px';
+            kage1.style.opacity = '1.0';
+            kage2.style.opacity = '1.0';
+            break;
+            case 31:
+            kage1.style.left = '310px';
+            kage2.style.right = '310px';
+            break;
+            case 32:
+            kage1.style.left = '320px';
+            kage2.style.right = '320px';
+            break;
+            case 33:
+            kage1.style.left = '329px';
+            kage2.style.display = 'none';
+            ningyou0.style.display = 'inline';
+            break;
+            case 34:
+            hpbarnobiru.style.display = 'inline';
+            kage1.style.opacity = '0.9';
+            break;
+            case 35:
+            kage1.style.opacity = '0.8';
+            break;
+            case 36:
+            kage1.style.opacity = '0.7';
+            break;
+            case 37:
+            kage1.style.opacity = '0.6';
+            break;
+            case 38:
+            kage1.style.opacity = '0.5';
+            break;
+            case 39:
+            kage1.style.opacity = '0.4';
+            break;
+            case 40:
+            kage1.style.opacity = '0.3';
+            break;
+            case 41:
+            kage1.style.opacity = '0.2';
+            break;
+            case 42:
+            kage1.style.opacity = '0.1';
+            break;
+            case 43:
+            hpwaku.style.display = 'inline';
+            hpbar.style.display = 'inline';
+            hpbarnobiru.style.display = 'none';
+            kage1.style.display = 'none';
+            ningyou0.style.display = 'none';
+            ningyou1.style.display = 'inline';
+            ningyou2.style.display = 'inline';
+            ningyou3.style.display = 'inline';
+            ningyou4.style.display = 'inline';
+            ningyouhikaru.style.display = 'inline';
+            hitarea.style.display = 'inline';
+            heart1.style.display = 'inline';
+            heart2.style.display = 'inline';
+            hppara.innerText = hitpoint+'/300';
+            bossname.innerText = 'Ichimatsuko';
+            timeLimit();
+            clearInterval(timerId1);
+            break;
+        }
+    },80);
+}
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■取り残された人形をクリックでゲーム開始■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+awateru1.addEventListener('mouseover',function(){awateru1.style.cursor = 'pointer';});
+awateru1.addEventListener('click',function(){
+    awateru1.style.display = 'none';
+    //koesyoujyo.load();
+    //koesyoujyo.play();
+    //bgmboss.load();
+    sesyoujyoPlay();
+    decodeSe1();
+    awateru2.style.display = 'inline';
+    let timerId0 = setInterval(function(){
+        fps0++;
+        switch(fps0){
+            case 1:
+            awateru2.style.left = '400px';
+            break;
+            case 2:
+            awateru2.style.left = '360px';
+            break;
+            case 3:
+            awateru2.style.left = '320px';
+            break;
+            case 4:
+            awateru2.style.left = '280px';
+            break;
+            case 5:
+            awateru2.style.left = '240px';
+            break;
+            case 6:
+            awateru2.style.left = '200px';
+            break;
+            case 7:
+            awateru2.style.left = '160px';
+            break;
+            case 8:
+            awateru2.style.left = '120px';
+            break;
+            case 9:
+            awateru2.style.left = '80px';
+            break;
+            case 10:
+            awateru2.style.left = '40px';
+            break;
+            case 11:
+            awateru2.style.left = '0px';
+            break;
+            case 12:
+            awateru2.style.display = 'none';
+            break;
+            case 13:
+            blackout.style.opacity = '0.8';
+            break;
+            case 14:
+            blackout.style.opacity = '0.6';
+            break;
+            case 15:
+            blackout.style.opacity = '0.4';
+            break;
+            case 16:
+            blackout.style.opacity = '0.2';
+            break;
+            case 17:
+            blackout.style.display = 'none';
+            //bgmboss.play();
+            sebossbgmPlay();
+            ningyouApp();
+            clearInterval(timerId0);
+            break;
+        }
+    },80);
+});
+
+/*■■■■■■■■■■■■■ヒットポイントの数値によってボスの状態を変更。0になった時はクリアイベント発生■■■■■■■■■■■■■*/
+function faceBreak(){
+    if(hitpoint<=0){
+        clearEvent();
+    }else if(hitpoint>0 && hitpoint<=60){
+        ningyou3.style.display = 'none';
+    }else if(hitpoint>60 && hitpoint<=120){
+        ningyou2.style.display = 'none';
+    }else if(hitpoint>120 && hitpoint<=180){
+        ningyou1.style.display = 'none';
+    }
+}
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ボスをクリックした時■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+hitarea.addEventListener('mouseover',function(){hitarea.style.cursor = 'pointer';});
+hitarea.addEventListener('click',function(){
+    //sekiru.load();
+    //sekiru.play();
+    sekiruPlay();
+    fps2 = 0;
+    hitpoint -= 5;
+    hpbar.style.width = hitpoint*3+'px';
+    hppara.innerText = hitpoint+'/300';
+    ningyouhikaru.style.opacity = '1.0';
+    faceBreak();
+    let timerId2 = setInterval(function(){
+        fps2++;
+        if(fps2 === 1){
+            ningyouhikaru.style.opacity = '0.0';
+            clearInterval(timerId2);
+        }
+    },80);
+    if(hitpoint>20 && hitpoint<=300 && timepoint>=5){
+        pieelApp();
+    }
+});
+
+let waapfps = 0;
+let seencount = document.getElementById('encountse');
+waaparea.addEventListener('mouseover',function(){waaparea.style.cursor = 'pointer';});
+waaparea.addEventListener('click',function(){
+    waaparea.style.display = 'none';
+    //seencount.load();
+    //seencount.play();
+    seencountPlay();
+    let waapTimer = setInterval(function(){
+        waapfps++;
+        switch(waapfps){
+            case 1:
+            whiteeffect.style.display = 'inline';
+            body.style.backgroundColor = '#1a1a1a';
+            break;
+            case 2:
+            whiteeffect.style.opacity = '0.2';
+            body.style.backgroundColor = '#333333';
+            break;
+            case 3:
+            whiteeffect.style.opacity = '0.3';
+            body.style.backgroundColor = '#4d4d4d';
+            break;
+            case 4:
+            whiteeffect.style.opacity = '0.4';
+            body.style.backgroundColor = '#666666';
+            break;
+            case 5:
+            whiteeffect.style.opacity = '0.5';
+            body.style.backgroundColor = '#808080';
+            break;
+            case 6:
+            whiteeffect.style.opacity = '0.6';
+            body.style.backgroundColor = '#999999';
+            break;
+            case 7:
+            whiteeffect.style.opacity = '0.7';
+            body.style.backgroundColor = '#b3b3b3';
+            break;
+            case 8:
+            whiteeffect.style.opacity = '0.8';
+            body.style.backgroundColor = '#cccccc';
+            break;
+            case 9:
+            whiteeffect.style.opacity = '0.9';
+            body.style.backgroundColor = '#e6e6e6';
+            break;
+            case 10:
+            body.style.backgroundColor = '#ffffff';
+            whiteeffect.style.opacity = '1.0';
+            break;
+            case 40:
+            location.href = 'maamomj3upftsk.html';
+            clearInterval(waapTimer);
+            break;
+        }
+    },80);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ピエエルを倒す■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+pieel4.addEventListener('mouseover',function(){pieel4.style.cursor='pointer';});
+pieel4.addEventListener('click',function(){
+    //segrasshibi.load();
+    //segrasshibi.play();
+    segrasshibiPlay();
+    pieel4.style.display = 'none';
+    pieel5.style.display = 'inline';
+});
+pieel5.addEventListener('mouseover',function(){pieel5.style.cursor='pointer';});
+pieel5.addEventListener('click',function(){
+    //segrasshibi.load();
+    //segrasshibi.play();
+    segrasshibiPlay();
+    pieel5.style.display = 'none';
+    pieel6.style.display = 'inline';
+});
+pieel6.addEventListener('mouseover',function(){pieel6.style.cursor='pointer';});
+pieel6.addEventListener('click',function(){
+    //segrasshibi.load();
+    //segrasshibi.play();
+    segrasshibiPlay();
+    pieel6.style.display = 'none';
+    pieel7.style.display = 'inline';
+});
+pieel7.addEventListener('mouseover',function(){pieel7.style.cursor='pointer';});
+pieel7.addEventListener('click',function(){
+    //segrassbreak.load();
+    //segrassbreak.play();
+    sepieelStop();
+    pieelvoicePlaying = false;
+    segrassbreakPlay();
+    pieel7.style.display = 'none';
+    pieelbreak.style.display = 'inline';
+    fps5 = 0;
+    let timerId5 = setInterval(function(){
+        fps5++;
+        if(fps5===3){
+            pieelbreak.style.display = 'none';
+            clearInterval(timerId5);
+        }
+    },40);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ハート君に触れた時■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+heart1.addEventListener('mouseover',function(){
+    heart1.style.opacity = '0.0';
+    if(hitpoint<=280 && hitpoint>0){
+        hitpoint += 20;
+        hpbar.style.width = hitpoint*3+'px';
+        hppara.innerText = hitpoint+'/300';
+    }else if(hitpoint<=300 && hitpoint>280){
+        hitpoint = 300;
+        hpbar.style.width = hitpoint*3+'px';
+        hppara.innerText = hitpoint+'/300';
+    }
+});
+heart1.addEventListener('mouseout',function(){heart1.style.opacity = '1.0';});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+</html>

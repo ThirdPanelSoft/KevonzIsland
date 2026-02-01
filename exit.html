@@ -1,0 +1,53 @@
+<link rel="icon"href="image/favicon.ico">
+<style>
+h1 {
+font-family: "Matura MT Script Capitals";
+color: blue;
+}
+h2 {
+font-family: "Times New Roman";
+}
+p, h6 {
+font-family: "Comic Sans MS";
+}
+body {
+  background-image: url("Bliss_(Longhorn_build_5001).jpg");
+  background-size: cover;
+  background-size: 100% 100%;
+}
+        img {
+            cursor: pointer;
+            max-width: 100%;
+        }
+</style>
+<title>YOU WON!!!!</title>
+<center>
+<marquee>YOU DID IT</marquee>
+<h1>🎉🎉🎉 GREAT JOB 🎉🎉🎉</h1>
+<p>CONGRATULATION!!!  You open the exit door..... and find your way out of the Evil Island...... Now you free from kedvonz!!!!</p>
+<p>WE CANT BELIVE YOU DID IT YOU WONS!!! ENJOJ YOUR FREEDOM</p>
+<p>KEVONZ IS DISAPPOINTED OF YOU .... HE WANT TO KILL ... HE CRYING</p>
+<img src="cryvonz.png" id="kedvonze">
+<br>
+<a href="#" id="image"><h2>RETURN TO TEH HOMEPAGE</h2></a>
+</center>
+<script>
+    const img2 = document.getElementById("kedvonze");
+
+    img2.addEventListener("click", function () {
+        img2.src = "kevonz3am-scary.png";
+document.querySelectorAll("marquee, p, h1, h2:not(a h2)").forEach(el => {
+    el.remove();
+});
+        document.title = "YOU DIDN'T WIN LULZ";
+    document.getElementById("image").addEventListener("click", function (e) {
+        e.preventDefault();
+        const img = document.createElement("img");
+        img.src = "pimg/nisebox.jpg";
+        img.addEventListener("click", function () {
+            window.location.href = "box.html";
+        });
+        this.replaceWith(img);
+    });
+    });
+</script>
