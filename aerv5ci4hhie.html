@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Expires" content="Thu, 10 Dec 2020 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>KEVONZ ISLAND</title>
+<link rel="icon"href="image/favicon.ico">
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#headpic{width:400px;height:90px;position:absolute;left:0px;top:0px;}
+#langbt{
+    font-size:20px;color:#ffffff;font-weight:bold;
+    text-align:center;margin: 0px;padding: 3px;line-height: 1em;
+    position:absolute;right:0px;top:0px;
+    background-color:#000000;
+    border-left:1px solid #ffffff;
+    border-right:1px solid #ffffff;
+    border-bottom:1px solid #ffffff;
+}
+#menu{
+    color:#ff0000;font-size:14px;
+    position:absolute;left:0px;top:110px;
+    text-align:left;
+}
+ol#menu li{margin-bottom:5px;}
+#bflist{
+    color:#ffffff;font-size:14px;
+    position:absolute;left:450px;top:220px;
+    text-align:left;display:none;
+}
+ul#bflist li{margin-bottom:20px;text-decoration:underline;}
+#midashi{
+    color:#ffffff;font-size:20px;text-align:left;font-weight:bold;
+    position:absolute;left:200px;top:90px;
+}
+#imgspace{
+    width:770px;height:375px;background-color:#333333;
+    position:absolute;left:200px;top:130px;
+}
+#blackback{
+    width:770px;height:375px;background-color:#000000;
+    position:absolute;left:200px;top:130px;display:none;
+}
+#bikou{
+    color:#ffffff;font-size:13px;line-height:110%;text-align:left;
+    position:absolute;left:200px;top:500px;
+}
+#tope{width:770px;height:490px;position:absolute;left:200px;top:90px;}
+#cass{width:239px;height:375px;position:absolute;left:465px;top:130px;display:none;}
+#cassmove{width:239px;height:375px;position:absolute;left:465px;top:130px;display:none;}
+#cassbt{width:14px;height:38px;position:absolute;left:466px;top:233px;display:none;}
+#uzipic{width:370px;height:200px;position:absolute;left:400px;top:218px;display:none;}
+#newspaper{width:250px;height:335px;position:absolute;left:460px;top:150px;display:none;}
+#boy{width:278px;height:293px;position:absolute;left:433px;top:172px;display:none;}
+#medaddy{width:770px;height:375px;position:absolute;left:200px;top:130px;display:none;}
+#tentaipuzzle{width:626px;height:375px;position:absolute;left:272px;top:130px;display:none;}
+#buttonnoma{width:600px;height:375px;position:absolute;left:285px;top:130px;display:none;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<audio id="tapekoe" preload="auto">
+<source src="pse/arctapeonsei.wav" type="audio/wav">
+<source src="pse/arctapeonsei.mp3" type="audio/mp3">
+</audio>
+
+<audio id="cassbtse" preload="auto">
+<source src="pse/arccassbt.wav" type="audio/wav">
+<source src="pse/arccassbt.mp3" type="audio/mp3">
+</audio>
+
+<div id="d1">
+<img src = "pimg/archeade.jpg"id="headpic">
+<div id="langbt">Japanese</div>
+<ol id = "menu">
+<li id="m1">TOP</li>
+<li id="m2">Cassette player</li>
+<li id="m3">Graffiti on the wall<br>in that room</li>
+<li id="m4">Newspaper content</li>
+<li id="m5">Video "Red Numbers"<br>Secret Password</li>
+<li id="m6"style="text-decoration:line-through">Works created with<br>Flash(not adopted)</li>
+<li id="m7">Button room</li>
+<li id="m8">Celestial puzzle room</li>
+<li id="m9">Item "Father's Majesty"</li>
+</ol>
+<p id="midashi"></p>
+<div id = "imgspace"></div>
+<div id = "blackback"></div>
+<img src="pimg/arccass.jpg"id="cass">
+<img src="pimg/arccassmove.gif"id="cassmove">
+<img src="pimg/arccassbt.jpg"id="cassbt">
+<img src="pimg/arcuzipic.jpg"id="uzipic">
+<img src="pimg/arcnewspaper.jpg"id="newspaper">
+<img src="pimg/arcboy.jpg"id="boy">
+<img src="pimg/archive/medaddyeve.jpg"id="medaddy">
+<img src="pimg/archive/tentaipuzzle.jpg"id="tentaipuzzle">
+<img src="pimg/archive/buttonnoma.jpg"id="buttonnoma">
+<p id="bikou"></p>
+<img src="pimg/arctope.jpg"id="tope">
+
+<ul id = "bflist">
+<li id="bf1"></li>
+<li id="bf2"></li>
+<li id="bf3"></li>
+<li id="bf4"></li>
+<li id="bf5"></li>
+</ul>
+
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let m1 = document.getElementById('m1');
+let m2 = document.getElementById('m2');
+let m3 = document.getElementById('m3');
+let m4 = document.getElementById('m4');
+let m5 = document.getElementById('m5');
+let m6 = document.getElementById('m6');
+
+let langbt = document.getElementById('langbt');
+let tope = document.getElementById('tope');
+let blackback = document.getElementById('blackback');
+let cass = document.getElementById('cass');
+let cassmove = document.getElementById('cassmove');
+let cassbt = document.getElementById('cassbt');
+
+let midashi = document.getElementById('midashi');
+let bikou = document.getElementById('bikou');
+
+let koetape = document.getElementById('tapekoe');
+let secassbt = document.getElementById('cassbtse');
+let uzipic = document.getElementById('uzipic');
+let newspaper = document.getElementById('newspaper');
+let boy = document.getElementById('boy');
+let medaddy = document.getElementById('medaddy');
+let tentaipuzzle = document.getElementById('tentaipuzzle');
+let buttonnoma = document.getElementById('buttonnoma');
+
+let bflist = document.getElementById('bflist');
+let bf1 = document.getElementById('bf1');
+let bf2 = document.getElementById('bf2');
+let bf3 = document.getElementById('bf3');
+let bf4 = document.getElementById('bf4');
+let bf5 = document.getElementById('bf5');
+
+/*言語切り替え*/
+langbt.addEventListener('mouseover',function(){langbt.style.cursor='pointer';});
+langbt.addEventListener('click',function(){
+    location.href = 'aerv5ci4hhi.html';
+});
+
+function allHide(){
+    //トップ絵
+    tope.style.display = 'none';
+    //テープ
+    cass.style.display = 'none';
+    cassmove.style.display = 'none';
+    cassbt.style.display = 'none';
+    koetape.pause();
+    //蛆の間の絵
+    uzipic.style.display = 'none';
+    //新聞
+    newspaper.style.display = 'none';
+    //少年
+    blackback.style.display = 'none';
+    boy.style.display = 'none';
+    //没FLASH
+    bflist.style.display = 'none';
+    //ボタンの間
+    buttonnoma.style.display = 'none';
+    //天体パズル
+    tentaipuzzle.style.display = 'none';
+    //父の威光
+    medaddy.style.display = 'none';
+}
+
+m1.addEventListener('mouseover',function(){m1.style.cursor = 'pointer';});
+m1.addEventListener('click',function(){
+    allHide();
+    tope.style.display = 'inline';
+});
+
+m2.addEventListener('mouseover',function(){m2.style.cursor = 'pointer';});
+m2.addEventListener('click',function(){
+    allHide();
+    secassbt.load();
+    koetape.load();
+    cass.style.display = 'inline';
+    cassbt.style.display = 'inline';
+    midashi.innerText = '02.Voice recorded on cassette tape (not adopted)';
+    bikou.innerText = 'Voice memo of a researcher who went missing while searching for "Fancy Island". \nIt was such a story, but it was rejected.';
+});
+//---------------------■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■1行の文章の長さ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+cassbt.addEventListener('mouseover',function(){cassbt.style.cursor = 'pointer';});
+cassbt.addEventListener('click',function(){
+    cassbt.style.display = 'none';
+    cass.style.display = 'none';
+    cassmove.style.display = 'inline';
+    secassbt.play();
+    koetape.play();
+});
+
+m3.addEventListener('mouseover',function(){m3.style.cursor = 'pointer';});
+m3.addEventListener('click',function(){
+    allHide();
+    uzipic.style.display = 'inline';
+    midashi.innerText = '03.Graffiti on the wall in that room';
+    bikou.innerText = 'This is a meaningless graffiti. Added to create an atmosphere.';
+});
+//---------------------■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■1行の文章の長さ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+uzipic.addEventListener('mouseover',function(){uzipic.style.cursor = 'pointer';});
+uzipic.addEventListener('click',function(){
+    window.open('pimg/arcrakugaki.jpg','_blank');
+});
+
+m4.addEventListener('mouseover',function(){m4.style.cursor = 'pointer';});
+m4.addEventListener('click',function(){
+    allHide();
+    newspaper.style.display = 'inline';
+    midashi.innerText = '04.Newspaper content';
+    bikou.innerText = 'The newspaper wrote, "Old" Fancy Island "was a fun amusement park, but it was devastated\nby the mysterious disappearance of the caretaker and became a haunted habitat."';
+});
+//---------------------■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■1行の文章の長さ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+m5.addEventListener('mouseover',function(){m5.style.cursor = 'pointer';});
+m5.addEventListener('click',function(){
+    allHide();
+    blackback.style.display = 'inline';
+    boy.style.display = 'inline';
+    midashi.innerText = '05.Video "Red Numbers"Secret Password';
+    bikou.innerText = 'Enter "115513181889" in the input field on the video "red number" page to go to the secret page.';
+});
+//---------------------■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■1行の文章の長さ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+/*
+m6.addEventListener('mouseover',function(){m6.style.cursor = 'pointer';});
+m6.addEventListener('click',function(){
+    allHide();
+    bflist.style.display = 'block';
+    bf1.innerText = 'Jump off';
+    bf2.innerText = 'Skull slider puzzle';
+    bf3.innerText = 'Early "Fancy Island"';
+    bf4.innerText = 'Coin game Noh mask';
+    bf5.innerText = 'Scream page(※Beware of volume and fear※)';
+    midashi.innerText = '06.Works created with Flash(not adopted)';
+    bikou.innerText = 'Pages that were in the main story before, or pages that were created but rejected.';
+});
+*/
+//---------------------■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■1行の文章の長さ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+m7.addEventListener('mouseover',function(){m7.style.cursor = 'pointer';});
+m7.addEventListener('click',function(){
+    allHide();
+    blackback.style.display = 'inline';
+    buttonnoma.style.display = 'inline';
+    midashi.innerText = '07.Button room';
+    bikou.innerText = 'I cut this page to make the second half of the main part easier to understand.';
+});
+//---------------------■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■1行の文章の長さ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+m8.addEventListener('mouseover',function(){m8.style.cursor = 'pointer';});
+m8.addEventListener('click',function(){
+    allHide();
+    blackback.style.display = 'inline';
+    tentaipuzzle.style.display = 'inline';
+    midashi.innerText = '08.Celestial puzzle room';
+    bikou.innerText = 'I cut this page to make the second half of the main part easier to understand.';
+});
+//---------------------■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■1行の文章の長さ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+m9.addEventListener('mouseover',function(){m9.style.cursor = 'pointer';});
+m9.addEventListener('click',function(){
+    allHide();
+    blackback.style.display = 'inline';
+    medaddy.style.display = 'inline';
+    midashi.innerText = '09.Item "Father Majesty"';
+    bikou.innerText = 'I cut this page to make the second half of the main part easier to understand.';
+});
+//---------------------■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■1行の文章の長さ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+//---------------------ボタンの押し順を2回成功させて「お守り」を入手すると、この先のページのモグラ叩きと市松子戦が簡単になるというもの。\n
+//---------------------最初のシーンが何もない壁一面から始まる分かり難さ、押し順成功したと思ったらもう一つ現れるがっかりサプライズの為カット。\n
+//---------------------押し順失敗時に現れる生首は修正後の目ダディの間で続投。\n
+//---------------------■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■1行の文章の長さ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+bf1.addEventListener('mouseover',function(){bf1.style.cursor = 'pointer';});
+bf1.addEventListener('click',function(){
+    window.open('toushinfla.html','_blank');
+});
+
+bf2.addEventListener('mouseover',function(){bf2.style.cursor = 'pointer';});
+bf2.addEventListener('click',function(){
+    window.open('puzzleandfancy.html','_blank');
+});
+
+bf3.addEventListener('mouseover',function(){bf3.style.cursor = 'pointer';});
+bf3.addEventListener('click',function(){
+    window.open('1arcfancytop.html','_blank');
+});
+
+bf4.addEventListener('mouseover',function(){bf4.style.cursor = 'pointer';});
+bf4.addEventListener('click',function(){
+    window.open('amonnemuonic4k5.html','_blank');
+});
+
+bf5.addEventListener('mouseover',function(){bf5.style.cursor = 'pointer';});
+bf5.addEventListener('click',function(){
+    window.open('psychoarc.html','_blank');
+});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+</html>

@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Expires" content="Fri, 15 Aug 2025 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>KEVONZ ISLAND</title>
+<link rel="icon"href="image/favicon.ico">
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#back{width:970px;height:580px;position:absolute;left:0px;top:0px;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#hinadanb{width:970px;height:229px;position:absolute;left:0px;top:60px;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#hinadanm{width:970px;height:229px;position:absolute;left:0px;top:234px;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#hinadanf{width:970px;height:172px;position:absolute;left:0px;bottom:0px;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*上段左から1*/
+#ningyou1a{width:166px;height:46px;position:absolute;left:66px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou2a{width:166px;height:92px;position:absolute;left:66px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou3a{width:166px;height:138px;position:absolute;left:66px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou4a{width:166px;height:184px;position:absolute;left:66px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou5a{width:166px;height:230px;position:absolute;left:66px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ndeatha{width:166px;height:280px;position:absolute;left:66px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*上段左から2*/
+#ningyou1b{width:166px;height:46px;position:absolute;left:294px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou2b{width:166px;height:92px;position:absolute;left:294px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou3b{width:166px;height:138px;position:absolute;left:294px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou4b{width:166px;height:184px;position:absolute;left:294px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou5b{width:166px;height:230px;position:absolute;left:294px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ndeathb{width:166px;height:280px;position:absolute;left:294px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*上段左から3*/
+#ningyou1c{width:166px;height:46px;position:absolute;left:525px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou2c{width:166px;height:92px;position:absolute;left:525px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou3c{width:166px;height:138px;position:absolute;left:525px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou4c{width:166px;height:184px;position:absolute;left:525px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou5c{width:166px;height:230px;position:absolute;left:525px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ndeathc{width:166px;height:280px;position:absolute;left:525px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*上段左から4*/
+#ningyou1d{width:166px;height:46px;position:absolute;left:753px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou2d{width:166px;height:92px;position:absolute;left:753px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou3d{width:166px;height:138px;position:absolute;left:753px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou4d{width:166px;height:184px;position:absolute;left:753px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou5d{width:166px;height:230px;position:absolute;left:753px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ndeathd{width:166px;height:280px;position:absolute;left:753px;bottom:291px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*下段左から1*/
+#ningyou1e{width:166px;height:46px;position:absolute;left:66px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou2e{width:166px;height:92px;position:absolute;left:66px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou3e{width:166px;height:138px;position:absolute;left:66px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou4e{width:166px;height:184px;position:absolute;left:66px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou5e{width:166px;height:230px;position:absolute;left:66px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ndeathe{width:166px;height:280px;position:absolute;left:66px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*下段左から2*/
+#ningyou1f{width:166px;height:46px;position:absolute;left:294px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou2f{width:166px;height:92px;position:absolute;left:294px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou3f{width:166px;height:138px;position:absolute;left:294px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou4f{width:166px;height:184px;position:absolute;left:294px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou5f{width:166px;height:230px;position:absolute;left:294px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ndeathf{width:166px;height:280px;position:absolute;left:294px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*下段左から3*/
+#ningyou1g{width:166px;height:46px;position:absolute;left:525px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou2g{width:166px;height:92px;position:absolute;left:525px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou3g{width:166px;height:138px;position:absolute;left:525px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou4g{width:166px;height:184px;position:absolute;left:525px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou5g{width:166px;height:230px;position:absolute;left:525px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ndeathg{width:166px;height:280px;position:absolute;left:525px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*下段左から4*/
+#ningyou1h{width:166px;height:46px;position:absolute;left:753px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou2h{width:166px;height:92px;position:absolute;left:753px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou3h{width:166px;height:138px;position:absolute;left:753px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou4h{width:166px;height:184px;position:absolute;left:753px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ningyou5h{width:166px;height:230px;position:absolute;left:753px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ndeathh{width:166px;height:280px;position:absolute;left:753px;bottom:114px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*人形のヒットエリア*/
+#hitareaa{width:107px;height:230px;position:absolute;left:96px;top:59px;background-color:#00ff00;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#hitareab{width:107px;height:230px;position:absolute;left:324px;top:59px;background-color:#00ff00;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#hitareac{width:107px;height:230px;position:absolute;left:555px;top:59px;background-color:#00ff00;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#hitaread{width:107px;height:230px;position:absolute;left:783px;top:59px;background-color:#00ff00;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#hitareae{width:107px;height:230px;position:absolute;left:96px;top:236px;background-color:#00ff00;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#hitareaf{width:107px;height:230px;position:absolute;left:324px;top:236px;background-color:#00ff00;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#hitareag{width:107px;height:230px;position:absolute;left:555px;top:236px;background-color:#00ff00;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#hitareah{width:107px;height:230px;position:absolute;left:783px;top:236px;background-color:#00ff00;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*迫る首*/
+#neckneara{width:242px;height:290px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#necknearb{width:242px;height:290px;position:absolute;left:242px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#necknearc{width:242px;height:290px;position:absolute;left:486px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckneard{width:242px;height:290px;position:absolute;left:728px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckneare{width:242px;height:290px;position:absolute;left:0px;top:177px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#necknearf{width:242px;height:290px;position:absolute;left:242px;top:177px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#necknearg{width:242px;height:290px;position:absolute;left:486px;top:177px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#necknearh{width:242px;height:290px;position:absolute;left:728px;top:177px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*迫る首ヒットエリア*/
+#neckhita{width:171px;height:180px;position:absolute;left:34px;top:36px;background-color:#00ff00;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckhitb{width:171px;height:180px;position:absolute;left:276px;top:36px;background-color:#00ff00;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckhitc{width:171px;height:180px;position:absolute;left:520px;top:36px;background-color:#00ff00;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckhitd{width:171px;height:180px;position:absolute;left:762px;top:36px;background-color:#00ff00;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckhite{width:171px;height:180px;position:absolute;left:34px;top:213px;background-color:#00ff00;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckhitf{width:171px;height:180px;position:absolute;left:276px;top:213px;background-color:#00ff00;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckhitg{width:171px;height:180px;position:absolute;left:520px;top:213px;background-color:#00ff00;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckhith{width:171px;height:180px;position:absolute;left:762px;top:213px;background-color:#00ff00;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*迫る首斬られる*/
+#neckbreaka{width:242px;height:290px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckbreakb{width:242px;height:290px;position:absolute;left:242px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckbreakc{width:242px;height:290px;position:absolute;left:486px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckbreakd{width:242px;height:290px;position:absolute;left:728px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckbreake{width:242px;height:290px;position:absolute;left:0px;top:177px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckbreakf{width:242px;height:290px;position:absolute;left:242px;top:177px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckbreakg{width:242px;height:290px;position:absolute;left:486px;top:177px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckbreakh{width:242px;height:290px;position:absolute;left:728px;top:177px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*スタートボタン*/
+#startbt{width:166px;height:172px;position:absolute;left:409px;bottom:0px;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*時間＆討伐数表示*/
+#limitmoji{
+    font-size:18px;color:#ffffff;font-weight:bold;
+    margin: 0px;padding: 0px;line-height: 1em;
+    position:absolute;left:150px;top:10px;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#toubatsumoji{
+    font-size:18px;color:#ffffff;font-weight:bold;
+    margin: 0px;padding: 0px;line-height: 1em;
+    position:absolute;left:20px;top:10px;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+
+#bodyup{width:166px;height:399px;position:absolute;left:410px;bottom:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#faceup1{width:416px;height:446px;position:absolute;left:277px;bottom:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#faceup2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#faceup3{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#gameover{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#blackout{width:970px;height:580px;position:absolute;left:0px;top:0px;background-color:#000000;opacity:0.2;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<!--/*
+<audio id="kiruse" preload="auto">
+<source src="pse/janenedamage.wav" type="audio/wav">
+<source src="pse/janenedamage.mp3" type="audio/mp3">
+</audio>
+
+<audio id="takawaraikoe" preload="auto">
+<source src="pse/takawarai.wav" type="audio/wav">
+<source src="pse/takawarai.mp3" type="audio/mp3">
+</audio>
+
+<audio id="syoujyokoe" preload="auto">
+<source src="pse/syoujyo.wav" type="audio/wav">
+<source src="pse/syoujyo.mp3" type="audio/mp3">
+</audio>
+
+<audio id="fonfase" preload="auto">
+<source src="pse/fanfare.wav" type="audio/wav">
+<source src="pse/fanfare.mp3" type="audio/mp3">
+</audio>
+*/-->
+
+<div id="d1">
+<img src="pimg/ichimatsu1/back.jpg"id="back">
+<!--★★★★★★★★★★★★★★★雛壇バック★★★★★★★★★★★★★★★-->
+<img src="pimg/ichimatsu1/hinadanmiddle.png"id="hinadanb">
+<!--上段左から1-->
+<img src="pimg/ichimatsu1/ningyou1.png"id="ningyou1a">
+<img src="pimg/ichimatsu1/ningyou2.png"id="ningyou2a">
+<img src="pimg/ichimatsu1/ningyou3.png"id="ningyou3a">
+<img src="pimg/ichimatsu1/ningyou4.png"id="ningyou4a">
+<img src="pimg/ichimatsu1/ningyou5.png"id="ningyou5a">
+<img src="pimg/ichimatsu1/ndeatha.gif"id="ndeatha">
+<div id="hitareaa"></div>
+<!--上段左から2-->
+<img src="pimg/ichimatsu1/ningyou1.png"id="ningyou1b">
+<img src="pimg/ichimatsu1/ningyou2.png"id="ningyou2b">
+<img src="pimg/ichimatsu1/ningyou3.png"id="ningyou3b">
+<img src="pimg/ichimatsu1/ningyou4.png"id="ningyou4b">
+<img src="pimg/ichimatsu1/ningyou5.png"id="ningyou5b">
+<img src="pimg/ichimatsu1/ndeathb.gif"id="ndeathb">
+<div id="hitareab"></div>
+<!--上段左から3-->
+<img src="pimg/ichimatsu1/ningyou1.png"id="ningyou1c">
+<img src="pimg/ichimatsu1/ningyou2.png"id="ningyou2c">
+<img src="pimg/ichimatsu1/ningyou3.png"id="ningyou3c">
+<img src="pimg/ichimatsu1/ningyou4.png"id="ningyou4c">
+<img src="pimg/ichimatsu1/ningyou5.png"id="ningyou5c">
+<img src="pimg/ichimatsu1/ndeathc.gif"id="ndeathc">
+<div id="hitareac"></div>
+<!--上段左から4-->
+<img src="pimg/ichimatsu1/ningyou1.png"id="ningyou1d">
+<img src="pimg/ichimatsu1/ningyou2.png"id="ningyou2d">
+<img src="pimg/ichimatsu1/ningyou3.png"id="ningyou3d">
+<img src="pimg/ichimatsu1/ningyou4.png"id="ningyou4d">
+<img src="pimg/ichimatsu1/ningyou5.png"id="ningyou5d">
+<img src="pimg/ichimatsu1/ndeathd.gif"id="ndeathd">
+<div id="hitaread"></div>
+<!--★★★★★★★★★★★★★★★雛壇ミドル★★★★★★★★★★★★★★★-->
+<img src="pimg/ichimatsu1/hinadanmiddle.png"id="hinadanm">
+<!--下段左から1-->
+<img src="pimg/ichimatsu1/ningyou1.png"id="ningyou1e">
+<img src="pimg/ichimatsu1/ningyou2.png"id="ningyou2e">
+<img src="pimg/ichimatsu1/ningyou3.png"id="ningyou3e">
+<img src="pimg/ichimatsu1/ningyou4.png"id="ningyou4e">
+<img src="pimg/ichimatsu1/ningyou5.png"id="ningyou5e">
+<img src="pimg/ichimatsu1/ndeathe.gif"id="ndeathe">
+<div id="hitareae"></div>
+<!--下段左から2-->
+<img src="pimg/ichimatsu1/ningyou1.png"id="ningyou1f">
+<img src="pimg/ichimatsu1/ningyou2.png"id="ningyou2f">
+<img src="pimg/ichimatsu1/ningyou3.png"id="ningyou3f">
+<img src="pimg/ichimatsu1/ningyou4.png"id="ningyou4f">
+<img src="pimg/ichimatsu1/ningyou5.png"id="ningyou5f">
+<img src="pimg/ichimatsu1/ndeathf.gif"id="ndeathf">
+<div id="hitareaf"></div>
+<!--下段左から3-->
+<img src="pimg/ichimatsu1/ningyou1.png"id="ningyou1g">
+<img src="pimg/ichimatsu1/ningyou2.png"id="ningyou2g">
+<img src="pimg/ichimatsu1/ningyou3.png"id="ningyou3g">
+<img src="pimg/ichimatsu1/ningyou4.png"id="ningyou4g">
+<img src="pimg/ichimatsu1/ningyou5.png"id="ningyou5g">
+<img src="pimg/ichimatsu1/ndeathg.gif"id="ndeathg">
+<div id="hitareag"></div>
+<!--下段左から4-->
+<img src="pimg/ichimatsu1/ningyou1.png"id="ningyou1h">
+<img src="pimg/ichimatsu1/ningyou2.png"id="ningyou2h">
+<img src="pimg/ichimatsu1/ningyou3.png"id="ningyou3h">
+<img src="pimg/ichimatsu1/ningyou4.png"id="ningyou4h">
+<img src="pimg/ichimatsu1/ningyou5.png"id="ningyou5h">
+<img src="pimg/ichimatsu1/ndeathh.gif"id="ndeathh">
+<div id="hitareah"></div>
+<!--★★★★★★★★★★★★★★★雛壇フロント★★★★★★★★★★★★★★★-->
+<img src="pimg/ichimatsu1/hinadanfront.png"id="hinadanf">
+<!--迫る首-->
+<img src="pimg/ichimatsu1/neckneara.gif"id="neckneara">
+<img src="pimg/ichimatsu1/necknearb.gif"id="necknearb">
+<img src="pimg/ichimatsu1/necknearc.gif"id="necknearc">
+<img src="pimg/ichimatsu1/neckneard.gif"id="neckneard">
+<img src="pimg/ichimatsu1/neckneare.gif"id="neckneare">
+<img src="pimg/ichimatsu1/necknearf.gif"id="necknearf">
+<img src="pimg/ichimatsu1/necknearg.gif"id="necknearg">
+<img src="pimg/ichimatsu1/necknearh.gif"id="necknearh">
+<!--迫る首ヒットエリア-->
+<div id="neckhita"></div>
+<div id="neckhitb"></div>
+<div id="neckhitc"></div>
+<div id="neckhitd"></div>
+<div id="neckhite"></div>
+<div id="neckhitf"></div>
+<div id="neckhitg"></div>
+<div id="neckhith"></div>
+<!--迫る首斬られる-->
+<img src="pimg/ichimatsu1/neckbreaka.gif"id="neckbreaka">
+<img src="pimg/ichimatsu1/neckbreakb.gif"id="neckbreakb">
+<img src="pimg/ichimatsu1/neckbreakc.gif"id="neckbreakc">
+<img src="pimg/ichimatsu1/neckbreakd.gif"id="neckbreakd">
+<img src="pimg/ichimatsu1/neckbreake.gif"id="neckbreake">
+<img src="pimg/ichimatsu1/neckbreakf.gif"id="neckbreakf">
+<img src="pimg/ichimatsu1/neckbreakg.gif"id="neckbreakg">
+<img src="pimg/ichimatsu1/neckbreakh.gif"id="neckbreakh">
+<!--スタートボタン-->
+<img src="pimg/ichimatsu1/startbt.png"id="startbt">
+<!--タイムリミット&討伐数表示-->
+<p id="limitmoji"></p>
+<p id="toubatsumoji"></p>
+<!--ゲームオーバー演出-->
+<img src="pimg/ichimatsu1/upupup.gif"id="bodyup">
+<img src="pimg/ichimatsu1/ningyouup1.png"id="faceup1">
+<img src="pimg/ichimatsu1/ningyouup2.png"id="faceup2">
+<img src="pimg/ichimatsu1/ningyouup3.png"id="faceup3">
+<img src="pimg/gameover.jpg"id="gameover">
+<div id="blackout"></div>
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+/*★には同じ数字、☆には同じスペル(変数、関数)、◇にはファイルのパスを入力
+let sampleSource★ = '';
+async function decodeSe★(){
+    const response★ = await fetch("◇◇◇");
+    const arrayBuffer★ = await response★.arrayBuffer();
+    const audioBuffer★ = await ctx.decodeAudioData(arrayBuffer★);
+    return audioBuffer★;
+}
+function playSe★(ctx,audioBuffer★){
+    sampleSource★ = ctx.createBufferSource();
+    sampleSource★.buffer = audioBuffer★;
+    sampleSource★.connect(ctx.destination);
+    sampleSource★.start();
+}
+async function se☆Play(){
+    const se☆ = await decodeSe★();
+    playSe★(ctx,se☆);
+}
+async function se☆Stop(){
+    sampleSource★?.stop();
+}
+*/
+
+/*
+<audio id="kiruse" preload="auto">
+<source src="pse/janenedamage.mp3" type="audio/mp3">
+</audio>
+
+<audio id="takawaraikoe" preload="auto">
+<source src="pse/takawarai.mp3" type="audio/mp3">
+</audio>
+
+<audio id="syoujyokoe" preload="auto">
+<source src="pse/syoujyo.mp3" type="audio/mp3">
+</audio>
+
+<audio id="fonfase" preload="auto">
+<source src="pse/fanfare.mp3" type="audio/mp3">
+</audio>
+*/
+
+/*★★★★★★★★★★★★★★★★★効果音のセット★★★★★★★★★★★★★★★★★★★★*/
+window.AudioContext = window.AudioContext||window.webkitAudioContext;
+const ctx = new AudioContext();
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource1 = '';
+async function decodeSe1(){
+    const response1 = await fetch("pse/janenedamage.mp3");
+    const arrayBuffer1 = await response1.arrayBuffer();
+    const audioBuffer1 = await ctx.decodeAudioData(arrayBuffer1);
+    return audioBuffer1;
+}
+function playSe1(ctx,audioBuffer1){
+    sampleSource1 = ctx.createBufferSource();
+    sampleSource1.buffer = audioBuffer1;
+    sampleSource1.connect(ctx.destination);
+    sampleSource1.start();
+}
+async function sekiruPlay(){
+    const sekiru = await decodeSe1();
+    playSe1(ctx,sekiru);
+}
+async function sekiruStop(){
+    sampleSource1?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let waraiplaying = false;
+let sampleSource2 = '';
+async function decodeSe2(){
+    const response2 = await fetch("pse/takawarai.mp3");
+    const arrayBuffer2 = await response2.arrayBuffer();
+    const audioBuffer2 = await ctx.decodeAudioData(arrayBuffer2);
+    return audioBuffer2;
+}
+function playSe2(ctx,audioBuffer2){
+    sampleSource2 = ctx.createBufferSource();
+    sampleSource2.buffer = audioBuffer2;
+    sampleSource2.connect(ctx.destination);
+    sampleSource2.start();
+    waraiplaying = true;
+}
+async function setakawaraikoePlay(){
+    const setakawaraikoe = await decodeSe2();
+    playSe2(ctx,setakawaraikoe);
+}
+async function setakawaraikoeStop(){
+    sampleSource2?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource3 = '';
+async function decodeSe3(){
+    const response3 = await fetch("pse/syoujyo.mp3");
+    const arrayBuffer3 = await response3.arrayBuffer();
+    const audioBuffer3 = await ctx.decodeAudioData(arrayBuffer3);
+    return audioBuffer3;
+}
+function playSe3(ctx,audioBuffer3){
+    sampleSource3 = ctx.createBufferSource();
+    sampleSource3.buffer = audioBuffer3;
+    sampleSource3.connect(ctx.destination);
+    sampleSource3.start();
+}
+async function sesyoujyokoePlay(){
+    const sesyoujyokoe = await decodeSe3();
+    playSe3(ctx,sesyoujyokoe);
+}
+async function sesyoujyokoeStop(){
+    sampleSource3?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource4 = '';
+async function decodeSe4(){
+    const response4 = await fetch("pse/fanfare.mp3");
+    const arrayBuffer4 = await response4.arrayBuffer();
+    const audioBuffer4 = await ctx.decodeAudioData(arrayBuffer4);
+    return audioBuffer4;
+}
+function playSe4(ctx,audioBuffer4){
+    sampleSource4 = ctx.createBufferSource();
+    sampleSource4.buffer = audioBuffer4;
+    sampleSource4.connect(ctx.destination);
+    sampleSource4.start();
+}
+async function sefonfaPlay(){
+    const sefonfa = await decodeSe4();
+    playSe4(ctx,sefonfa);
+}
+async function sefonfaStop(){
+    sampleSource4?.stop();
+}
+
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let body = document.getElementById('body');
+let d1 = document.getElementById('d1');
+let back = document.getElementById('back');
+let hinadanb = document.getElementById('hinadanb');
+let hinadanm = document.getElementById('hinadanm');
+let hinadanf = document.getElementById('hinadanf');
+/*上段左から1*/
+let ningyou1a = document.getElementById('ningyou1a');
+let ningyou2a = document.getElementById('ningyou2a');
+let ningyou3a = document.getElementById('ningyou3a');
+let ningyou4a = document.getElementById('ningyou4a');
+let ningyou5a = document.getElementById('ningyou5a');
+let ndeatha = document.getElementById('ndeatha');
+/*上段左から2*/
+let ningyou1b = document.getElementById('ningyou1b');
+let ningyou2b = document.getElementById('ningyou2b');
+let ningyou3b = document.getElementById('ningyou3b');
+let ningyou4b = document.getElementById('ningyou4b');
+let ningyou5b = document.getElementById('ningyou5b');
+/*上段左から3*/
+let ningyou1c = document.getElementById('ningyou1c');
+let ningyou2c = document.getElementById('ningyou2c');
+let ningyou3c = document.getElementById('ningyou3c');
+let ningyou4c = document.getElementById('ningyou4c');
+let ningyou5c = document.getElementById('ningyou5c');
+/*上段左から4*/
+let ningyou1d = document.getElementById('ningyou1d');
+let ningyou2d = document.getElementById('ningyou2d');
+let ningyou3d = document.getElementById('ningyou3d');
+let ningyou4d = document.getElementById('ningyou4d');
+let ningyou5d = document.getElementById('ningyou5d');
+/*下段左から1*/
+let ningyou1e = document.getElementById('ningyou1e');
+let ningyou2e = document.getElementById('ningyou2e');
+let ningyou3e = document.getElementById('ningyou3e');
+let ningyou4e = document.getElementById('ningyou4e');
+let ningyou5e = document.getElementById('ningyou5e');
+/*下段左から2*/
+let ningyou1f = document.getElementById('ningyou1f');
+let ningyou2f = document.getElementById('ningyou2f');
+let ningyou3f = document.getElementById('ningyou3f');
+let ningyou4f = document.getElementById('ningyou4f');
+let ningyou5f = document.getElementById('ningyou5f');
+/*下段左から3*/
+let ningyou1g = document.getElementById('ningyou1g');
+let ningyou2g = document.getElementById('ningyou2g');
+let ningyou3g = document.getElementById('ningyou3g');
+let ningyou4g = document.getElementById('ningyou4g');
+let ningyou5g = document.getElementById('ningyou5g');
+/*下段左から4*/
+let ningyou1h = document.getElementById('ningyou1h');
+let ningyou2h = document.getElementById('ningyou2h');
+let ningyou3h = document.getElementById('ningyou3h');
+let ningyou4h = document.getElementById('ningyou4h');
+let ningyou5h = document.getElementById('ningyou5h');
+/*人形のヒットエリア*/
+let hitareaa = document.getElementById('hitareaa');
+let hitareab = document.getElementById('hitareab');
+let hitareac = document.getElementById('hitareac');
+let hitaread = document.getElementById('hitaread');
+let hitareae = document.getElementById('hitareae');
+let hitareaf = document.getElementById('hitareaf');
+let hitareag = document.getElementById('hitareag');
+let hitareah = document.getElementById('hitareah');
+/*迫る首*/
+let neckneara = document.getElementById('neckneara');
+let necknearb = document.getElementById('necknearb');
+let necknearc = document.getElementById('necknearc');
+let neckneard = document.getElementById('neckneard');
+let neckneare = document.getElementById('neckneare');
+let necknearf = document.getElementById('necknearf');
+let necknearg = document.getElementById('necknearg');
+let necknearh = document.getElementById('necknearh');
+/*迫る首ヒットエリア*/
+let neckhita = document.getElementById('neckhita');
+let neckhitb = document.getElementById('neckhitb');
+let neckhitc = document.getElementById('neckhitc');
+let neckhitd = document.getElementById('neckhitd');
+let neckhite = document.getElementById('neckhite');
+let neckhitf = document.getElementById('neckhitf');
+let neckhitg = document.getElementById('neckhitg');
+let neckhith = document.getElementById('neckhith');
+/*迫る首斬られる*/
+let neckbreaka = document.getElementById('neckbreaka');
+let neckbreakb = document.getElementById('neckbreakb');
+let neckbreakc = document.getElementById('neckbreakc');
+let neckbreakd = document.getElementById('neckbreakd');
+let neckbreake = document.getElementById('neckbreake');
+let neckbreakf = document.getElementById('neckbreakf');
+let neckbreakg = document.getElementById('neckbreakg');
+let neckbreakh = document.getElementById('neckbreakh');
+/*スタートボタン*/
+let startbt = document.getElementById('startbt');
+/*時間&討伐数表示*/
+let limitmoji = document.getElementById('limitmoji');
+let toubatsumoji = document.getElementById('toubatsumoji');
+/*ゲームオーバー演出*/
+let bodyup = document.getElementById('bodyup');
+let faceup1 = document.getElementById('faceup1');
+let faceup2 = document.getElementById('faceup2');
+let faceup3 = document.getElementById('faceup3');
+let gameover = document.getElementById('gameover');
+let blackout = document.getElementById('blackout');
+/*効果音*/
+//let sekiru = document.getElementById('kiruse');
+//let koesyoujyo = document.getElementById('syoujyokoe');
+//let koetakawarai = document.getElementById('takawaraikoe');
+//let sefonfa = document.getElementById('fonfase');
+//load(); play(); pause();
+/*スコア*/
+let fps1 = 0;
+let fps2 = 0;
+let fps3 = 0;
+let fps4 = 0;
+let fps5 = 0;
+let fps6 = 0;
+let fps7 = 0;
+let fps8 = 0;
+let fps9 = 0;
+let fps10 = 0;
+let fps11 = 0;
+let fps12 = 0;
+let fps13 = 0;
+let fps14 = 0;
+let fps15 = 0;
+let fps16 = 0;
+let fps17 = 0;
+let fps18 = 0;
+//斬られるに使うfps
+let fps19 = 0;
+let fps20 = 0;
+let fps21 = 0;
+let fps22 = 0;
+let fps23 = 0;
+let fps24 = 0;
+let fps25 = 0;
+let fps26 = 0;
+//その他のfps
+let fps27 = 0;
+let fps28 = 0;
+let fps29 = 0;
+let fps30 = 0;
+let fps31 = 0;
+let fps32 = 0;
+let fps33 = 0;
+let fps34 = 0;
+//スコアとかタイマー
+let point = 0;
+let timecount = 30;
+let timerId1 = '';
+let timerId2 = '';
+let timerId3 = '';
+let timerId4 = '';
+let timerId5 = '';
+let timerId6 = '';
+let timerId7 = '';
+let timerId8 = '';
+
+function toubatsuCount(){
+    point++;
+    if(point>=0 && point<=9){
+        toubatsumoji.innerText = '0'+point+'体/10体';
+    }else if(point>=10){
+        toubatsumoji.innerText = point+'体/10体';
+    }
+}
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■人形の動きA ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+function ningyouMoveA(){
+    fps1 = 0;
+    timerId1 = setInterval(function(){
+        fps1++;
+        switch(fps1){
+            case 1:
+            hitareaa.style.display = 'inline';
+            ningyou1a.style.display = 'inline';
+            break;
+            case 2:
+            ningyou1a.style.display = 'none';
+            ningyou2a.style.display = 'inline';
+            break;
+            case 3:
+            ningyou2a.style.display = 'none';
+            ningyou3a.style.display = 'inline';
+            break;
+            case 4:
+            ningyou3a.style.display = 'none';
+            ningyou4a.style.display = 'inline';
+            break;
+            case 5:
+            ningyou4a.style.display = 'none';
+            ningyou5a.style.display = 'inline';
+            break;
+            case 6:
+            ningyou5a.style.display = 'none';
+            ningyou4a.style.display = 'inline';
+            break;
+            case 7:
+            ningyou4a.style.display = 'none';
+            ningyou3a.style.display = 'inline';
+            break;
+            case 8:
+            ningyou3a.style.display = 'none';
+            ningyou2a.style.display = 'inline';
+            break;
+            case 9:
+            ningyou2a.style.display = 'none';
+            ningyou1a.style.display = 'inline';
+            break;
+            case 10:
+            ningyou1a.style.display = 'none';
+            hitareaa.style.display = 'none';
+            clearInterval(timerId1);
+            break;
+        }
+    },90);
+}
+/*上段左から1を斬る*/
+hitareaa.addEventListener('mouseover',function(){hitareaa.style.cursor='pointer';});//■■aを2つ変える
+hitareaa.addEventListener('click',function(){//■■aを変える
+    //sekiru.load();
+    //sekiru.play();
+    sekiruPlay();
+    hitareaa.style.display = 'none';//■■aを変える
+    clearInterval(timerId1);//☆☆数字を変える
+    ningyou1a.style.display = 'none';//■■aを変える
+    ningyou2a.style.display = 'none';//■■aを変える
+    ningyou3a.style.display = 'none';//■■aを変える
+    ningyou4a.style.display = 'none';//■■aを変える
+    ningyou5a.style.display = 'none';//■■aを変える
+    ndeatha.style.display = 'inline';//■■aを変える
+    fps11 = 0;//★★数字を変える
+    let timerId11 = setInterval(function(){//★★数字を変える
+        fps11++;//★★数字を変える
+        switch(fps11){//★★数字を変える
+            case 8:
+            //koetakawarai.load();
+            //koetakawarai.play();
+            setakawaraikoePlay();
+            ndeatha.style.display = 'none';//■■aを変える
+            neckneara.style.display = 'inline';//■■aを変える
+            neckhita.style.display = 'inline';//■■aを変える
+            break;
+            case 16:
+            neckneara.style.display = 'none';//■■aを変える
+            neckhita.style.display = 'none';//■■aを変える
+            clearInterval(timerId11);//★★数字を変える
+            break;
+        }
+    },60);
+});
+neckhita.addEventListener('mouseover',function(){neckhita.style.cursor = 'pointer';});//■■aを2つ変える
+neckhita.addEventListener('click',function(){//■■aを変える
+    neckhita.style.display = 'none';//■■aを変える
+    toubatsuCount();
+    //sekiru.load();
+    //sekiru.play();
+    //koetakawarai.pause();
+    //koesyoujyo.load();
+    //koesyoujyo.play();
+    if(waraiplaying===true){setakawaraikoeStop();}
+    sekiruPlay();
+    sesyoujyokoePlay();
+    neckbreaka.style.display ='inline';//■■aを変える
+    fps19 = 0;//★☆★数字を変える
+    let timerId19 = setInterval(function(){//★☆★数字を変える
+        fps19++;//★☆★数字を変える
+        if(fps19>=6){//★☆★数字を変える
+            neckbreaka.style.display ='none';//■■aを変える
+            clearInterval(timerId19);//★☆★数字を変える
+        }
+    },60);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■人形の動きB ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+function ningyouMoveB(){
+    fps2 = 0;
+    timerId2 = setInterval(function(){
+        fps2++;
+        switch(fps2){
+            case 1:
+            hitareab.style.display = 'inline';
+            ningyou1b.style.display = 'inline';
+            break;
+            case 2:
+            ningyou1b.style.display = 'none';
+            ningyou2b.style.display = 'inline';
+            break;
+            case 3:
+            ningyou2b.style.display = 'none';
+            ningyou3b.style.display = 'inline';
+            break;
+            case 4:
+            ningyou3b.style.display = 'none';
+            ningyou4b.style.display = 'inline';
+            break;
+            case 5:
+            ningyou4b.style.display = 'none';
+            ningyou5b.style.display = 'inline';
+            break;
+            case 6:
+            ningyou5b.style.display = 'none';
+            ningyou4b.style.display = 'inline';
+            break;
+            case 7:
+            ningyou4b.style.display = 'none';
+            ningyou3b.style.display = 'inline';
+            break;
+            case 8:
+            ningyou3b.style.display = 'none';
+            ningyou2b.style.display = 'inline';
+            break;
+            case 9:
+            ningyou2b.style.display = 'none';
+            ningyou1b.style.display = 'inline';
+            break;
+            case 10:
+            ningyou1b.style.display = 'none';
+            hitareab.style.display = 'none';
+            clearInterval(timerId2);
+            break;
+        }
+    },90);
+}
+
+/*上段左から2を斬る*/
+hitareab.addEventListener('mouseover',function(){hitareab.style.cursor='pointer';});//■■aを2つ変える
+hitareab.addEventListener('click',function(){//■■aを変える
+    //sekiru.load();
+    //sekiru.play();
+    sekiruPlay();
+    hitareab.style.display = 'none';//■■aを変える
+    clearInterval(timerId2);//☆☆数字を変える
+    ningyou1b.style.display = 'none';//■■aを変える
+    ningyou2b.style.display = 'none';//■■aを変える
+    ningyou3b.style.display = 'none';//■■aを変える
+    ningyou4b.style.display = 'none';//■■aを変える
+    ningyou5b.style.display = 'none';//■■aを変える
+    ndeathb.style.display = 'inline';//■■aを変える
+    fps12 = 0;//★★数字を変える
+    let timerId12 = setInterval(function(){//★★数字を変える
+        fps12++;//★★数字を変える
+        switch(fps12){//★★数字を変える
+            case 8:
+            //koetakawarai.load();
+            //koetakawarai.play();
+            setakawaraikoePlay();
+            ndeathb.style.display = 'none';//■■aを変える
+            necknearb.style.display = 'inline';//■■aを変える
+            neckhitb.style.display = 'inline';//■■aを変える
+            break;
+            case 16:
+            necknearb.style.display = 'none';//■■aを変える
+            neckhitb.style.display = 'none';//■■aを変える
+            clearInterval(timerId12);//★★数字を変える
+            break;
+        }
+    },60);
+});
+neckhitb.addEventListener('mouseover',function(){neckhitb.style.cursor = 'pointer';});//■■aを2つ変える
+neckhitb.addEventListener('click',function(){//■■aを変える
+    neckhitb.style.display = 'none';//■■aを変える
+    toubatsuCount();
+    //sekiru.load();
+    //sekiru.play();
+    //koetakawarai.pause();
+    //koesyoujyo.load();
+    //koesyoujyo.play();
+    if(waraiplaying===true){setakawaraikoeStop();}
+    sekiruPlay();
+    sesyoujyokoePlay();
+    neckbreakb.style.display ='inline';//■■aを変える
+    fps20 = 0;//★☆★数字を変える
+    let timerId20 = setInterval(function(){//★☆★数字を変える
+        fps20++;//★☆★数字を変える
+        if(fps20>=6){//★☆★数字を変える
+            neckbreakb.style.display ='none';//■■aを変える
+            clearInterval(timerId20);//★☆★数字を変える
+        }
+    },60);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■人形の動きC ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+function ningyouMoveC(){
+    fps3 = 0;
+    timerId3 = setInterval(function(){
+        fps3++;
+        switch(fps3){
+            case 1:
+            hitareac.style.display = 'inline';
+            ningyou1c.style.display = 'inline';
+            break;
+            case 2:
+            ningyou1c.style.display = 'none';
+            ningyou2c.style.display = 'inline';
+            break;
+            case 3:
+            ningyou2c.style.display = 'none';
+            ningyou3c.style.display = 'inline';
+            break;
+            case 4:
+            ningyou3c.style.display = 'none';
+            ningyou4c.style.display = 'inline';
+            break;
+            case 5:
+            ningyou4c.style.display = 'none';
+            ningyou5c.style.display = 'inline';
+            break;
+            case 6:
+            ningyou5c.style.display = 'none';
+            ningyou4c.style.display = 'inline';
+            break;
+            case 7:
+            ningyou4c.style.display = 'none';
+            ningyou3c.style.display = 'inline';
+            break;
+            case 8:
+            ningyou3c.style.display = 'none';
+            ningyou2c.style.display = 'inline';
+            break;
+            case 9:
+            ningyou2c.style.display = 'none';
+            ningyou1c.style.display = 'inline';
+            break;
+            case 10:
+            ningyou1c.style.display = 'none';
+            hitareac.style.display = 'none';
+            clearInterval(timerId3);
+            break;
+        }
+    },90);
+}
+
+/*上段左から3を斬る*/
+hitareac.addEventListener('mouseover',function(){hitareac.style.cursor='pointer';});//■■aを2つ変える
+hitareac.addEventListener('click',function(){//■■aを変える
+    //sekiru.load();
+    //sekiru.play();
+    sekiruPlay();
+    hitareac.style.display = 'none';//■■aを変える
+    clearInterval(timerId3);//☆☆数字を変える
+    ningyou1c.style.display = 'none';//■■aを変える
+    ningyou2c.style.display = 'none';//■■aを変える
+    ningyou3c.style.display = 'none';//■■aを変える
+    ningyou4c.style.display = 'none';//■■aを変える
+    ningyou5c.style.display = 'none';//■■aを変える
+    ndeathc.style.display = 'inline';//■■aを変える
+    fps13 = 0;//★★数字を変える
+    let timerId13 = setInterval(function(){//★★数字を変える
+        fps13++;//★★数字を変える
+        switch(fps13){//★★数字を変える
+            case 8:
+            //koetakawarai.load();
+            //koetakawarai.play();
+            setakawaraikoePlay();
+            ndeathc.style.display = 'none';//■■aを変える
+            necknearc.style.display = 'inline';//■■aを変える
+            neckhitc.style.display = 'inline';//■■aを変える
+            break;
+            case 16:
+            necknearc.style.display = 'none';//■■aを変える
+            neckhitc.style.display = 'none';//■■aを変える
+            clearInterval(timerId13);//★★数字を変える
+            break;
+        }
+    },60);
+});
+neckhitc.addEventListener('mouseover',function(){neckhitc.style.cursor = 'pointer';});//■■aを2つ変える
+neckhitc.addEventListener('click',function(){//■■aを変える
+    neckhitc.style.display = 'none';//■■aを変える
+    toubatsuCount();
+    //sekiru.load();
+    //sekiru.play();
+    //koetakawarai.pause();
+    //koesyoujyo.load();
+    //koesyoujyo.play();
+    if(waraiplaying===true){setakawaraikoeStop();}
+    sekiruPlay();
+    sesyoujyokoePlay();
+    neckbreakc.style.display ='inline';//■■aを変える
+    fps21 = 0;//★☆★数字を変える
+    let timerId21 = setInterval(function(){//★☆★数字を変える
+        fps21++;//★☆★数字を変える
+        if(fps21>=6){//★☆★数字を変える
+            neckbreakc.style.display ='none';//■■aを変える
+            clearInterval(timerId21);//★☆★数字を変える
+        }
+    },60);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■人形の動きD ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+function ningyouMoveD(){
+    fps4 = 0;
+    timerId4 = setInterval(function(){
+        fps4++;
+        switch(fps4){
+            case 1:
+            hitaread.style.display = 'inline';
+            ningyou1d.style.display = 'inline';
+            break;
+            case 2:
+            ningyou1d.style.display = 'none';
+            ningyou2d.style.display = 'inline';
+            break;
+            case 3:
+            ningyou2d.style.display = 'none';
+            ningyou3d.style.display = 'inline';
+            break;
+            case 4:
+            ningyou3d.style.display = 'none';
+            ningyou4d.style.display = 'inline';
+            break;
+            case 5:
+            ningyou4d.style.display = 'none';
+            ningyou5d.style.display = 'inline';
+            break;
+            case 6:
+            ningyou5d.style.display = 'none';
+            ningyou4d.style.display = 'inline';
+            break;
+            case 7:
+            ningyou4d.style.display = 'none';
+            ningyou3d.style.display = 'inline';
+            break;
+            case 8:
+            ningyou3d.style.display = 'none';
+            ningyou2d.style.display = 'inline';
+            break;
+            case 9:
+            ningyou2d.style.display = 'none';
+            ningyou1d.style.display = 'inline';
+            break;
+            case 10:
+            ningyou1d.style.display = 'none';
+            hitaread.style.display = 'none';
+            clearInterval(timerId4);
+            break;
+        }
+    },90);
+}
+
+/*上段左から4を斬る*/
+hitaread.addEventListener('mouseover',function(){hitaread.style.cursor='pointer';});//■■aを2つ変える
+hitaread.addEventListener('click',function(){//■■aを変える
+    //sekiru.load();
+    //sekiru.play();
+    sekiruPlay();
+    hitaread.style.display = 'none';//■■aを変える
+    clearInterval(timerId4);//☆☆数字を変える
+    ningyou1d.style.display = 'none';//■■aを変える
+    ningyou2d.style.display = 'none';//■■aを変える
+    ningyou3d.style.display = 'none';//■■aを変える
+    ningyou4d.style.display = 'none';//■■aを変える
+    ningyou5d.style.display = 'none';//■■aを変える
+    ndeathd.style.display = 'inline';//■■aを変える
+    fps14 = 0;//★★数字を変える
+    let timerId14 = setInterval(function(){//★★数字を変える
+        fps14++;//★★数字を変える
+        switch(fps14){//★★数字を変える
+            case 8:
+            //koetakawarai.load();
+            //koetakawarai.play();
+            setakawaraikoePlay();
+            ndeathd.style.display = 'none';//■■aを変える
+            neckneard.style.display = 'inline';//■■aを変える
+            neckhitd.style.display = 'inline';//■■aを変える
+            break;
+            case 16:
+            neckneard.style.display = 'none';//■■aを変える
+            neckhitd.style.display = 'none';//■■aを変える
+            clearInterval(timerId14);//★★数字を変える
+            break;
+        }
+    },60);
+});
+neckhitd.addEventListener('mouseover',function(){neckhitd.style.cursor = 'pointer';});//■■aを2つ変える
+neckhitd.addEventListener('click',function(){//■■aを変える
+    neckhitd.style.display = 'none';//■■aを変える
+    toubatsuCount();
+    //sekiru.load();
+    //sekiru.play();
+    //koetakawarai.pause();
+    //koesyoujyo.load();
+    //koesyoujyo.play();
+    if(waraiplaying===true){setakawaraikoeStop();}
+    sekiruPlay();
+    sesyoujyokoePlay();
+    neckbreakd.style.display ='inline';//■■aを変える
+    fps22 = 0;//★☆★数字を変える
+    let timerId22 = setInterval(function(){//★☆★数字を変える
+        fps22++;//★☆★数字を変える
+        if(fps22>=6){//★☆★数字を変える
+            neckbreakd.style.display ='none';//■■aを変える
+            clearInterval(timerId22);//★☆★数字を変える
+        }
+    },60);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■人形の動きE ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+function ningyouMoveE(){
+    fps5 = 0;
+    timerId5 = setInterval(function(){
+        fps5++;
+        switch(fps5){
+            case 1:
+            hitareae.style.display = 'inline';
+            ningyou1e.style.display = 'inline';
+            break;
+            case 2:
+            ningyou1e.style.display = 'none';
+            ningyou2e.style.display = 'inline';
+            break;
+            case 3:
+            ningyou2e.style.display = 'none';
+            ningyou3e.style.display = 'inline';
+            break;
+            case 4:
+            ningyou3e.style.display = 'none';
+            ningyou4e.style.display = 'inline';
+            break;
+            case 5:
+            ningyou4e.style.display = 'none';
+            ningyou5e.style.display = 'inline';
+            break;
+            case 6:
+            ningyou5e.style.display = 'none';
+            ningyou4e.style.display = 'inline';
+            break;
+            case 7:
+            ningyou4e.style.display = 'none';
+            ningyou3e.style.display = 'inline';
+            break;
+            case 8:
+            ningyou3e.style.display = 'none';
+            ningyou2e.style.display = 'inline';
+            break;
+            case 9:
+            ningyou2e.style.display = 'none';
+            ningyou1e.style.display = 'inline';
+            break;
+            case 10:
+            ningyou1e.style.display = 'none';
+            hitareae.style.display = 'none';
+            clearInterval(timerId5);
+            break;
+        }
+    },90);
+}
+
+/*下段左から1を斬る*/
+hitareae.addEventListener('mouseover',function(){hitareae.style.cursor='pointer';});//■■aを2つ変える
+hitareae.addEventListener('click',function(){//■■aを変える
+    //sekiru.load();
+    //sekiru.play();
+    sekiruPlay();
+    hitareae.style.display = 'none';//■■aを変える
+    clearInterval(timerId5);//☆☆数字を変える
+    ningyou1e.style.display = 'none';//■■aを変える
+    ningyou2e.style.display = 'none';//■■aを変える
+    ningyou3e.style.display = 'none';//■■aを変える
+    ningyou4e.style.display = 'none';//■■aを変える
+    ningyou5e.style.display = 'none';//■■aを変える
+    ndeathe.style.display = 'inline';//■■aを変える
+    fps15 = 0;//★★数字を変える
+    let timerId15 = setInterval(function(){//★★数字を変える
+        fps15++;//★★数字を変える
+        switch(fps15){//★★数字を変える
+            case 8:
+            //koetakawarai.load();
+            //koetakawarai.play();
+            setakawaraikoePlay();
+            ndeathe.style.display = 'none';//■■aを変える
+            neckneare.style.display = 'inline';//■■aを変える
+            neckhite.style.display = 'inline';//■■aを変える
+            break;
+            case 16:
+            neckneare.style.display = 'none';//■■aを変える
+            neckhite.style.display = 'none';//■■aを変える
+            clearInterval(timerId15);//★★数字を変える
+            break;
+        }
+    },60);
+});
+neckhite.addEventListener('mouseover',function(){neckhite.style.cursor = 'pointer';});//■■aを2つ変える
+neckhite.addEventListener('click',function(){//■■aを変える
+    neckhite.style.display = 'none';//■■aを変える
+    toubatsuCount();
+    //sekiru.load();
+    //sekiru.play();
+    //koetakawarai.pause();
+    //koesyoujyo.load();
+    //koesyoujyo.play();
+    if(waraiplaying===true){setakawaraikoeStop();}
+    sekiruPlay();
+    sesyoujyokoePlay();
+    neckbreake.style.display ='inline';//■■aを変える
+    fps23 = 0;//★☆★数字を変える
+    let timerId23 = setInterval(function(){//★☆★数字を変える
+        fps23++;//★☆★数字を変える
+        if(fps23>=6){//★☆★数字を変える
+            neckbreake.style.display ='none';//■■aを変える
+            clearInterval(timerId23);//★☆★数字を変える
+        }
+    },60);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■人形の動きF ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+function ningyouMoveF(){
+    fps6 = 0;
+    timerId6 = setInterval(function(){
+        fps6++;
+        switch(fps6){
+            case 1:
+            hitareaf.style.display = 'inline';
+            ningyou1f.style.display = 'inline';
+            break;
+            case 2:
+            ningyou1f.style.display = 'none';
+            ningyou2f.style.display = 'inline';
+            break;
+            case 3:
+            ningyou2f.style.display = 'none';
+            ningyou3f.style.display = 'inline';
+            break;
+            case 4:
+            ningyou3f.style.display = 'none';
+            ningyou4f.style.display = 'inline';
+            break;
+            case 5:
+            ningyou4f.style.display = 'none';
+            ningyou5f.style.display = 'inline';
+            break;
+            case 6:
+            ningyou5f.style.display = 'none';
+            ningyou4f.style.display = 'inline';
+            break;
+            case 7:
+            ningyou4f.style.display = 'none';
+            ningyou3f.style.display = 'inline';
+            break;
+            case 8:
+            ningyou3f.style.display = 'none';
+            ningyou2f.style.display = 'inline';
+            break;
+            case 9:
+            ningyou2f.style.display = 'none';
+            ningyou1f.style.display = 'inline';
+            break;
+            case 10:
+            ningyou1f.style.display = 'none';
+            hitareaf.style.display = 'none';
+            clearInterval(timerId6);
+            break;
+        }
+    },90);
+}
+
+/*下段左から2を斬る*/
+hitareaf.addEventListener('mouseover',function(){hitareaf.style.cursor='pointer';});//■■aを2つ変える
+hitareaf.addEventListener('click',function(){//■■aを変える
+    //sekiru.load();
+    //sekiru.play();
+    sekiruPlay();
+    hitareaf.style.display = 'none';//■■aを変える
+    clearInterval(timerId6);//☆☆数字を変える
+    ningyou1f.style.display = 'none';//■■aを変える
+    ningyou2f.style.display = 'none';//■■aを変える
+    ningyou3f.style.display = 'none';//■■aを変える
+    ningyou4f.style.display = 'none';//■■aを変える
+    ningyou5f.style.display = 'none';//■■aを変える
+    ndeathf.style.display = 'inline';//■■aを変える
+    fps16 = 0;//★★数字を変える
+    let timerId16 = setInterval(function(){//★★数字を変える
+        fps16++;//★★数字を変える
+        switch(fps16){//★★数字を変える
+            case 8:
+            //koetakawarai.load();
+            //koetakawarai.play();
+            setakawaraikoePlay();
+            ndeathf.style.display = 'none';//■■aを変える
+            necknearf.style.display = 'inline';//■■aを変える
+            neckhitf.style.display = 'inline';//■■aを変える
+            break;
+            case 16:
+            necknearf.style.display = 'none';//■■aを変える
+            neckhitf.style.display = 'none';//■■aを変える
+            clearInterval(timerId16);//★★数字を変える
+            break;
+        }
+    },60);
+});
+neckhitf.addEventListener('mouseover',function(){neckhitf.style.cursor = 'pointer';});//■■aを2つ変える
+neckhitf.addEventListener('click',function(){//■■aを変える
+    neckhitf.style.display = 'none';//■■aを変える
+    toubatsuCount();
+    //sekiru.load();
+    //sekiru.play();
+    //koetakawarai.pause();
+    //koesyoujyo.load();
+    //koesyoujyo.play();
+    if(waraiplaying===true){setakawaraikoeStop();}
+    sekiruPlay();
+    sesyoujyokoePlay();
+    neckbreakf.style.display ='inline';//■■aを変える
+    fps24 = 0;//★☆★数字を変える
+    let timerId24 = setInterval(function(){//★☆★数字を変える
+        fps24++;//★☆★数字を変える
+        if(fps24>=6){//★☆★数字を変える
+            neckbreakf.style.display ='none';//■■aを変える
+            clearInterval(timerId24);//★☆★数字を変える
+        }
+    },60);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■人形の動きG ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+function ningyouMoveG(){
+    fps7 = 0;
+    timerId7 = setInterval(function(){
+        fps7++;
+        switch(fps7){
+            case 1:
+            hitareag.style.display = 'inline';
+            ningyou1g.style.display = 'inline';
+            break;
+            case 2:
+            ningyou1g.style.display = 'none';
+            ningyou2g.style.display = 'inline';
+            break;
+            case 3:
+            ningyou2g.style.display = 'none';
+            ningyou3g.style.display = 'inline';
+            break;
+            case 4:
+            ningyou3g.style.display = 'none';
+            ningyou4g.style.display = 'inline';
+            break;
+            case 5:
+            ningyou4g.style.display = 'none';
+            ningyou5g.style.display = 'inline';
+            break;
+            case 6:
+            ningyou5g.style.display = 'none';
+            ningyou4g.style.display = 'inline';
+            break;
+            case 7:
+            ningyou4g.style.display = 'none';
+            ningyou3g.style.display = 'inline';
+            break;
+            case 8:
+            ningyou3g.style.display = 'none';
+            ningyou2g.style.display = 'inline';
+            break;
+            case 9:
+            ningyou2g.style.display = 'none';
+            ningyou1g.style.display = 'inline';
+            break;
+            case 10:
+            ningyou1g.style.display = 'none';
+            hitareag.style.display = 'none';
+            clearInterval(timerId7);
+            break;
+        }
+    },90);
+}
+
+/*下段左から3を斬る*/
+hitareag.addEventListener('mouseover',function(){hitareag.style.cursor='pointer';});//■■aを2つ変える
+hitareag.addEventListener('click',function(){//■■aを変える
+    //sekiru.load();
+    //sekiru.play();
+    sekiruPlay();
+    hitareag.style.display = 'none';//■■aを変える
+    clearInterval(timerId7);//☆☆数字を変える
+    ningyou1g.style.display = 'none';//■■aを変える
+    ningyou2g.style.display = 'none';//■■aを変える
+    ningyou3g.style.display = 'none';//■■aを変える
+    ningyou4g.style.display = 'none';//■■aを変える
+    ningyou5g.style.display = 'none';//■■aを変える
+    ndeathg.style.display = 'inline';//■■aを変える
+    fps17 = 0;//★★数字を変える
+    let timerId17 = setInterval(function(){//★★数字を変える
+        fps17++;//★★数字を変える
+        switch(fps17){//★★数字を変える
+            case 8:
+            //koetakawarai.load();
+            //koetakawarai.play();
+            setakawaraikoePlay();
+            ndeathg.style.display = 'none';//■■aを変える
+            necknearg.style.display = 'inline';//■■aを変える
+            neckhitg.style.display = 'inline';//■■aを変える
+            break;
+            case 16:
+            necknearg.style.display = 'none';//■■aを変える
+            neckhitg.style.display = 'none';//■■aを変える
+            clearInterval(timerId17);//★★数字を変える
+            break;
+        }
+    },60);
+});
+neckhitg.addEventListener('mouseover',function(){neckhitg.style.cursor = 'pointer';});//■■aを2つ変える
+neckhitg.addEventListener('click',function(){//■■aを変える
+    neckhitg.style.display = 'none';//■■aを変える
+    toubatsuCount();
+    //sekiru.load();
+    //sekiru.play();
+    //koetakawarai.pause();
+    //koesyoujyo.load();
+    //koesyoujyo.play();
+    if(waraiplaying===true){setakawaraikoeStop();}
+    sekiruPlay();
+    sesyoujyokoePlay();
+    neckbreakg.style.display ='inline';//■■aを変える
+    fps25 = 0;//★☆★数字を変える
+    let timerId25 = setInterval(function(){//★☆★数字を変える
+        fps25++;//★☆★数字を変える
+        if(fps25>=6){//★☆★数字を変える
+            neckbreakg.style.display ='none';//■■aを変える
+            clearInterval(timerId25);//★☆★数字を変える
+        }
+    },60);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■人形の動き■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+function ningyouMoveH(){
+    fps8 = 0;
+    timerId8 = setInterval(function(){
+        fps8++;
+        switch(fps8){
+            case 1:
+            hitareah.style.display = 'inline';
+            ningyou1h.style.display = 'inline';
+            break;
+            case 2:
+            ningyou1h.style.display = 'none';
+            ningyou2h.style.display = 'inline';
+            break;
+            case 3:
+            ningyou2h.style.display = 'none';
+            ningyou3h.style.display = 'inline';
+            break;
+            case 4:
+            ningyou3h.style.display = 'none';
+            ningyou4h.style.display = 'inline';
+            break;
+            case 5:
+            ningyou4h.style.display = 'none';
+            ningyou5h.style.display = 'inline';
+            break;
+            case 6:
+            ningyou5h.style.display = 'none';
+            ningyou4h.style.display = 'inline';
+            break;
+            case 7:
+            ningyou4h.style.display = 'none';
+            ningyou3h.style.display = 'inline';
+            break;
+            case 8:
+            ningyou3h.style.display = 'none';
+            ningyou2h.style.display = 'inline';
+            break;
+            case 9:
+            ningyou2h.style.display = 'none';
+            ningyou1h.style.display = 'inline';
+            break;
+            case 10:
+            ningyou1h.style.display = 'none';
+            hitareah.style.display = 'none';
+            clearInterval(timerId8);
+            break;
+        }
+    },90);
+}
+
+/*下段左から4を斬る*/
+hitareah.addEventListener('mouseover',function(){hitareah.style.cursor='pointer';});//■■aを2つ変える
+hitareah.addEventListener('click',function(){//■■aを変える
+    //sekiru.load();
+    //sekiru.play();
+    sekiruPlay();
+    hitareah.style.display = 'none';//■■aを変える
+    clearInterval(timerId8);//☆☆数字を変える
+    ningyou1h.style.display = 'none';//■■aを変える
+    ningyou2h.style.display = 'none';//■■aを変える
+    ningyou3h.style.display = 'none';//■■aを変える
+    ningyou4h.style.display = 'none';//■■aを変える
+    ningyou5h.style.display = 'none';//■■aを変える
+    ndeathh.style.display = 'inline';//■■aを変える
+    fps18 = 0;//★★数字を変える
+    let timerId18 = setInterval(function(){//★★数字を変える
+        fps18++;//★★数字を変える
+        switch(fps18){//★★数字を変える
+            case 8:
+            //koetakawarai.load();
+            //koetakawarai.play();
+            setakawaraikoePlay();
+            ndeathh.style.display = 'none';//■■aを変える
+            necknearh.style.display = 'inline';//■■aを変える
+            neckhith.style.display = 'inline';//■■aを変える
+            break;
+            case 16:
+            necknearh.style.display = 'none';//■■aを変える
+            neckhith.style.display = 'none';//■■aを変える
+            clearInterval(timerId18);//★★数字を変える
+            break;
+        }
+    },60);
+});
+neckhith.addEventListener('mouseover',function(){neckhith.style.cursor = 'pointer';});//■■aを2つ変える
+neckhith.addEventListener('click',function(){//■■aを変える
+    neckhith.style.display = 'none';//■■aを変える
+    toubatsuCount();
+    //sekiru.load();
+    //sekiru.play();
+    //koetakawarai.pause();
+    //koesyoujyo.load();
+    //koesyoujyo.play();
+    if(waraiplaying===true){setakawaraikoeStop();}
+    sekiruPlay();
+    sesyoujyokoePlay();
+    neckbreakh.style.display ='inline';//■■aを変える
+    fps26 = 0;//★☆★数字を変える
+    let timerId26 = setInterval(function(){//★☆★数字を変える
+        fps26++;//★☆★数字を変える
+        if(fps26>=6){//★☆★数字を変える
+            neckbreakh.style.display ='none';//■■aを変える
+            clearInterval(timerId26);//★☆★数字を変える
+        }
+    },60);
+});
+
+/*時間カウント*/
+function limitTimer(){
+    let timerId0 = setInterval(function(){
+        timecount--;
+        if(timecount>=10){
+            limitmoji.innerText = '制限時間:'+timecount+'秒';
+        }else if(timecount>=6 && timecount<=9){
+            limitmoji.innerText = '制限時間:0'+timecount+'秒';
+        }else if(timecount>=1 && timecount<=5){
+            limitmoji.style.color = '#ff0000';
+            limitmoji.innerText = '制限時間:0'+timecount+'秒';
+        }else if(timecount<=0 && point<=9){
+            clearInterval(timerId0);
+            limitmoji.innerText = '制限時間:0'+timecount+'秒';
+            bodyup.style.display = 'inline';
+            let timerId27 = setInterval(function(){
+                fps27++;
+                switch(fps27){
+                    case 35:
+                    //koetakawarai.load();
+                    //koetakawarai.play();
+                    setakawaraikoePlay();
+                    bodyup.style.display = 'none';
+                    faceup1.style.display = 'inline';
+                    break;
+                    case 36:
+                    faceup1.style.display = 'none';
+                    faceup2.style.display = 'inline';
+                    break;
+                    case 37:
+                    faceup2.style.display = 'none';
+                    faceup3.style.display = 'inline';
+                    break;
+                    case 38:
+                    faceup3.style.display = 'none';
+                    gameover.style.display = 'inline';
+                    body.style.backgroundColor = '#ff0000';
+                    break;
+                    case 70:
+                    location.href = 'main.html';
+                    clearInterval(timerId27);
+                    break;
+                }
+            },60);
+        }else if(timecount<=0 && point>=10){
+            clearInterval(timerId0);
+            //sefonfa.load();
+            //sefonfa.play();
+            sefonfaPlay();
+            limitmoji.innerText = 'STAGE CLEAR！';
+            let timerId28 = setInterval(function(){
+                fps28++;
+                switch(fps28){
+                    case 36:
+                    blackout.style.display = 'inline';
+                    break;
+                    case 37:
+                    blackout.style.opacity = '0.4';
+                    break;
+                    case 38:
+                    blackout.style.opacity = '0.6';
+                    break;
+                    case 39:
+                    blackout.style.opacity = '0.8';
+                    break;
+                    case 40:
+                    blackout.style.opacity = '1.0';
+                    break;
+                    case 46:
+                    location.href = 's2st66usam7obe.html';
+                    clearInterval(timerId28);
+                    break;
+                }
+            },80);
+        }
+    },1000);
+}
+
+/*ランダムで人形を出現させる*/
+function ningyouRandom1(){
+    let timerId9 = setInterval(function(){
+        fps9++;
+        let com1 = Math.floor(Math.random()*4)+1;
+        switch(com1){
+            case 1:
+            ningyouMoveA();
+            break;
+            case 2:
+            ningyouMoveB();
+            break;
+            case 3:
+            ningyouMoveC();
+            break;
+            case 4:
+            ningyouMoveD();
+            break;
+        }
+        if(fps9>=28){
+            clearInterval(timerId9);
+        }
+    },1000);
+}
+
+function ningyouRandom2(){
+    let timerId10 = setInterval(function(){
+        fps10++;
+        let com2 = Math.floor(Math.random()*4)+1;
+        switch(com2){
+            case 1:
+            ningyouMoveE();
+            break;
+            case 2:
+            ningyouMoveF();
+            break;
+            case 3:
+            ningyouMoveG();
+            break;
+            case 4:
+            ningyouMoveH();
+            break;
+        }
+        if(fps10>=22){
+            clearInterval(timerId10);
+        }
+    },1250);
+}
+
+startbt.addEventListener('mouseover',function(){startbt.style.cursor = 'pointer';});
+startbt.addEventListener('click',function(){
+    startbt.style.display = 'none';
+    toubatsumoji.innerText = '0'+point+'体/10体';
+    ningyouRandom1();
+    ningyouRandom2();
+    limitTimer();
+});
+
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+</html>

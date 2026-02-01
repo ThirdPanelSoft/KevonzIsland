@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>KEVONZ ISLAND</title>
+<link rel="icon"href="image/favicon.ico">
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #aaaaaa;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+    cursor: none;
+    overflow:hidden;
+}
+#d1{
+    background-color: #aaaaaa;
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#door{
+    width:80px;
+    height:183px;
+    position:absolute;
+    top:198px;
+    left:445px;
+}
+#boxleft{
+    background-color:#000000;
+    width:280px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:200px;
+}
+#boxright{
+    background-color:#000000;
+    width:280px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    right:200px;
+}
+#boxmiddle{
+    background-color:#000000;
+    width:20px;
+    height:198px;
+    position:absolute;
+    top:0px;
+    right:475px;
+}
+#neckfall{
+    width:688px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:141px;
+    display:none;
+}
+#c{position:absolute;pointer-events:none;z-index: 999999;}
+.f{position:absolute;width:32px;height:32px;background:url(aero_arrow.cur) no-repeat center/contain}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#dvdText {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 30px;
+    font-weight: bold;
+    display: none;
+    user-select: none;
+    z-index: 999999;
+    line-height: 1;
+    text-align: center; 
+}
+</style>
+<div id=c></div>
+<div id="dvdText">YOU'VE JUST GONE TO EPSTEIN ISLAND<br>WELCOME TO HEAVEN<br>ENDING █ OF █</div>
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+<!--
+<audio id="itemgetse" preload="auto">
+<source src="pse/itemget.wav" type="audio/wav">
+<source src="pse/itemget.mp3" type="audio/wav">
+</audio>
+-->
+<div id="d1">
+<div id="boxleft"></div>
+<div id="boxright"></div>
+<div id="boxmiddle"></div>
+<img src="pimg/door.jpg"id="door">
+<img src="img/epstein.webp"id="neckfall">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let body = document.getElementById('body');
+let d1 = document.getElementById('d1');
+let boxleft = document.getElementById('boxleft');
+let boxright = document.getElementById('boxright');
+let boxmiddle = document.getElementById('boxmiddle');
+let door = document.getElementById('door');
+let neckfall = document.getElementById('neckfall');
+
+boxleft.addEventListener('mouseover',function(){
+    boxleft.style.backgroundColor = '#ff0000';
+    boxright.style.backgroundColor = '#ff0000';
+    boxmiddle.style.backgroundColor = '#ff0000';
+    body.style.backgroundColor = '#ff0000';
+    d1.style.backgroundColor = '#ff0000';
+    door.style.display = 'none';
+});
+boxright.addEventListener('mouseover',function(){
+    boxleft.style.backgroundColor = '#ff0000';
+    boxright.style.backgroundColor = '#ff0000';
+    boxmiddle.style.backgroundColor = '#ff0000';
+    body.style.backgroundColor = '#ff0000';
+    d1.style.backgroundColor = '#ff0000';
+    door.style.display = 'none';
+});
+boxmiddle.addEventListener('mouseover',function(){
+    boxleft.style.backgroundColor = '#ff0000';
+    boxright.style.backgroundColor = '#ff0000';
+    boxmiddle.style.backgroundColor = '#ff0000';
+    body.style.backgroundColor = '#ff0000';
+    d1.style.backgroundColor = '#ff0000';
+    door.style.display = 'none';
+});
+door.addEventListener('mouseover',function(){door.style.cursor = 'pointer';});
+door.addEventListener('mouseout',function(){door.style.cursor = 'pointer';});
+const message = document.getElementById('message');
+const dvdText = document.getElementById('dvdText');
+
+let x = 100;
+let y = 100;
+let dx = 10;
+let dy = 10;
+
+function rhc() {
+    return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+}
+
+function moveDVD() {
+    const rect = dvdText.getBoundingClientRect();
+
+    if (rect.right >= window.innerWidth || rect.left <= 0) {
+        dx *= -1;
+    }
+    if (rect.bottom >= window.innerHeight || rect.top <= 0) {
+        dy *= -1;
+    }
+
+    x += dx;
+    y += dy;
+
+    dvdText.style.left = x + 'px';
+    dvdText.style.top = y + 'px';
+
+    requestAnimationFrame(moveDVD);
+}
+door.addEventListener('click', function () {
+    setInterval(() => {
+        const color = rhc();
+
+        boxleft.style.backgroundColor = color;
+        boxright.style.backgroundColor = color;
+        boxmiddle.style.backgroundColor = color;
+        body.style.backgroundColor = color;
+        d1.style.backgroundColor = color;
+    }, 1); 
+    setInterval(() => {dvdText.style.color = rhc();}, 1);
+    door.style.display = 'none';
+    c.style.display = 'none';
+    neckfall.style.display = 'inline';
+
+    dvdText.style.display = 'block';
+moveDVD();
+});
+for(c=document.getElementById("c"),g=16,s=40,o=g*s/2,y=0;y<g;y++)
+for(x=0;x<g;x++)
+c.innerHTML+=`<div class=f style="left:${x*s}px;top:${y*s}px"></div>`;
+onmousemove=e=>c.style.transform=`translate(${e.clientX-o}px,${e.clientY-o}px)`
+</script>
+
+<!--
+<script src="js/.js"></script>
+-->
+</body>
+</html>

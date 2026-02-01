@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>KEVONZ ISLAND</title>
+<link rel="icon"href="image/favicon.ico">
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-image: url(pimg/akeru.gif);
+    background-repeat: repeat;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#midashi{
+    text-align:center;
+    color:#ff0000;
+    font-size:20px;
+    font-weight:bold;
+}
+#mojibake{
+    text-align:center;
+    color:#ff0000;
+    font-size:15px;
+}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+<!--
+<audio id="itemgetse" preload="auto">
+<source src="pse/itemget.wav" type="audio/wav">
+<source src="pse/itemget.mp3" type="audio/mp3">
+</audio>
+-->
+<div id="d1">
+<p id="midashi">a;oi枕aｴr\e^/.,\b^-p-</p>
+<p id="mojibake">
+        ・ｿsd縺ｵ縺・∴縺｣蜷ｸ縺・ｾ励ｈ<br>
+        縺ё繝帙うf縺・〒縺ｵ繧・＠yd縺<br>
+        ｵ縺鋭縺｢・吶・縺峨＞・難ｽ・ｽ吶<br>
+        ・縺・ｽ難ｽ・ｽｾ吶・縺峨＞・難ｽ・<br>
+        ｽ吶・縺峨＠・呻ｽ・◎縺ｵ縺・ｼ�・<br>
+        撰ｼ�・暦ｽ具ｽ・Χ縺峨Χ縺ｵ縺・ｽ<br>
+        ゑｽｾ・ｽ悶ｓ・・ｽ難ｽ・ｽ具ｽ翫℃繧<br>
+        ・≠縺奇ｽ抵ｼ幢ｽ・ｽ偵￡・鯉ｽ・ｽ医<br>
+        ＝・・ｽ謎ｺ很xg驥晁砂蟆ｾlg縺倥ｃ<br>
+        縲ゅ∞縺ｴ繧暖f讓ｹ閼Ｉ繧砺b繧電f<br>
+        h縺斐△縺仕・・ｽ・・縺・ｽ呻ｽ・・<br>
+        ・・←・帙＝・・ｼ帙≠・医＄縺ゑｽ<br>
+        茨ｽ吶′・難ｽ・�・≠縺・∞vb荳咲｣<br>
+        ｯ繧ｦ繧ｧ險縺・qwq縺ｺ縺頑・縺в縺<br>
+        ｵ縺臥ｵｵg荳肴э蟆ｾhvksd繧澱kds鬘<br>
+        槭が繧｢繧ｦ繧ｧ蟆ｾp繧呈�а繧呈�ж<br>
+        豁ｩ譬а繧偵∴縺・⊆繧偵＞縺翫∴<br>
+        縺ж縺ｺ縺廓mjdklvmlfdkj縺｢g繧ｸ<br>
+        繝･d縺ｵ縺ヌj繝ｩ繧ｪr豢ｾ荳願ｿｽ縺<br>
+        ・≧縺ゅｒ縺医≠縺・gh縺ｵ縺《g<br>
+        hf繝ｩ繧､縺・y蜈ｷ蜷・h繝ｴ繧｣rf繧<br>
+        薙Χ縺・♀繧九≠縺ｽ縺医＞縺ｵ縺√<br>
+        ◎縺ｷ縺罫縺ｵ縺・♀縺ゅ∴l繧薙<br>
+        §繧・ｼ帙＝・偵＃縺・≠・呻ｽ難ｽ<br>
+        ・＃縺ゅ＞・呻ｽ医℃・難ｽ厄ｽ・ｓ<br>
+        ・・ｽ奇ｽ<a href="puzzledoor.html"style="text-decoration:none;color:rgb(150,0,0)">薙ｋ縺</a>・≠縺・∴繧翫ｅ縺<br>
+        ｵ縺・＝縺倥ｅ・呻ｽ・ｽ医☆縺医♀<br>
+        縺ゑｽ撰ｽ難ｽ・・縺・⊃縺上＜繧偵<br>
+        ￥縺・・縺・ｰｾw貉ｯ繧ｦ繧｣y縺上♂<br>
+        繧ｦ繧ｧ貉ｯ繧ｦ繧ｧ縺上＜fbsjdhf縺茎<br>
+        縺ｵ縺」邵ｫ縺в螳ｵ荳頑虻fdcv繧屠<br>
+        kd縺ｵ縺√￡縺ｽ縺・∞險縺・p・�縺<br>
+        ｴ縺赫wfrgyjyt荳逆gy繧ｸ繝･jg繧電<br>
+        縺ｵ縺峨・縺ｽ縺｡縺ｽ縺・ｽ・・・奇ｽ<br>
+        ゑｽ・ｽ九・縺・≧縺・∞縺・ｈ縺・<br>
+        ｓ・ゅ＃縺阪≧・・・縺・ｽ・・縺<br>
+        翫＞・抵ｽ費ｽ斐ｊ縺奇ｽ茨ｽ奇ｽゑｽ・<br>
+        ｽ・ｽゅｓ・奇ｽ・・縺峨＞縺ｶ縺・→<br>
+        縺･・・ｽ・ｽ・・縺翫≧縺・ｋ螳ｶb<br>
+        vsdf豁ｩ險縺翫≧縺上＜縺・∞縺・<br>
+        ＞w縺・∞菴阪え繧ｧy繧ｦ繧｣繝ｳfbvd<br>
+        sjffkl・・ｽ医ｌ縺・≧縺・ｊ繧・ｌ<br>
+        縺・ｽ呻ｽ・ｽ・ｽ難ｽ・〒・薙ｊ縺奇ｽ<br>
+        ・ｽ・ｽ・ｽ具ｽ奇ｽ医Χ繧後＞・鯉ｽ抵<br>
+        ｽ・・繧奇ｽ・ｽ鯉ｽ難ｽ托ｽ励⊃縺・ｽ・<br>
+        ｽ医△縺・ｽ斐￥縺・ｽ托ｽ励￥縺・≧<br>
+        縺・ｽ難ｽ・ｺ彙chf繝ｴ邨ｵ蟆ｾ縺ｽ縺上<br>
+        ＜縺・ghdydft・痴dfg逾冶ｨ縺・￥<br>
+        縺・ｽ糠gvyrf豁ｩ・励￥縺峨♀・舌<br>
+        ｋ縺・＞縺奇ｽ励ｄ・鯉ｽ難ｽ具ｽ・ｽ奇<br>
+        ｽ・ｽ医ｋ縺・≧縺・￥縺峨・縺擾ｽ暦<br>
+        ｽ吶￥縺上＜・代ｓ縺ｵ・薙§縺ゑｽ九<br>
+        ☆縺ゅ＠縺奇ｽ托ｽ暦ｽ暦ｽ暦ｽ医￥縺峨<br>
+        ＞縺・￥縺峨≧縺・・縺・ｼ托ｼ抵ｼ暦<br>
+        ｼ假ｼ托ｼ呻ｼ難ｽ代∪縺翫§・難ｽ九≦・<br>
+        励・・呻ｽ・ｓ・・ｽ茨ｽ厄ｽ呻ｽ・ｽゑｽ<br>
+        抵ｽ・※・呻ｽ・ｽ茨ｽ・ｓ・假ｽ阪＠縺奇<br>
+        ｽ托ｼ撰ｼ托ｼ呻ｼ偵≧・・ｼ呻ｼ假ｽ・ｽ呻ｼ<br>
+        斐＞<a href="tnihonematumusus.html"style="text-decoration:none;color:rgb(150,0,0)">縺翫＞・・</a>
+</p>
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+</html>

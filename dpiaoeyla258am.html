@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Expires" content="Fri, 15 Aug 2025 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>KEVONZ ISLAND</title>
+<link rel="icon"href="image/favicon.ico">
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#back{width:970px;height:580px;position:absolute;left:0px;top:0px;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#back2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#walk{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ghostapp{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#kyoufu1{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#kyoufu2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#waapstop{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#kyoufu3{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#slash1{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#slash2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#ghostarea{
+    width:245px;height:580px;
+    position:absolute;left:362px;top:0px;
+    background-color:#00ff00;opacity:0.0;display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#nextarea{
+    width:96px;height:205px;
+    position:absolute;left:437px;top:63px;
+    background-color:#00ff00;opacity:0.0;display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+/*連打バー&ボタン*/
+#limitbar{width:480px;height:30px;position:absolute;left:245px;top:307px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rendabar0{width:450px;height:30px;position:absolute;left:225px;top:377px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rendabar1{width:450px;height:30px;position:absolute;left:225px;top:377px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rendabar2{width:450px;height:30px;position:absolute;left:225px;top:377px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rendabar3{width:450px;height:30px;position:absolute;left:225px;top:377px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rendabar4{width:450px;height:30px;position:absolute;left:225px;top:377px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rendabar5{width:450px;height:30px;position:absolute;left:225px;top:377px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rendabar6{width:450px;height:30px;position:absolute;left:225px;top:377px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rendabar7{width:450px;height:30px;position:absolute;left:225px;top:377px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rendabar8{width:450px;height:30px;position:absolute;left:225px;top:377px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rendabar9{width:450px;height:30px;position:absolute;left:225px;top:377px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rendabar10{width:450px;height:30px;position:absolute;left:225px;top:377px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rendabar11{width:450px;height:30px;position:absolute;left:225px;top:377px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rendabar12{width:450px;height:30px;position:absolute;left:225px;top:377px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rendabar13{width:450px;height:30px;position:absolute;left:225px;top:377px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rendabar14{width:450px;height:30px;position:absolute;left:225px;top:377px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#rendabar15{width:450px;height:30px;position:absolute;left:225px;top:377px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#fontkaihi1{width:70px;height:30px;position:absolute;left:675px;top:377px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#fontkaihi2{width:70px;height:30px;position:absolute;left:675px;top:377px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#btrenda1{width:190px;height:133px;position:absolute;left:390px;bottom:20px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#btrenda2{width:190px;height:133px;position:absolute;left:390px;bottom:20px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#btkaihi{width:190px;height:133px;position:absolute;left:390px;bottom:20px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#btfail{width:190px;height:133px;position:absolute;left:390px;bottom:20px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#bossrush1{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#bossrush2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#bossrush3{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#bossrush4{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#bossrush5{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#weffect{
+    background-color:#ffffff;width:970px;height:580px;
+    position:absolute;left:0px;top:0px;display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<!--
+<audio id="walkse" preload="auto">
+<source src="pse/walkkinoita.wav" type="audio/wav">
+<source src="pse/walkkinoita.mp3" type="audio/mp3">
+</audio>
+
+<audio id="obakekoe" preload="auto">
+<source src="pse/kaidanshojo.wav" type="audio/wav">
+<source src="pse/kaidanshojo.mp3" type="audio/mp3">
+</audio>
+
+<audio id="appearse" preload="auto">
+<source src="pse/eyeloadobake1.wav" type="audio/wav">
+<source src="pse/eyeloadobake1.mp3" type="audio/mp3">
+</audio>
+
+<audio id="noroise" preload="auto">
+<source src="pse/eyeloadobake2.wav" type="audio/wav">
+<source src="pse/eyeloadobake2.mp3" type="audio/mp3">
+</audio>
+
+<audio id="scream" preload="auto">
+<source src="pse/screamlong.wav" type="audio/wav">
+<source src="pse/screamlong.mp3" type="audio/mp3">
+</audio>
+
+<audio id="takawarai" preload="auto">
+<source src="pse/takawarai.wav" type="audio/wav">
+<source src="pse/takawarai.mp3" type="audio/mp3">
+</audio>
+
+<audio id="oowarai" preload="auto">
+<source src="pse/oowarai.wav" type="audio/wav">
+<source src="pse/oowarai.mp3" type="audio/mp3">
+</audio>
+
+<audio id="punchse" preload="auto">
+<source src="pse/punch.wav" type="audio/wav">
+<source src="pse/punch.mp3" type="audio/mp3">
+</audio>
+
+<audio id="waapse" preload="auto"loop>
+<source src="pse/medadytame.wav" type="audio/wav">
+<source src="pse/medadytame.mp3" type="audio/mp3">
+</audio>
+
+<audio id="waapkaihise" preload="auto">
+<source src="pse/waapkaihi.wav" type="audio/wav">
+<source src="pse/waapkaihi.mp3" type="audio/mp3">
+</audio>
+
+<audio id="rendabtsucse" preload="auto">
+<source src="pse/rendabtsuc.wav" type="audio/wav">
+<source src="pse/rendabtsuc.mp3" type="audio/mp3">
+</audio>
+
+<audio id="kiruse" preload="auto">
+<source src="pse/janenedamage.wav" type="audio/wav">
+<source src="pse/janenedamage.mp3" type="audio/mp3">
+</audio>
+-->
+
+<div id="d1">
+<img src="pimg/akumu/akuback.jpg"id="back">
+<img src="pimg/akumu/akuback2.jpg"id="back2">
+<img src="pimg/akumu/walk3.gif"id="walk">
+<img src="pimg/akumu/akumuapp.gif"id="ghostapp">
+<img src="pimg/akumu/kyoufu1.gif"id="kyoufu1">
+<img src="pimg/akumu/kyoufu2.gif"id="kyoufu2">
+<img src="pimg/akumu/waapstop.jpg"id="waapstop">
+<img src="pimg/akumu/kyoufu3.gif"id="kyoufu3">
+<img src="pimg/akumu/akumuslash1.gif"id="slash1">
+<img src="pimg/akumu/akumuslash2.gif"id="slash2">
+<div id="ghostarea"></div>
+<div id="nextarea"></div>
+<!--連打バー-->
+<img src="pimg/akumu/limitbar.gif"id="limitbar">
+<img src="pimg/akumu/rendabar0.jpg"id="rendabar0">
+<img src="pimg/akumu/rendabar1.jpg"id="rendabar1">
+<img src="pimg/akumu/rendabar2.jpg"id="rendabar2">
+<img src="pimg/akumu/rendabar3.jpg"id="rendabar3">
+<img src="pimg/akumu/rendabar4.jpg"id="rendabar4">
+<img src="pimg/akumu/rendabar5.jpg"id="rendabar5">
+<img src="pimg/akumu/rendabar6.jpg"id="rendabar6">
+<img src="pimg/akumu/rendabar7.jpg"id="rendabar7">
+<img src="pimg/akumu/rendabar8.jpg"id="rendabar8">
+<img src="pimg/akumu/rendabar9.jpg"id="rendabar9">
+<img src="pimg/akumu/rendabar10.jpg"id="rendabar10">
+<img src="pimg/akumu/rendabar11.jpg"id="rendabar11">
+<img src="pimg/akumu/rendabar12.jpg"id="rendabar12">
+<img src="pimg/akumu/rendabar13.jpg"id="rendabar13">
+<img src="pimg/akumu/rendabar14.jpg"id="rendabar14">
+<img src="pimg/akumu/rendabar15.jpg"id="rendabar15">
+<img src="pimg/akumu/fontkaihi1.jpg"id="fontkaihi1">
+<img src="pimg/akumu/fontkaihi2.gif"id="fontkaihi2">
+<img src="pimg/akumu/btrenda1.png"id="btrenda1">
+<img src="pimg/akumu/btrenda2.png"id="btrenda2">
+<img src="pimg/akumu/btkaihi.png"id="btkaihi">
+<img src="pimg/akumu/btfail.png"id="btfail">
+<!--ボスラッシュ-->
+<img src="pimg/akumu/tokorush0.jpg"id="bossrush1">
+<img src="pimg/tokorush2.jpg"id="bossrush2">
+<img src="pimg/tokorush3.jpg"id="bossrush3">
+<img src="pimg/tokorush4.gif"id="bossrush4">
+<img src="pimg/tokorush5.jpg"id="bossrush5">
+<div id="weffect"></div>
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+/*★には同じ数字、☆には同じスペル(変数、関数)、◇にはファイルのパスを入力
+let sampleSource★ = '';
+async function decodeSe★(){
+    const response★ = await fetch("◇◇◇");
+    const arrayBuffer★ = await response★.arrayBuffer();
+    const audioBuffer★ = await ctx.decodeAudioData(arrayBuffer★);
+    return audioBuffer★;
+}
+function playSe★(ctx,audioBuffer★){
+    sampleSource★ = ctx.createBufferSource();
+    sampleSource★.buffer = audioBuffer★;
+    sampleSource★.connect(ctx.destination);
+    sampleSource★.start();
+}
+async function se☆Play(){
+    const se☆ = await decodeSe★();
+    playSe★(ctx,se☆);
+}
+async function se☆Stop(){
+    sampleSource★?.stop();
+}
+*/
+
+/*
+01<source src="pse/walkkinoita.mp3" id="walkse">【済】
+02<source src="pse/kaidanshojo.mp3" id="obakekoe">【済】
+03<source src="pse/eyeloadobake1.mp3" id="appearse">【済】
+04<source src="pse/eyeloadobake2.mp3" id="noroise">【済】
+05<source src="pse/screamlong.mp3" id="scream">【済】
+06<source src="pse/takawarai.mp3" id="takawarai">【済】
+07<source src="pse/oowarai.mp3" id="oowarai">【済】
+08<source src="pse/punch.mp3" id="punchse">【済】
+09<source src="pse/medadytame.mp3" id="waapse">【済】
+10<source src="pse/waapkaihi.mp3" id="waapkaihise">【済】
+11<source src="pse/rendabtsuc.mp3" id="rendabtsucse">【済】
+12<source src="pse/janenedamage.mp3" id="kiruse">
+*/
+
+/*★★★★★★★★★★★★★★★★★効果音のセット★★★★★★★★★★★★★★★★★★★★*/
+window.AudioContext = window.AudioContext||window.webkitAudioContext;
+const ctx = new AudioContext();
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource12 = '';
+async function decodeSe12(){
+    const response12 = await fetch("pse/janenedamage.mp3");
+    const arrayBuffer12 = await response12.arrayBuffer();
+    const audioBuffer12 = await ctx.decodeAudioData(arrayBuffer12);
+    return audioBuffer12;
+}
+function playSe12(ctx,audioBuffer12){
+    sampleSource12 = ctx.createBufferSource();
+    sampleSource12.buffer = audioBuffer12;
+    sampleSource12.connect(ctx.destination);
+    sampleSource12.start();
+}
+async function sekiruPlay(){
+    const sekiru = await decodeSe12();
+    playSe12(ctx,sekiru);
+}
+async function sekiruStop(){
+    sampleSource12?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource11 = '';
+async function decodeSe11(){
+    const response11 = await fetch("pse/rendabtsuc.mp3");
+    const arrayBuffer11 = await response11.arrayBuffer();
+    const audioBuffer11 = await ctx.decodeAudioData(arrayBuffer11);
+    return audioBuffer11;
+}
+function playSe11(ctx,audioBuffer11){
+    sampleSource11 = ctx.createBufferSource();
+    sampleSource11.buffer = audioBuffer11;
+    sampleSource11.connect(ctx.destination);
+    sampleSource11.start();
+}
+async function serendabtsucPlay(){
+    const serendabtsuc = await decodeSe11();
+    playSe11(ctx,serendabtsuc);
+}
+async function serendabtsucStop(){
+    sampleSource11?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource10 = '';
+async function decodeSe10(){
+    const response10 = await fetch("pse/waapkaihi.mp3");
+    const arrayBuffer10 = await response10.arrayBuffer();
+    const audioBuffer10 = await ctx.decodeAudioData(arrayBuffer10);
+    return audioBuffer10;
+}
+function playSe10(ctx,audioBuffer10){
+    sampleSource10 = ctx.createBufferSource();
+    sampleSource10.buffer = audioBuffer10;
+    sampleSource10.connect(ctx.destination);
+    sampleSource10.start();
+}
+async function sewaapkaihiPlay(){
+    const sewaapkaihi = await decodeSe10();
+    playSe10(ctx,sewaapkaihi);
+}
+async function sewaapkaihiStop(){
+    sampleSource10?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let waapplaying = false;
+let sampleSource9 = '';
+async function decodeSe9(){
+    const response9 = await fetch("pse/medadytame.mp3");
+    const arrayBuffer9 = await response9.arrayBuffer();
+    const audioBuffer9 = await ctx.decodeAudioData(arrayBuffer9);
+    return audioBuffer9;
+}
+function playSe9(ctx,audioBuffer9){
+    sampleSource9 = ctx.createBufferSource();
+    sampleSource9.buffer = audioBuffer9;
+    sampleSource9.loop = true;
+    sampleSource9.connect(ctx.destination);
+    sampleSource9.start();
+    waapplaying = true;
+}
+async function sewaapPlay(){
+    const sewaap = await decodeSe9();
+    playSe9(ctx,sewaap);
+}
+async function sewaapStop(){
+    sampleSource9?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource8 = '';
+async function decodeSe8(){
+    const response8 = await fetch("pse/punch.mp3");
+    const arrayBuffer8 = await response8.arrayBuffer();
+    const audioBuffer8 = await ctx.decodeAudioData(arrayBuffer8);
+    return audioBuffer8;
+}
+function playSe8(ctx,audioBuffer8){
+    sampleSource8 = ctx.createBufferSource();
+    sampleSource8.buffer = audioBuffer8;
+    sampleSource8.connect(ctx.destination);
+    sampleSource8.start();
+}
+async function sepunchPlay(){
+    const sepunch = await decodeSe8();
+    playSe8(ctx,sepunch);
+}
+async function sepunchStop(){
+    sampleSource8?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let oowaraiplaying = false;
+let sampleSource7 = '';
+async function decodeSe7(){
+    const response7 = await fetch("pse/oowarai.mp3");
+    const arrayBuffer7 = await response7.arrayBuffer();
+    const audioBuffer7 = await ctx.decodeAudioData(arrayBuffer7);
+    return audioBuffer7;
+}
+function playSe7(ctx,audioBuffer7){
+    sampleSource7 = ctx.createBufferSource();
+    sampleSource7.buffer = audioBuffer7;
+    sampleSource7.connect(ctx.destination);
+    sampleSource7.start();
+    oowaraiplaying = true;
+}
+async function seoowaraiPlay(){
+    const seoowarai = await decodeSe7();
+    playSe7(ctx,seoowarai);
+}
+async function seoowaraiStop(){
+    sampleSource7?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let takawaraiplaying = false;
+let sampleSource6 = '';
+async function decodeSe6(){
+    const response6 = await fetch("pse/takawarai.mp3");
+    const arrayBuffer6 = await response6.arrayBuffer();
+    const audioBuffer6 = await ctx.decodeAudioData(arrayBuffer6);
+    return audioBuffer6;
+}
+function playSe6(ctx,audioBuffer6){
+    sampleSource6 = ctx.createBufferSource();
+    sampleSource6.buffer = audioBuffer6;
+    sampleSource6.connect(ctx.destination);
+    sampleSource6.start();
+    takawaraiplaying = true;
+}
+async function setakawaraiPlay(){
+    const setakawarai = await decodeSe6();
+    playSe6(ctx,setakawarai);
+}
+async function setakawaraiStop(){
+    sampleSource6?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let screamplaying = false;
+let sampleSource5 = '';
+async function decodeSe5(){
+    const response5 = await fetch("pse/screamlong.mp3");
+    const arrayBuffer5 = await response5.arrayBuffer();
+    const audioBuffer5 = await ctx.decodeAudioData(arrayBuffer5);
+    return audioBuffer5;
+}
+function playSe5(ctx,audioBuffer5){
+    sampleSource5 = ctx.createBufferSource();
+    sampleSource5.buffer = audioBuffer5;
+    sampleSource5.connect(ctx.destination);
+    sampleSource5.start();
+    screamplaying = true;
+}
+async function sescreamPlay(){
+    const sescream = await decodeSe5();
+    playSe5(ctx,sescream);
+}
+async function sescreamStop(){
+    sampleSource5?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource4 = '';
+async function decodeSe4(){
+    const response4 = await fetch("pse/eyeloadobake2.mp3");
+    const arrayBuffer4 = await response4.arrayBuffer();
+    const audioBuffer4 = await ctx.decodeAudioData(arrayBuffer4);
+    return audioBuffer4;
+}
+function playSe4(ctx,audioBuffer4){
+    sampleSource4 = ctx.createBufferSource();
+    sampleSource4.buffer = audioBuffer4;
+    sampleSource4.connect(ctx.destination);
+    sampleSource4.start();
+}
+async function senoroiPlay(){
+    const senoroi = await decodeSe4();
+    playSe4(ctx,senoroi);
+}
+async function senoroiStop(){
+    sampleSource4?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource3 = '';
+async function decodeSe3(){
+    const response3 = await fetch("pse/eyeloadobake1.mp3");
+    const arrayBuffer3 = await response3.arrayBuffer();
+    const audioBuffer3 = await ctx.decodeAudioData(arrayBuffer3);
+    return audioBuffer3;
+}
+function playSe3(ctx,audioBuffer3){
+    sampleSource3 = ctx.createBufferSource();
+    sampleSource3.buffer = audioBuffer3;
+    sampleSource3.connect(ctx.destination);
+    sampleSource3.start();
+}
+async function seappearPlay(){
+    const seappear = await decodeSe3();
+    playSe3(ctx,seappear);
+}
+async function seappearStop(){
+    sampleSource3?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource2 = '';
+async function decodeSe2(){
+    const response2 = await fetch("pse/kaidanshojo.mp3");
+    const arrayBuffer2 = await response2.arrayBuffer();
+    const audioBuffer2 = await ctx.decodeAudioData(arrayBuffer2);
+    return audioBuffer2;
+}
+function playSe2(ctx,audioBuffer2){
+    sampleSource2 = ctx.createBufferSource();
+    sampleSource2.buffer = audioBuffer2;
+    sampleSource2.connect(ctx.destination);
+    sampleSource2.start();
+}
+async function seobakekoePlay(){
+    const seobakekoe = await decodeSe2();
+    playSe2(ctx,seobakekoe);
+}
+async function seobakekoeStop(){
+    sampleSource2?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource1 = '';
+async function decodeSe1(){
+    const response1 = await fetch("pse/walkkinoita.mp3");
+    const arrayBuffer1 = await response1.arrayBuffer();
+    const audioBuffer1 = await ctx.decodeAudioData(arrayBuffer1);
+    return audioBuffer1;
+}
+function playSe1(ctx,audioBuffer1){
+    sampleSource1 = ctx.createBufferSource();
+    sampleSource1.buffer = audioBuffer1;
+    sampleSource1.connect(ctx.destination);
+    sampleSource1.start();
+}
+async function sewalkPlay(){
+    const sewalk = await decodeSe1();
+    playSe1(ctx,sewalk);
+}
+async function sewalkStop(){
+    sampleSource1?.stop();
+}
+
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+    decodeSe1();
+});
+let back = document.getElementById('back');
+let back2 = document.getElementById('back2');
+let walk = document.getElementById('walk');
+let ghostapp = document.getElementById('ghostapp');
+let kyoufu1 = document.getElementById('kyoufu1');
+let kyoufu2 = document.getElementById('kyoufu2');
+let waapstop = document.getElementById('waapstop');
+let kyoufu3 = document.getElementById('kyoufu3');
+let slash1 = document.getElementById('slash1');
+let slash2 = document.getElementById('slash2');
+let ghostarea = document.getElementById('ghostarea');
+let nextarea = document.getElementById('nextarea');
+/*連打バー&ボタン*/
+let limitbar = document.getElementById('limitbar');
+let rendabar0 = document.getElementById('rendabar0');
+let rendabar1 = document.getElementById('rendabar1');
+let rendabar2 = document.getElementById('rendabar2');
+let rendabar3 = document.getElementById('rendabar3');
+let rendabar4 = document.getElementById('rendabar4');
+let rendabar5 = document.getElementById('rendabar5');
+let rendabar6 = document.getElementById('rendabar6');
+let rendabar7 = document.getElementById('rendabar7');
+let rendabar8 = document.getElementById('rendabar8');
+let rendabar9 = document.getElementById('rendabar9');
+let rendabar10 = document.getElementById('rendabar10');
+let rendabar11 = document.getElementById('rendabar11');
+let rendabar12 = document.getElementById('rendabar12');
+let rendabar13 = document.getElementById('rendabar13');
+let rendabar14 = document.getElementById('rendabar14');
+let rendabar15 = document.getElementById('rendabar15');
+let fontkaihi1 = document.getElementById('fontkaihi1');
+let fontkaihi2 = document.getElementById('fontkaihi2');
+let btrenda1 = document.getElementById('btrenda1');
+let btrenda2 = document.getElementById('btrenda2');
+let btkaihi = document.getElementById('btkaihi');
+let btfail = document.getElementById('btfail');
+/*ボスラッシュ*/
+let rush1 = document.getElementById('bossrush1');
+let rush2 = document.getElementById('bossrush2');
+let rush3 = document.getElementById('bossrush3');
+let rush4 = document.getElementById('bossrush4');
+let rush5 = document.getElementById('bossrush5');
+let weffect = document.getElementById('weffect');
+/*効果音*/
+//let sewalk = document.getElementById('walkse');
+//let koeobake = document.getElementById('obakekoe');
+//let seappear = document.getElementById('appearse');
+//let senoroi = document.getElementById('noroise');
+//let koescream = document.getElementById('scream');
+//let koetakawarai = document.getElementById('takawarai');
+//let koeoowarai = document.getElementById('oowarai');
+//let sepunch = document.getElementById('punchse');
+//let sewaap = document.getElementById('waapse');
+//let sewaapkaihi = document.getElementById('waapkaihise');
+//let serendabtsuc = document.getElementById('rendabtsucse');
+//let sekiru = document.getElementById('kiruse');
+//load(); play(); pause();
+/*スコア*/
+let timerId1 = '';
+let fps1 = 0;
+let fps2 = 0;
+let fps3 = 0;
+let fps4 = 0;
+let rendapt = 0;
+
+back.addEventListener('mouseover',function(){back.style.cursor = 'pointer';});
+back.addEventListener('click',function(){
+    //koescream.load();
+    //koetakawarai.load();
+    //koeoowarai.load();
+    //sewalk.load();
+    //sewalk.play();
+    sewalkPlay();
+    decodeSe2();//ワープお化けの声
+    decodeSe8();//連打音
+    decodeSe9();//連打イベント時の風の音
+    decodeSe12();//斬る音
+    back.style.display = 'none';
+    walk.style.display = 'inline';
+    timerId1 = setInterval(function(){
+        fps1++;
+        switch(fps1){
+            case 23:
+            //koeobake.load();
+            //koeobake.play();
+            seobakekoePlay();
+            decodeSe3();//ワープお化け出現の音
+            break;
+            case 47:
+            //seappear.load();
+            //seappear.play();
+            seappearPlay();
+            decodeSe4();//ワープお化けが波動を出す音
+            walk.style.display = 'none';
+            ghostapp.style.display = 'inline';
+            ghostarea.style.display = 'inline';
+            break;
+            case 74:
+            ghostarea.style.display = 'none';
+            //senoroi.load();
+            //senoroi.play();
+            senoroiPlay();
+            break;
+            case 80://強制ワープ演出発動
+            //sewaap.load();
+            //sewaap.play();
+            sewaapPlay();
+            ghostapp.style.display = 'none';
+            kyoufu1.style.display = 'inline';
+            break;
+            case 87://拮抗状態(6000ms間)
+            kyoufu1.style.display = 'none';
+            kyoufu2.style.display = 'inline';
+            limitbar.style.display = 'inline';
+            rendabar0.style.display = 'inline';
+            fontkaihi1.style.display = 'inline';
+            btrenda1.style.display = 'inline';
+            decodeSe5();//失敗した時の幽霊の声
+            decodeSe6();//失敗した時の幽霊の声
+            decodeSe7();//失敗した時の幽霊の声
+            decodeSe10();//回避して元に戻る音
+            decodeSe11();//時間内に連打成功した音
+            break;
+            case 161://連打に失敗した場合の結果報告
+            //sewaap.pause();
+            if(waapplaying===true){sewaapStop();}
+            limitbar.style.display = 'none';
+            btrenda1.style.display = 'none';
+            kyoufu2.style.display = 'none';
+            btfail.style.display = 'inline';
+            waapstop.style.display = 'inline';
+            break;
+            case 185://連続恐怖スタート+24
+            rendabar0.style.display = 'none';
+            rendabar1.style.display = 'none';
+            rendabar2.style.display = 'none';
+            rendabar3.style.display = 'none';
+            rendabar4.style.display = 'none';
+            rendabar5.style.display = 'none';
+            rendabar6.style.display = 'none';
+            rendabar7.style.display = 'none';
+            rendabar8.style.display = 'none';
+            rendabar9.style.display = 'none';
+            rendabar10.style.display = 'none';
+            rendabar11.style.display = 'none';
+            rendabar12.style.display = 'none';
+            rendabar13.style.display = 'none';
+            rendabar14.style.display = 'none';
+            rendabar15.style.display = 'none';
+            fontkaihi1.style.display = 'none';
+            //koescream.play();
+            sescreamPlay();
+            rush1.style.display = 'inline';
+            break;
+            case 213://画面白
+            body.style.backgroundColor = '#ffffff';
+            rush1.style.display = 'none';
+            weffect.style.display = 'inline';
+            if(screamplaying===true){sescreamStop();}
+            break;
+            case 214:
+            //koetakawarai.play();
+            setakawaraiPlay();
+            body.style.backgroundColor = '#000000';
+            weffect.style.display = 'none';
+            rush2.style.display = 'inline';
+            break;
+            case 238://画面白
+            body.style.backgroundColor = '#ffffff';
+            rush2.style.display = 'none';
+            weffect.style.display = 'inline';
+            if(takawaraiplaying===true){setakawaraiStop();}
+            break;
+            case 239:
+            //koescream.play();
+            sescreamPlay();
+            body.style.backgroundColor = '#000000';
+            weffect.style.display = 'none';
+            rush3.style.display = 'inline';
+            break;
+            case 263://画面白
+            body.style.backgroundColor = '#ffffff';
+            rush3.style.display = 'none';
+            weffect.style.display = 'inline';
+            if(screamplaying===true){sescreamStop();}
+            break;
+            case 264:
+            //koeoowarai.play();
+            seoowaraiPlay();
+            body.style.backgroundColor = '#000000';
+            weffect.style.display = 'none';
+            rush4.style.display = 'inline';
+            break;
+            case 288://画面白
+            body.style.backgroundColor = '#ffffff';
+            rush4.style.display = 'none';
+            weffect.style.display = 'inline';
+            if(oowaraiplaying===true){seoowaraiStop();}
+            break;
+            case 289:
+            //koescream.play();
+            sescreamPlay();
+            body.style.backgroundColor = '#000000';
+            weffect.style.display = 'none';
+            rush5.style.display = 'inline';
+            break;
+            case 313:
+            clearInterval(timerId1);
+            if(screamplaying===true){sescreamStop();}
+            location.href = 'topd.html';
+            break;
+        }
+    },80);
+});
+
+ghostarea.addEventListener('mouseover',function(){ghostarea.style.cursor='pointer';});
+ghostarea.addEventListener('click',function(){
+    ghostarea.style.display = 'none';
+    clearInterval(timerId1);
+    //sekiru.load();
+    //sekiru.play();
+    sekiruPlay();
+    ghostapp.style.display = 'none';
+    slash1.style.display = 'inline';
+    let timerId4 = setInterval(function(){
+        fps4++;
+        if(fps4>=4){
+            slash2.style.display = 'none';
+            back2.style.display = 'inline';
+            nextarea.style.display = 'inline';
+            clearInterval(timerId4);
+        }
+    },60);
+});
+
+function barChange(){
+    switch(rendapt){
+        case 1:
+        rendabar0.style.display = 'none';
+        rendabar1.style.display = 'inline';
+        break;
+        case 2:
+        rendabar1.style.display = 'none';
+        rendabar2.style.display = 'inline';
+        break;
+        case 3:
+        rendabar2.style.display = 'none';
+        rendabar3.style.display = 'inline';
+        break;
+        case 4:
+        rendabar3.style.display = 'none';
+        rendabar4.style.display = 'inline';
+        break;
+        case 5:
+        rendabar4.style.display = 'none';
+        rendabar5.style.display = 'inline';
+        break;
+        case 6:
+        rendabar5.style.display = 'none';
+        rendabar6.style.display = 'inline';
+        break;
+        case 7:
+        rendabar6.style.display = 'none';
+        rendabar7.style.display = 'inline';
+        break;
+        case 8:
+        rendabar7.style.display = 'none';
+        rendabar8.style.display = 'inline';
+        break;
+        case 9:
+        rendabar8.style.display = 'none';
+        rendabar9.style.display = 'inline';
+        break;
+        case 10:
+        rendabar9.style.display = 'none';
+        rendabar10.style.display = 'inline';
+        break;
+        case 11:
+        rendabar10.style.display = 'none';
+        rendabar11.style.display = 'inline';
+        break;
+        case 12:
+        rendabar11.style.display = 'none';
+        rendabar12.style.display = 'inline';
+        break;
+        case 13:
+        rendabar12.style.display = 'none';
+        rendabar13.style.display = 'inline';
+        break;
+        case 14:
+        rendabar13.style.display = 'none';
+        rendabar14.style.display = 'inline';
+        break;
+        case 15:
+        clearInterval(timerId1);
+        //sewaap.pause();
+        //serendabtsuc.load();
+        //serendabtsuc.play();
+        if(waapplaying===true){sewaapStop();}
+        serendabtsucPlay();
+        limitbar.style.display = 'none';
+        rendabar14.style.display = 'none';
+        fontkaihi1.style.display = 'none';
+        btrenda1.style.display = 'none';
+        kyoufu2.style.display = 'none';
+        rendabar15.style.display = 'inline';
+        fontkaihi2.style.display = 'inline';
+        btkaihi.style.display = 'inline';
+        waapstop.style.display = 'inline';
+        let timerId3 = setInterval(function(){
+            fps3++;
+            switch(fps3){
+                case 24:
+                //sewaapkaihi.load();
+                //sewaapkaihi.play();
+                sewaapkaihiPlay();
+                rendabar15.style.display = 'none';
+                fontkaihi2.style.display = 'none';
+                btkaihi.style.display = 'none';
+                waapstop.style.display = 'none';
+                kyoufu3.style.display = 'inline';
+                break;
+                case 31:
+                //sekiru.load();
+                //sekiru.play();
+                sekiruPlay();
+                kyoufu3.style.display = 'none';
+                slash2.style.display = 'inline';
+                break;
+                case 34:
+                slash2.style.display = 'none';
+                back2.style.display = 'inline';
+                nextarea.style.display = 'inline';
+                clearInterval(timerId3);
+                break;
+            }
+        },80);
+        break;
+    }
+}
+
+btrenda1.addEventListener('mouseover',function(){btrenda1.style.cursor='pointer';});
+btrenda1.addEventListener('click',function(){
+    //sepunch.load();
+    //sepunch.play();
+    sepunchPlay();
+    rendapt += 1;
+    btrenda1.style.display = 'none';
+    btrenda2.style.display = 'inline';
+    fps2 = 0;
+    let timerId2 = setInterval(function(){
+        fps2++;
+        if(fps2 === 1){
+            btrenda2.style.display = 'none';
+            btrenda1.style.display = 'inline';
+            barChange();
+            clearInterval(timerId2);
+        }
+    },80);
+});
+
+nextarea.addEventListener('mouseover',function(){nextarea.style.cursor='pointer';});
+nextarea.addEventListener('click',function(){
+    location.href = 'i4it3sum27ae.html';
+});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Expires" content="Fri, 15 Aug 2025 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>KEVONZ ISLAND</title>
+<link rel="icon"href="image/favicon.ico">
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#dback{width:560px;height:315px;position:absolute;top:132px;left:205px;opacity:0.2;}
+#dback2{width:560px;height:315px;position:absolute;top:132px;left:205px;display:none;}
+#dback3{width:560px;height:315px;position:absolute;top:132px;left:205px;display:none;}
+#dback4{width:560px;height:315px;position:absolute;top:132px;left:205px;display:none;}
+#dback5{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#gameover{width:970px;height:580px;position:absolute;top:0px;left:0px;opacity:0.0;display:none;}
+#don{width:65px;height:49px;position:absolute;top:255px;left:452px;opacity:0.6;border-radius:10px;}
+/*トップバー*/
+#dtbar{width:560px;height:34px;position:absolute;top:132px;left:205px;opacity:0.6;}
+#dprof{width:32px;height:32px;position:absolute;top:133px;left:225px;opacity:1.0;border-radius:100px;}
+#dicon5{width:16px;height:16px;position:absolute;top:141px;right:255px;opacity:0.8;}
+#dicon6{width:16px;height:16px;position:absolute;top:141px;right:225px;opacity:0.8;}
+#dtitle{color:#dddddd;font-size:10pt;position:absolute;top:131px;left:265px;}
+/*アンダーバー*/
+#dbar{width:560px;height:34px;position:absolute;top:413px;left:205px;display:none;}
+#dicon1{width:16px;height:16px;position:absolute;top:425px;left:225px;opacity:0.8;display:none;}
+#dicon2{width:16px;height:16px;position:absolute;top:425px;left:255px;opacity:0.8;display:none;}
+#dicon3{width:16px;height:16px;position:absolute;top:425px;right:255px;opacity:0.8;display:none;}
+#dicon4{width:16px;height:16px;position:absolute;top:425px;right:225px;opacity:0.8;display:none;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<!--
+<audio id="dougabgm" preload="auto">
+<source src="pse/dougabgm.wav" type="audio/wav">
+<source src="pse/dougabgm.mp3" type="audio/mp3">
+</audio>
+
+<audio id="tsukamuse" preload="auto">
+<source src="pse/dougatsukamu.wav" type="audio/wav">
+<source src="pse/dougatsukamu.mp3" type="audio/mp3">
+</audio>
+
+<audio id="yurasuse" preload="auto">
+<source src="pse/dougayurasu.wav" type="audio/wav">
+<source src="pse/dougayurasu.mp3" type="audio/mp3">
+</audio>
+
+<audio id="oowaraise" preload="auto">
+<source src="pse/oowarai.wav" type="audio/wav">
+<source src="pse/oowarai.mp3" type="audio/mp3">
+</audio>
+-->
+
+<div id="d1">
+<img src = "pimg/dougaback.jpg"id="dback">
+<img src = "pimg/dback2.gif"id="dback2">
+<img src = "pimg/dback3.gif"id="dback3">
+<img src = "pimg/dback4.gif"id="dback4">
+<img src = "pimg/dougatopbar.jpg"id="dtbar">
+<img src = "pimg/dougabar.gif"id="dbar">
+<img src = "pimg/dougaicon1.jpg"id="dicon1">
+<img src = "pimg/dougaicon2.jpg"id="dicon2">
+<img src = "pimg/dougaicon3.jpg"id="dicon3">
+<img src = "pimg/dougaicon4.jpg"id="dicon4">
+<img src = "pimg/dougaicon5.jpg"id="dicon5">
+<img src = "pimg/dougaicon6.jpg"id="dicon6">
+<img src = "pimg/dougaprof.jpg"id="dprof">
+<img src = "pimg/dougaon.jpg"id="don">
+<p id="dtitle">カメラが捉えた恐怖の心霊映像</p>
+<img src = "pimg/dback5.gif"id="dback5">
+<img src = "pimg/gameover.jpg"id="gameover">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+/*★には同じ数字、☆には同じスペル(変数、関数)、◇にはファイルのパスを入力
+let sampleSource★ = '';
+async function decodeSe★(){
+    const response★ = await fetch("◇◇◇");
+    const arrayBuffer★ = await response★.arrayBuffer();
+    const audioBuffer★ = await ctx.decodeAudioData(arrayBuffer★);
+    return audioBuffer★;
+}
+function playSe★(ctx,audioBuffer★){
+    sampleSource★ = ctx.createBufferSource();
+    sampleSource★.buffer = audioBuffer★;
+    sampleSource★.connect(ctx.destination);
+    sampleSource★.start();
+}
+async function se☆Play(){
+    const se☆ = await decodeSe★();
+    playSe★(ctx,se☆);
+}
+async function se☆Stop(){
+    sampleSource★?.stop();
+}
+*/
+
+/*
+<source src="pse/dougabgm.mp3" id="dougabgm">
+
+<source src="pse/dougatsukamu.mp3" id="tsukamuse">
+
+<source src="pse/dougayurasu.mp3" id="yurasuse>
+
+<source src="pse/oowarai.mp3" id="oowaraise">
+*/
+
+/*★★★★★★★★★★★★★★★★★効果音のセット★★★★★★★★★★★★★★★★★★★★*/
+window.AudioContext = window.AudioContext||window.webkitAudioContext;
+const ctx = new AudioContext();
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource1 = '';
+async function decodeSe1(){
+    const response1 = await fetch("pse/dougabgm.mp3");
+    const arrayBuffer1 = await response1.arrayBuffer();
+    const audioBuffer1 = await ctx.decodeAudioData(arrayBuffer1);
+    return audioBuffer1;
+}
+function playSe1(ctx,audioBuffer1){
+    sampleSource1 = ctx.createBufferSource();
+    sampleSource1.buffer = audioBuffer1;
+    sampleSource1.connect(ctx.destination);
+    sampleSource1.start();
+}
+async function sedougabgmPlay(){
+    const sedougabgm = await decodeSe1();
+    playSe1(ctx,sedougabgm);
+}
+async function sedougabgmStop(){
+    sampleSource1?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource2 = '';
+async function decodeSe2(){
+    const response2 = await fetch("pse/dougatsukamu.mp3");
+    const arrayBuffer2 = await response2.arrayBuffer();
+    const audioBuffer2 = await ctx.decodeAudioData(arrayBuffer2);
+    return audioBuffer2;
+}
+function playSe2(ctx,audioBuffer2){
+    sampleSource2 = ctx.createBufferSource();
+    sampleSource2.buffer = audioBuffer2;
+    sampleSource2.connect(ctx.destination);
+    sampleSource2.start();
+}
+async function setsukamuPlay(){
+    const setsukamu = await decodeSe2();
+    playSe2(ctx,setsukamu);
+}
+async function setsukamuStop(){
+    sampleSource2?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource3 = '';
+async function decodeSe3(){
+    const response3 = await fetch("pse/dougayurasu.mp3");
+    const arrayBuffer3 = await response3.arrayBuffer();
+    const audioBuffer3 = await ctx.decodeAudioData(arrayBuffer3);
+    return audioBuffer3;
+}
+function playSe3(ctx,audioBuffer3){
+    sampleSource3 = ctx.createBufferSource();
+    sampleSource3.buffer = audioBuffer3;
+    sampleSource3.connect(ctx.destination);
+    sampleSource3.start();
+}
+async function seyurasuPlay(){
+    const seyurasu = await decodeSe3();
+    playSe3(ctx,seyurasu);
+}
+async function seyurasuStop(){
+    sampleSource3?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource4 = '';
+async function decodeSe4(){
+    const response4 = await fetch("pse/oowarai.mp3");
+    const arrayBuffer4 = await response4.arrayBuffer();
+    const audioBuffer4 = await ctx.decodeAudioData(arrayBuffer4);
+    return audioBuffer4;
+}
+function playSe4(ctx,audioBuffer4){
+    sampleSource4 = ctx.createBufferSource();
+    sampleSource4.buffer = audioBuffer4;
+    sampleSource4.connect(ctx.destination);
+    sampleSource4.start();
+}
+async function seoowaraiPlay(){
+    const seoowarai = await decodeSe4();
+    playSe4(ctx,seoowarai);
+}
+async function seoowaraiStop(){
+    sampleSource4?.stop();
+}
+
+
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let body = document.getElementById('body');
+let d1 = document.getElementById('d1');
+let dback = document.getElementById('dback');
+let dback2 = document.getElementById('dback2');
+let dback3 = document.getElementById('dback3');
+let dback4 = document.getElementById('dback4');
+let dback5 = document.getElementById('dback5');
+let gameover = document.getElementById('gameover');
+let don = document.getElementById('don');
+//トップバー
+let dtbar = document.getElementById('dtbar');
+let dprof = document.getElementById('dprof');
+let dicon5 = document.getElementById('dicon5');
+let dicon6 = document.getElementById('dicon6');
+let dtitle = document.getElementById('dtitle');
+//アンダーバー
+let dbar = document.getElementById('dbar');
+let dicon1 = document.getElementById('dicon1');
+let dicon2 = document.getElementById('dicon2');
+let dicon3 = document.getElementById('dicon3');
+let dicon4 = document.getElementById('dicon4');
+//時間表示
+let frameRate = 0;
+let secPoint = 0;
+let seccount = document.createElement('div');
+seccount.setAttribute('id','seccount');
+seccount.style.position = 'absolute';
+seccount.style.top = '414px';
+seccount.style.left = '285px';
+seccount.style.color = '#ffffff';
+seccount.style.fontSize = '9pt';
+//BGM・効果音
+//let bgmdouga = document.getElementById('dougabgm');
+//let setsukamu = document.getElementById('tsukamuse');
+//let seyurasu = document.getElementById('yurasuse');
+//let seoowarai = document.getElementById('oowaraise');
+//load(); play(); pause();
+
+function taskHideTop(){
+//トップバー
+dtbar.style.display = 'none';
+dprof.style.display = 'none';
+dicon5.style.display = 'none';
+dicon6.style.display = 'none';
+dtitle.style.display = 'none';
+}
+
+function taskAppUnder(){
+//アンダーバー
+dbar.style.display = 'inline';
+dicon1.style.display = 'inline';
+dicon2.style.display = 'inline';
+dicon3.style.display = 'inline';
+dicon4.style.display = 'inline';
+}
+
+dicon1.addEventListener('mouseover',function(){
+    dicon1.style.opacity = '1.0';
+});
+dicon1.addEventListener('mouseout',function(){
+    dicon1.style.opacity = '0.8';
+});
+
+dicon2.addEventListener('mouseover',function(){
+    dicon2.style.opacity = '1.0';
+});
+dicon2.addEventListener('mouseout',function(){
+    dicon2.style.opacity = '0.8';
+});
+
+dicon3.addEventListener('mouseover',function(){
+    dicon3.style.opacity = '1.0';
+});
+dicon3.addEventListener('mouseout',function(){
+    dicon3.style.opacity = '0.8';
+});
+
+dicon4.addEventListener('mouseover',function(){
+    dicon4.style.opacity = '1.0';
+});
+dicon4.addEventListener('mouseout',function(){
+    dicon4.style.opacity = '0.8';
+});
+
+dicon5.addEventListener('mouseover',function(){
+    dicon5.style.opacity = '1.0';
+});
+dicon5.addEventListener('mouseout',function(){
+    dicon5.style.opacity = '0.8';
+});
+
+dicon6.addEventListener('mouseover',function(){
+    dicon6.style.opacity = '1.0';
+});
+dicon6.addEventListener('mouseout',function(){
+    dicon6.style.opacity = '0.8';
+});
+
+don.addEventListener('mouseover',function(){
+    don.style.opacity = '1.0';
+});
+don.addEventListener('mouseout',function(){
+    don.style.opacity = '0.6';
+});
+
+don.addEventListener('mouseover',function(){don.style.cursor = 'pointer';});
+don.addEventListener('click',function(){
+    //bgmdouga.load();
+    //bgmdouga.play();
+    //setsukamu.load();
+    //seyurasu.load();
+    //seoowarai.load();
+    sedougabgmPlay();
+    decodeSe2();
+    decodeSe3();
+    decodeSe4();
+    don.style.display = 'none';
+    dback.style.display = 'none';
+    dback2.style.display = 'inline';
+    taskAppUnder();
+    taskHideTop();
+    d1.insertBefore(seccount,null);
+    seccount.innerHTML = '<p>0:0'+secPoint+'/0:20</p>';
+    let timerId = setInterval(function(){
+        secPoint++;
+        if(secPoint < 10){
+            seccount.innerHTML = '<p>0:0'+secPoint+'/0:20</p>';
+        }
+        if(secPoint === 7){
+            clearInterval(timerId);
+        }
+    },1000);
+    let animeId = setInterval(function(){
+        frameRate++;
+        switch(frameRate){
+            case 44:
+            dback2.style.display = 'none';
+            dback3.style.display = 'inline';
+            break;
+            case 60:
+            dback3.style.display = 'none';
+            dback4.style.display = 'inline';
+            break;
+            case 76:
+            dback4.style.display = 'none';
+            dback2.style.display = 'inline';
+            break;
+            case 92:
+            //setsukamu.play();
+            setsukamuPlay();
+            seccount.style.display = 'none';
+            dback2.style.display = 'none';
+            dback5.style.display = 'inline';
+            break;
+            case 102:
+            //seyurasu.play();
+            seyurasuPlay();
+            break;
+            case 122:
+            //seoowarai.play();
+            seoowaraiPlay();
+            break;
+            case 150:
+            gameover.style.display = 'inline';
+            break;
+            case 151:
+            gameover.style.opacity = '0.2';
+            body.style.backgroundColor = '#330000';
+            break;
+            case 152:
+            gameover.style.opacity = '0.4';
+            body.style.backgroundColor = '#660000';
+            break;
+            case 153:
+            gameover.style.opacity = '0.6';
+            body.style.backgroundColor = '#990000';
+            break;
+            case 154:
+            gameover.style.opacity = '0.8';
+            body.style.backgroundColor = '#cc0000';
+            break;
+            case 155:
+            gameover.style.opacity = '1.0';
+            body.style.backgroundColor = '#ff0000';
+            clearInterval(animeId);
+            break;
+        }
+    },70);
+});
+
+</script>
+<!--
+<script src="js/.js"></script>
+-->
+</body>
+</html>

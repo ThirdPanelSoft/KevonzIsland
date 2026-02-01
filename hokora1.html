@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Expires" content="Fri, 15 Aug 2025 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>KEVONZ ISLAND</title>
+<link rel="icon"href="image/favicon.ico">
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#eyeback{width:970px;height:580px;position:absolute;left:0px;top:0px;}
+/*上段左(黄→赤→緑→青→紫)*/
+#eye1a{width:145px;height:145px;position:absolute;left:24px;top:24px;}
+#eye2a{width:145px;height:145px;position:absolute;left:24px;top:24px;display:none;}
+#eye3a{width:145px;height:145px;position:absolute;left:24px;top:24px;display:none;}
+#eye4a{width:145px;height:145px;position:absolute;left:24px;top:24px;display:none;}
+#eye5a{width:145px;height:145px;position:absolute;left:24px;top:24px;display:none;}
+#eyemove1a{width:145px;height:145px;position:absolute;left:24px;top:24px;display:none;}
+#eyemove2a{width:145px;height:145px;position:absolute;left:24px;top:24px;display:none;}
+/*上段中(黄→赤→緑→青→紫)*/
+#eye1b{width:145px;height:145px;position:absolute;left:410px;top:24px;}
+#eye2b{width:145px;height:145px;position:absolute;left:410px;top:24px;display:none;}
+#eye3b{width:145px;height:145px;position:absolute;left:410px;top:24px;display:none;}
+#eye4b{width:145px;height:145px;position:absolute;left:410px;top:24px;display:none;}
+#eye5b{width:145px;height:145px;position:absolute;left:410px;top:24px;display:none;}
+#eyemove1b{width:145px;height:145px;position:absolute;left:410px;top:24px;display:none;}
+#eyemove2b{width:145px;height:145px;position:absolute;left:410px;top:24px;display:none;}
+/*上段右(黄→赤→緑→青→紫)*/
+#eye1c{width:145px;height:145px;position:absolute;left:796px;top:24px;}
+#eye2c{width:145px;height:145px;position:absolute;left:796px;top:24px;display:none;}
+#eye3c{width:145px;height:145px;position:absolute;left:796px;top:24px;display:none;}
+#eye4c{width:145px;height:145px;position:absolute;left:796px;top:24px;display:none;}
+#eye5c{width:145px;height:145px;position:absolute;left:796px;top:24px;display:none;}
+#eyemove1c{width:145px;height:145px;position:absolute;left:796px;top:24px;display:none;}
+#eyemove2c{width:145px;height:145px;position:absolute;left:796px;top:24px;display:none;}
+/*中段左(黄→赤→緑→青→紫)*/
+#eye1d{width:145px;height:145px;position:absolute;left:217px;top:217px;}
+#eye2d{width:145px;height:145px;position:absolute;left:217px;top:217px;display:none;}
+#eye3d{width:145px;height:145px;position:absolute;left:217px;top:217px;display:none;}
+#eye4d{width:145px;height:145px;position:absolute;left:217px;top:217px;display:none;}
+#eye5d{width:145px;height:145px;position:absolute;left:217px;top:217px;display:none;}
+#eyemove1d{width:145px;height:145px;position:absolute;left:217px;top:217px;display:none;}
+#eyemove2d{width:145px;height:145px;position:absolute;left:217px;top:217px;display:none;}
+/*中段右(黄→赤→緑→青→紫)*/
+#eye1e{width:145px;height:145px;position:absolute;left:603px;top:217px;}
+#eye2e{width:145px;height:145px;position:absolute;left:603px;top:217px;display:none;}
+#eye3e{width:145px;height:145px;position:absolute;left:603px;top:217px;display:none;}
+#eye4e{width:145px;height:145px;position:absolute;left:603px;top:217px;display:none;}
+#eye5e{width:145px;height:145px;position:absolute;left:603px;top:217px;display:none;}
+#eyemove1e{width:145px;height:145px;position:absolute;left:603px;top:217px;display:none;}
+#eyemove2e{width:145px;height:145px;position:absolute;left:603px;top:217px;display:none;}
+/*下段左(黄→赤→緑→青→紫)*/
+#eye1f{width:145px;height:145px;position:absolute;left:24px;bottom:25px;}
+#eye2f{width:145px;height:145px;position:absolute;left:24px;bottom:25px;display:none;}
+#eye3f{width:145px;height:145px;position:absolute;left:24px;bottom:25px;display:none;}
+#eye4f{width:145px;height:145px;position:absolute;left:24px;bottom:25px;display:none;}
+#eye5f{width:145px;height:145px;position:absolute;left:24px;bottom:25px;display:none;}
+#eyemove1f{width:145px;height:145px;position:absolute;left:24px;bottom:25px;display:none;}
+#eyemove2f{width:145px;height:145px;position:absolute;left:24px;bottom:25px;display:none;}
+/*下段中(黄→赤→緑→青→紫)*/
+#eye1g{width:145px;height:145px;position:absolute;left:410px;bottom:25px;}
+#eye2g{width:145px;height:145px;position:absolute;left:410px;bottom:25px;display:none;}
+#eye3g{width:145px;height:145px;position:absolute;left:410px;bottom:25px;display:none;}
+#eye4g{width:145px;height:145px;position:absolute;left:410px;bottom:25px;display:none;}
+#eye5g{width:145px;height:145px;position:absolute;left:410px;bottom:25px;display:none;}
+#eyemove1g{width:145px;height:145px;position:absolute;left:410px;bottom:25px;display:none;}
+#eyemove2g{width:145px;height:145px;position:absolute;left:410px;bottom:25px;display:none;}
+/*下段右(黄→赤→緑→青→紫)*/
+#eye1h{width:145px;height:145px;position:absolute;left:796px;bottom:25px;}
+#eye2h{width:145px;height:145px;position:absolute;left:796px;bottom:25px;display:none;}
+#eye3h{width:145px;height:145px;position:absolute;left:796px;bottom:25px;display:none;}
+#eye4h{width:145px;height:145px;position:absolute;left:796px;bottom:25px;display:none;}
+#eye5h{width:145px;height:145px;position:absolute;left:796px;bottom:25px;display:none;}
+#eyemove1h{width:145px;height:145px;position:absolute;left:796px;bottom:25px;display:none;}
+#eyemove2h{width:145px;height:145px;position:absolute;left:796px;bottom:25px;display:none;}
+/*祠のシーン*/
+#hokoranoma{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#hokoraarea1{
+    width:113px;height:139px;
+    position:absolute;left:418px;top:81px;
+    background-color:#00ff00;opacity:0.0;display:none;
+}
+#hokora{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#hokoraarea2{
+    width:294px;height:319px;
+    position:absolute;left:338px;top:230px;
+    background-color:#00ff00;opacity:0.0;display:none;
+}
+#hand1{width:294px;height:319px;position:absolute;left:338px;top:230px;display:none;}
+#hand2{width:298px;height:373px;position:absolute;left:336px;top:205px;display:none;}
+#eyepuzsuc1{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#eyepuzsuc2{width:970px;height:522px;position:absolute;left:0px;top:0px;display:none;}
+#eyepuzsuc3{width:970px;height:464px;position:absolute;left:0px;top:0px;display:none;}
+#eyepuzsuc4{width:970px;height:406px;position:absolute;left:0px;top:0px;display:none;}
+#eyepuzsuc5{width:970px;height:348px;position:absolute;left:0px;top:0px;display:none;}
+#eyepuzsuc6{width:970px;height:290px;position:absolute;left:0px;top:0px;display:none;}
+#eyepuzsuc7{width:970px;height:232px;position:absolute;left:0px;top:0px;display:none;}
+#eyepuzsuc8{width:970px;height:174px;position:absolute;left:0px;top:0px;display:none;}
+#eyepuzsuc9{width:970px;height:116px;position:absolute;left:0px;top:0px;display:none;}
+#eyepuzsuc10{width:970px;height:58px;position:absolute;left:0px;top:0px;display:none;}
+
+#mir1{width:319px;height:400px;position:absolute;left:31px;top:90px;display:none;}
+#mir2{width:319px;height:400px;position:absolute;left:31px;top:90px;display:none;}
+#mir3{width:319px;height:400px;position:absolute;left:31px;top:90px;display:none;}
+#mir4{width:319px;height:400px;position:absolute;left:31px;top:90px;display:none;}
+#mir5{width:319px;height:400px;position:absolute;left:31px;top:90px;display:none;}
+#mir6{width:319px;height:400px;position:absolute;left:31px;top:90px;display:none;}
+#mir7{width:319px;height:400px;position:absolute;left:31px;top:90px;display:none;}
+#mir8{width:319px;height:400px;position:absolute;left:31px;top:90px;display:none;}
+#mir9{width:319px;height:400px;position:absolute;left:31px;top:90px;display:none;}
+#mir10{width:319px;height:400px;position:absolute;left:31px;top:90px;display:none;}
+#mir11{width:319px;height:400px;position:absolute;left:31px;top:90px;display:none;}
+#mir12{width:319px;height:400px;position:absolute;left:31px;top:90px;display:none;}
+#mir13{width:319px;height:400px;position:absolute;left:31px;top:90px;display:none;}
+#mir14{width:319px;height:400px;position:absolute;left:31px;top:90px;display:none;}
+#mirarea{width:211px;height:262px;position:absolute;left:86px;top:159px;border-radius:1000px;background-color:#00ff00;opacity:0.0;display:none;}
+#flashback{width:970px;height:580px;position:absolute;left:0px;top:0px;background-color:#ffffff;opacity:0.1;display:none;}
+#hint{width:970px;height:580px;position:absolute;left:0px;top:0px;opacity:0.2;display:none;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<!--
+<audio id="panese" preload="auto">
+<source src="pse/boxpane.wav" type="audio/wav">
+<source src="pse/boxpane.mp3" type="audio/mp3">
+</audio>
+
+<audio id="unlockse" preload="auto">
+<source src="pse/boxunlock.wav" type="audio/wav">
+<source src="pse/boxunlock.mp3" type="audio/mp3">
+</audio>
+
+<audio id="eyepuzopense" preload="auto">
+<source src="pse/boxopen.wav" type="audio/wav">
+<source src="pse/boxopen.mp3" type="audio/mp3">
+</audio>
+
+<audio id="handse" preload="auto">
+<source src="pse/doorkishimi.wav" type="audio/wav">
+<source src="pse/doorkishimi.mp3" type="audio/mp3">
+</audio>
+-->
+
+<div id="d1">
+<img src="pimg/eyepuzzleback.jpg"id="eyeback">
+<!--上段左(黄→赤→緑→青→紫)-->
+<img src="pimg/eyekiiro.png"id="eye1a">
+<img src="pimg/eyeaka.png"id="eye2a">
+<img src="pimg/eyemidori.png"id="eye3a">
+<img src="pimg/eyeao.png"id="eye4a">
+<img src="pimg/eyemurasaki.png"id="eye5a">
+<img src="pimg/eyemove1.png"id="eyemove1a">
+<img src="pimg/eyemove2.png"id="eyemove2a">
+<!--上段中(黄→赤→緑→青→紫)-->
+<img src="pimg/eyekiiro.png"id="eye1b">
+<img src="pimg/eyeaka.png"id="eye2b">
+<img src="pimg/eyemidori.png"id="eye3b">
+<img src="pimg/eyeao.png"id="eye4b">
+<img src="pimg/eyemurasaki.png"id="eye5b">
+<img src="pimg/eyemove1.png"id="eyemove1b">
+<img src="pimg/eyemove2.png"id="eyemove2b">
+<!--上段右(黄→赤→緑→青→紫)-->
+<img src="pimg/eyekiiro.png"id="eye1c">
+<img src="pimg/eyeaka.png"id="eye2c">
+<img src="pimg/eyemidori.png"id="eye3c">
+<img src="pimg/eyeao.png"id="eye4c">
+<img src="pimg/eyemurasaki.png"id="eye5c">
+<img src="pimg/eyemove1.png"id="eyemove1c">
+<img src="pimg/eyemove2.png"id="eyemove2c">
+<!--中段左(黄→赤→緑→青→紫)-->
+<img src="pimg/eyekiiro.png"id="eye1d">
+<img src="pimg/eyeaka.png"id="eye2d">
+<img src="pimg/eyemidori.png"id="eye3d">
+<img src="pimg/eyeao.png"id="eye4d">
+<img src="pimg/eyemurasaki.png"id="eye5d">
+<img src="pimg/eyemove1.png"id="eyemove1d">
+<img src="pimg/eyemove2.png"id="eyemove2d">
+<!--中段右(黄→赤→緑→青→紫)-->
+<img src="pimg/eyekiiro.png"id="eye1e">
+<img src="pimg/eyeaka.png"id="eye2e">
+<img src="pimg/eyemidori.png"id="eye3e">
+<img src="pimg/eyeao.png"id="eye4e">
+<img src="pimg/eyemurasaki.png"id="eye5e">
+<img src="pimg/eyemove1.png"id="eyemove1e">
+<img src="pimg/eyemove2.png"id="eyemove2e">
+<!--下段左(黄→赤→緑→青→紫)-->
+<img src="pimg/eyekiiro.png"id="eye1f">
+<img src="pimg/eyeaka.png"id="eye2f">
+<img src="pimg/eyemidori.png"id="eye3f">
+<img src="pimg/eyeao.png"id="eye4f">
+<img src="pimg/eyemurasaki.png"id="eye5f">
+<img src="pimg/eyemove1.png"id="eyemove1f">
+<img src="pimg/eyemove2.png"id="eyemove2f">
+<!--下段中(黄→赤→緑→青→紫)-->
+<img src="pimg/eyekiiro.png"id="eye1g">
+<img src="pimg/eyeaka.png"id="eye2g">
+<img src="pimg/eyemidori.png"id="eye3g">
+<img src="pimg/eyeao.png"id="eye4g">
+<img src="pimg/eyemurasaki.png"id="eye5g">
+<img src="pimg/eyemove1.png"id="eyemove1g">
+<img src="pimg/eyemove2.png"id="eyemove2g">
+<!--下段右(黄→赤→緑→青→紫)-->
+<img src="pimg/eyekiiro.png"id="eye1h">
+<img src="pimg/eyeaka.png"id="eye2h">
+<img src="pimg/eyemidori.png"id="eye3h">
+<img src="pimg/eyeao.png"id="eye4h">
+<img src="pimg/eyemurasaki.png"id="eye5h">
+<img src="pimg/eyemove1.png"id="eyemove1h">
+<img src="pimg/eyemove2.png"id="eyemove2h">
+<!--祠のシーン-->
+<img src="pimg/hokoranoma.jpg"id="hokoranoma">
+<div id="hokoraarea1"></div>
+<img src="pimg/hokora.jpg"id="hokora">
+<div id="hokoraarea2"></div>
+<img src="pimg/hokorahand1.jpg"id="hand1">
+<img src="pimg/hokorahand2.png"id="hand2">
+<img src="pimg/eyepuzsuc1.jpg"id="eyepuzsuc1">
+<img src="pimg/eyepuzsuc2.jpg"id="eyepuzsuc2">
+<img src="pimg/eyepuzsuc3.jpg"id="eyepuzsuc3">
+<img src="pimg/eyepuzsuc4.jpg"id="eyepuzsuc4">
+<img src="pimg/eyepuzsuc5.jpg"id="eyepuzsuc5">
+<img src="pimg/eyepuzsuc6.jpg"id="eyepuzsuc6">
+<img src="pimg/eyepuzsuc7.jpg"id="eyepuzsuc7">
+<img src="pimg/eyepuzsuc8.jpg"id="eyepuzsuc8">
+<img src="pimg/eyepuzsuc9.jpg"id="eyepuzsuc9">
+<img src="pimg/eyepuzsuc10.jpg"id="eyepuzsuc10">
+
+<img src="pimg/tsuikagazou/mir1.png"id="mir1">
+<img src="pimg/tsuikagazou/mir2.png"id="mir2">
+<img src="pimg/tsuikagazou/mir3.png"id="mir3">
+<img src="pimg/tsuikagazou/mir4.png"id="mir4">
+<img src="pimg/tsuikagazou/mir5.png"id="mir5">
+<img src="pimg/tsuikagazou/mir6.png"id="mir6">
+<img src="pimg/tsuikagazou/mir7.png"id="mir7">
+<img src="pimg/tsuikagazou/mir8.png"id="mir8">
+<img src="pimg/tsuikagazou/mir9.png"id="mir9">
+<img src="pimg/tsuikagazou/mir10.png"id="mir10">
+<img src="pimg/tsuikagazou/ujimir11.png"id="mir11">
+<img src="pimg/tsuikagazou/ujimir12.png"id="mir12">
+<img src="pimg/tsuikagazou/ujimir13.png"id="mir13">
+<img src="pimg/tsuikagazou/ujimir14.png"id="mir14">
+<img src="pimg/tsuikagazou/hintotoujinoma.png"id="hint">
+<div id="mirarea"></div>
+<div id="flashback"></div>
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+/*★には同じ数字、☆には同じスペル(変数、関数)、◇にはファイルのパスを入力
+let sampleSource★ = '';
+async function decodeSe★(){
+    const response★ = await fetch("◇◇◇");
+    const arrayBuffer★ = await response★.arrayBuffer();
+    const audioBuffer★ = await ctx.decodeAudioData(arrayBuffer★);
+    return audioBuffer★;
+}
+function playSe★(ctx,audioBuffer★){
+    sampleSource★ = ctx.createBufferSource();
+    sampleSource★.buffer = audioBuffer★;
+    sampleSource★.connect(ctx.destination);
+    sampleSource★.start();
+}
+async function se☆Play(){
+    const se☆ = await decodeSe★();
+    playSe★(ctx,se☆);
+}
+async function se☆Stop(){
+    sampleSource★?.stop();
+}
+*/
+
+/*
+<audio id="panese" preload="auto">
+<source src="pse/boxpane.mp3" type="audio/mp3">
+</audio>
+
+<audio id="unlockse" preload="auto">
+<source src="pse/boxunlock.mp3" type="audio/mp3">
+</audio>
+
+<audio id="eyepuzopense" preload="auto">
+<source src="pse/boxopen.mp3" type="audio/mp3">
+</audio>
+
+<audio id="handse" preload="auto">
+<source src="pse/doorkishimi.mp3" type="audio/mp3">
+</audio>
+*/
+
+/*★★★★★★★★★★★★★★★★★効果音のセット★★★★★★★★★★★★★★★★★★★★*/
+window.AudioContext = window.AudioContext||window.webkitAudioContext;
+const ctx = new AudioContext();
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource1 = '';
+async function decodeSe1(){
+    const response1 = await fetch("pse/boxpane.mp3");
+    const arrayBuffer1 = await response1.arrayBuffer();
+    const audioBuffer1 = await ctx.decodeAudioData(arrayBuffer1);
+    return audioBuffer1;
+}
+function playSe1(ctx,audioBuffer1){
+    sampleSource1 = ctx.createBufferSource();
+    sampleSource1.buffer = audioBuffer1;
+    sampleSource1.connect(ctx.destination);
+    sampleSource1.start();
+}
+async function sepanePlay(){
+    const sepane = await decodeSe1();
+    playSe1(ctx,sepane);
+}
+async function sepaneStop(){
+    sampleSource1?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource2 = '';
+async function decodeSe2(){
+    const response2 = await fetch("pse/boxunlock.mp3");
+    const arrayBuffer2 = await response2.arrayBuffer();
+    const audioBuffer2 = await ctx.decodeAudioData(arrayBuffer2);
+    return audioBuffer2;
+}
+function playSe2(ctx,audioBuffer2){
+    sampleSource2 = ctx.createBufferSource();
+    sampleSource2.buffer = audioBuffer2;
+    sampleSource2.connect(ctx.destination);
+    sampleSource2.start();
+}
+async function seunlockPlay(){
+    const seunlock = await decodeSe2();
+    playSe2(ctx,seunlock);
+}
+async function seunlockStop(){
+    sampleSource2?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource3 = '';
+async function decodeSe3(){
+    const response3 = await fetch("pse/boxopen.mp3");
+    const arrayBuffer3 = await response3.arrayBuffer();
+    const audioBuffer3 = await ctx.decodeAudioData(arrayBuffer3);
+    return audioBuffer3;
+}
+function playSe3(ctx,audioBuffer3){
+    sampleSource3 = ctx.createBufferSource();
+    sampleSource3.buffer = audioBuffer3;
+    sampleSource3.connect(ctx.destination);
+    sampleSource3.start();
+}
+async function seeyepuzopenPlay(){
+    const seeyepuzopen = await decodeSe3();
+    playSe3(ctx,seeyepuzopen);
+}
+async function seeyepuzopenStop(){
+    sampleSource3?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource4 = '';
+async function decodeSe4(){
+    const response4 = await fetch("pse/doorkishimi.mp3");
+    const arrayBuffer4 = await response4.arrayBuffer();
+    const audioBuffer4 = await ctx.decodeAudioData(arrayBuffer4);
+    return audioBuffer4;
+}
+function playSe4(ctx,audioBuffer4){
+    sampleSource4 = ctx.createBufferSource();
+    sampleSource4.buffer = audioBuffer4;
+    sampleSource4.connect(ctx.destination);
+    sampleSource4.start();
+}
+async function sehandPlay(){
+    const sehand = await decodeSe4();
+    playSe4(ctx,sehand);
+}
+async function sehandStop(){
+    sampleSource4?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let sampleSource11 = '';
+async function decodeSe11(){
+    const response11 = await fetch("pse/janpienoroi.mp3");
+    const arrayBuffer11 = await response11.arrayBuffer();
+    const audioBuffer11 = await ctx.decodeAudioData(arrayBuffer11);
+    return audioBuffer11;
+}
+function playSe11(ctx,audioBuffer11){
+    sampleSource11 = ctx.createBufferSource();
+    sampleSource11.buffer = audioBuffer11;
+    sampleSource11.connect(ctx.destination);
+    sampleSource11.start();
+}
+async function sepienoroiPlay(){
+    const sepienoroi = await decodeSe11();
+    playSe11(ctx,sepienoroi);
+}
+async function sepienoroiStop(){
+    sampleSource11?.stop();
+}
+
+/*■■■■■■■■■■■■■■■■■■■■ここに効果音の名前入力■■■■■■■■■■■■■■■■■■■■*/
+let encountplaying = false;
+let sampleSource13 = '';
+async function decodeSe13(){
+    const response13 = await fetch("pse/janencount.mp3");
+    const arrayBuffer13 = await response13.arrayBuffer();
+    const audioBuffer13 = await ctx.decodeAudioData(arrayBuffer13);
+    return audioBuffer13;
+}
+function playSe13(ctx,audioBuffer13){
+    sampleSource13 = ctx.createBufferSource();
+    sampleSource13.buffer = audioBuffer13;
+    sampleSource13.connect(ctx.destination);
+    sampleSource13.start();
+    encountplaying = true;
+}
+async function seencountPlay(){
+    const seencount = await decodeSe13();
+    playSe13(ctx,seencount);
+}
+async function seencountStop(){
+    sampleSource13?.stop();
+}
+
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+    decodeSe1();
+    decodeSe2();
+    decodeSe3();
+    decodeSe4();
+});
+let eyeback = document.getElementById('eyeback');
+/*上段左(黄→赤→緑→青→紫)*/
+let eye1a = document.getElementById('eye1a');
+let eye2a = document.getElementById('eye2a');
+let eye3a = document.getElementById('eye3a');
+let eye4a = document.getElementById('eye4a');
+let eye5a = document.getElementById('eye5a');
+let eyemove1a = document.getElementById('eyemove1a');
+let eyemove2a = document.getElementById('eyemove2a');
+/*上段中(黄→赤→緑→青→紫)*/
+let eye1b = document.getElementById('eye1b');
+let eye2b = document.getElementById('eye2b');
+let eye3b = document.getElementById('eye3b');
+let eye4b = document.getElementById('eye4b');
+let eye5b = document.getElementById('eye5b');
+let eyemove1b = document.getElementById('eyemove1b');
+let eyemove2b = document.getElementById('eyemove2b');
+/*上段右(黄→赤→緑→青→紫)*/
+let eye1c = document.getElementById('eye1c');
+let eye2c = document.getElementById('eye2c');
+let eye3c = document.getElementById('eye3c');
+let eye4c = document.getElementById('eye4c');
+let eye5c = document.getElementById('eye5c');
+let eyemove1c = document.getElementById('eyemove1c');
+let eyemove2c = document.getElementById('eyemove2c');
+/*中段左(黄→赤→緑→青→紫)*/
+let eye1d = document.getElementById('eye1d');
+let eye2d = document.getElementById('eye2d');
+let eye3d = document.getElementById('eye3d');
+let eye4d = document.getElementById('eye4d');
+let eye5d = document.getElementById('eye5d');
+let eyemove1d = document.getElementById('eyemove1d');
+let eyemove2d = document.getElementById('eyemove2d');
+/*中段右(黄→赤→緑→青→紫)*/
+let eye1e = document.getElementById('eye1e');
+let eye2e = document.getElementById('eye2e');
+let eye3e = document.getElementById('eye3e');
+let eye4e = document.getElementById('eye4e');
+let eye5e = document.getElementById('eye5e');
+let eyemove1e = document.getElementById('eyemove1e');
+let eyemove2e = document.getElementById('eyemove2e');
+/*下段左(黄→赤→緑→青→紫)*/
+let eye1f = document.getElementById('eye1f');
+let eye2f = document.getElementById('eye2f');
+let eye3f = document.getElementById('eye3f');
+let eye4f = document.getElementById('eye4f');
+let eye5f = document.getElementById('eye5f');
+let eyemove1f = document.getElementById('eyemove1f');
+let eyemove2f = document.getElementById('eyemove2f');
+/*下段中(黄→赤→緑→青→紫)*/
+let eye1g = document.getElementById('eye1g');
+let eye2g = document.getElementById('eye2g');
+let eye3g = document.getElementById('eye3g');
+let eye4g = document.getElementById('eye4g');
+let eye5g = document.getElementById('eye5g');
+let eyemove1g = document.getElementById('eyemove1g');
+let eyemove2g = document.getElementById('eyemove2g');
+/*下段右(黄→赤→緑→青→紫)*/
+let eye1h = document.getElementById('eye1h');
+let eye2h = document.getElementById('eye2h');
+let eye3h = document.getElementById('eye3h');
+let eye4h = document.getElementById('eye4h');
+let eye5h = document.getElementById('eye5h');
+let eyemove1h = document.getElementById('eyemove1h');
+let eyemove2h = document.getElementById('eyemove2h');
+/*祠セット*/
+let hokoranoma = document.getElementById('hokoranoma');
+let hokoraarea1 = document.getElementById('hokoraarea1');
+let hokora = document.getElementById('hokora');
+let hokoraarea2 = document.getElementById('hokoraarea2');
+let hand1 = document.getElementById('hand1');
+let hand2 = document.getElementById('hand2');
+let eyepuzsuc1 = document.getElementById('eyepuzsuc1');
+let eyepuzsuc2 = document.getElementById('eyepuzsuc2');
+let eyepuzsuc3 = document.getElementById('eyepuzsuc3');
+let eyepuzsuc4 = document.getElementById('eyepuzsuc4');
+let eyepuzsuc5 = document.getElementById('eyepuzsuc5');
+let eyepuzsuc6 = document.getElementById('eyepuzsuc6');
+let eyepuzsuc7 = document.getElementById('eyepuzsuc7');
+let eyepuzsuc8 = document.getElementById('eyepuzsuc8');
+let eyepuzsuc9 = document.getElementById('eyepuzsuc9');
+let eyepuzsuc10 = document.getElementById('eyepuzsuc10');
+
+let mir1 = document.getElementById('mir1');
+let mir2 = document.getElementById('mir2');
+let mir3 = document.getElementById('mir3');
+let mir4 = document.getElementById('mir4');
+let mir5 = document.getElementById('mir5');
+let mir6 = document.getElementById('mir6');
+let mir7 = document.getElementById('mir7');
+let mir8 = document.getElementById('mir8');
+let mir9 = document.getElementById('mir9');
+let mir10 = document.getElementById('mir10');
+let mir11 = document.getElementById('mir11');
+let mir12 = document.getElementById('mir12');
+let mir13 = document.getElementById('mir13');
+let mir14 = document.getElementById('mir14');
+let mirarea = document.getElementById('mirarea');
+let hint = document.getElementById('hint');
+let flashback = document.getElementById('flashback');
+/*効果音*/
+//let sepane = document.getElementById('panese');
+//let seunlock = document.getElementById('unlockse');
+//let seeyepuzopen = document.getElementById('eyepuzopense');
+//let sehand = document.getElementById('handse');
+//load(); play(); pause();
+/*スコア*/
+fps1 = 0;
+fps2 = 0;
+fps3 = 0;
+fps4 = 0;
+fps5 = 0;
+fps6 = 0;
+fps7 = 0;
+fps8 = 0;
+fps9 = 0;
+fps10 = 0;
+fps11 = 0;
+fps12 = 0;
+fps13 = 0;
+fps14 = 0;
+fps15 = 0;
+fps16 = 0;
+fps17 = 0;
+fps18 = 0;
+fps19 = 0;
+fps20 = 0;
+fps21 = 0;
+fps22 = 0;
+fps23 = 0;
+fps24 = 0;
+fps25 = 0;
+fps26 = 0;
+fps27 = 0;
+fps28 = 0;
+fps29 = 0;
+fps30 = 0;
+fps31 = 0;
+fps32 = 0;
+fps33 = 0;
+fps34 = 0;
+fps35 = 0;
+fps36 = 0;
+fps37 = 0;
+fps38 = 0;
+fps39 = 0;
+fps40 = 0;
+fps41 = 0;
+fps42 = 0;
+unlockpoint = 20;
+
+/*回してるパネルの色が正解の位置に来た時、unlockpointが70ならイベント発生。70じゃなければ+10する。*/
+function unlockcheck(){
+    if(unlockpoint === 70){
+        //seunlock.load();
+        //seunlock.play();
+        seunlockPlay();
+        decodeSe11();
+        decodeSe13();
+        eye2a.style.display = 'none';
+        eye1b.style.display = 'none';
+        eye5c.style.display = 'none';
+        eye4d.style.display = 'none';
+        eye2e.style.display = 'none';
+        eye3f.style.display = 'none';
+        eye4g.style.display = 'none';
+        eye1h.style.display = 'none';
+        eyeback.style.display = 'none';
+        eyepuzsuc1.style.display = 'inline';
+        hokoranoma.style.display = 'inline';
+        let timerId41 = setInterval(function(){
+            fps41++;
+            switch(fps41){
+                case 24:
+                //seeyepuzopen.load();
+                //seeyepuzopen.play();
+                seeyepuzopenPlay();
+                eyepuzsuc1.style.display = 'none';
+                eyepuzsuc2.style.display = 'inline';
+                break;
+                case 25:
+                eyepuzsuc2.style.display = 'none';
+                eyepuzsuc3.style.display = 'inline';
+                break;
+                case 26:
+                eyepuzsuc3.style.display = 'none';
+                eyepuzsuc4.style.display = 'inline';
+                break;
+                case 27:
+                eyepuzsuc4.style.display = 'none';
+                eyepuzsuc5.style.display = 'inline';
+                break;
+                case 28:
+                eyepuzsuc5.style.display = 'none';
+                eyepuzsuc6.style.display = 'inline';
+                break;
+                case 29:
+                eyepuzsuc6.style.display = 'none';
+                eyepuzsuc7.style.display = 'inline';
+                break;
+                case 30:
+                eyepuzsuc7.style.display = 'none';
+                eyepuzsuc8.style.display = 'inline';
+                break;
+                case 31:
+                eyepuzsuc8.style.display = 'none';
+                eyepuzsuc9.style.display = 'inline';
+                break;
+                case 32:
+                eyepuzsuc9.style.display = 'none';
+                eyepuzsuc10.style.display = 'inline';
+                break;
+                case 33:
+                eyepuzsuc10.style.display = 'none';
+                hokoraarea1.style.display = 'inline';
+                clearInterval(timerId41);
+                break;
+            }
+        },80);
+    }else{
+        unlockpoint += 10;
+    }
+}
+hokoraarea1.addEventListener('mouseover',function(){hokoraarea1.style.cursor = 'pointer';});
+hokoraarea1.addEventListener('click',function(){
+    hokoraarea1.style.display = 'none';
+    hokoranoma.style.display = 'none';
+    hokora.style.display = 'inline';
+    hokoraarea2.style.display = 'inline';
+});
+hokoraarea2.addEventListener('mouseover',function(){hokoraarea2.style.cursor = 'pointer';});
+hokoraarea2.addEventListener('click',function(){
+    //sehand.load();
+    //sehand.play();
+    sehandPlay();
+    hokoraarea2.style.display = 'none';
+    hand1.style.display = 'inline';
+    let timerId42 = setInterval(function(){
+        fps42++;
+        switch(fps42){
+            case 1:
+            hand1.style.display = 'none';
+            hand2.style.display = 'inline';
+            break;
+            case 20:
+            sepienoroiPlay();//鏡出現の効果音
+            mir1.style.display = 'inline';
+            break;
+            case 21:
+            mir1.style.display = 'none';
+            mir2.style.display = 'inline';
+            break;
+            case 22:
+            mir2.style.display = 'none';
+            mir3.style.display = 'inline';
+            break;
+            case 23:
+            mir3.style.display = 'none';
+            mir4.style.display = 'inline';
+            break;
+            case 24:
+            mir4.style.display = 'none';
+            mir5.style.display = 'inline';
+            break;
+            case 25:
+            mir5.style.display = 'none';
+            mir6.style.display = 'inline';
+            break;
+            case 26:
+            mir6.style.display = 'none';
+            mir7.style.display = 'inline';
+            break;
+            case 27:
+            mir7.style.display = 'none';
+            mir8.style.display = 'inline';
+            break;
+            case 28:
+            mir8.style.display = 'none';
+            mir9.style.display = 'inline';
+            break;
+            case 29:
+            mir9.style.display = 'none';
+            mir10.style.display = 'inline';
+            break;
+            case 30:
+            mir10.style.display = 'none';
+            mir11.style.display = 'inline';
+            break;
+            case 31:
+            mir11.style.display = 'none';
+            mir12.style.display = 'inline';
+            break;
+            case 32:
+            mir12.style.display = 'none';
+            mir13.style.display = 'inline';
+            break;
+            case 33:
+            mir13.style.display = 'none';
+            mir14.style.display = 'inline';
+            mirarea.style.display = 'inline';
+            clearInterval(timerId42);
+            break;
+        }
+    },80);
+});
+
+/*鏡をクリックしてヒントを表示後、メインにワープ*/
+let timerIdhint = '';
+let hintfps = 0;
+mirarea.addEventListener('mouseover',function(){mirarea.style.cursor='pointer';});
+mirarea.addEventListener('click',function(){
+    mirarea.style.display = 'none';
+    hint.style.display = 'inline';
+    timerIdhint = setInterval(function(){
+        hintfps++;
+        switch(hintfps){
+            case 1:
+            hint.style.opacity = '0.4';
+            break;
+            case 2:
+            hint.style.opacity = '0.6';
+            break;
+            case 3:
+            hint.style.opacity = '0.8';
+            break;
+            case 4:
+            hint.style.opacity = '1.0';
+            break;
+            case 14:
+            hint.style.opacity = '0.8';
+            break;
+            case 15:
+            hint.style.opacity = '0.6';
+            break;
+            case 16:
+            hint.style.opacity = '0.4';
+            break;
+            case 17:
+            hint.style.opacity = '0.2';
+            break;
+            case 18:
+            hint.style.display = 'none';
+            break;
+            case 23:
+            seencountPlay();//メインページにワープの効果音
+            flashback.style.display = 'inline';
+            body.style.backgroundColor = '#1a1a1a';
+            break;
+            case 24:
+            flashback.style.opacity = '0.2';
+            body.style.backgroundColor = '#333333';
+            break;
+            case 25:
+            flashback.style.opacity = '0.3';
+            body.style.backgroundColor = '#4d4d4d';
+            break;
+            case 26:
+            flashback.style.opacity = '0.4';
+            body.style.backgroundColor = '#666666';
+            break;
+            case 27:
+            flashback.style.opacity = '0.5';
+            body.style.backgroundColor = '#808080';
+            break;
+            case 28:
+            flashback.style.opacity = '0.6';
+            body.style.backgroundColor = '#999999';
+            break;
+            case 29:
+            flashback.style.opacity = '0.7';
+            body.style.backgroundColor = '#b3b3b3';
+            break;
+            case 30:
+            flashback.style.opacity = '0.8';
+            body.style.backgroundColor = '#cccccc';
+            break;
+            case 31:
+            flashback.style.opacity = '0.9';
+            body.style.backgroundColor = '#e6e6e6';
+            break;
+            case 32:
+            flashback.style.opacity = '1.0';
+            body.style.backgroundColor = '#ffffff';
+            break;
+            case 52:
+            if(encountplaying===true){seencountStop();}
+            clearInterval(timerIdhint);
+            location.href = 'ujinoma.html';
+            break;
+        }
+    },100);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■上段左(黄→赤→緑→青→紫)■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+eye1a.addEventListener('mouseover',function(){eye1a.style.cursor = 'pointer';});//■■2つ変える
+eye1a.addEventListener('click',function(){//■■変える
+    fps1 = 0;//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye1a.style.display = 'none';//■■変える
+    eyemove1a.style.display = 'inline';
+    let timerId1 = setInterval(function(){//■■変える
+        fps1++;//■■変える
+        switch(fps1){//■■変える
+            case 1:
+            eyemove1a.style.display = 'none';
+            eyemove2a.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2a.style.display = 'none';
+            eye2a.style.display = 'inline';//■■変える
+            unlockcheck();//●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+            clearInterval(timerId1);//■■変える
+            break;
+        }
+    },80);
+});
+eye2a.addEventListener('mouseover',function(){eye2a.style.cursor = 'pointer';});//■■2つ変える
+eye2a.addEventListener('click',function(){//■■変える
+    fps2 = 0;//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye2a.style.display = 'none';//■■変える
+    eyemove1a.style.display = 'inline';
+    let timerId2 = setInterval(function(){//■■変える
+        fps2++;//■■変える
+        switch(fps2){//■■変える
+            case 1:
+            eyemove1a.style.display = 'none';
+            eyemove2a.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2a.style.display = 'none';
+            eye3a.style.display = 'inline';//■■変える
+            unlockpoint -= 10;//○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
+            clearInterval(timerId2);//■■変える
+            break;
+        }
+    },80);
+});
+eye3a.addEventListener('mouseover',function(){eye3a.style.cursor = 'pointer';});//■■2つ変える
+eye3a.addEventListener('click',function(){//■■変える
+    fps3 = 0;//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye3a.style.display = 'none';//■■変える
+    eyemove1a.style.display = 'inline';
+    let timerId3 = setInterval(function(){//■■変える
+        fps3++;//■■変える
+        switch(fps3){//■■変える
+            case 1:
+            eyemove1a.style.display = 'none';
+            eyemove2a.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2a.style.display = 'none';
+            eye4a.style.display = 'inline';//■■変える
+            clearInterval(timerId3);//■■変える
+            break;
+        }
+    },80);
+});
+eye4a.addEventListener('mouseover',function(){eye4a.style.cursor = 'pointer';});//■■2つ変える
+eye4a.addEventListener('click',function(){//■■変える
+    fps4 = 0;//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye4a.style.display = 'none';//■■変える
+    eyemove1a.style.display = 'inline';
+    let timerId4 = setInterval(function(){//■■変える
+        fps4++;//■■変える
+        switch(fps4){//■■変える
+            case 1:
+            eyemove1a.style.display = 'none';
+            eyemove2a.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2a.style.display = 'none';
+            eye5a.style.display = 'inline';//■■変える
+            clearInterval(timerId4);//■■変える
+            break;
+        }
+    },80);
+});
+eye5a.addEventListener('mouseover',function(){eye5a.style.cursor = 'pointer';});//■■2つ変える
+eye5a.addEventListener('click',function(){//■■変える
+    fps5 = 0;//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye5a.style.display = 'none';//■■変える
+    eyemove1a.style.display = 'inline';
+    let timerId5 = setInterval(function(){//■■変える
+        fps5++;//■■変える
+        switch(fps5){//■■変える
+            case 1:
+            eyemove1a.style.display = 'none';
+            eyemove2a.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2a.style.display = 'none';
+            eye1a.style.display = 'inline';//■■変える
+            clearInterval(timerId5);//■■変える
+            break;
+        }
+    },80);
+});
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■上段中(黄→赤→緑→青→紫)■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+eye1b.addEventListener('mouseover',function(){eye1b.style.cursor = 'pointer';});//■■2つ変える
+eye1b.addEventListener('click',function(){//■■変える
+    fps6 = 0;//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye1b.style.display = 'none';//■■変える
+    eyemove1b.style.display = 'inline';
+    let timerId6 = setInterval(function(){//■■変える
+        fps6++;//■■変える
+        switch(fps6){//■■変える
+            case 1:
+            eyemove1b.style.display = 'none';
+            eyemove2b.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2b.style.display = 'none';
+            eye2b.style.display = 'inline';//■■変える
+            unlockpoint -= 10;//○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
+            clearInterval(timerId6);//■■変える
+            break;
+        }
+    },80);
+});
+eye2b.addEventListener('mouseover',function(){eye2b.style.cursor = 'pointer';});//■■2つ変える
+eye2b.addEventListener('click',function(){//■■変える
+    fps7 = 0;//★★変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye2b.style.display = 'none';//■■変える
+    eyemove1b.style.display = 'inline';
+    let timerId7 = setInterval(function(){//★★変える
+        fps7++;//★★変える
+        switch(fps7){//★★変える
+            case 1:
+            eyemove1b.style.display = 'none';
+            eyemove2b.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2b.style.display = 'none';
+            eye3b.style.display = 'inline';//■■変える
+            clearInterval(timerId7);//★★変える
+            break;
+        }
+    },80);
+});
+eye3b.addEventListener('mouseover',function(){eye3b.style.cursor = 'pointer';});//■■2つ変える
+eye3b.addEventListener('click',function(){//■■変える
+    fps8 = 0;//★★変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye3b.style.display = 'none';//■■変える
+    eyemove1b.style.display = 'inline';
+    let timerId8 = setInterval(function(){//★★変える
+        fps8++;//★★変える
+        switch(fps8){//★★変える
+            case 1:
+            eyemove1b.style.display = 'none';
+            eyemove2b.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2b.style.display = 'none';
+            eye4b.style.display = 'inline';//■■変える
+            clearInterval(timerId8);//★★変える
+            break;
+        }
+    },80);
+});
+eye4b.addEventListener('mouseover',function(){eye4b.style.cursor = 'pointer';});//■■2つ変える
+eye4b.addEventListener('click',function(){//■■変える
+    fps9 = 0;//★★変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye4b.style.display = 'none';//■■変える
+    eyemove1b.style.display = 'inline';
+    let timerId9 = setInterval(function(){//★★変える
+        fps9++;//★★変える
+        switch(fps9){//★★変える
+            case 1:
+            eyemove1b.style.display = 'none';
+            eyemove2b.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2b.style.display = 'none';
+            eye5b.style.display = 'inline';//■■変える
+            clearInterval(timerId9);//★★変える
+            break;
+        }
+    },80);
+});
+eye5b.addEventListener('mouseover',function(){eye5b.style.cursor = 'pointer';});//■■2つ変える
+eye5b.addEventListener('click',function(){//■■変える
+    fps10 = 0;//★★変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye5b.style.display = 'none';//■■変える
+    eyemove1b.style.display = 'inline';
+    let timerId10 = setInterval(function(){//★★変える
+        fps10++;//★★変える
+        switch(fps10){//★★変える
+            case 1:
+            eyemove1b.style.display = 'none';
+            eyemove2b.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2b.style.display = 'none';
+            eye1b.style.display = 'inline';//■■変える
+            unlockcheck();//●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+            clearInterval(timerId10);//★★変える
+            break;
+        }
+    },80);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■上段右(黄→赤→緑→青→紫)■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+eye1c.addEventListener('mouseover',function(){eye1c.style.cursor = 'pointer';});//■■2つ変える
+eye1c.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye1c.style.display = 'none';//■■変える
+    eyemove1c.style.display = 'inline';
+    fps11 = 0;//★★変える
+    let timerId11 = setInterval(function(){//★★変える
+        fps11++;//★★変える
+        switch(fps11){//★★変える
+            case 1:
+            eyemove1c.style.display = 'none';
+            eyemove2c.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2c.style.display = 'none';
+            eye2c.style.display = 'inline';//■■変える
+            clearInterval(timerId11);//★★変える
+            break;
+        }
+    },80);
+});
+eye2c.addEventListener('mouseover',function(){eye2c.style.cursor = 'pointer';});//■■2つ変える
+eye2c.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye2c.style.display = 'none';//■■変える
+    eyemove1c.style.display = 'inline';
+    fps12 = 0;//★★変える
+    let timerId12 = setInterval(function(){//★★変える
+        fps12++;//★★変える
+        switch(fps12){//★★変える
+            case 1:
+            eyemove1c.style.display = 'none';
+            eyemove2c.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2c.style.display = 'none';
+            eye3c.style.display = 'inline';//■■変える
+            clearInterval(timerId12);//★★変える
+            break;
+        }
+    },80);
+});
+eye3c.addEventListener('mouseover',function(){eye3c.style.cursor = 'pointer';});//■■2つ変える
+eye3c.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye3c.style.display = 'none';//■■変える
+    eyemove1c.style.display = 'inline';
+    fps13 = 0;//★★変える
+    let timerId13 = setInterval(function(){//★★変える
+        fps13++;//★★変える
+        switch(fps13){//★★変える
+            case 1:
+            eyemove1c.style.display = 'none';
+            eyemove2c.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2c.style.display = 'none';
+            eye4c.style.display = 'inline';//■■変える
+            clearInterval(timerId13);//★★変える
+            break;
+        }
+    },80);
+});
+eye4c.addEventListener('mouseover',function(){eye4c.style.cursor = 'pointer';});//■■2つ変える
+eye4c.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye4c.style.display = 'none';//■■変える
+    eyemove1c.style.display = 'inline';
+    fps14 = 0;//★★変える
+    let timerId14 = setInterval(function(){//★★変える
+        fps14++;//★★変える
+        switch(fps14){//★★変える
+            case 1:
+            eyemove1c.style.display = 'none';
+            eyemove2c.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2c.style.display = 'none';
+            eye5c.style.display = 'inline';//■■変える
+            unlockcheck();//●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+            clearInterval(timerId14);//★★変える
+            break;
+        }
+    },80);
+});
+eye5c.addEventListener('mouseover',function(){eye5c.style.cursor = 'pointer';});//■■2つ変える
+eye5c.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye5c.style.display = 'none';//■■変える
+    eyemove1c.style.display = 'inline';
+    fps15 = 0;//★★変える
+    let timerId15 = setInterval(function(){//★★変える
+        fps15++;//★★変える
+        switch(fps15){//★★変える
+            case 1:
+            eyemove1c.style.display = 'none';
+            eyemove2c.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2c.style.display = 'none';
+            eye1c.style.display = 'inline';//■■変える
+            unlockpoint -= 10;//○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
+            clearInterval(timerId15);//★★変える
+            break;
+        }
+    },80);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■中段左(黄→赤→緑→青→紫)■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+eye1d.addEventListener('mouseover',function(){eye1d.style.cursor = 'pointer';});//■■2つ変える
+eye1d.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye1d.style.display = 'none';//■■変える
+    eyemove1d.style.display = 'inline';
+    fps16 = 0;//★★変える
+    let timerId16 = setInterval(function(){//★★変える
+        fps16++;//★★変える
+        switch(fps16){//★★変える
+            case 1:
+            eyemove1d.style.display = 'none';
+            eyemove2d.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2d.style.display = 'none';
+            eye2d.style.display = 'inline';//■■変える
+            clearInterval(timerId16);//★★変える
+            break;
+        }
+    },80);
+});
+eye2d.addEventListener('mouseover',function(){eye2d.style.cursor = 'pointer';});//■■2つ変える
+eye2d.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye2d.style.display = 'none';//■■変える
+    eyemove1d.style.display = 'inline';
+    fps17 = 0;//★★変える
+    let timerId17 = setInterval(function(){//★★変える
+        fps17++;//★★変える
+        switch(fps17){//★★変える
+            case 1:
+            eyemove1d.style.display = 'none';
+            eyemove2d.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2d.style.display = 'none';
+            eye3d.style.display = 'inline';//■■変える
+            clearInterval(timerId17);//★★変える
+            break;
+        }
+    },80);
+});
+eye3d.addEventListener('mouseover',function(){eye3d.style.cursor = 'pointer';});//■■2つ変える
+eye3d.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye3d.style.display = 'none';//■■変える
+    eyemove1d.style.display = 'inline';
+    fps18 = 0;//★★変える
+    let timerId18 = setInterval(function(){//★★変える
+        fps18++;//★★変える
+        switch(fps18){//★★変える
+            case 1:
+            eyemove1d.style.display = 'none';
+            eyemove2d.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2d.style.display = 'none';
+            eye4d.style.display = 'inline';//■■変える
+            unlockcheck();//●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+            clearInterval(timerId18);//★★変える
+            break;
+        }
+    },80);
+});
+eye4d.addEventListener('mouseover',function(){eye4d.style.cursor = 'pointer';});//■■2つ変える
+eye4d.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye4d.style.display = 'none';//■■変える
+    eyemove1d.style.display = 'inline';
+    fps19 = 0;//★★変える
+    let timerId19 = setInterval(function(){//★★変える
+        fps19++;//★★変える
+        switch(fps19){//★★変える
+            case 1:
+            eyemove1d.style.display = 'none';
+            eyemove2d.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2d.style.display = 'none';
+            eye5d.style.display = 'inline';//■■変える
+            unlockpoint -= 10;//○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
+            clearInterval(timerId19);//★★変える
+            break;
+        }
+    },80);
+});
+eye5d.addEventListener('mouseover',function(){eye5d.style.cursor = 'pointer';});//■■2つ変える
+eye5d.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye5d.style.display = 'none';//■■変える
+    eyemove1d.style.display = 'inline';
+    fps20 = 0;//★★変える
+    let timerId20 = setInterval(function(){//★★変える
+        fps20++;//★★変える
+        switch(fps20){//★★変える
+            case 1:
+            eyemove1d.style.display = 'none';
+            eyemove2d.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2d.style.display = 'none';
+            eye1d.style.display = 'inline';//■■変える
+            clearInterval(timerId20);//★★変える
+            break;
+        }
+    },80);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■中段右(黄→赤→緑→青→紫)■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+eye1e.addEventListener('mouseover',function(){eye1e.style.cursor = 'pointer';});//■■2つ変える
+eye1e.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye1e.style.display = 'none';//■■変える
+    eyemove1e.style.display = 'inline';
+    fps21 = 0;//★★変える
+    let timerId21 = setInterval(function(){//★★変える
+        fps21++;//★★変える
+        switch(fps21){//★★変える
+            case 1:
+            eyemove1e.style.display = 'none';
+            eyemove2e.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2e.style.display = 'none';
+            eye2e.style.display = 'inline';//■■変える
+            unlockcheck();//●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+            clearInterval(timerId21);//★★変える
+            break;
+        }
+    },80);
+});
+eye2e.addEventListener('mouseover',function(){eye2e.style.cursor = 'pointer';});//■■2つ変える
+eye2e.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye2e.style.display = 'none';//■■変える
+    eyemove1e.style.display = 'inline';
+    fps22 = 0;//★★変える
+    let timerId22 = setInterval(function(){//★★変える
+        fps22++;//★★変える
+        switch(fps22){//★★変える
+            case 1:
+            eyemove1e.style.display = 'none';
+            eyemove2e.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2e.style.display = 'none';
+            eye3e.style.display = 'inline';//■■変える
+            unlockpoint -= 10;//○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
+            clearInterval(timerId22);//★★変える
+            break;
+        }
+    },80);
+});
+eye3e.addEventListener('mouseover',function(){eye3e.style.cursor = 'pointer';});//■■2つ変える
+eye3e.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye3e.style.display = 'none';//■■変える
+    eyemove1e.style.display = 'inline';
+    fps23 = 0;//★★変える
+    let timerId23 = setInterval(function(){//★★変える
+        fps23++;//★★変える
+        switch(fps23){//★★変える
+            case 1:
+            eyemove1e.style.display = 'none';
+            eyemove2e.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2e.style.display = 'none';
+            eye4e.style.display = 'inline';//■■変える
+            clearInterval(timerId23);//★★変える
+            break;
+        }
+    },80);
+});
+eye4e.addEventListener('mouseover',function(){eye4e.style.cursor = 'pointer';});//■■2つ変える
+eye4e.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye4e.style.display = 'none';//■■変える
+    eyemove1e.style.display = 'inline';
+    fps24 = 0;//★★変える
+    let timerId24 = setInterval(function(){//★★変える
+        fps24++;//★★変える
+        switch(fps24){//★★変える
+            case 1:
+            eyemove1e.style.display = 'none';
+            eyemove2e.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2e.style.display = 'none';
+            eye5e.style.display = 'inline';//■■変える
+            clearInterval(timerId24);//★★変える
+            break;
+        }
+    },80);
+});
+eye5e.addEventListener('mouseover',function(){eye5e.style.cursor = 'pointer';});//■■2つ変える
+eye5e.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye5e.style.display = 'none';//■■変える
+    eyemove1e.style.display = 'inline';
+    fps25 = 0;//★★変える
+    let timerId25 = setInterval(function(){//★★変える
+        fps25++;//★★変える
+        switch(fps25){//★★変える
+            case 1:
+            eyemove1e.style.display = 'none';
+            eyemove2e.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2e.style.display = 'none';
+            eye1e.style.display = 'inline';//■■変える
+            clearInterval(timerId25);//★★変える
+            break;
+        }
+    },80);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■下段左(黄→赤→緑→青→紫)■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+eye1f.addEventListener('mouseover',function(){eye1f.style.cursor = 'pointer';});//■■2つ変える
+eye1f.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye1f.style.display = 'none';//■■変える
+    eyemove1f.style.display = 'inline';
+    fps26 = 0;//★★変える
+    let timerId26 = setInterval(function(){//★★変える
+        fps26++;//★★変える
+        switch(fps26){//★★変える
+            case 1:
+            eyemove1f.style.display = 'none';
+            eyemove2f.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2f.style.display = 'none';
+            eye2f.style.display = 'inline';//■■変える
+            clearInterval(timerId26);//★★変える
+            break;
+        }
+    },80);
+});
+eye2f.addEventListener('mouseover',function(){eye2f.style.cursor = 'pointer';});//■■2つ変える
+eye2f.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye2f.style.display = 'none';//■■変える
+    eyemove1f.style.display = 'inline';
+    fps27 = 0;//★★変える
+    let timerId27 = setInterval(function(){//★★変える
+        fps27++;//★★変える
+        switch(fps27){//★★変える
+            case 1:
+            eyemove1f.style.display = 'none';
+            eyemove2f.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2f.style.display = 'none';
+            eye3f.style.display = 'inline';//■■変える
+            unlockcheck();//●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+            clearInterval(timerId27);//★★変える
+            break;
+        }
+    },80);
+});
+eye3f.addEventListener('mouseover',function(){eye3f.style.cursor = 'pointer';});//■■2つ変える
+eye3f.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye3f.style.display = 'none';//■■変える
+    eyemove1f.style.display = 'inline';
+    fps28 = 0;//★★変える
+    let timerId28 = setInterval(function(){//★★変える
+        fps28++;//★★変える
+        switch(fps28){//★★変える
+            case 1:
+            eyemove1f.style.display = 'none';
+            eyemove2f.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2f.style.display = 'none';
+            eye4f.style.display = 'inline';//■■変える
+            unlockpoint -= 10;//○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
+            clearInterval(timerId28);//★★変える
+            break;
+        }
+    },80);
+});
+eye4f.addEventListener('mouseover',function(){eye4f.style.cursor = 'pointer';});//■■2つ変える
+eye4f.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye4f.style.display = 'none';//■■変える
+    eyemove1f.style.display = 'inline';
+    fps29 = 0;//★★変える
+    let timerId29 = setInterval(function(){//★★変える
+        fps29++;//★★変える
+        switch(fps29){//★★変える
+            case 1:
+            eyemove1f.style.display = 'none';
+            eyemove2f.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2f.style.display = 'none';
+            eye5f.style.display = 'inline';//■■変える
+            clearInterval(timerId29);//★★変える
+            break;
+        }
+    },80);
+});
+eye5f.addEventListener('mouseover',function(){eye5f.style.cursor = 'pointer';});//■■2つ変える
+eye5f.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye5f.style.display = 'none';//■■変える
+    eyemove1f.style.display = 'inline';
+    fps30 = 0;//★★変える
+    let timerId30 = setInterval(function(){//★★変える
+        fps30++;//★★変える
+        switch(fps30){//★★変える
+            case 1:
+            eyemove1f.style.display = 'none';
+            eyemove2f.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2f.style.display = 'none';
+            eye1f.style.display = 'inline';//■■変える
+            clearInterval(timerId30);//★★変える
+            break;
+        }
+    },80);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■下段中(黄→赤→緑→青→紫)■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+eye1g.addEventListener('mouseover',function(){eye1g.style.cursor = 'pointer';});//■■2つ変える
+eye1g.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye1g.style.display = 'none';//■■変える
+    eyemove1g.style.display = 'inline';
+    fps31 = 0;//★★変える
+    let timerId31 = setInterval(function(){//★★変える
+        fps31++;//★★変える
+        switch(fps31){//★★変える
+            case 1:
+            eyemove1g.style.display = 'none';
+            eyemove2g.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2g.style.display = 'none';
+            eye2g.style.display = 'inline';//■■変える
+            clearInterval(timerId31);//★★変える
+            break;
+        }
+    },80);
+});
+eye2g.addEventListener('mouseover',function(){eye2g.style.cursor = 'pointer';});//■■2つ変える
+eye2g.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye2g.style.display = 'none';//■■変える
+    eyemove1g.style.display = 'inline';
+    fps32 = 0;//★★変える
+    let timerId32 = setInterval(function(){//★★変える
+        fps32++;//★★変える
+        switch(fps32){//★★変える
+            case 1:
+            eyemove1g.style.display = 'none';
+            eyemove2g.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2g.style.display = 'none';
+            eye3g.style.display = 'inline';//■■変える
+            clearInterval(timerId32);//★★変える
+            break;
+        }
+    },80);
+});
+eye3g.addEventListener('mouseover',function(){eye3g.style.cursor = 'pointer';});//■■2つ変える
+eye3g.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye3g.style.display = 'none';//■■変える
+    eyemove1g.style.display = 'inline';
+    fps33 = 0;//★★変える
+    let timerId33 = setInterval(function(){//★★変える
+        fps33++;//★★変える
+        switch(fps33){//★★変える
+            case 1:
+            eyemove1g.style.display = 'none';
+            eyemove2g.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2g.style.display = 'none';
+            eye4g.style.display = 'inline';//■■変える
+            unlockcheck();//●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+            clearInterval(timerId33);//★★変える
+            break;
+        }
+    },80);
+});
+eye4g.addEventListener('mouseover',function(){eye4g.style.cursor = 'pointer';});//■■2つ変える
+eye4g.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye4g.style.display = 'none';//■■変える
+    eyemove1g.style.display = 'inline';
+    fps34 = 0;//★★変える
+    let timerId34 = setInterval(function(){//★★変える
+        fps34++;//★★変える
+        switch(fps34){//★★変える
+            case 1:
+            eyemove1g.style.display = 'none';
+            eyemove2g.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2g.style.display = 'none';
+            eye5g.style.display = 'inline';//■■変える
+            unlockpoint -= 10;//○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
+            clearInterval(timerId34);//★★変える
+            break;
+        }
+    },80);
+});
+eye5g.addEventListener('mouseover',function(){eye5g.style.cursor = 'pointer';});//■■2つ変える
+eye5g.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye5g.style.display = 'none';//■■変える
+    eyemove1g.style.display = 'inline';
+    fps35 = 0;//★★変える
+    let timerId35 = setInterval(function(){//★★変える
+        fps35++;//★★変える
+        switch(fps35){//★★変える
+            case 1:
+            eyemove1g.style.display = 'none';
+            eyemove2g.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2g.style.display = 'none';
+            eye1g.style.display = 'inline';//■■変える
+            clearInterval(timerId35);//★★変える
+            break;
+        }
+    },80);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■下段右(黄→赤→緑→青→紫)■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+eye1h.addEventListener('mouseover',function(){eye1h.style.cursor = 'pointer';});//■■2つ変える
+eye1h.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye1h.style.display = 'none';//■■変える
+    eyemove1h.style.display = 'inline';
+    fps36 = 0;//★★変える
+    let timerId36 = setInterval(function(){//★★変える
+        fps36++;//★★変える
+        switch(fps36){//★★変える
+            case 1:
+            eyemove1h.style.display = 'none';
+            eyemove2h.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2h.style.display = 'none';
+            eye2h.style.display = 'inline';//■■変える
+            unlockpoint -= 10;//○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
+            clearInterval(timerId36);//★★変える
+            break;
+        }
+    },80);
+});
+eye2h.addEventListener('mouseover',function(){eye2h.style.cursor = 'pointer';});//■■2つ変える
+eye2h.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye2h.style.display = 'none';//■■変える
+    eyemove1h.style.display = 'inline';
+    fps37 = 0;//★★変える
+    let timerId37 = setInterval(function(){//★★変える
+        fps37++;//★★変える
+        switch(fps37){//★★変える
+            case 1:
+            eyemove1h.style.display = 'none';
+            eyemove2h.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2h.style.display = 'none';
+            eye3h.style.display = 'inline';//■■変える
+            clearInterval(timerId37);//★★変える
+            break;
+        }
+    },80);
+});
+eye3h.addEventListener('mouseover',function(){eye3h.style.cursor = 'pointer';});//■■2つ変える
+eye3h.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye3h.style.display = 'none';//■■変える
+    eyemove1h.style.display = 'inline';
+    fps38 = 0;//★★変える
+    let timerId38 = setInterval(function(){//★★変える
+        fps38++;//★★変える
+        switch(fps38){//★★変える
+            case 1:
+            eyemove1h.style.display = 'none';
+            eyemove2h.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2h.style.display = 'none';
+            eye4h.style.display = 'inline';//■■変える
+            clearInterval(timerId38);//★★変える
+            break;
+        }
+    },80);
+});
+eye4h.addEventListener('mouseover',function(){eye4h.style.cursor = 'pointer';});//■■2つ変える
+eye4h.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye4h.style.display = 'none';//■■変える
+    eyemove1h.style.display = 'inline';
+    fps39 = 0;//★★変える
+    let timerId39 = setInterval(function(){//★★変える
+        fps39++;//★★変える
+        switch(fps39){//★★変える
+            case 1:
+            eyemove1h.style.display = 'none';
+            eyemove2h.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2h.style.display = 'none';
+            eye5h.style.display = 'inline';//■■変える
+            clearInterval(timerId39);//★★変える
+            break;
+        }
+    },80);
+});
+eye5h.addEventListener('mouseover',function(){eye5h.style.cursor = 'pointer';});//■■2つ変える
+eye5h.addEventListener('click',function(){//■■変える
+    //sepane.load();
+    sepanePlay();//sepane.play();
+    eye5h.style.display = 'none';//■■変える
+    eyemove1h.style.display = 'inline';
+    fps40 = 0;//★★変える
+    let timerId40 = setInterval(function(){//★★変える
+        fps40++;//★★変える
+        switch(fps40){//★★変える
+            case 1:
+            eyemove1h.style.display = 'none';
+            eyemove2h.style.display = 'inline';
+            break;
+            case 2:
+            eyemove2h.style.display = 'none';
+            eye1h.style.display = 'inline';//■■変える
+            unlockcheck();//●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+            clearInterval(timerId40);//★★変える
+            break;
+        }
+    },80);
+});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+</html>
