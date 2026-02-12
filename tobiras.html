@@ -30,10 +30,17 @@ html,body{margin:0;height:100%}
 body{background:center/cover repeat url(tfs/A.png)}
 #door{width:175px;height:349px;position:absolute;left:397px;top:116px;}
 #dooropen{width:175px;height:349px;position:absolute;left:397px;top:116px;display:none;}
-#nikki1{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
-#nikki2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
 #konkon{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
 #curse{width:600px;height:800px;position:absolute;left:0px;top:0px;display:none;}
+    #splatterContainer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 2147483647;
+    }
 /*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
 #loadback{
     width:970px;height:582px;
@@ -99,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </head>
 <body id="body">
+<div id="splatterContainer"></div>
 <!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
 <!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
 <!--音声の二次配布・無断利用禁止。-->
@@ -129,8 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
 <div id="d1">
 <img src = "pimg/randomdoor.jpg" id="door">
 <img src = "pimg/randomdooropen.gif" id="dooropen">
-<img src = "pimg/rannikki1.jpg" id="nikki1">
-<img src = "pimg/rannikki2.jpg" id="nikki2">
 <img src="pimg/konkonsan.gif"id="konkon">
 <img src="pimg/curse1.jpg"id="curse">
 <!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
@@ -304,7 +310,7 @@ let fps4 = 0;
 //let sekonkon = document.getElementById('konkonse');
 //let securse = document.getElementById('cursese');
 //load(); play(); pause();
-
+const container = document.getElementById("splatterContainer");
 door.addEventListener('mouseover',function(){door.style.cursor = 'pointer';});
 door.addEventListener('click',function(){
     //seopen.load();
@@ -337,15 +343,43 @@ door.addEventListener('click',function(){
                 break;
                 case 9:
                 dooropen.style.display = 'none';
-                nikki1.style.display = 'inline';
-                break;
-                case 33:
                 //koenikki.play();
-                senikkikoePlay();
-                nikki1.style.display = 'none';
-                nikki2.style.display = 'inline';
-                clearInterval(timerId2);
-                break;
+  document.body.style.pointerEvents = "none";
+  document.body.style.backgroundImage = `url(pimg/fakenikki.png)`;
+  setInterval(() => {
+    const wrapper = document.createElement("div");
+    wrapper.style.position = "absolute";
+    wrapper.style.left = Math.random() * innerWidth + "px";
+    wrapper.style.top = Math.random() * innerHeight + "px";
+    wrapper.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+    const size = 40 + Math.random() * 80;
+
+    const img = document.createElement("img");
+    img.src = "pimg/god3.png";
+    img.style.width = size + "px";
+    img.style.display = "block";
+
+    wrapper.appendChild(img);
+    if (Math.random() < 0.5) {
+      const color = "#" + Math.floor(Math.random() * 16777215)
+        .toString(16)
+        .padStart(6, "0");
+
+      const overlay = document.createElement("div");
+      overlay.style.position = "absolute";
+      overlay.style.inset = "0";
+      overlay.style.background = color;
+      overlay.style.mixBlendMode = "multiply";
+      overlay.style.pointerEvents = "none";
+
+      wrapper.style.position = "absolute";
+      wrapper.style.display = "inline-block";
+      wrapper.appendChild(overlay);
+    }
+
+    container.appendChild(wrapper);
+  }, 50);
             }
         },80);
         break;

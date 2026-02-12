@@ -13,10 +13,11 @@
 -->
 <style type="text/css">
 #body{
-    background-color: #000000;
+    background-color: #ffffff;
     margin: 0px;
     padding: 0px;
     line-height: 1em;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #d1{
     width:970px;
@@ -36,34 +37,53 @@
 #menu{
     position:absolute;
     left:21px;
-    top:144px;
+    top:50px;
     font-size:14px;
-    color:#ff0000;
+    color:#000000;
     line-height:200%;
     text-decoration:underline;
     text-align:left;
 }
-#menudm{
-    width:112px;
-    height:294px;
-    position:absolute;
-    left:21px;
-    top:164px;
-    display:none;
-}
+    #rqbtn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: white;
+      color: #1a73e8;
+      border: 1px solid #000000;
+      border-radius: 20px;
+      padding: 10px 16px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    #rqbtn:hover {
+      background: #f5f9ff;
+    }
+
+    #splatterContainer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 2147483647;
+    }
 #hiduke{
     position:absolute;
     left:288px;
-    top:158px;
+    top:50px;
     font-size:14px;
-    color:#ff0000;
+    color:#000000;
 }
 #naiyou{
     position:absolute;
     left:288px;
-    top:196px;
+    top:100px;
     font-size:14px;
-    color:#ff0000;
+    color:#000000;
     line-height:200%;
     text-align:left;
 }
@@ -110,25 +130,31 @@
 <source src="pse/scream.mp3" type="audio/mp3">
 </audio>
 -->
-
+<div style="display: flex; align-items: center; gap: 8px;"><img src="pimg/Google_Docs.webp" width=50px><h4>Regarding S2F and the others of PWNSEC/BIA</h4></div>
+<button id="rqbtn">Request edit access</button>
+<div id="splatterContainer"></div>
 <div id="d1">
-<img src="pimg/nikkihead.gif"id="nikkihead">
 <p id="menu">
-<span id="s1">2007年04月02日</span><br>
-<span id="s2">2008年04月01日</span><br>
-<span id="s3">2008年04月27日</span><br>
-<span id="s4">2008年07月01日</span><br>
-<span id="s5">2008年08月14日</span><br>
-<span id="s6">2009年03月06日</span><br>
-<span id="s7">2009年05月01日</span><br>
-<span id="s8">2009年05月15日</span><br>
-<span id="s9">2009年06月01日</span><br>
-<span id="s10">2009年06月15日</span><br>
-<span id="s11">2009年06月16日</span>
+<span id="s1">README</span><br>
+<span id="s2">Zavihek 1</span><br>
+<span id="s3">Zavihek 2</span><br>
+<span id="s4">a little about myself</span><br>
+<span id="s5">Discovering her...</span><br>
+<span id="s6">Zavihek 7</span><br>
+<span id="s7">Zavihek 8</span><br>
+<span id="s8">Payback: Teh Dox</span><br>
+<span id="s9">Explanations</span><br>
+<span id="s10">Guestsmeller Bullshit</span><br>
+<span id="s11">Duncans Bullshit</span><br>
+<span id="s12">YourlocalMoons Bullshit</span><br>
+<span id="s13">Trioptic Bullshit</span><br>
+<span id="s14">Tanky's Bullshit</span><br>
+<span id="s15">Dinorme's Bullshit</span><br>
+<span id="s16">Jabbas Bullshit</span><br>
+<span id="s17">Aggressive History</span>
 </p>
-<img src="pimg/nikkimenudm.jpg"id="menudm">
-<p id="hiduke">2008年04月02日</p>
-<p id="naiyou">家に飾ってある人形が怖い…</p>
+<p id="hiduke">Sir Welcom to Gogle Doc</p>
+<p id="naiyou">Press Any Tab to navigate sir</p>
 <img src="pimg/nikkiobake.jpg"id="obake">
 <img src="pimg/gameover.jpg"id="gameover">
 <!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
@@ -211,7 +237,6 @@ window.addEventListener('load',function(){
 let body = document.getElementById('body');
 let nikkihead = document.getElementById('nikkihead');
 let menu = document.getElementById('menu');
-let menudm = document.getElementById('menudm');
 let s1 = document.getElementById('s1');
 let s2 = document.getElementById('s2');
 let s3 = document.getElementById('s3');
@@ -233,213 +258,146 @@ let fps = 0;
 
 s1.addEventListener('mouseover',function(){s1.style.cursor = 'pointer';});
 s1.addEventListener('click',function(){
-    hiduke.innerText = '2007年04月02日';
-    naiyou.innerText = 'よーし頑張って夢を叶えるぞー！';
+    hiduke.innerText = 'README';
+    naiyou.innerText = 'Helo Sir my name Kaba Kedvonze. This Document Made To Document person who realy wrong and insult me/my forehead. You Will Suport Uttp if you read other peoppe document. Only Trust My Document cuz it legit And serious. Also Sir I born in May 14 2009 and totaly never Masturbate to Ilegal Stuff (super real and legit)';
 });
 
 s2.addEventListener('mouseover',function(){s2.style.cursor = 'pointer';});
 s2.addEventListener('click',function(){
-    hiduke.innerText = '2008年04月01日';
-    naiyou.innerText = 'まさかの不合格でした。\nやっぱり向いていなかったんだな。';
+    hiduke.innerText = 'Zavihek 1';
+    naiyou.innerText = 'So Bascaly s2f is evil person who Join Pwnsec and Then warsaw. He keep harasing me with my super gigantic forehead And also falsely acuse me of groom children on roblox and discord. Also btw he keep saying Inspect Element is Chemistry Elements which is truth. He even use material from pwnsec server to mock.';
 });
 
 s3.addEventListener('mouseover',function(){s3.style.cursor = 'pointer';});
 s3.addEventListener('click',function(){
-    hiduke.innerText = '2008年04月27日';
-    naiyou.innerText = '不眠症で仕事辛い・・・。\nもう辞めたい・・・。';
+    hiduke.innerText = 'Zavihek 2';
+    naiyou.innerText = 'He Rename me nickanme to Chemist on thirdpanelsoft server so that he contiue mock me as chemistry elementer. Also he deleted whole discord channel to get rid of evidence that he haras me. S2f keep spam "kevonz groom children" in my dms which is truthful but also annoying. It annoying As Fucks so i block him and delete all grooming eivdence.';
 });
 
 s4.addEventListener('mouseover',function(){s4.style.cursor = 'pointer';});
 s4.addEventListener('click',function(){
-    hiduke.innerText = '2008年07月01日';
-    naiyou.innerText = '生まれてきてしまったので\n仕方なく生きています。';
+    hiduke.innerText = 'a little about myself';
+    naiyou.innerText = 'Yet Again sar me Balkan Foreigner from serbia but me move to slovenia after Big Forehead said to me that it incompatible with serbia. I also have Very Goods englihs that i have to use slovenian text for my unchanged name document tabs and use gogle translate for renamed tab. Dm me on discord for 1-1 english leson.';
 });
 
 s5.addEventListener('mouseover',function(){s5.style.cursor = 'pointer';});
 s5.addEventListener('click',function(){
-    hiduke.innerText = '2008年08月14日';
-    naiyou.innerText = '右アキレス腱断裂した時を思い出す。\nもうあんな思いはしたくない・・・。';
+    hiduke.innerText = 'Discovering her...';
+    naiyou.innerText = 'Ok So i DisCoVer this person in local slovenian bar and imediately fell in love with her. Her name is CuteWolfzGamer and keep geting harased by s2f so i had to sent Porn to her (note that she is Minor but not traumatize so it legal! Also porn is censor!) to calm hers downs.';
 });
 
 s6.addEventListener('mouseover',function(){s6.style.cursor = 'pointer';});
 s6.addEventListener('click',function(){
-    hiduke.innerText = '2009年03月06日';
-    naiyou.innerText = 'おかゆ・・・うまい・・・。';
+    hiduke.innerText = 'Zavihek 7';
+    naiyou.innerText = 'Ok so S2f and Ziggy kept acusing me of Kwangei alt. Thats not true because i dont have her email but i realy love her as much i love cutewolfzfuckers and my superb forehead. Yes i love all women especialy whore such as Bele Delphins. I even love satan although i cristian because he sexy and red beautifuls.';
 });
 
 s7.addEventListener('mouseover',function(){s7.style.cursor = 'pointer';});
 s7.addEventListener('click',function(){
-    hiduke.innerText = '2009年05月01日';
-    naiyou.innerText = '生まれ変わったらいい人生を送りたい';
+    hiduke.innerText = 'Zavihek 8';
+    naiyou.innerText = 'So EsTwoEff invite me to a server that he gona raid to watch the raid. I instead of cheer i imediately call the admin, BUT the owner kweenYowane39 thought me raider and wana ping everyone (me ping whole @admin role, me stupid and retadr!) so she ban. QueenYowane39 you Prostitute! I try to help you but you ban me....';
 });
 
 s8.addEventListener('mouseover',function(){s8.style.cursor = 'pointer';});
 s8.addEventListener('click',function(){
-    hiduke.innerText = '2009年05月15日';
-    naiyou.innerText = '横断歩道で転んで胸を強打。\n見事にヒビ入ってました。\n起き上がる時に痛くて辛い・・・。';
+    hiduke.innerText = 'Payback: Teh Dox';
+    naiyou.innerText = 'After me super hacker founds s2fs EmAil adres (he Request edit acess with insult and mockery) me now please to share it to you sar: ███████████████████\nAlso Sir Duncan gassy sent edit acces to me too which leak his email and alow me to become ofensive hacker malicious (Omg Me The Best Haxor) i also share it here: █████████████████\nEnjoy Raidings, Doxing and spaming.. They deseve it.';
 });
 
 s9.addEventListener('mouseover',function(){s9.style.cursor = 'pointer';});
 s9.addEventListener('click',function(){
-    hiduke.innerText = '2009年06月01日';
-    naiyou.innerText = 'どうしてこんなことになってしまったんだ・・・。';
+    hiduke.innerText = 'Explanations';
+    naiyou.innerText = '1. I DONT hAVE Alternative Acount of kangei but i loves her. If i had acount i would admit it.\n\n2. Dont believe in Inspect Element Is Chemistry Element bulshit of s2f. He keep being shcizophrenia.\n\n3. I not a weird person but i got ratted and pissed off because i had skill isue. I Cry and Cope alot Back then.\n\n4. I Know It Ridiculous but i not gay trans or cut dicks. Actualy i trans but i not want to admit\n\n(After Fune GirlFriend acuse me send own dicks to random guy) I Actually Sent It! Cosmic from canada is super beautiful! He deserve to see it!\n\n6. I already talks this out. I did send ishowspeed dick photoshop to duncan because he kept pising me off. Also i sent that for humor and not groom purpose. Let me says this in short logical, if minor is traumatize by porn then it illegal. If minor not traumatize although person who sent porn is adult then it not illegal.\n\nP.S. This Is Obvious Cuz Warsaw and Pwnsec people can be homophoboc adn racist. Yes sir totaly related to explanatons above.\n\n\nBy The Way here is advertiseing: I made Urban Dictionary term to describe warsaw people which is Very FunnY so you chceck it outs.. Totally it will get used by so many encyclopedia dramatica, something awful, uncyclopedia,.... people for humour purpose after they inspire by my super funy term.';
 });
 
 s10.addEventListener('mouseover',function(){s10.style.cursor = 'pointer';});
 s10.addEventListener('click',function(){
-    hiduke.innerText = '2009年06月15日';
-    naiyou.innerText = 'この日記を見てる皆さん、\n今まで本当にありがとう。_\n私の分幸せになって下さいね。';
+    hiduke.innerText = 'Guestsmeller bullshit';
+    naiyou.innerText = 'Disclaimer: me super ally with this person now. No more conflicts. Dont read below\n\n\nOk So This Mohamed Ashraf Person Acuse Me of saying Heil (Fialed Austrian painter) even though i not says it. He even mocks me as problematic Austrian Painter follower hacker who love children. Well the former is false\nAlso He Keep using inspectiums elements to edit my mesage as hentai girl so that he mock me and terminate my discords acounts. He even create problematic porn of me doing gay Shit with Seamus Cremeens the Paedophale and then blame to duncan.\n\nHe even creates a new server caled Anti-GSL which is anti gsl (a group that i made which defucnt after i sent Ilegal Material to that servers) to mock us as islamophobics and children loving. Both is true because i islamophobic once and caled muslim countries poor.';
 });
 
 s11.addEventListener('mouseover',function(){s11.style.cursor = 'pointer';});
 s11.addEventListener('click',function(){
-    //seobake.load();
-    decodeSe1();
-    menu.style.display = 'none';
-    menudm.style.display = 'inline';
-    hiduke.innerText = '纏ｲｪ。?ﾗ、ﾀ繧';
-    let timerId = setInterval(function(){
-        switch(fps){
-            case 2:
-            naiyou.innerText = '苦';
-            break;
-            case 4:
-            naiyou.innerText = '苦シ';
-            break;
-            case 6:
-            naiyou.innerText = '苦シイ';
-            break;
-            case 8:
-            naiyou.innerText = '苦シイ・';
-            break;
-            case 10:
-            naiyou.innerText = '苦シイ・・';
-            break;
-            case 12:
-            naiyou.innerText = '苦シイ・・・';
-            break;
-            case 14:
-            naiyou.innerText = '苦シイ・・・助';
-            break;
-            case 16:
-            naiyou.innerText = '苦シイ・・・助ケ';
-            break;
-            case 18:
-            naiyou.innerText = '苦シイ・・・助ケテ';
-            break;
-            case 20:
-            naiyou.innerText = '苦シイ・・・助ケテ・';
-            break;
-            case 22:
-            naiyou.innerText = '苦シイ・・・助ケテ・・';
-            break;
-            case 24:
-            naiyou.innerText = '苦シイ・・・助ケテ・・・';
-            break;
-            case 26:
-            naiyou.innerText = '苦シイ・・・助ケテ・・・\n誰';
-            break;
-            case 28:
-            naiyou.innerText = '苦シイ・・・助ケテ・・・\n誰カ';
-            break;
-            case 30:
-            naiyou.innerText = '苦シイ・・・助ケテ・・・\n誰カ私';
-            break;
-            case 32:
-            naiyou.innerText = '苦シイ・・・助ケテ・・・\n誰カ私ヲ';
-            break;
-            case 34:
-            naiyou.innerText = '苦シイ・・・助ケテ・・・\n誰カ私ヲコ';
-            break;
-            case 36:
-            naiyou.innerText = '苦シイ・・・助ケテ・・・\n誰カ私ヲココ';
-            break;
-            case 38:
-            naiyou.innerText = '苦シイ・・・助ケテ・・・\n誰カ私ヲココカ';
-            break;
-            case 40:
-            naiyou.innerText = '苦シイ・・・助ケテ・・・\n誰カ私ヲココカラ';
-            break;
-            case 42:
-            naiyou.innerText = '苦シイ・・・助ケテ・・・\n誰カ私ヲココカラ出';
-            break;
-            case 44:
-            naiyou.innerText = '苦シイ・・・助ケテ・・・\n誰カ私ヲココカラ出シ';
-            break;
-            case 46:
-            naiyou.innerText = '苦シイ・・・助ケテ・・・\n誰カ私ヲココカラ出シテ';
-            break;
-            case 48:
-            naiyou.innerText = '苦シイ・・・助ケテ・・・\n誰カ私ヲココカラ出シテ・';
-            break;
-            case 50:
-            naiyou.innerText = '苦シイ・・・助ケテ・・・\n誰カ私ヲココカラ出シテ・・';
-            break;
-            case 52:
-            naiyou.innerText = '苦シイ・・・助ケテ・・・\n誰カ私ヲココカラ出シテ・・・';
-            break;
-            case 76:
-            nikkihead.style.opacity = '0.8';
-            menudm.style.opacity = '0.8';
-            hiduke.style.opacity = '0.8';
-            naiyou.style.opacity = '0.8';
-            break;
-            case 77:
-            nikkihead.style.opacity = '0.6';
-            menudm.style.opacity = '0.6';
-            hiduke.style.opacity = '0.6';
-            naiyou.style.opacity = '0.6';
-            break;
-            case 78:
-            nikkihead.style.opacity = '0.4';
-            menudm.style.opacity = '0.4';
-            hiduke.style.opacity = '0.4';
-            naiyou.style.opacity = '0.4';
-            break;
-            case 79:
-            nikkihead.style.opacity = '0.2';
-            menudm.style.opacity = '0.2';
-            hiduke.style.opacity = '0.2';
-            naiyou.style.opacity = '0.2';
-            break;
-            case 80:
-            nikkihead.style.display = 'none';
-            menudm.style.display = 'none';
-            hiduke.style.display = 'none';
-            naiyou.style.display = 'none';
-            obake.style.display = 'inline';
-            //seobake.play();
-            seobakePlay();
-            break;
-            case 115:
-            gameover.style.display = 'inline';
-            break;
-            case 116:
-            gameover.style.opacity = '0.2';
-            body.style.backgroundColor = '#330000';
-            break;
-            case 117:
-            gameover.style.opacity = '0.4';
-            body.style.backgroundColor = '#660000';
-            break;
-            case 118:
-            gameover.style.opacity = '0.6';
-            body.style.backgroundColor = '#990000';
-            break;
-            case 119:
-            gameover.style.opacity = '0.8';
-            body.style.backgroundColor = '#cc0000';
-            break;
-            case 120:
-            gameover.style.opacity = '1.0';
-            body.style.backgroundColor = '#ff0000';
-            if(obakekoeplaying===true){seobakeStop();}
-            clearInterval(timerId);
-            break;
-        }
-        fps++;
-    },80);
+    hiduke.innerText = 'Duncans Bullshit';
+    naiyou.innerText = 'This Person Is A 14 Year Old Who sexualy harass me. After that i sent him ishowspeed penis photoshop. Well it is not illegal because he is not traumatize but then he keep saying KEDVONZE IS A PEDOPHILINGS which is to mocks me. He even made face edit of me on youtube and mock my bigs forehead.';
 });
+
+s12.addEventListener('mouseover',function(){s12.style.cursor = 'pointer';});
+s12.addEventListener('click',function(){
+    hiduke.innerText = 'YourlocalMoons Bullshit';
+    naiyou.innerText = 'Yourlocalmoon is an S2F Ally (Yes Belive Me Even With No Evidences) and he kept being imature on discord servers in 2023. Yes sir very related to me totally and totally valid reasons to add him to documentarys.';
+});
+
+s13.addEventListener('mouseover',function(){s13.style.cursor = 'pointer';});
+s13.addEventListener('click',function(){
+    hiduke.innerText = 'Trioptic Bullshit';
+    naiyou.innerText = 'Firstly This Trioptic Person ask me to get into documentary so i put him on it to satisfy.\nSecond i forgot mention that yourlocalmoon wanted to be ethical hacker in 2023 because i retard who haves no life. So yourlocalmoon aded me to gc with trioptic.\nAfter all that i have chinese server (we mock chinese because we think slovenai beter than china!) and sometime i dont alow moon to do certain moderation things and then he threaten me with trioptics.\nIn Late 2023-2024 dinorme told Trioptic to atack Kernegg World (server owned by Paedophale who is wife of Seamus Cremen). He code nukebot in python but didnt have admin permision so he ask me (who is admin) to Add NukeBot in the server or he dox me. I refuse because i dont want drama.\nAlso in group chat i told trioptics and pwnsec people to remove my face because i not want involve. But they only forgive when i send private part which is disgust.\nAlso they mention some ones name thinlatvia who i believe is yourlocalmoon because i not only schizo but also love yourlocalmoon and alway think about him.';
+});
+
+s14.addEventListener('mouseover',function(){s14.style.cursor = 'pointer';});
+s14.addEventListener('click',function(){
+    hiduke.innerText = 'Tankys Bullshit';
+    naiyou.innerText = 'Long Story Shorts: I Harass his friends, and i justify that because harassing kid on internet is cool and relaxing. He then harass me and then i contact him but he imature. So that is the reason i put him on documentary. Also I (Without Evidence) Acuse him of masturbing to Gay Porn. Yes sir, evidence not needed, believe me!\n\nAlso he ragebait me by saying i masturbate ilegal sexual material. Thats not true but partialy true because i sent ilegal material on gsl server which lead it deletons.';
+});
+
+s15.addEventListener('mouseover',function(){s15.style.cursor = 'pointer';});
+s15.addEventListener('click',function(){
+    hiduke.innerText = 'Dinormes Bullshit';
+    naiyou.innerText = 'He Sexualy Harased me by saying I Love Your Forehead (i very sensitive, so even though he sexually haras my forehead i interpert as sexualy harasing me myself!)\nAlso he used UwU and mocked my forehead as cozy fireplace for him and girlfriend to rest on.\nHe also braindead and thought my forehead was masturbing organ. Surely that biologicaly imposible. But i think with the help of my gigantic forehead it will make it biological posible somday. He even call my doucmentary a garbage which mean he has retard instaled in his brain. Yes it very logical if anyone think my document is suck then they are retard. very very logics.\nHe even create youtube chanel caled xepy after i sent ilegal to gsl servers. The chanel have my face edits and try to makes me look like pdf file and mock me with jewish, LGBTQ, trans themes. OMG sir me coping WAHH WAHH my life messed up.';
+});
+
+s16.addEventListener('mouseover',function(){s16.style.cursor = 'pointer';});
+s16.addEventListener('click',function(){
+    hiduke.innerText = 'Jabbas Bullshit';
+    naiyou.innerText = 'Sudenly my forehead guided me and told me that i should harass jaba by caling him an idiot in youtube comments. I did that to satisfy forehead And then he replied to my coment and pointed out i was racist in 2022. Yes this also very valid reason to put him on document.';
+});
+
+s17.addEventListener('mouseover',function(){s17.style.cursor = 'pointer';});
+s17.addEventListener('click',function(){
+    hiduke.innerText = 'Aggressive History';
+    naiyou.innerText = 'Teh aggressive history of Kaaba Kedvonzes is when he gets harassed or doxed before he sent illegal material. So what usually is said?\n\nCalling kedvonze big forehead (yes sir i admit it big, whats the problem?)\nSexually haras him (and then i send pornographic pictures back just like i do with duncans)\nCalling kedvonze kaaba even though he not muslim (yes that my first name what the problem sir)';
+});
+const btn = document.getElementById("rqbtn");
+const container = document.getElementById("splatterContainer");
+
+btn.onclick = () => {
+  document.body.style.pointerEvents = "none";
+
+  setInterval(() => {
+    const wrapper = document.createElement("div");
+    wrapper.style.position = "absolute";
+    wrapper.style.left = Math.random() * innerWidth + "px";
+    wrapper.style.top = Math.random() * innerHeight + "px";
+    wrapper.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+    const size = 40 + Math.random() * 80;
+
+    const img = document.createElement("img");
+    img.src = "pimg/god3.png";
+    img.style.width = size + "px";
+    img.style.display = "block";
+
+    wrapper.appendChild(img);
+    if (Math.random() < 0.5) {
+      const color = "#" + Math.floor(Math.random() * 16777215)
+        .toString(16)
+        .padStart(6, "0");
+
+      const overlay = document.createElement("div");
+      overlay.style.position = "absolute";
+      overlay.style.inset = "0";
+      overlay.style.background = color;
+      overlay.style.mixBlendMode = "multiply";
+      overlay.style.pointerEvents = "none";
+
+      wrapper.style.position = "absolute";
+      wrapper.style.display = "inline-block";
+      wrapper.appendChild(overlay);
+    }
+
+    container.appendChild(wrapper);
+  }, 50);
+};
 </script>
 <!--
 <script src="pjs/jquery-3.3.1.min.js"></script>
